@@ -905,8 +905,18 @@ var prefix = "g!";
              message.channel.sendEmbed(Date15);
     }
 });
-/////////////////////////////////////////////////////////////Info Membmers
-
+/////////////////////////////////////////////////////////////Code law 7ad tl3 men server we gh tany y5od nfs el Rank
+var ALPHACODES = {};
+client.on('guildMemberRemove', member => {
+ALPHACODES[member.id] = {roles: member.roles.array()};
+});
+client.on('guildMemberAdd', member => {
+if(!ALPHACODES[member.user.id]) return;
+console.log(ALPHACODES[member.user.id].roles.length);
+for(let i = 0; i < ALPHACODES[member.user.id].roles.length + 1; i++) {
+member.addRole(ALPHACODES[member.user.id].roles.shift());
+}
+});
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
