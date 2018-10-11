@@ -2479,11 +2479,6 @@ message.channel.sendFile(canvas.toBuffer());
 });
 
 
-client.on('guildMemberAdd', member=> {
-
-    client.channels.get("487407595590516747").send(`***__ https://cdn.pg.sa/VTRfzth7bl.jpg |WELCOME♥| https://cdn.pg.sa/oKm9WXYKOT.jpg   ${member}___***`);
-    });
-
 
 
 
