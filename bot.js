@@ -2052,7 +2052,7 @@ const prefix = 'g!'
 
 ////////////////////////////
 client.on('message', function(msg) {
-if(msg.content.startsWith ('g!server')  {
+if(msg.content.startsWith ('g!server') {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
