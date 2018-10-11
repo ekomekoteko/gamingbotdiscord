@@ -1524,10 +1524,17 @@ ${args}
 
 
 
-/////////////Report
-/////////////////////////////////////////////////////////////////////R  E   B   O   R    T 
+/////////////
+/////////////////////////////////////////////////////////////////////WELCOME 
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`👑ولكم نورت السيرفر | Welcome To Server👑 
+اسم العضو المحترم |Name member🌷  ${member}
+انت العضو الأسطورة رقم| ♦♦ |You Member number is👑 ${member.guild.memberCount}`) 
 
+}).catch(console.error)
+})
 
 
 
