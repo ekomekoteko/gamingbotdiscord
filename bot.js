@@ -1,10 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "g!";
 
 client.on('ready', () => {
-     client.user.setActivity(" g!help | g!inv",{type: 'WATCHING'})
-
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
 
