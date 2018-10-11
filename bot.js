@@ -2388,7 +2388,16 @@ client.on('message',async message => {
 
 
 
-/////////////////Mute
+/////////////////welcome 
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === '个welcome个');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲server** 🎉♥:hugging:  !!
+   !!, ${member}`);
+});
 
 
 
