@@ -318,5 +318,79 @@ client.on('message', msg => {
 });
 
 
+///////////////////////////////////////////////////////----////////ID
+client.on("message", msg => {
+           var prefix = "g!";
+  if(msg.content.startsWith (prefix + "id")) {
+    if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
+      const embed = new Discord.RichEmbed();
+  embed.addField(":cloud_tornado:  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
+          .addField(":id:  الايدي", `**[ ${msg.author.id} ]**`, true)
+          .setColor("RANDOM")
+          .setFooter(msg.author.username , msg.author.avatarURL)
+          .setThumbnail(`${msg.author.avatarURL}`)
+          .setTimestamp()
+          .setURL(`${msg.author.avatarURL}`)
+          .addField(':spy:  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+          .addField(':satellite_orbital:   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
+          .addField(':military_medal:  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
+          .addField(':robot:  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
+      msg.channel.send({embed: embed})
+	    }
+});
+////////////////////////////////////////////////////////////////////////////ID
+client.on('message', message => {
+    if (message.content === "g!ID") {
+    let embed = new Discord.RichEmbed()
+   .setColor("RANDOM")
+   .setThumbnail(message.author.avatarURL)
+   .setTitle(`info about ${message.guild.name}`)
+   .addField("Server Owner 👑",`➥ ` + `${message.guild.owner.user.username}`, true)
+   .addField('Server ID 🆔',`➥` + message.guild.id, true)
+   .addField("Owner Tag",`➥ ` +  `#` + message.guild.owner.user.discriminator, true)
+   .addField("Owner ID 🆔",`➥ ` + message.guild.owner.user.id, true)
+   .addField("Server Region📡",`➥ ` + message.guild.region, true)
+   .addField("Server Member Size🏧",`➥ ` + message.guild.members.size, true)
+   .addField("Server Channels Number🏧",`➥ ` + message.guild.channels.size, true)
+   .addField("Server Roels Number🏧",`➥ ` + message.guild.roles.size, true)
+   .addField("AFK channel💤",`➥ ` + message.guild.afkChannel || 'Null', true)
+   .addField("Server Created AT",`➥ ` + message.guild.createdAt, true)
+   .addField(`info about ${message.author.username}`, `➥ `)
+   .addField("Name",`➥ ` + `${message.author.username}`, true)
+   .addField('Tag',`➥ ` + "#" +  message.author.discriminator, true)
+   .addField("ID 🆔",`➥ ` + message.author.id, true)
+   .addField(" Account Created At",`➥ ` + message.author.createdAt, true)
+   .setTimestamp()
+   .setFooter(message.author.tag, message.author.avatarURL)
+      
+      /////////////////////////////////////////////////////GAMING
+   message.channel.sendEmbed(embed);
+     }
+ });
+///////////////////////////////////////Mahmoud-QuaStyle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
 
