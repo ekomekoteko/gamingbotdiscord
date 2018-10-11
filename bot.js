@@ -574,7 +574,115 @@ message.react("❌")
  }}});	
 
 
+/////////////////////////////////////////////////---------///////////////////////////
+client.on('message', message => {
+if (message.content.startsWith("g!ban")) {
+    var mention = message.mentions.members.first();
+    if(!mention) return message.channel.send("يجب منشن العضو");
 
+    mention.ban("By: " + message.author.tag);
+    
+    message.channel.send("تم أعطاء باند الى : " + mention.tag);
+};
+});
+
+
+
+
+////////////unban
+client.on('message' , message => {
+    var prefix = "g!";
+    let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
+    if(message.content.startsWith(prefix + 'unban')) {
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
+        if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
+        message.guild.unban(user);
+        message.guild.owner.send(`لقد تم فك الباند عن الشخص \n ${user} \n By : <@${message.author.id}>`)
+        var embed = new Discord.RichEmbed()
+        .setThumbnail(message.author.avatarURl)
+        .setColor("RANDOM")
+        .setTitle('**●Unban** !')
+        .addField('**●User Unban :** ', `${user}` , true)
+        .addField('**●By :**' ,       ` <@${message.author.id}> ` , true)
+        .setAuthor(message.guild.name)
+        message.channel.sendEmbed(embed)
+    }
+});	///////////////////////////////////////////// By:Mahmoud-QuaStyle
+
+////////////////----------------------------------------------------------------///////////bans 
+client.on('message', message => {
+    if (message.content.startsWith("g!bans")) {
+        message.guild.fetchBans()
+        .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
+  .catch(console.error);
+}
+});
+
+
+
+
+
+
+//////////////////////////////////////////////---------------//////////////////////////////////////// P    I   N  G 
+
+client.on('message', message =>{
+    if(message.content === 'g!ping'){
+let start = Date.now(); message.channel.send('pong').then(message => { 
+message.edit(`\`\`\`js
+Time taken: ${Date.now() - start} ms
+Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
+    });
+    }
+});
+
+///////////////////////////////////////////--------------////////////////////////////////// ID   BOT 
+
+
+client.on('message', message => {
+    if (message.content.startsWith("g!idbot")) {
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('``INFO Name Bot`` ')
+            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``servers``', [client.guilds.size], true) 
+            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+            .addField("``Your Name``", `${message.author.username}`)
+            .addField('``your tag``', message.author.discriminator)
+            .addField('``Your id``', message.author.id)
+            .addField('``Bot``', message.author.bot)
+            .addField('``date of registration``', message.author.createdAt)
+    })
+}
+});
+
+
+////////////////////////////////////////////////-------///////////////////////// i n  v i t e s 
+
+client.on('message', message => {
+    if (message.content.startsWith("g!invite")) {
+    message.guild.fetchInvites()
+    .then(invites => message.channel.send(`لقد دعوت  ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
+     
+    }
+});
+
+//////////////////////////////////////////////////////////--------------////////////////////////BOT 
+client.on('message', message => {
+     if (message.content === "g!bot") {
+     let embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .addField("**Servers:**" , client.guilds.size)
+  .addField("**Users:**", client.users.size)
+  .addField("**channels:**", client.channels.size)
+  .setTimestamp()
+message.channel.sendEmbed(embed);
+    }
+});
 
 
 
