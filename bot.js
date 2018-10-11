@@ -1392,10 +1392,114 @@ voiceChannel.leave();
   }
 
 });
-///////////////////////////////////
+/////////////////////////////-----------------//////alll BOTS
+client.on('message', message => {
+     if(!message.channel.guild) return;
+var prefix = "g!";
+                if(message.content.startsWith(prefix + 'allbots')) {
+
+    
+    if (message.author.bot) return;
+    let i = 1;
+        const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
+          const embed = new Discord.RichEmbed()
+          .setAuthor(message.author.tag, message.author.avatarURL)
+          .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
+${botssize.join('\n')}`)
+.setFooter(client.user.username, client.user.avatarURL)
+.setTimestamp();
+message.channel.send(embed)
+
+}
 
 
+});
 
+///////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////create ct and cv
+
+ client.on("message", (message) => {
+if (message.content.startsWith("g!ct")) {
+            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
+        let args = message.content.split(" ").slice(1);
+    message.guild.createChannel(args.join(' '), 'text');
+message.channel.sendMessage(':ballot_box_with_check: تـم إنـشاء روم كـتابـي')
+
+}
+});
+
+//////////////////////////////////////////////////////////////cv 
+client.on("message", (message) => {
+if (message.content.startsWith("g!cv")) {
+            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
+        let args = message.content.split(" ").slice(1);
+    message.guild.createChannel(args.join(' '), 'voice');
+    message.channel.sendMessage(':white_check_mark: تـم إنـشاء روم صـوتي')
+    
+}
+});
+////////////////////////////////////////////////////////////////////////////////////////////////////////Dt
+
+client.on('message', message => {
+         if (message.content === prefix + "td") {
+         if (!message.channel.guild) return message.reply('** This command only for servers **');
+         var currentTime = new Date(),
+            hours = currentTime.getHours() + 4 ,
+            hours2 = currentTime.getHours() + 3 ,
+            hours3 = currentTime.getHours() + 2 ,
+            hours4 = currentTime.getHours() + 3 ,
+            minutes = currentTime.getMinutes(),
+            seconds = currentTime.getSeconds(),
+            Year = currentTime.getFullYear(),
+            Month = currentTime.getMonth() + 1,
+            Day = currentTime.getDate();
+             var h = hours
+  if(hours > 12) {
+               hours -= 12;
+            } else if(hours == 0) {
+                hours = "12";
+            }
+             if(hours2 > 12) {
+               hours2 -= 12;
+            } else if(hours2 == 0) {
+                hours2 = "12";
+
+            }
+                         if(hours3 > 12) {
+               hours3 -= 12;
+            } else if(hours3 == 0) {
+                hours3 = "12";
+            }
+            if (minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            var suffix = 'صباحاَ';
+            if (hours >= 12) {
+                suffix = 'مساء';
+                hours = hours - 12;
+            }
+            if (hours == 0) {
+                hours = 12;
+            }
+
+
+                var Date15= new Discord.RichEmbed()
+                .setThumbnail("https://i.imgur.com/ib3n4Hq.png")
+                .setTitle( "Time & Date.")
+                .setColor('RANDOM')
+                .setFooter(message.author.username, message.author.avatarURL)
+                 .addField('- KSA. :flag_sa: ',
+                ""+ hours2 + ":" + minutes +":"+ seconds  + "")
+                .addField('- EGY. :flag_eg: ',
+                ""+ hours3 + ":" + minutes +":"+ seconds  + "")
+
+                .addField('- Date.',
+                ""+ Day + "-" + Month + "-" + Year +  "")
+
+                 message.channel.sendEmbed(Date15);
+        }
+    });
 
 
 
