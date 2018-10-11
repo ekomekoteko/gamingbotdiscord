@@ -98,37 +98,37 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 			  اوامر عامة                                                                                 
-:mailbox_with_mail:  ***g!allbots ~ لعرض جميع البوتات الي بالسيرفر***
-:mailbox_with_mail:  *** g!server ~يعرض لك معلومات عن السيرفر***
-:mailbox_with_mail:   ***g!bot ~ يعرض لك كل معلومات البوت***
-:mailbox_with_mail:   ***g!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات***
-:mailbox_with_mail: ***g!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر*** 
-:mailbox_with_mail: ***g!invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر*** 
-:mailbox_with_mail: ***g!cal ~ اله حاسبة
-:mailbox_with_mail: ***g!trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة***
-:mailbox_with_mail: ***g!short ~ يختصر لك رابط كبير الى رابط صغير
-:mailbox_with_mail: ***g!tag ~ يكتب لك الكلمة بشكل جميل وكبير
-:mailbox_with_mail: ***g!google ~ للبحث في قوقل عن طريق الدسكورد***
-:mailbox_with_mail:*** g!perms ~ يعرض لك برمشناتك بالسيرفر***
-:mailbox_with_mail: ***g!rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها***
-:mailbox_with_mail: ***g!roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل***
-:mailbox_with_mail: ***g!emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر***
-:mailbox_with_mail: ***g!say ~ يكرر الكلام الي تكتبو***
-:mailbox_with_mail: ***g!image ~ صورة السيرفر***
-:mailbox_with_mail: ***g!members ~ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص***
-:mailbox_with_mail: ***g!id ~ معلومات عنك***
-:mailbox_with_mail: ***g!bans ~ عدد الاشخاص المبندة***
-:mailbox_with_mail: ***g!avatar ~ صورتك او صورة الي تمنشنو***
-:mailbox_with_mail: ***g!embed ~ يكرر الي تقولو بشكل حلو***
-:mailbox_with_mail: ***g!emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي***
-:mailbox_with_mail: ***g!inv ~ لدعوة البوت الى سيرفرك***
-:mailbox_with_mail: ***g!support ~ سيرفر الدعم***
-:mailbox_with_mail: ***g!contact ~ ارسال اقتراح او لمراسلة صاحب البوت***
-:mailbox_with_mail: ***g!report ~  احد سبك واهانك***
-:mailbox_with_mail: ***g!owner<massange ~ ارسال رسالة لي اونر*** 
-:mailbox_with_mail: ***g!server ~  معلومات عن السرفر 
-:mailbox_with_mail: ***g!draw<massange ~ يحط لك الكلام في صوره***
-:mailbox_with_mail: ***g!embed<massange> ~ يحط لك الكلام في مربع***
+:mailbox_with_mail: g!allbots ~ لعرض جميع البوتات الي بالسيرفر
+:mailbox_with_mail: g!server ~يعرض لك معلومات عن السيرفر
+:mailbox_with_mail: g!bot ~ يعرض لك كل معلومات البوت***
+:mailbox_with_mail: g!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
+:mailbox_with_mail: g!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر
+:mailbox_with_mail: g!invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر
+:mailbox_with_mail: g!cal ~ اله حاسبة
+:mailbox_with_mail: g!trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
+:mailbox_with_mail: g!short ~ يختصر لك رابط كبير الى رابط صغير
+:mailbox_with_mail: g!tag ~ يكتب لك الكلمة بشكل جميل وكبير
+:mailbox_with_mail: g!google ~ للبحث في قوقل عن طريق الدسكورد
+:mailbox_with_mail: g!perms ~ يعرض لك برمشناتك بالسيرفر
+:mailbox_with_mail: g!rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها
+:mailbox_with_mail: g!roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل
+:mailbox_with_mail: g!emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر
+:mailbox_with_mail: g!say ~ يكرر الكلام الي تكتبو
+:mailbox_with_mail: g!image ~ صورة السيرفر
+:mailbox_with_mail: g!members ~ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
+:mailbox_with_mail: g!id ~ معلومات عنك
+:mailbox_with_mail: g!bans ~ عدد الاشخاص المبندة
+:mailbox_with_mail: g!avatar ~ صورتك او صورة الي تمنشنو
+:mailbox_with_mail: g!embed ~ يكرر الي تقولو بشكل حلو
+:mailbox_with_mail: g!emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
+:mailbox_with_mail: g!inv ~ لدعوة البوت الى سيرفرك
+:mailbox_with_mail: g!support ~ سيرفر الدعم
+:mailbox_with_mail: g!contact ~ ارسال اقتراح او لمراسلة صاحب البوت
+:mailbox_with_mail: g!report ~  احد سبك واهانك
+:mailbox_with_mail: g!owner<massange ~ ارسال رسالة لي اونر
+:mailbox_with_mail: g!server ~  معلومات عن السرفر 
+:mailbox_with_mail: g!draw<massange ~ يحط لك الكلام في صوره
+:mailbox_with_mail: g!embed<massange> ~ يحط لك الكلام في مربع
 	
 `)
    message.author.sendEmbed(embed)
