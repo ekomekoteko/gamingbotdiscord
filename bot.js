@@ -9,18 +9,288 @@ client.on('ready', () => {
 //-----------------------------------------------------------------------------------------------------------------------------
 
 
-client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("name", "个welcome个")
-        const embed = new Discord.RichEmbed()
-        .setColor('B90C0C')
-        .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('***WELCOME TO SERVER GAMING ♥ ***')
-.setThumbnail(member.avatarURL)
-  .setImage('https://cdn.pg.sa/9TN1Lmn4TH.gif')
-        .setTimestamp()
-        return wc.sendEmbed(embed);
-        
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === '个welcome个');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲server** 🎉♥:hugging:  !!
+   !!, ${member}`);
 });
+
+// Log our bot in using the token from https://discordapp.com/developers/applications/me
+
+
+client.on('guildMemberAdd', member => {
+        let channel = member.guild.channels.find('name', '个welcome个');
+        let memberavatar = member.user.avatarURL
+          if (!channel) return;
+        let embed = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setThumbnail(memberavatar)
+            .addField('🎽 | name :  ',`${member}`)
+            .addField('📢 | Welcome' , `W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲server** 🎉♥:hugging:  , ${member}`)
+            .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
+                    .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
+                   
+                      .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                         
+                                         .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                           
+         .setFooter(`${member.guild.name}`)
+            .setTimestamp()
+       
+          channel.sendEmbed(embed);
+        });
+
+
+
+client.on('guildMemberRemove', member => {
+            var embed = new Discord.RichEmbed()
+            .setAuthor(member.user.username, member.user.avatarURL)
+            .setThumbnail(member.user.avatarURL)
+            .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
+            .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
+            .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+            .setColor('RED')
+            .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+        
+        var channel =member.guild.channels.find('name', '个welcome个')
+        if (!channel) return;
+        channel.send({embed : embed});
+        })
+
+
+
+
+
+client.on('message' , message => {
+  var prefix = "g!";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "bcRole")) {
+    let args = message.content.split(" ").slice(1);
+
+    if(!args[0]) {
+      message.channel.send("قم بمنشنة الرتبة | g!bcRole@everyoneرساله");
+        return;
+    }
+    if(!args[1]) {
+      message.channel.send("قم بمنشنة الرتبة | g!bcRole @everyone رساله");
+        return;
+    }
+
+      if(args[0] == "@everyone") {
+        message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.memberCount} اعضاء`);
+        message.guild.members.forEach(mi => {
+          mi.send(
+          "الرسالة :" + "\n" +
+         "**" + `${args[1]}` + "**"
+          );
+        });
+        return;
+      }
+          var role = message.mentions.roles.first();
+            if(!role) {
+              message.reply("لا توجد رتبة بهذا الاسم");
+                return;
+            }
+        message.guild.members.filter(m => m.roles.get(role.id)).forEach(sa => {
+        sa.send(
+          "الرسالة :" + "\n" +
+        "**" + `${args[1]}` + "**"
+          );
+        });
+      message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عظو**`);
+    }
+});
+
+
+
+
+
+client.on("message", message => {
+    if (message.content.startsWith("g!obc")) {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+  m.send(`${argresult}\n ${m}`);
+  })
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.delete();
+  };
+  });
+
+
+//bc online
+
+
+  var prefix = "g!";
+
+  client.on("message", message => {
+  
+              if (message.content.startsWith(prefix + "bc")) {
+                           if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+    let args = message.content.split(" ").slice(1);
+    var argresult = args.join(' '); 
+    message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+   m.send(`${argresult}\n ${m}`);
+  })
+   message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` :mailbox:  عدد المستلمين `); 
+   message.delete(); 
+  };     
+  });
+
+
+
+
+
+
+client.on('message', message => {
+    var  user = message.mentions.users.first() || message.author;
+if (message.content.startsWith("g!avatar")) {
+message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
+}
+});
+
+
+client.on('ready',  () => {
+    console.log('تم تشغيل :Broadcast  ');
+    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
+  });
+
+
+
+
+
+  client.on('message', message => {
+    if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('g!adminbc')){
+if(!message.author.id === '411137717884289024') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
+
+
+
+  
+  
+
+   client.on("message", message => {
+    if (message.content === "g!invite") {
+     const embed = new Discord.RichEmbed()
+         .setColor("RANDOM")
+         .addField('Broadcast', ``)
+     message.author.send({embed});
+   
+    }
+   });
+
+
+   client.on("message", message => {
+    if (message.content === "g!bc-support") {
+     const embed = new Discord.RichEmbed()
+         .setColor("RANDOM")
+         .addField('❤سيرفر الدعم الفني', `  https://discord.gg/9JmX2K  `)
+     message.author.send({embed});
+   
+    }
+   });
+
+
+
+
+
+   client.on('message', message => {
+    if (message.content.startsWith("g!bc-bot")) {
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('``INFO Broadcast Bot`` ')
+            .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('``servers``', [client.guilds.size], true)
+            .addField('``channels``' , `[ ${client.channels.size} ]` , true)
+            .addField('``Users``' ,`[ ${client.users.size} ]` , true)
+            .addField('``My Name``' , `[ ${client.user.tag} ]` , true)
+            .addField('``My ID``' , `[ ${client.user.id} ]` , true)
+                  .addField('``My Prefix``' , `[-]` , true)
+                  .addField('``My Language``' , `[ Java Script ]` , true)
+                    })
+}
+});
+
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag} !`);
+          client.user.setActivity("g!help | g!inv",{type: 'Mahmoud-QuaStyle'});
+  
+  });
+
+
+
+
+
+
+const sWlc = {}
+const premium = ['389090790984515594']
+client.on('message', message => {
+var prefix = "!";
+if(message.channel.type === "dm") return;
+if(message.author.bot) return;
+  if(!sWlc[message.guild.id]) sWlc[message.guild.id] = {
+    channel: "welcome"
+}
+const channel = sWlc[message.guild.id].channel
+  if (message.content.startsWith(prefix + "setwelcomer")) {
+    if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
+    let newChannel = message.content.split(' ').slice(1).join(" ")
+    if(!newChannel) return message.reply(`**${prefix}setwelcomer <channel name>**`)
+    sWlc[message.guild.id].channel = newChannel
+    message.channel.send(`**${message.guild.name}'s channel has been changed to ${newChannel}**`);
+  }
+});
+ 
+
+
+client.on('message', DEL => {//By Mahmoud-QuaStyle
+if(DEL.content === 'g!bot-owner') {
+var embed = new Discord.RichEmbed()
+.addField('صاْنع البوت : @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661  ', `${client.user.tag}`, true)
+.setColor("RANDOM")
+DEL.channel.sendEmbed(embed);
+
+}
+});
+
+
+
+
+
+
+client.on("message", message => {
+    if (message.content === "g!help") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setDescription(`**❓❔❗️❕وش مميزات البوت❗️❕❓❔**
+        **__1-__:books:🧐 GAMING BOT 🧐:books:
+         __2-__:white_check_mark: :part_alternation_mark:️ استخدامه جدا سهل:part_alternation_mark:️:white_check_mark: 
+         __3-__:gear:️صيانه كل يوم:gear:️
+         __4-__:money_with_wings: مجاني :money_with_wings:**`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
 
 
 
