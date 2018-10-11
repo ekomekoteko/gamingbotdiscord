@@ -2073,6 +2073,66 @@ if(msg.content.startsWith ('g!server')) {
 ////////////////////
 
 
+client.on('message', async message => {
+	if (message.content === 'g!help-admin') {
+		message.react('👑');
+	}
+	else if (message.content === '!react-custom') {
+		message.react('396548322053062656');
+	}
+	else if (message.content === '!fruits') {
+		message.react('🍎')
+			.then(() => message.react('🍊'))
+			.then(() => message.react('🍇'))
+			.catch(() => console.error('One of the emojis failed to react.'));
+	}
+});
+
+client.on('message', async message => {
+	if (message.content === 'g!help-music') {
+		message.react('🎶');
+	}
+	else if (message.content === '!react-custom') {
+		message.react('396548322053062656');
+	}
+	else if (message.content === '!fruits') {
+		message.react('🍎')
+			.then(() => message.react('🍊'))
+			.then(() => message.react('🍇'))
+			.catch(() => console.error('One of the emojis failed to react.'));
+	}
+});
+
+client.on('message', async message => {
+	if (message.content === 'g!help-bc') {
+		message.react('⌲');
+	}
+	else if (message.content === '!react-custom') {
+		message.react('396548322053062656');
+	}
+	else if (message.content === '!fruits') {
+		message.react('😊')
+			.then(() => message.react('🍊'))
+			.then(() => message.react('🍇'))
+			.catch(() => console.error('One of the emojis failed to react.'));
+	}
+});
+
+
+client.on('message', async message => {
+	if (message.content === 'g!help-public') {
+		message.react('😊');
+	}
+	else if (message.content === '!react-custom') {
+		message.react('396548322053062656');
+	}
+	else if (message.content === '!fruits') {
+		message.react('🍎')
+			.then(() => message.react('🍊'))
+			.then(() => message.react('🍇'))
+			.catch(() => console.error('One of the emojis failed to react.'));
+	}
+});
 
 
 
