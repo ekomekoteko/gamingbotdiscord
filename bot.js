@@ -30,4 +30,4 @@ client.on("guildMemberAdd", function(member) {
 
 
 
-client.login('BOT_TOKEN');
+client.login(process.env.BOT_TOKEN);
