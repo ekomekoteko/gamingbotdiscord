@@ -2508,7 +2508,14 @@ message.channel.send(id)
 
 
 
-
+client.on('message',function(message) {
+    if(!message.channel.guild) return undefined;
+    const swearWords = ["ككس","اسكت","حيوان","كلب"];
+    if (swearWords.some(word => message.content.includes(word)) ) {
+      message.delete()
+      message.reply("**ممنوع السب**"); 
+    }
+  });
 
 
 
