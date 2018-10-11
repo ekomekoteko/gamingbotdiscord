@@ -1439,12 +1439,24 @@ if (message.content.startsWith("g!cv")) {
     
 }
 });
-////////////////////////////////////////////////////////////////////////////////////////////////////////Dt
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+//////////////////////////////////////////////////////////////////////////////// Inv bot 
+ client.on('message' , message => {
 
-
+    if (message.content === "g!inv") {
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**')
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)
+.setTitle('Click Here TO add BOT ')
+.setURL('https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot')
+  message.channel.sendEmbed(embed);
+   }
+}); 
+///////////////////////////////////////////////////
 
 
 
