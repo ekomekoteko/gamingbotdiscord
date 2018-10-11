@@ -1451,7 +1451,7 @@ if (message.content.startsWith("g!cv")) {
      const embed = new Discord.RichEmbed()
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)
-.setTitle('Click Here TO add BOT ')
+.setTitle('Click Here to add Bot ')
 .setURL('https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot')
   message.channel.sendEmbed(embed);
    }
