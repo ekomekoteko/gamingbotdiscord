@@ -814,7 +814,7 @@ client.on('message', message => {
        .setTitle('Broadcast')
        .addField(':tulip: سيرفر', message.guild.name)
        .addField(':crown: المرسل', message.author.username)
-       .addField(:arrow_forward: 'الرسالة', args)
+       .addField(':arrow_forward: الرسالة', args)
        .setThumbnail(message.author.avatarURL)
        .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
