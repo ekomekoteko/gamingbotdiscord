@@ -784,7 +784,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////BC
 client.on('message', message => {
 	    var prefix = "g!";
               if(!message.channel.guild) return;
@@ -812,9 +812,9 @@ client.on('message', message => {
        Discord.RichEmbed()
        .setColor('RANDOM')
        .setTitle('Broadcast')
-       .addField('سيرفر', message.guild.name)
-       .addField('المرسل', message.author.username)
-       .addField('الرسالة', args)
+       .addField(':tulip: سيرفر', message.guild.name)
+       .addField(':crown: المرسل', message.author.username)
+       .addField(:arrow_forward: 'الرسالة', args)
        .setThumbnail(message.author.avatarURL)
        .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
