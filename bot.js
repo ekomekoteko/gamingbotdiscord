@@ -2781,6 +2781,24 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
+        if (message.content.startsWith(prefix + "g!delete world")) {
+            let alpha = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setImage(`https://cdn.discordapp.com/attachments/493497637358665728/500005330605047819/deleted.png`)
+          message.channel.sendEmbed(alpha);
+        }
+    });
+
+
+    client.on('message', message => {
+        if (message.content.startsWith(prefix + "g!blow world")) {
+            let alpha = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setImage(`https://i.imgur.com/C1FIPdf.gif`)
+          message.channel.sendEmbed(alpha);
+        }
+    });
 
 
 
