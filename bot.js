@@ -970,17 +970,7 @@ return;
 
 ///////////////////////Code law 7ad tl3 men server lma ygy tany nfs el rank el kan ma3h yrg3lo tany 
 
-var ALPHACODES = {};
-client.on('guildMemberRemove', member => {
-ALPHACODES[member.id] = {roles: member.roles.array()};
-});
-client.on('guildMemberAdd', member => {
-if(!ALPHACODES[member.user.id]) return;
-console.log(ALPHACODES[member.user.id].roles.length);
-for(let i = 0; i < ALPHACODES[member.user.id].roles.length + 1; i++) {
-member.addRole(ALPHACODES[member.user.id].roles.shift());
-}
-});
+
 
 
 
@@ -2256,17 +2246,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 
 ///////////////////////////////////////////////
 /////////////welcome new
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setThumbnail(member.user.avatarURL)
-  .addField("***شكرا الانضمامك الينا***" ,member.user.username )
-    .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
-    .setColor('RANDOM')
-    .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
-var channel =member.guild.channels.find('name', '个welcome个')
-if (!channel) return;
-channel.send({embed : embed});
-});
+
 ///////////////////bot el fe serrver eh 
 
 client.on('message', message => {
