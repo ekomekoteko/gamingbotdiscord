@@ -2117,11 +2117,7 @@ client.on('guildMemberAdd', async member => {
 	channel.send(`Welcome to the server, ${member}!`, attachment);
 });
 
-client.on('message', async message => {
-	if (message.content === '!join') {
-		client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
-	}
-});
+
 
 
 
