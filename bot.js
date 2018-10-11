@@ -968,14 +968,91 @@ return;
 
 });
 
-////////////////-----------------------/////asyb el BOT FE ROOM Voic
+///////////////////////Code law 7ad tl3 men server lma ygy tany nfs el rank el kan ma3h yrg3lo tany 
 
-client.on('message', message =>{
-  if(message.content.startsWith('g!join')){
-    const voiceChannel = message.member.voiceChannel
-    voiceChannel.join();
-    message.channel.send("تم الأتصال بالروم الصوتي")
-}})
+var ALPHACODES = {};
+client.on('guildMemberRemove', member => {
+ALPHACODES[member.id] = {roles: member.roles.array()};
+});
+client.on('guildMemberAdd', member => {
+if(!ALPHACODES[member.user.id]) return;
+console.log(ALPHACODES[member.user.id].roles.length);
+for(let i = 0; i < ALPHACODES[member.user.id].roles.length + 1; i++) {
+member.addRole(ALPHACODES[member.user.id].roles.shift());
+}
+});
+
+
+
+////////////////-----------------------/////Send
+
+client.on('message' , message => {
+  var prefix = "g!";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "send")) {
+    let args = message.content.split(" ").slice(1);
+
+
+    let suggestmessage = args.join(" ").slice(22);
+    let suggestchannel = message.mentions.channels.first();
+
+    if (!suggestchannel) {
+        return message.reply("Please Mention the channel!")
+    }
+
+    if (!suggestmessage) {
+        return message.reply("Plase Give Text To send Channel!")
+    
+         
+    }
+     message.delete();
+suggestchannel.send("@everyone  `||` @here ");
+    let embed = new Discord.RichEmbed()
+        .addField("**", `${suggestmessage}`)
+        .setFooter(`by ${message.author.tag}`)
+        .setTimestamp()
+    suggestchannel.send({
+        embed
+    }).then(msg => {
+        msg.react("✅").then(r => msg.react("❎"))
+    });
+
+
+    message.reply(`Your message is sended.`).then(msg => msg.delete(1000));
+    return;
+}
+});
+/////////////////////////////////////////////////////////////////////////-----//////////////MC  Umc
+
+
+client.on('message', message => {
+
+    if (message.content === "g!mc") {
+                        if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
+
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+
+           }).then(() => {
+               message.reply("تم تقفيل الشات ✅ ")
+           });
+             }
+if (message.content === "g!umc") {
+    if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
+
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: true
+
+           }).then(() => {
+               message.reply("تم فتح الشات✅")
+           });
+             }
+
+
+
+});
 
 
 
