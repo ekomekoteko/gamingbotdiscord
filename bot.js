@@ -81,6 +81,7 @@ client.on("message", message => {
 :ok_hand: g!BlackSquad|Create Rank <BlackSquad> ~ اعمل رتبة بي اسم BlackSquad
 :ok_hand: g!PUBG|Create Rank <PUBG> ~ اعمل رتبة بي اسم PUBG 
  وي بعديها اكتب اي امر من دول 
+وي اليكتب امر من دول يحصل علي الرتلقائي
 :boom: ___Ranks In GAME'S___:boom: 
 
 to Add Rank:  CrossFire  
