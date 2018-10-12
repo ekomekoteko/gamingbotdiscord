@@ -3171,7 +3171,15 @@ var cats = ["https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg","http://www.d
 message.channel.sendEmbed(cat);
     }
 });
+//////////////////////////////////
+client.on('message', message => {
+    if(message.content.startsWith('g!sa')) {
+    let args = message.content.split(' ').slice(1);
+    let ar = args.join(' ');
 
+    message.channel.send(ar,{tts:true});
+}
+});
 
 
 client.login(process.env.BOT_TOKEN);
