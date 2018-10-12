@@ -3248,7 +3248,7 @@ const botToken = "process.env.BOT_TOKEN"; /*You'll have to set this yourself; re
                      here https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token*/
  
 //Load up the bot... // AlphaCodes
-bot.login(botToken);
+bot.login(process.env.BOT_TOKEN);
  
 //If there isn't a reaction for every role, scold the user! // AlphaCodes
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
