@@ -170,6 +170,7 @@ client.on('message', msg => {
       .setColor("#000000")
       .setDescription(`
 	      اوامر ادارة السيرفر
+***:anger: - سوي روم اسمه 个welcome个 عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
 :ok_hand:   g!move @user ~  لسحب الشخص الى روومك  
 :ok_hand:  g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
 :ok_hand:  g!role @user <rank> ~ لأعطاء رتبة لعضو معين
