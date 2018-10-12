@@ -3137,7 +3137,6 @@ reaction2.on("collect", r => {
 
 
 ////////////////Ping
-const Discord = require('discord.js')
 
 exports.run = async (client, message, args, color) => {
 
