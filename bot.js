@@ -3341,12 +3341,12 @@ var prefix = "g!";//GAMING
 if(message.content.startsWith(prefix + 'channel')) {//Alpha Codes
     let channel = message.channel//GAMING
     var embed = new Discord.RichEmbed()//GAMING
-      .setTitle("Channel Info:small_orange_diamond: ")//GAMING
+      .setTitle(":low_brightness:Channel Info:small_orange_diamond: ")//GAMING
       .setColor("#9932CC")//GAMING
-      .setDescription(`Info about <#${channel.id}>\nChannel ID: ${channel.id}`)//Alpha Codes
-      .addField("Created At :small_red_triangle_down: ", `${channel.createdAt}`)//GAMING
-      .addField("Channel Type :flag_white:", `${channel.type}`)//GAMING
-      .addField("Extra Information :100: ", `Channel is NSFW => ${channel.nsfw}\nChannel Topic=> ${channel.topic}\nChannel Parent => ${channel.parent}\nChannel Position => ${channel.position}`)
+      .setDescription(`:low_brightness:Info about <#${channel.id}>\nChannel ID::low_brightness: ${channel.id}`)//Alpha Codes
+      .addField(":low_brightness:Created At :small_red_triangle_down: ", `${channel.createdAt}`)//GAMING
+      .addField(":low_brightness:Channel Type :flag_white:", `${channel.type}`)//GAMING
+      .addField(":low_brightness:Extra Information :100: ", `Channel is NSFW => ${channel.nsfw}:round_pushpin: \nChannel Topic=> ${channel.topic} :hearts:\nChannel Parent => ${channel.parent} :orange_book: \nChannel Position =>   ${channel.position} :black_heart: `)
  
      message.channel.send({ embed: embed });//GAMING
   }//GAMING
