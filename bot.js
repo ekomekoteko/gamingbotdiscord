@@ -198,28 +198,6 @@ client.on('message', msg => {
 :ok_hand: g!muteall ~ لاعطاء ميوت لكل السرفر
 :ok_hand: g!deafen ~ لاعطاء دفين
 :ok_hand: g!undeafen ~ فك الدفين
-:ok_hand: g!CrossFire|Create Rank <CrossFire> ~ اعمل رتبة بي اسم CrossFire 
-:ok_hand: g!Fortnite|Create Rank <Fortnite> ~ اعمل رتبة بي اسم Fortnite
-:ok_hand: g!Minecraft|Create Rank <Minecraft> ~ اعمل رتبة بي اسم Minecraft
-:ok_hand: g!BlackSquad|Create Rank <BlackSquad> ~ اعمل رتبة بي اسم BlackSquad
-:ok_hand: g!PUBG|Create Rank <PUBG> ~ اعمل رتبة بي اسم PUBG 
-:boom: ***___Ranks In GAME'S___***:boom: 
-
-***to Add Rank:  CrossFire  
-Type: g!CrossFire
---------------------------
-to Add Rank: PUBG 
-Type: g!PUBG
---------------------------
-to Add Rank:  Fortnite 
-Type:: g!Fortniye
---------------------------
-to Add Rank: Minecraft  
-Type: g!Minecraft
---------------------------
-to Add Rank: BlackSquad
-Type:  g!BlackSquad
---------------------------***
 `)
    message.author.sendEmbed(embed)
     
