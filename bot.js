@@ -3168,7 +3168,7 @@ const yourID = "411137717884289024"; //Instructions on how to get this: https://
 const setupCMD = "g!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const roles = ["Hacker", "Artist", "Public Relations", "Intern"]; Member
-const reactions = ["ًں’»", "ًں–Œ", "ًںکƒ", "ًں†•"]; Reaction Here | الريأكشن هنا
+const reactions = ["ًں’»", "ًں–Œ", "ًںکƒ", "ًں†•"];  
 const botToken = "التوكين"; /*You'll have to set this yourself; read more // AlphaCodes غير كلمة التوكين وحط التوكين حقك
                      here https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token*/
  
