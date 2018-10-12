@@ -3211,9 +3211,9 @@ member.addRole(member.guild.roles.find('name', 'Member'));
  
 client.on('message', message => {                      
     if(!message.channel.guild) return;
-       if(message.content.startsWith(prefix + 'g!active')) {       
+       if(message.content.startsWith(prefix + 'active')) {       
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-       message.channel.sendMessage(`اضغط على الصح عشان تتفعل`).then(msg => {
+       message.channel.sendMessage(` اضغط على الصح عشان تتفعل وتاخذ الرتبة الوان تقائي`).then(msg => {
        
        
         msg.react('✅')
@@ -3227,7 +3227,7 @@ client.on('message', message => {
      
                                                        
                                active.on("collect", r => {
-                                   message.member.addRole(message.guild.roles.find("name", "Member"));
+                                   message.member.addRole(message.guild.roles.find("name", "disco"));
                                    message.member.removeRole(message.guild.roles.find("name", "Member"));
                                    msg.delete();
                                    message.channel.send(`**تم تفعيلك استمتع.**`).then(m => m.delete(1000));  
