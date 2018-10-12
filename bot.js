@@ -1475,7 +1475,7 @@ if (message.content.startsWith("g!cv")) {
 ///////////////////////////////////////////////////7alet el BOT
 
 const adminprefix = "g!";
-const devs = ['411137717884289024','470602554611597315'];
+const devs = ['411137717884289024','470602554611597315','298047001239486466'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
