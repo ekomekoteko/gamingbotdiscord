@@ -3326,7 +3326,7 @@ client.on('message', message => {
        .setFooter(message.author.tag, message.author.avatarURL) // Alpha Codes Server.
  
        message.channel.send(memberInfo);
-   } // Alpha Codes Server.
+   } // GAMING Server.
 });
 function Days(date) {
    let now = new Date(); // Alpha Codes Server.
@@ -3334,7 +3334,24 @@ function Days(date) {
    let days = Math.floor(diff / 86400000);
    return days + (days == 1 ? " day" : " days") + " ago"; // Alpha Codes Server.
 }
-
+//////////GAMING
+client.on('message', message => {//GAMING
+    if(!message.channel.guild) return;//GAMING
+var prefix = "g!";//GAMING
+if(message.content.startsWith(prefix + 'channel')) {//Alpha Codes
+    let channel = message.channel//GAMING
+    var embed = new Discord.RichEmbed()//GAMING
+      .setTitle("Channel Info")//GAMING
+      .setColor("#9932CC")//GAMING
+      .setDescription(`Info about <#${channel.id}>\nChannel ID: ${channel.id}`)//Alpha Codes
+      .addField("Created At", `${channel.createdAt}`)//GAMING
+      .addField("Channel Type", `${channel.type}`)//GAMING
+      .addField("Extra Information", `Channel is NSFW => ${channel.nsfw}\nChannel Topic=> ${channel.topic}\nChannel Parent => ${channel.parent}\nChannel Position => ${channel.position}`)
+ 
+     message.channel.send({ embed: embed });//GAMING
+  }//GAMING
+ 
+    });//GAMING
 
 
 
