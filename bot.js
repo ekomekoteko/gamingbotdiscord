@@ -139,7 +139,7 @@ ${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudsp
 
 ${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 
-${prefix}***help-rank** →→ ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+${prefix}***help-Rank** →→ ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 	  `)
    message.channel.sendEmbed(embed)
     
