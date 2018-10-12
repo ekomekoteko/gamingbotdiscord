@@ -2899,15 +2899,15 @@ client.on('message', message => {
    
                   var Date15= new Discord.RichEmbed()
                   .setThumbnail("https://i.imgur.com/ib3n4Hq.png") 
-                  .setTitle( "「التاريخ  والوقت」")
+                  .setTitle( ":clock: 「التاريخ  والوقت」:clock: ")
                   .setColor('RANDOM')
                   .setFooter(message.author.username, message.author.avatarURL)
                   .addField(' :flag_sd: الامارات',
-                  "「"+ hours + ":" + minutes +":"+ seconds + "」")
+                  ":round_pushpin: 「"+ hours + ":" + minutes +":"+ seconds + "」:round_pushpin: ")
                    .addField(' :flag_sa: مكه المكرمه',
-                  "「"+ hours2 + ":" + minutes +":"+ seconds  + "」") 
+                  ":round_pushpin: 「"+ hours2 + ":" + minutes +":"+ seconds  + "」:round_pushpin: ") 
                   .addField(' :flag_ye: مصر',
-                  "「"+ hours3 + ":" + minutes +":"+ seconds  + "」") 
+                  ":round_pushpin: 「"+ hours3 + ":" + minutes +":"+ seconds  + "」:round_pushpin: ") 
                    
                   .addField('Date',
                   "「"+ Day + "-" + Month + "-" + Year +  "」")
