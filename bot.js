@@ -836,10 +836,10 @@ client.on('message', message => {
   var bc = new
        Discord.RichEmbed()
        .setColor('RANDOM')
-       .setTitle('Broadcast')
-       .addField(':tulip: سيرفر', message.guild.name)
-       .addField(':crown: المرسل', message.author.username)
-       .addField(':arrow_forward: الرسالة', args)
+       .setTitle(':anger_right: Broadcast :anger_right: ')
+       .addField(':tulip: Server', message.guild.name)
+       .addField(':beginner: Sender', message.author.username)
+       .addField(':scroll: Massage', args)
        .setThumbnail(message.author.avatarURL)
        .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
