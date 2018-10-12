@@ -3345,7 +3345,7 @@ if(message.content.startsWith(prefix + 'channel')) {//Alpha Codes
       .setColor("#9932CC")//GAMING
       .setDescription(`:low_brightness:Info about <#${channel.id}>\n:low_brightness:Channel ID: ${channel.id}:pen_ballpoint: `)//Alpha Codes
       .addField(":low_brightness:Created At :small_red_triangle_down: ",  `:low_brightness: ${channel.createdAt}:clock: `)//GAMING
-      .addField(":low_brightness:Channel Type :flag_white:", `:low_brightness: ${channel.type}:low_brightness:`)//GAMING
+      .addField(":low_brightness:Channel Type :flag_white:", `:low_brightness: ${channel.type}:jack_o_lantern: `)//GAMING
       .addField(":low_brightness:Extra Information :100: ", `:low_brightness:Channel is NSFW => ${channel.nsfw}:round_pushpin: \n:low_brightness:Channel Topic=> ${channel.topic} \n:low_brightness: Channel Parent => ${channel.parent} :orange_book: \n:low_brightness: Channel Position =>   ${channel.position} :black_heart: `)
  
      message.channel.send({ embed: embed });//GAMING
