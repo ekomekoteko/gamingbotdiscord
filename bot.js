@@ -3162,7 +3162,7 @@ exports.help = {
 
 ////////////////
 //Settings! // AlphaCodes
-const yourID = ""; //Instructions on how to get this: https://redd.it/40zgse // AlphaCodes
+const yourID = "411137717884289024"; //Instructions on how to get this: https://redd.it/40zgse // AlphaCodes
 const setupCMD = "g!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const roles = ["Member", "disco", "Public Relations", "Intern"]; 
