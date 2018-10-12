@@ -68,6 +68,41 @@ client.on("message", message => {
 
 
 ////2 
+client.on("message", message => {
+    if (message.content === "g!help-Rank") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setDescription(`**❓❔❗️❕Add-Rank❗️❕❓❔**
+        **:ok_hand: g!CrossFire|Create Rank <CrossFire> ~ اعمل رتبة بي اسم CrossFire 
+:ok_hand: g!Fortnite|Create Rank <Fortnite> ~ اعمل رتبة بي اسم Fortnite
+:ok_hand: g!Minecraft|Create Rank <Minecraft> ~ اعمل رتبة بي اسم Minecraft
+:ok_hand: g!BlackSquad|Create Rank <BlackSquad> ~ اعمل رتبة بي اسم BlackSquad
+:ok_hand: g!PUBG|Create Rank <PUBG> ~ اعمل رتبة بي اسم PUBG 
+ وي بعديها اكتب اي امر من دول 
+:boom: ___Ranks In GAME'S___:boom: 
+
+to Add Rank:  CrossFire  
+Type: g!CrossFire
+--------------------------
+to Add Rank: PUBG 
+Type: g!PUBG
+--------------------------
+to Add Rank:  Fortnite 
+Type:: g!Fortnite
+--------------------------
+to Add Rank: Minecraft  
+Type: g!Minecraft
+--------------------------
+to Add Rank: BlackSquad
+Type:  g!BlackSquad
+--------------------------
+     **`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
+
 
 
 
@@ -103,6 +138,8 @@ ${prefix}***help-colors*** →→ ***『اوامر اللوان』*** :traffic_l
 ${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudspeaker:
 
 ${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
+
+${prefix}***help-rank** →→ ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 	  `)
    message.channel.sendEmbed(embed)
     
