@@ -69,9 +69,11 @@ client.on("message", message => {
 
 ////2 
 client.on("message", message => {
-    if (message.content === "g!help-Rank") {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#00FF00")
+	var prefix = "g!";
+ if (message.content === "g!help-Rank") {
+	 message.channel.send('');
+  const embed = new Discord.RichEmbed() 
+      .setColor("#000000")
          .setDescription(`**❓❔❗️❕Add-Rank❗️❕❓❔**
         **:ok_hand: g!CrossFire|Create Rank <CrossFire> ~ اعمل رتبة بي اسم CrossFire 
 :ok_hand: g!Fortnite|Create Rank <Fortnite> ~ اعمل رتبة بي اسم Fortnite
@@ -101,7 +103,10 @@ Type:  g!BlackSquad
    
    }
    });
-
+client.on('message', msg => {
+    if(msg.content === 'g!help-Rank')
+    msg.reply('Check Your DM :white_check_mark:')
+  }); 
 
 
 
@@ -139,7 +144,7 @@ ${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudsp
 
 ${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 
-${prefix}***help-Rank** →→ ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 	  `)
    message.channel.sendEmbed(embed)
     
