@@ -3371,11 +3371,11 @@ client.on('message', message => {
     if(!message.channel.guild) return;
        if(message.content.startsWith(prefix + 'CrossFire')) {       
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-       message.channel.sendMessage(` اضغط على الصح عشان تتفعل وتاخذ الرتبة الوان تقائي`).then(msg => {
+       message.channel.sendMessage(` اضغط على :Crossfire: `).then(msg => {
        
        
-        msg.react('✅')
-       .then(() => msg.react('✅'))
+        msg.react(':Crossfire: ')
+       .then(() => msg.react(':Crossfire: '))
      
      
  
