@@ -837,9 +837,9 @@ client.on('message', message => {
        Discord.RichEmbed()
        .setColor('RANDOM')
        .setTitle(':anger_right: Broadcast :anger_right: ')
-       .addField(':tulip: Server', message.guild.name)
-       .addField(':beginner: Sender', message.author.username)
-       .addField(':scroll: Massage', args)
+       .addField(':rose: Server', message.guild.name)
+       .addField(':speaking_head: Sender', message.author.username)
+       .addField(':love_letter:  Message', args)
        .setThumbnail(message.author.avatarURL)
        .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
