@@ -2628,7 +2628,7 @@ client.on('guildMemberAdd', member => {
                       
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**SERVER NAME **")
+     .setFooter("**Server**")
         .setTimestamp()
     
       channel.sendEmbed(embed);
@@ -2648,7 +2648,17 @@ client.on('guildMemberAdd', member=> {
 
     client.channels.get("487407595590516747").send(`***__ https://cdn.pg.sa/2PgnoANxa9.jpg |WELCOME| https://cdn.pg.sa/4m5reJrY2U.jpg  ${member}___***`);
     });
-
+////////////WELCOME 2
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === '个welcome个');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲server** 🎉♥:hugging:  !!
+   !!, ${member}`);
+});
 
 ///////////////////////////////////////2y 7ad y3mel 2mr el bot fe room 8yr bot y5od muted 
 
@@ -3276,6 +3286,17 @@ client.on("guildMemberAdd", member => {
 
 ///////////////////////////////////////// 
 
+client.on('message', message => {
+              if (!message.channel.guild) return;
+      if(message.content =='g!count')
+      var IzRo = new Discord.RichEmbed()
+      .setThumbnail(message.author.avatarURL)
+      .setFooter(message.author.username, message.author.avatarURL)
+      .setTitle(':tulip:| Members info')
+      .addBlankField(true)
+      .addField('عدد اعضاء السيرفر',`${message.guild.memberCount}`)
+      message.channel.send(IzRo);
+    });
 
 
 
