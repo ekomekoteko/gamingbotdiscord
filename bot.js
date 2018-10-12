@@ -3203,7 +3203,40 @@ message.channel.sendEmbed(cat);
 });
 
 
-
+////////////////
+ client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Member'));  هنا الرتبه الي اول ما يدخل السيرفر تكون معه
+});
+ 
+ 
+client.on('message', message => {                      
+    if(!message.channel.guild) return;
+       if(message.content.startsWith(prefix + 'g!active')) {         هنا تكتب الأمر الي تبيه يكتبه عشان ياخذ الرتبه
+        let modlog = client.channels.find('name', 'spam-☺');  rr هنا تحط اسم الروم الي تبيه يكتب فيه الأمر حق الرتبه
+       if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+       message.channel.sendMessage(`اضغط على الصح عشان تتفعل`).then(msg => {
+       
+       
+        msg.react('✅')
+       .then(() => msg.react('✅'))
+     
+     
+ 
+       let activeFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+     
+       let active = msg.createReactionCollector(activeFilter, { time: 15000 });
+     
+                                                       
+                               active.on("collect", r => {
+                                   message.member.addRole(message.guild.roles.find("name", "Member"));   هنا اسم الرتبه الي تبي الشخص ياخذها
+                                   message.member.removeRole(message.guild.roles.find("name", "Member")); هنا الرتبه الي اول ما تدخل السيرفر تكون معك
+                                   msg.delete();
+                                   message.channel.send(`**تم تفعيلك استمتع.**`).then(m => m.delete(1000));   هنا رسالة التفعيل تقدر تغيرها تخليها تم اعطائك رتبة اللعبة
+     
+                                   })
+                                   })
+                                   }
+                                   });
 
 
 
