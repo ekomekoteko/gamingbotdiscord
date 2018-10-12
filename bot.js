@@ -3344,9 +3344,9 @@ if(message.content.startsWith(prefix + 'channel')) {//Alpha Codes
       .setTitle("Channel Info:small_orange_diamond: ")//GAMING
       .setColor("#9932CC")//GAMING
       .setDescription(`Info about <#${channel.id}>\nChannel ID: ${channel.id}`)//Alpha Codes
-      .addField("Created At:small_red_triangle_down: ", `${channel.createdAt}`)//GAMING
-      .addField("Channel Type:flag_white:", `${channel.type}`)//GAMING
-      .addField("Extra Information:100: ", `Channel is NSFW => ${channel.nsfw}\nChannel Topic=> ${channel.topic}\nChannel Parent => ${channel.parent}\nChannel Position => ${channel.position}`)
+      .addField("Created At :small_red_triangle_down: ", `${channel.createdAt}`)//GAMING
+      .addField("Channel Type :flag_white:", `${channel.type}`)//GAMING
+      .addField("Extra Information :100: ", `Channel is NSFW => ${channel.nsfw}\nChannel Topic=> ${channel.topic}\nChannel Parent => ${channel.parent}\nChannel Position => ${channel.position}`)
  
      message.channel.send({ embed: embed });//GAMING
   }//GAMING
