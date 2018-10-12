@@ -3162,7 +3162,21 @@ exports.help = {
 
 ////////////////
 
-  
+  super.on('message', sap =>{//By Mahmoud-QuaStyle//
+  var prefix = "YOUR PREFIX HERE" //By Mahmoud-QuaStyle//
+      if(sap.content.startsWith(prefix)){//By @Mahmoud-QuaStyle//
+          if(command == "afk"){//By @Mahmoud-QuaStyle//
+      if(sap.guild.member(super.author).hasPermission("MANAGE_NICKNAME")) return sap.reply(`**I D'ont Have Permission "MANAGE_NICKNAME"`);//By @$~Super_Man~$//
+      if(sap.mebmer(sap.author).hasPermission("CHANGE_NICKNAME")) return sap.reply(`**You D'ont Have Permission "CHANGE_NICKNAME"**`);//By @$~Super_Man~$//
+              if(sap.member.setNickname(`[AFK] ${sap.author.username}`)) sap.reply(`**You Are Now In AFK Mode, Aply "s!back" For Join To Online Mod**`);//By @$~Super_Man~$//
+          }//ByMahmoud-QuaStyle//
+          if(command == "back"){//Mahmoud-QuaStyle//
+      if(sap.guild.member(super.author).hasPermission("MANAGE_NICKNAME")) return sap.reply(`**I D'ont Have Permission "MANAGE_NICKNAME"`);//By @$~Super_Man~$//
+      if(sap.guild.mebmer(sap.author).hasPermission("CHANGE_NICKNAME")) return sap.reply(`**You D'ont Have Permission "CHANGE_NICKNAME"**`);//By @$~Super_Man~$//
+              if(sap.member.setNickname(``)) sap.reply(`You Are Now In Online Mod`);//By @$~Super_Man~$//
+      }//ByMahmoud-QuaStyle//
+    }//By Mahmoud-QuaStyle//
+});//By Mahmoud-QuaStyle//
 
 
 
