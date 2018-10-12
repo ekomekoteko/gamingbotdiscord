@@ -3093,6 +3093,52 @@ client.on('message', message => {
 
 
 
+//////////////////REPORT
+case "report":
+    {
+        if(message.member.hasPermission('ADMINISTRATOR')) {
+            return message.channel.send('🔨 - You are an admin.');
+        };
+
+        let target = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+        let reports = message.guild.channels.find('name' , 'reports');
+        let reason =  arg.slice(1).join(' ');
+
+        if(!target) return message.channel.send('`Please specify a member to report.`');
+        if(!reason) return message.channel.send('`Please specify a reason to report.`');
+        if(!reports) return message.channel.send('`Please create a channel named "reports" to log the reports.`');
+
+        let reportembed = new Discord.RichEmbed()
+            .setThumbnail(target.user.avatarURL)
+            .setAuthor('Report', 'https://cdn.discordapp.com/emojis/465245981613621259.png?v=1')
+            .setDescription(`New report by ${message.author.username}`)
+            .addField('⚠ - Reported Member', `${target.user.tag}\n(${target.user.id})`, true)
+            .addField('⚠ - Reported by', `${message.author.tag}\n(${message.author.id})`, true)
+            .addField('⚙ - Channel', `${message.channel}`)
+            .addField('🔨 - Reason', `${reason}`)
+            .setColor('0xfc4f35')
+            .setTimestamp();
+        reports.send(reportembed);
+
+        message.channel.send(`**${target}** was reported by **${message.author}** [ ${reason} ]`).then(message => message.delete(5000));
+    }
+    break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 client.login(process.env.BOT_TOKEN);
 
