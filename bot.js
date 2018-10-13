@@ -3473,7 +3473,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "CrossFire"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
@@ -3544,7 +3544,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "PUBG"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
@@ -3579,7 +3579,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "Minecraft"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
@@ -3614,7 +3614,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "Fortnite"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
@@ -3649,7 +3649,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "Leagueoflegends"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
@@ -3682,7 +3682,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "Brawlhalla"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
