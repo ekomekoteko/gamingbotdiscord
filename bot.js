@@ -3706,10 +3706,25 @@ var cats = ["https://cdn.pg.sa/kQnLdE3Iqy.jpg","https://cdn.pg.sa/9NVzokjdye.jpg
 message.channel.sendEmbed(cat);
     }
 });
-//////////////////////////BC yrsal rsala le kol el Server el fhom el BOT /
+//////////////////////////Mn4en el BOT yrod 3lek
 
 
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply("»Hello !!");
+    }
+});
 
+
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply("g!help g!inv g!help-Rank IAM ONLINE 24x24  !!");
+    }
+});
 
 
 
