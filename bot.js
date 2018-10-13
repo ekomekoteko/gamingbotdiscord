@@ -742,7 +742,7 @@ client.on('message', message => {
     }
 });
 client.on('message', message => {
-    if (message.content.startsWith("g!invites")) {
+    if (message.content.startsWith("g!Invites")) {
     message.guild.fetchInvites()
     .then(invites => message.channel.send(`:small_orange_diamond:You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites Todây`))
      
