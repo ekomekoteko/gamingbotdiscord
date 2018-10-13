@@ -3589,6 +3589,12 @@ client.on('message', message => {
 //////////////////////////////
 
 
+client.on("ready", () => {
+    client.user.setPresence({ game: { name: `Disco Roles! Created by i am toast#1213` }, type: 0 });
+    console.log("g!help g!inv g!help-Rank");
+});
+
+
 
 
 
