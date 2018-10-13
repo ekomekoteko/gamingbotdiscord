@@ -80,6 +80,8 @@ client.on("message", message => {
 :ok_hand: g!Minecraft|Create Rank <Minecraft> ~ اعمل رتبة بي اسم Minecraft
 :ok_hand: g!BlackSquad|Create Rank <BlackSquad> ~ اعمل رتبة بي اسم BlackSquad
 :ok_hand: g!PUBG|Create Rank <PUBG> ~ اعمل رتبة بي اسم PUBG 
+:ok_hand: g!Brawlhalla| Create Rank <Brawlhalla>  اعمل رتبة بي اسم Brawlhalla
+:ok_hand: g!Leagueoflegends|Create Rank <Leagueoflegends> 
  وي بعديها اكتب اي امر من دول 
 وي اليكتب امر من دول يحصل علي الرتلقائي
 :boom: ___Ranks In GAME'S___:boom: 
@@ -99,6 +101,12 @@ Type: g!Minecraft
 to Add Rank: BlackSquad
 Type:  g!BlackSquad
 --------------------------
+to Add Rank: Leagueoflegends
+Type: g!Leagueoflegends 
+--------------------------
+to Add Rank: Brawlhalla
+Type: g!Brawlhalla
+---------------------------
      **`)
    message.author.sendEmbed(embed)
    
@@ -3616,7 +3624,72 @@ client.on('message', message => {
                                    });
 
 
+////////////////////////////////////////////////////
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Member'));  
+});
+ 
+ 
+client.on('message', message => {                      
+    if(!message.channel.guild) return;
+       if(message.content.startsWith(prefix + 'Leagueoflegends')) {       
+       if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+       message.channel.sendMessage(` Leagueoflegends Click Right to Get a Rank  `).then(msg => {
+       
+       
+        msg.react('✅')
+       .then(() => msg.react('✅'))
+     
+     
+ 
+       let activeFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+     
+       let active = msg.createReactionCollector(activeFilter, { time: 15000 });
+     
+                                                       
+                               active.on("collect", r => {
+                                   message.member.addRole(message.guild.roles.find("name", "Leagueoflegends"));
+                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   msg.delete();
+                                   message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
+                                   })
+                                   })
+                                   }
+                                   });
+///////////////////////////////////////////////////////
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Member'));  
+});
+ 
+ 
+client.on('message', message => {                      
+    if(!message.channel.guild) return;
+       if(message.content.startsWith(prefix + 'Brawlhalla')) {       
+       if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+       message.channel.sendMessage(` Brawlhalla Click Right to Get a Rank  `).then(msg => {
+       
+       
+        msg.react('✅')
+       .then(() => msg.react('✅'))
+     
+     
+ 
+       let activeFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+     
+       let active = msg.createReactionCollector(activeFilter, { time: 15000 });
+     
+                                                       
+                               active.on("collect", r => {
+                                   message.member.addRole(message.guild.roles.find("name", "Brawlhalla"));
+                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   msg.delete();
+                                   message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
+
+                                   })
+                                   })
+                                   }
+                                   });
 
 
 
