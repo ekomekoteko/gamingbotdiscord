@@ -735,7 +735,14 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content.startsWith("g!invite")) {
     message.guild.fetchInvites()
-    .then(invites => message.channel.send(`You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today`))
+     if(!mention) return message.channel.send("You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today"))
+     
+    }
+});
+client.on('message', message => {
+    if (message.content.startsWith("g!invites")) {
+    message.guild.fetchInvites()
+     if(!mention) return message.channel.send("You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today"))
      
     }
 });
