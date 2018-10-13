@@ -3713,7 +3713,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("»Hello !!");
+    message.reply("`»Hello !!`");
     }
 });
 
@@ -3722,9 +3722,18 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("g!help g!inv g!help-Rank IAM ONLINE 24x24  !!");
+    message.reply("`g!help g!inv g!help-Rank IAM ONLINE 24x24  !!`");
     }
 });
+
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   !!```");
+    }
+});
+
 
 
 
