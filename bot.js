@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
- client.user.setActivity("»ONLINE, :100: ",{type: 'watching'})
+ client.user.setActivity("»ONLINE, ♥ ",{type: 'watching'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -3707,17 +3707,6 @@ message.channel.sendEmbed(cat);
     }
 });
 //////////////////////////BC yrsal rsala le kol el Server el fhom el BOT /
-client.on('message', message => {
-    if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('g!all-bc-users')){
-if(!message.author.id === '411137717884289024') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
 
 
 
