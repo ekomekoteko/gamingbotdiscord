@@ -3587,10 +3587,6 @@ client.on('message', message => {
 
 
 //////////////////////////////
-const config = require('./config.json');
-const prefix = config.prefix;
-const allowedUsers = config.allowedUsers;
-const role = config.roleToDisco;
 
 
 
