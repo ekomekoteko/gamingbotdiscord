@@ -3710,7 +3710,7 @@ message.channel.sendEmbed(cat);
 client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('g!bc-users')){
+if (message.content.startsWith('g!all-bc-users')){
 if(!message.author.id === '411137717884289024') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
