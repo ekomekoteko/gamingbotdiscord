@@ -194,7 +194,6 @@ client.on("message", message => {
 :mailbox_with_mail: g!embed<messange> ~ يحط لك الكلام في مربع
 :mailbox_with_mail: g!time ~ لمعرفة الوقت 
 :mailbox_with_mail: g!dt ~ لمعرفة الوقت والتاريخ
-:boom: ***___Ranks In GAME'S___***:boom: 
 `)
    message.author.sendEmbed(embed)
     
