@@ -3706,7 +3706,18 @@ var cats = ["https://cdn.pg.sa/kQnLdE3Iqy.jpg","https://cdn.pg.sa/9NVzokjdye.jpg
 message.channel.sendEmbed(cat);
     }
 });
-
+//////////////////////////BC yrsal rsala le kol el Server el fhom el BOT /
+client.on('message', message => {
+    if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('g!bc-users')){
+if(!message.author.id === '411137717884289024') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
+});
 
 
 
