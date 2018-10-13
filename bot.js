@@ -3622,21 +3622,16 @@ client.on('message', message => {
 
 
 
-//////////////////////////////
-client.on('message', message => {
-    if(!message.channel.guild) return;
-if (message.content.startsWith('g!ping')) {
-if(!message.channel.guild) return;
-var msg = `${Date.now() - message.createdTimestamp}`
-var api = `${Math.round(client.ping)}`
-if (message.author.bot) return;
-let embed = new Discord.RichEmbed()
-.setAuthor(message.author.username,message.author.avatarURL)
-.setColor('RANDOM')
-.addField('**Time Taken:**',msg + " ms :signal_strength: ")
-.addField('**WebSocket:**',api + " ms :signal_strength: ")
-message.channel.send({embed:embed});
-}
+//////////Photoo GAME's////////////////////
+var prefix = "g!";
+var cats = ["https://cdn.pg.sa/kQnLdE3Iqy.jpg","https://cdn.pg.sa/9NVzokjdye.jpg","https://cdn.pg.sa/FYchkbgg02.jpg","https://cdn.pg.sa/oxEQmBE6Pw.jpg","https://cdn.pg.sa/DwYG1JAibu.jpg","https://cdn.pg.sa/3VOKej7Rze.jpg","https://cdn.pg.sa/TdwTWp1qCw.jpg","https://cdn.pg.sa/gzrwDsZ85u.jpg","https://cdn.pg.sa/Ndpob7WF1c.jpg"]
+    client.on('message', message => {
+        var args = message.content.split(" ").slice(1);
+    if(message.content.startsWith(prefix + 'game')) {
+         var cat = new Discord.RichEmbed()
+.setImage(cats[Math.floor(Math.random() * cats.length)])
+message.channel.sendEmbed(cat);
+    }
 });
 
 
