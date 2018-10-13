@@ -2743,7 +2743,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲server 🎉♥:hugging: #invite-rewards  !!
+  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server 🎉♥:hugging:  !!
    !!, ${member}`);
 });
 
