@@ -3730,7 +3730,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   !!```");
+    message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   !! Staff @SُimŹik ,, 4kk ²²#7227  ```");
     }
 });
 
