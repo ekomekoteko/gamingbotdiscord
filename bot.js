@@ -3509,7 +3509,7 @@ client.on('message', message => {
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "BlackSquad"));
-                                   message.member.removeRole(message.guild.roles.find("name", "Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "0"));
                                    msg.delete();
                                    message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
 
