@@ -2662,16 +2662,16 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
-        .addField(':small_orange_diamond:Nâmè  :rose: :  ',`${member}`)
+        .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
         .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
-        .addField(':id: | Usèr :', "**[" + `${member.id}` + "]**" )
-                .addField(' :pushpin: Yóǔ Arě The Mēmbêr Nǖmbèr☆',`${member.guild.memberCount}`)
+        .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
+                .addField(':pushpin: Yóǔ Arě The Mēmbêr Nǖmbèr☆',`:small_orange_diamond: ${member.guild.memberCount}`)
                
                   .addField("•Ŋàme .. ♥",`<@` + `${member.id}` + `>`, true)
                       
                                      .addField(' Sērvěr', `${member.guild.name}`,true)
                                        
-     .setFooter("**♥**")
+     .setFooter("Sērvěr")
         .setTimestamp()
     
       channel.sendEmbed(embed);
