@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
- client.user.setActivity("g!help||g!inv",{type: 'WATCHING'})
+ client.user.setActivity("g!help||g!inv",{type: 'watching'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -3588,11 +3588,6 @@ client.on('message', message => {
 
 //////////////////////////////
 
-
-client.on("ready", () => {
-    client.user.setPresence({ game: { name: `g!help-Rank g!help g!inv iam ༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ` }, type: 0 });
-    console.log("g!help g!inv g!help-Rank");
-});
 
 
 
