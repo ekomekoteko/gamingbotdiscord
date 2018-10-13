@@ -735,12 +735,21 @@ client.on('message', message => {
 
 
 client.on('message', message => {
+    if (message.content.startsWith("g!invite")) {
+    message.guild.fetchInvites()
+    .then(invites => message.channel.send(`:small_orange_diamond:You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites Todây`))
+     
+    }
+});
+client.on('message', message => {
     if (message.content.startsWith("g!invites")) {
     message.guild.fetchInvites()
-        .then(invites => message.channel.send(`:small_orange_diamond: You have${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today '))
-  .catch(console.error);
-}
+    .then(invites => message.channel.send(`:small_orange_diamond:You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites Todây`))
+     
+    }
 });
+
+
 
 //////////////////////////////////////////////////////////--------------////////////////////////BOT 
 client.on('message', message => {
