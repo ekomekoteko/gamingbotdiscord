@@ -732,19 +732,13 @@ client.on('message', message => {
 
 ////////////////////////////////////////////////-------///////////////////////// i n  v i t e s 
 
-client.on('message', message => {
-    if (message.content.startsWith("g!invite")) {
-    message.guild.fetchInvites()
-     if(!mention) return message.channel.send("You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today");
-     
-    }
-});
+
 client.on('message', message => {
     if (message.content.startsWith("g!invites")) {
     message.guild.fetchInvites()
-     if(!mention) return message.channel.send("You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today");
-     
-    }
+        .then(bans => message.channel.send(`You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites,Today `))
+  .catch(console.error);
+}
 });
 
 //////////////////////////////////////////////////////////--------------////////////////////////BOT 
