@@ -3733,7 +3733,17 @@ client.on('message', message=> {
     message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   !! Staff @SُimŹik ,, 4kk ²²#7227  ```");
     }
 });
-
+////////////////////iNVITEby
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const stewart = member.guild.channels.find("name", "个welcome个");
+     stewart.send(`<@${member.user.id}> ***joined***; Invited by<@${inviter.id}>`);
+   //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
+  }); 
+});
 
 
 
