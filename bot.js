@@ -3587,7 +3587,7 @@ client.on('message', message => {
 
 
 //////////////////////////////
-let sWlc = JSON.parse(fs.readFileSync("./setWlc.json", "UTF8"))   
+
 client.on('message', message => {
 if(message.channel.type === "dm") return;
 if(message.author.bot) return;
