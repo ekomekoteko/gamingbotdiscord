@@ -2724,9 +2724,38 @@ client.on('guildMemberAdd', member => {
     
       channel.sendEmbed(embed);
     });
-    
+    ///////////////////////////////////Code e lma 7ad ytl3 men el Discord
+ client.on('guildMemberRemove', member => {
+            var embed = new Discord.RichEmbed()
+            .setAuthor(member.user.username, member.user.avatarURL)
+            .setThumbnail(member.user.avatarURL)
+            .setTitle(`:wave:  😔`)
+            .setDescription(`Bye Bye  😔 `)
+            .addField('👤  --- ',`**[ ${member.guild.memberCount} ]**`,true)
+            .setColor('RED')
+            .setFooter(`====:exclamation: Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
+        
+        var channel =member.guild.channels.find('name', '个welcome个')
+        if (!channel) return;
+        channel.send({embed : embed});
+        })
 
 
+/////////////////////name welcome good bye
+ client.on('guildMemberRemove', member => {
+            var embed = new Discord.RichEmbed()
+            .setAuthor(member.user.username, member.user.avatarURL)
+            .setThumbnail(member.user.avatarURL)
+            .setTitle(`:wave:  😔`)
+            .setDescription(`Bye Bye  😔 `)
+            .addField('👤  --- ',`**[ ${member.guild.memberCount} ]**`,true)
+            .setColor('RED')
+            .setFooter(`====:exclamation: Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
+        
+        var channel =member.guild.channels.find('name', 'welcome')
+        if (!channel) return;
+        channel.send({embed : embed});
+        })
 
 
 
@@ -2744,6 +2773,17 @@ client.on('guildMemberAdd', member=> {
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find(ch => ch.name === '个welcome个');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server 🎉♥:hugging:  !!
+   !!, ${member}`);
+});
+////welcome
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === 'welcome');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
