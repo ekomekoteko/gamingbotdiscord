@@ -3885,7 +3885,7 @@ client.on('message', message => {
 var mute = message.guild.roles.find("name", "mute");
 var warn = message.guild.roles.find("name", "warn");
   if(alphacodes.some(word => message.content.includes(word))) {
-  if(message.channel.id !== 'ا480937096102543385) return;
+  if(message.channel.id !== '480937096102543385') return;
   if (message.author.bot) return;
   
   if(message.member.roles.has()) return;
