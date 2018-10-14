@@ -4287,7 +4287,7 @@ client.on('message', message => {
 });
 //////////fkk
 client.on('message', message => { 
-	var prefix ="g!Id";
+	var prefix ="g!";
            if (message.content.startsWith(prefix + "id")) {
      var args = message.content.split(" ").slice(1);
      let user = message.mentions.users.first();
