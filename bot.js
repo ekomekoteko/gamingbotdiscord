@@ -248,8 +248,7 @@ client.on('message', msg => {
 :ok_hand: g!muteall ~ لاعطاء ميوت لكل السرفر
 :ok_hand: g!deafen ~ لاعطاء دفين
 :ok_hand: g!undeafen ~ فك الدفين
-:ok_hand: g!add-swear<message> ~ اكتب اي كلمة تريد منعها 
-:ok_hand: g!add-swear <SWEAR> > تضيف سبه
+:ok_hand: g!add-swear <SWEAR> > تضيف سبه او اي كلمة تريد منعها 
 :ok_hand: g!swears > يطلع لك السبات الي ضفتها
 :ok_hand: g!remove-swear <NUMBER> > يمسح سبه اذا تبي تعرف رقم السبه اكتب g!swears
 :ok_hand: g!remove-all-swears > يمسح كل السبات
