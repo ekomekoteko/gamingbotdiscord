@@ -3945,118 +3945,121 @@ console.log('[id] Send By: ' + message.author.username)
    }
  });
 ///////////////////////////////////////////////////
-client.on('message', message => {
-if (!points[message.author.id]) points[message.author.id] = {
-    points: 50,
-  };
-if (message.content.startsWith(prefix + 'رياضيات')) { 
-    if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
+client.on('message', async message => {
+      //!fortnite Ninja solo pc
+  let Client = require('fortnite');
+  let fortnite = new Client('2bb97881-c068-4cba-b3b5-152abfc71c83');
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+    if(message.content.startsWith(prefix + "fortnite")) {
+        let username = args[0];
+        let platform = args[2] || 'pc';
+        let gamemode = args[1];
+        if(gamemode != 'solo' && gamemode != 'duo' && gamemode != 'squad' && gamemode != 'lifetime') return message.reply(`⚠️ **|  ${prefix}fortnite username solo/duo/squad/lifetime pc**`);
+        
+    if(!username) return message.reply('**Specify a username!**');
+    
+    let data = fortnite.user(username, platform).then(data => {
+        let stats = data.stats;
+        
+        if(gamemode === 'solo') {
+            let solostats = stats.solo;
+            let score = solostats.score;
+            let kd = solostats.kd;
+            let matches = solostats.matches;
+            let kills = solostats.kills;
+            let wins = solostats.wins;
+            let top3 = solostats.top_3;
 
-const type = require('./read/read.json'); 
-const item = type[Math.floor(Math.random() * type.length)]; 
-const filter = response => { 
-    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-};
-message.channel.send('**لديك 15 ثانيه**').then(msg => {
-    let embed = new Discord.RichEmbed()
-    .setColor('#000000')
-    .setFooter("رياضيات  | DarkSide", 'https://cdn.discordapp.com/avatars/464357784247599104/98777979b17586bc1af26beaa423e818.png')
-    .setDescription(`** ${item.type}**`)
+            let ByEmbed = new Discord.RichEmbed()
+            .setAuthor('Forntite Tracker Solo Stats')
+            .setTitle(data.username+"'s Stats")
+            .setColor("RANDOM")
+            .setThumbnail("https://www.teepublic.com/t-shirt/2412274-fortnite-logo-game-t-shirts")
+            .addField('# | Wins:',wins,true)
+            .addField('# | Kills:',kills,true)
+            .addField('# | Score:',score,true)
+            .addField("# | Matches:",matches,true)
+            .addField("# | Kill/Death Ratio:",kd,true)
+            .addField("# | Top 3:",top3,true)
+            
+            return message.channel.send(ByEmbed);
+            
+        }else if (gamemode === 'duo') {
+            let Duostats = stats.duo;
+            let score = Duostats.score;
+            let kd = Duostats.kd;
+            let matches = Duostats.matches;
+            let kills = Duostats.kills;
+            let wins = Duostats.wins;
+            let top3 = Duostats.top_3;
 
-    msg.channel.sendEmbed(embed).then(() => {
-        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
-        .then((collected) => {
-        message.channel.send(`${collected.first().author} ✅ **الاجابه صحيحه**`); //mohamed192837465#7033صاحب الكود
+            let ByEmbed = new Discord.RichEmbed()
+            .setAuthor('Forntite Tracker Duo Stats')
+            .setTitle(data.username+"'s Stats")
+            .setColor("RANDOM")
+            .setThumbnail("https://www.teepublic.com/t-shirt/2412274-fortnite-logo-game-t-shirts")
+            .addField('# | Wins:',wins,true)
+            .addField('# | Kills:',kills,true)
+            .addField('# | Score:',score,true)
+            .addField("# | Matches:",matches,true)
+            .addField("# | Kill/Death Ratio:",kd,true)
+            .addField("# | Top 3:",top3,true)
+            
+        message.channel.send(ByEmbed);
 
-        console.log(`[Typing] ${collected.first().author} typed the word.`);
-            let won = collected.first().author; 
-            points[won.id].points++;
-          })
-          .catch(collected => { 
-            message.channel.send(`:x: **لا يوجد احد كتب الاجابه الصحيحه**`);
-            console.log(`[Typing] ماحد قال الاجابه `);
-          })
-        })
+        }else if(gamemode === 'squad') {
+            let squadstats = stats.squad;
+            let score = squadstats.score;
+            let kd = squadstats.kd;
+            let matches = squadstats.matches;
+            let kills = squadstats.kills;
+            let wins = squadstats.wins;
+            let top3 = squadstats.top_3;
+            
+            let ByEmbed = new Discord.RichEmbed()
+            .setAuthor('Forntite Tracker Squad Stats')
+            .setTitle(data.username+"'s Stats")
+            .setColor("RANDOM")
+            .setThumbnail("https://www.teepublic.com/t-shirt/2412274-fortnite-logo-game-t-shirts")
+            .addField('# | Wins:',wins,true)
+            .addField('# | Kills:',kills,true)
+            .addField('# | Score:',score,true)
+            .addField("# | Matches:",matches,true)
+            .addField("# | Kill/Death Ratio:",kd,true)
+            .addField("# | Top 3:",top3,true)
+            
+            return message.channel.send(ByEmbed);
+            
+        }else {
+            
+        
+        let lifetime = stats.lifetime;
+        let score = lifetime[6]['Score'];
+        let mplayed = lifetime[7]['Matches Played'];
+        let wins = lifetime[8]['Wins'];
+        let winper = lifetime[9]['Win%'];
+        let kills = lifetime[10]['Kills'];
+        let kd = lifetime[11]['K/d'];
+        
+                    let ByEmbed = new Discord.RichEmbed()
+            .setAuthor('Forntite Tracker Duo Stats')
+            .setTitle(data.username+"'s Stats")
+            .setColor("RANDOM")
+            .setThumbnail("https://www.teepublic.com/t-shirt/2412274-fortnite-logo-game-t-shirts")
+            .addField('# | Wins:',wins,true)
+            .addField('# | Kills:',kills,true)
+            .addField('# | Score:',score,true)
+            .addField("# | Matches:",mplayed,true)
+            .addField("# | Kill/Death Ratio:",kd,true)
+            .addField("# | Win Percentage:",winper,true)
+            
+        message.channel.send(ByEmbed);
+    }
     })
-}
+    }
 });
-
-
-client.on('message', message => {
-if (!points[message.author.id]) points[message.author.id] = {
-    points: 50,
-  };
-if (message.content.startsWith(prefix + 'ماينكرفت')) { 
-    if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
-
-const type = require('./minecraft/minecraft.json'); 
-const item = type[Math.floor(Math.random() * type.length)]; 
-const filter = response => { 
-    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-};
-message.channel.send('**لديك 15 ثانيه**').then(msg => {
-    let embed = new Discord.RichEmbed()
-    .setColor('#000000')
-    .setFooter("ماينكرفت  | DarkSide", 'https://cdn.discordapp.com/avatars/464357784247599104/98777979b17586bc1af26beaa423e818.png')
-    .setDescription(`** ${item.type}**`)
-
-    msg.channel.sendEmbed(embed).then(() => {
-        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
-        .then((collected) => {
-        message.channel.send(`${collected.first().author} ✅ **الاجابه صحيحه**`); //mohamed192837465#7033صاحب الكود
-
-        console.log(`[Typing] ${collected.first().author} typed the word.`);
-            let won = collected.first().author; 
-            points[won.id].points++;
-          })
-          .catch(collected => { 
-            message.channel.send(`:x: **لا يوجد احد كتب الاجابه الصحيحه**`);
-            console.log(`[Typing] ماحد قال الاجابه `);
-          })
-        })
-    })
-}
-});
-
-
-
-
-client.on('message', message => {
-if (!points[message.author.id]) points[message.author.id] = {
-    points: 50,
-  };
-if (message.content.startsWith(prefix + 'عواصم')) { 
-    if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
-
-const type = require('./3wasem/3wasem.json'); 
-const item = type[Math.floor(Math.random() * type.length)]; 
-const filter = response => { 
-    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-};
-message.channel.send('**اديك 15 ثانيا لتوجد العاصمه الصحيحه**').then(msg => {
-    let embed = new Discord.RichEmbed()
-    .setColor('#000000')
-    .setFooter("عواصم  | DarkSide", 'https://cdn.discordapp.com/avatars/464357784247599104/98777979b17586bc1af26beaa423e818.png')
-    .setDescription(`**اكتب عاصمه: ${item.type}**`)
-
-    msg.channel.sendEmbed(embed).then(() => {
-        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
-        .then((collected) => {
-        message.channel.send(`${collected.first().author} ✅ **الاجابه صحيحه**`); //mohamed192837465#7033صاحب الكود
-
-        console.log(`[Typing] ${collected.first().author} typed the word.`);
-            let won = collected.first().author; 
-            points[won.id].points++;
-          })
-          .catch(collected => { 
-            message.channel.send(`:x: **لا يوجد احد كتب الاجابه الصحيحه**`);
-            console.log(`[Typing] ماحد قال الاجابه `);
-          })
-        })
-    })
-}
-});
-
 
 
 client.login(process.env.BOT_TOKEN);
