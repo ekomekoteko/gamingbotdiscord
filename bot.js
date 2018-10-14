@@ -221,17 +221,18 @@ client.on('message', msg => {
       .setColor("#000000")
       .setDescription(`
 	      اوامر ادارة السيرفر
-***:anger: - سوي روم اسمه 个welcome个 عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
-:ok_hand:   g!move @user ~  لسحب الشخص الى روومك  
-:ok_hand:  g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
-:ok_hand:  g!role @user <rank> ~ لأعطاء رتبة لعضو معين
-:ok_hand:  g!roleremove @user <rank> ~ لازالة الرتبة من شخص معين
-:ok_hand:  g!role all <rank> ~ لأعطاء رتبة للجميع
-:ok_hand:  g!role humans <rank> ~ لأعطاء رتبة للاشخاص فقط
-:ok_hand:  g!role bots <rank> ~ لأعطاء رتبة لجميع البوتات
-:ok_hand:  g!hchannel ~ اخفاء الشات
-:ok_hand:  g!schannel ~ اضهار الشات المخفية
-:ok_hand:  g!clr <numbr> ~ مسح الشات بعدد
+***:anger: - سوي روم اسمه 个welcome个 or welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
+:ok_hand: g!move @user ~  لسحب الشخص الى روومك  
+:ok_hand: g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
+:ok_hand: g!role @user <rank> ~ لأعطاء رتبة لعضو معين
+:ok_hand: g!roleremove @user <rank> ~ لازالة الرتبة من شخص معين
+:ok_hand: g!role all <rank> ~ لأعطاء رتبة للجميع
+:ok_hand: g!role humans <rank> ~ لأعطاء رتبة للاشخاص فقط
+:ok_hand: g!role bots <rank> ~ لأعطاء رتبة لجميع البوتات
+:ok_hand: g!hchannel ~ اخفاء الشات
+:ok_hand: g!schannel ~ اضهار الشات المخفية
+:ok_hand: g!clear-all ~ مسح الكل 
+:ok_hand: g!clear <numbr> ~ مسح الشات بعدد
 :ok_hand: g!clear ~ مسح الشات
 :ok_hand: g!mute @user <reason> ~ اعطاء العضو ميوت لازم رتبة<Muted>
 :ok_hand: g!unmute @user ~ لفك الميوت عن الشخص 
@@ -4319,7 +4320,7 @@ client.on('message', message => {
 client.on('message', message => {
 	var prefix = "g!.";
    if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'clear')) {
+if(message.content.startsWith(prefix + 'clear-all')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
