@@ -233,7 +233,7 @@ client.on('message', msg => {
 :ok_hand:  g!schannel ~ اضهار الشات المخفية
 :ok_hand:  g!clr <numbr> ~ مسح الشات بعدد
 :ok_hand: g!clear ~ مسح الشات
-:ok_hand: g!mute @user <reason> ~ اعطاء العضو ميوت لازم رتبة <Muted>
+:ok_hand: g!mute @user <reason> ~ اعطاء العضو ميوت لازم رتبة<Muted>
 :ok_hand: g!unmute @user ~ لفك الميوت عن الشخص 
 :ok_hand: g!kick @user <reason> ~ طرد الشخص من السيرفر
 :ok_hand: g!ban @user <reason> ~ حضر الشخص من السيرفر
@@ -248,8 +248,9 @@ client.on('message', msg => {
 :ok_hand: g!muteall ~ لاعطاء ميوت لكل السرفر
 :ok_hand: g!deafen ~ لاعطاء دفين
 :ok_hand: g!undeafen ~ فك الدفين
+:ok_hand: g!add-swear<message> ~ اكتب اي كلمة تريد منعها 
 `)
-   message.author.sendEmbed(embed)
+    message.author.sendEmbed(embed)
     
    }
    });
