@@ -3861,9 +3861,6 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
     }// حقوق الفا كودز & عبود
 });
 ///////////////////////////Mute 10Min chat 8yr el BOT 
-const fs = require("fs"); 
-const ms = require("ms");
-
 const alphacodes = [
   "#credit",
   "#profile",
