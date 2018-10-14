@@ -3860,7 +3860,59 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
         oldMessage.channel.send(`:no_entry: | Hey <@${oldMessage.author.id}>! Dont swear or you will get mute!`).then(msg => msg.delete(2000));
     }// حقوق الفا كودز & عبود
 });
+///////////////////////////Mute 10Min chat 8yr el BOT 
+const fs = require("fs"); 
+const ms = require("ms");
 
+const alphacodes = [
+  "#credit",
+  "#profile",
+  "#rep",
+  "#top",
+  "!level",
+  "%!id",
+  "!فكك",
+  "!صراحه",
+  "!xo",
+  "!كت تويت",
+  "!invites",
+  "!top",
+  "!help",
+  "!stop",
+  "!play",
+  "!skip",
+"g!help"
+
+]
+client.on('message', message => {
+var mute = message.guild.roles.find("name", "mute");
+var warn = message.guild.roles.find("name", "warn");
+  if(alphacodes.some(word => message.content.includes(word))) {
+  if(message.channel.id !== 'ا480937096102543385) return;
+  if (message.author.bot) return;
+  
+  if(message.member.roles.has()) return;
+  if(!message.member.roles.has()) {
+  message.member.addRole(warn)
+  message.reply(`**تم اعطائك تحذير لانك استخدمت اوامر في الشات😠**`) 
+  }
+  
+  if(message.member.roles.has(warn.id)) {
+      message.member.addRole(mute)
+      message.member.removeRole(warn)
+      let mutetime = "10m";
+    
+    message.reply(`**تم اعطائك ميوت كتابي لمدة 10 دقائق :x: **!`);
+  
+      setTimeout(function(){
+      message.member.removeRole(mute)
+      message.reply(`تم الغاء الميوت عنك!`)
+    }, ms(mutetime))    
+     
+  }
+  
+  }
+  })
 
 
 
