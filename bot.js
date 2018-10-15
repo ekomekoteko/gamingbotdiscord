@@ -5288,18 +5288,6 @@ module.exports.help = {
     name: "removerole"
 }
 /////////////////////////////
-client.on('message', message => {
-sql.open("./score.sqlite");
-  sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
-    if (!row) {
-      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
-    } else {
-      let curLevel = Math.floor(0.3 * Math.sqrt(row.points + 1));
-      if (curLevel > row.level) {
-        row.level = curLevel;
-        sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
-var Canvas = require('canvas')
-var jimp = require('jimp')
 
 const w = ['./levelup.png'];
 
@@ -5369,6 +5357,7 @@ message.channel.sendFile(canvas.toBuffer())
 
 }
 	})
+////////////////
 
 
 client.login(process.env.BOT_TOKEN);
