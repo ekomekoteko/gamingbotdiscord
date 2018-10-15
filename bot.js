@@ -5345,7 +5345,9 @@ client.on('message', message => {
  });
 
 ////////////////
-
+console.log('Loading....Please Stand by.....');
+client.on('ready', () => {
+  console.log(`Bot Is online now !!`);
 
 
 ////////////////////////
