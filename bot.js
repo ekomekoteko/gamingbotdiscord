@@ -5290,8 +5290,7 @@ module.exports.help = {
 /////////////////////////////
 
 const bot = new Discord.Client({disableEveryone: true});
-const Canvas = require('canvas') 
-const fs = module.require("fs"); 
+const Canvas = require('canvas')  
 const r1 = require('snekfetch'); 
 
 
