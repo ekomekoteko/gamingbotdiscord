@@ -5351,19 +5351,19 @@ client.on('message', message => {
 message.guild.setName(`.a`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.al`)
+message.guild.setName(`Ｇ`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.alp`) 
+message.guild.setName(`Ａ`) 
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.alph`)
+message.guild.setName(`ＭＩ`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.alpha`)
+message.guild.setName(`ＮＧ`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.alpha `)
+message.guild.setName(`ＧＡＭＩＮＧ `)
 .then(msg => {
  setInterval(() => {
 }, 11000);
