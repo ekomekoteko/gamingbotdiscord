@@ -402,7 +402,7 @@ client.on('message', msg => {
 //////////////////////////////////----------------------------/////////////////////----////////ID
 client.on("message", msg => {
            var prefix = "g!";
-  if(msg.content.startsWith (prefix + "user")) {
+  if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
       const embed = new Discord.RichEmbed();
   embed.addField("🌹Ŋame ", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
