@@ -405,17 +405,17 @@ client.on("message", msg => {
   if(msg.content.startsWith (prefix + "id")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
       const embed = new Discord.RichEmbed();
-  embed.addField(" Ŋame 🌹", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-          .addField("IĐ 🔹", `**[ ${msg.author.id} ]**`, true)
+  embed.addField("🌹Ŋame ", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
+          .addField("🔹IĐ ", `**[ ${msg.author.id} ]**`, true)
           .setColor("RANDOM")
           .setFooter(msg.author.username , msg.author.avatarURL)
           .setThumbnail(`${msg.author.avatarURL}`)
           .setTimestamp()
           .setURL(`${msg.author.avatarURL}`)
-          .addField(':low_brightness: Státǖs :', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-          .addField('Płáýíńģ 🎈', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-          .addField(':military_medal: Řoles 🔰', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-          .addField('Deloveber Bot 🎋', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
+          .addField('Státǖs :low_brightness:', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+          .addField('🎈Płáýíńģ ', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
+          .addField('🔰Řoles ', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
+          .addField('🎋Deloveber Bot', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
       msg.channel.send({embed: embed})
 	    }
 });
