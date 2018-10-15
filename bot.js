@@ -5226,7 +5226,7 @@ client.on('message',message =>{
     }
   });
 //////////////////////////
-const Discord = require("discord.js");
+
 module.exports.run = async (bot, message, args) => {
 
     //!addrole @andrew Dog Person
@@ -5259,7 +5259,6 @@ module.exports.help = {
 
 // Remove Role
 
-const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
