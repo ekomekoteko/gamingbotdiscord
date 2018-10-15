@@ -237,8 +237,8 @@ client.on('message', msg => {
 :ok_hand: g!unmute @user ~ لفك الميوت عن الشخص 
 :ok_hand: g!kick @user <reason> ~ طرد الشخص من السيرفر
 :ok_hand: g!ban @user <reason> ~ حضر الشخص من السيرفر
-:ok_hand: g!mutechannel ~ تقفيل الشات
-:ok_hand: g!unmutechannel ~ فتح الشات
+:ok_hand: g!mc ~ تقفيل الشات
+:ok_hand: g!unmc ~ فتح الشات
 :ok_hand: g!dc ~ مسح كل الرومات
 :ok_hand: g!dr ~ <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
 :ok_hand: g!ct <name> ~ انشاء شات
@@ -252,6 +252,8 @@ client.on('message', msg => {
 :ok_hand: g!swears > يطلع لك السبات الي ضفتها
 :ok_hand: g!remove-swear <NUMBER> > يمسح سبه اذا تبي تعرف رقم السبه اكتب g!swears
 :ok_hand: g!remove-all-swears > يمسح كل السبات
+:ok_hand: g!setdate ~ البوت يعمل روم فيها التاريخ
+:ok_hand: g!settime ~ البوت يعمل روم فيها اللوقت
 `)
     message.author.sendEmbed(embed)
     
