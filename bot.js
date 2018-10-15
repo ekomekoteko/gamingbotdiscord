@@ -3343,7 +3343,30 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
-        .setImage('http://live-timely-4jepdssgmc.time.ly/wp-content/uploads/2018/08/welcomeEvents.jpg') //هنا حط الصوره الي تبيها
+        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
+        .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
+        .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
+        .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
+                .addField(':pushpin: Yóǔ Arě The Mēmbêr Nǖmbèr☆',`:small_orange_diamond: ${member.guild.memberCount}`)
+               
+                  .addField("•Ŋàme .. ♥",`<@` + `${member.id}` + `>`, true)
+                      
+                                     .addField(' Sērvěr', `${member.guild.name}`,true)
+                                       
+     .setFooter("Sērvěr")
+        .setTimestamp()
+    
+      channel.sendEmbed(embed);
+    });
+
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'welcome');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return; 
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
         .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
         .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
         .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
