@@ -399,10 +399,10 @@ client.on('message', msg => {
 });
 
 
-///////////////////////////////////////////////////////----////////ID
+//////////////////////////////////----------------------------/////////////////////----////////ID
 client.on("message", msg => {
            var prefix = "g!";
-  if(msg.content.startsWith (prefix + "id")) {
+  if(msg.content.startsWith (prefix + "user")) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
       const embed = new Discord.RichEmbed();
   embed.addField("🌹Ŋame ", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
@@ -412,14 +412,14 @@ client.on("message", msg => {
           .setThumbnail(`${msg.author.avatarURL}`)
           .setTimestamp()
           .setURL(`${msg.author.avatarURL}`)
-          .addField('Státǖs :low_brightness:', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
+          .addField(':low_brightness:Státǖs', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
           .addField('🎈Płáýíńģ ', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
           .addField('🔰Řoles ', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
           .addField('🎋Deloveber Bot', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
       msg.channel.send({embed: embed})
 	    }
 });
-////////////////////////////////////////////////////////////////////////////ID
+/////////////////////////////////////--------------------------------------///////////////////////////////////////ID
 client.on('message', message => {
     if (message.content === "g!ID") {
     let embed = new Discord.RichEmbed()
@@ -450,7 +450,7 @@ client.on('message', message => {
  });
 ///////////////////////////////////////Mahmoud-QuaStyle
 
-///////////////////////////////////////////////////////////////////Member
+////////////////////////////////////////////////--------------------------------///////////////////Member
 client.on('message',function(message) {
   if (message.author.bot) return;
 var prefix = "g!";
@@ -877,6 +877,8 @@ client.on('message', message => {
 .addField('    **:warning:  سابعا**' ,' **لا تنشر روابط!** ')
 .addField('    **:warning:  ثامنا**' ,' **لا تسوي سبام ايموجي** ')
 .addField('    **:warning:  تاسعا**' ,' **لا تطلب رتبه الاداره!** ')
+.addField('    **By:@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 ** ')
+
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);
     }
@@ -1034,13 +1036,13 @@ codes.push(`discord.gg/${invite.code}`)
 })
   if (nul > 0) {
       const e = new Discord.RichEmbed()
-      .addField(`${message.author.username}`, `لقد قمت بدعوة **${nul}** شخص`)
+      .addField(`${message.author.username}`, `Have Invites **${nul}** Pèrson`)
       .setColor('#36393e')
       message.channel.send(e)
   }else {
                        var embed = new Discord.RichEmbed()
                         .setColor("#000000")
-                        .addField(`${message.author.username}`, `لم تقم بدعوة أي شخص لهذة السيرفر`)
+                        .addField(`${message.author.username}`, `You have not invited anyone to this server`)
 
                        message.channel.send({ embed: embed });
                         return;
@@ -1538,7 +1540,7 @@ if (message.content.startsWith("g!cv")) {
      const embed = new Discord.RichEmbed()
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)
-.setTitle('Click Here to add Bot ')
+.setTitle('Click Here To Add Bot ')
 .setURL('https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot')
   message.channel.sendEmbed(embed);
    }
@@ -1577,7 +1579,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
-  .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
+  .setDescription(`**Thank you for adding the bot to the server :tada: **`)
       guild.owner.send(embed)
 });
 
@@ -1616,9 +1618,9 @@ ${args}
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`👑ولكم نورت السيرفر | Welcome To Server👑 
-اسم العضو المحترم |Name member🌷  ${member}
-انت العضو الأسطورة رقم| ♦♦ |You Member number is👑 ${member.guild.memberCount}`) 
+  return channel.send(`👑Welcome To Server👑 
+ Name member🌷  ${member}
+ You Member number is👑 ${member.guild.memberCount}`) 
 
 }).catch(console.error)
 })
@@ -2923,7 +2925,7 @@ client.on('guildMemberAdd', member => {
             .setDescription(`Bye Bye  😔 `)
             .addField('👤  --- ',`**[ ${member.guild.memberCount} ]**`,true)
             .setColor('RED')
-            .setFooter(`====:exclamation: Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
+            .setFooter(`==== :exclamation: Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
         var channel =member.guild.channels.find('name', '个welcome个')
         if (!channel) return;
@@ -3136,33 +3138,6 @@ client.on('message', message => {
     });
 ////////////////////////////////////////////////////////////////Top inv
 
-client.on('message',message =>{
-    var prefix = "g!";
-    if(message.content.startsWith(prefix + 'top')) {
-  message.guild.fetchInvites().then(i =>{
-  var invites = [];
-   
-  i.forEach(inv =>{
-    var [invs,i]=[{},null];
-     
-    if(inv.maxUses){
-        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
-    }else{
-        invs[inv.code] =+ inv.uses;
-    }
-        invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
-   
-  });
-  var embed = new Discord.RichEmbed()
-  .setColor("#000000")
-  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://media.discordapp.net/attachments/477570106755383307/479229377037598720/22713057_151850495552450_709700562_o.jpg?width=201&height=201")
-           message.channel.send({ embed: embed });
-   
-  });
-   
-    }
-  });
 
 
 ///////////////////////////////////////////////dt
