@@ -5348,7 +5348,7 @@ client.on('message', message => {
 client.on('message', message => { 
     var p = "g!"
         if (message.content.startsWith(p + `GAMING`)) {
-message.guild.setName(`ＧＡ`)
+message.guild.setName(`ＧＡＭＩＮＧ`)
 .then(msg => {
  setInterval(() => {
 message.guild.setName(`Ｍ`)
