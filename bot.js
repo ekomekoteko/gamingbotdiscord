@@ -5349,21 +5349,6 @@ client.on('message', message => {
 
 
 ////////////////////////
-super.on('message', sap =>{//By 
-  var prefix = "YOUR PREFIX HERE" //By 
-      if(sap.content.startsWith(prefix)){//By
-          if(command == "afk"){//By
-      if(sap.guild.member(super.author).hasPermission("MANAGE_NICKNAME")) return sap.reply(`**I D'ont Have Permission "MANAGE_NICKNAME"`);//By 
-      if(sap.mebmer(sap.author).hasPermission("CHANGE_NICKNAME")) return sap.reply(`**You D'ont Have Permission "CHANGE_NICKNAME"**`);//By 
-              if(sap.member.setNickname(`[AFK] ${sap.author.username}`)) sap.reply(`**You Are Now In AFK Mode, Aply "s!back" For Join To Online Mod**`);//By
-          }//By
-          if(command == "back"){//
-      if(sap.guild.member(super.author).hasPermission("MANAGE_NICKNAME")) return sap.reply(`**I D'ont Have Permission "MANAGE_NICKNAME"`);//By 
-      if(sap.guild.mebmer(sap.author).hasPermission("CHANGE_NICKNAME")) return sap.reply(`**You D'ont Have Permission "CHANGE_NICKNAME"**`);//By 
-              if(sap.member.setNickname(``)) sap.reply(`You Are Now In Online Mod`);//By 
-      }//By 
-    }//By 
-});//By //
 
 
 
