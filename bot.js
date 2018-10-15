@@ -5226,20 +5226,6 @@ client.on('message',message =>{
     }
   });
 //////////////////////////
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'mypoints')) {
-	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
-	let userData = points[message.author.id];
-	let embed = new Discord.RichEmbed()
-    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-	.setColor('#000000')
-	.setDescription(`نقاطك: \`${userData.points}\``)
-	message.channel.sendEmbed(embed)
-  }
-  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-    if (err) console.error(err)
-  })
-});
 
 
 
