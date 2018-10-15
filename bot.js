@@ -3335,7 +3335,7 @@ if (command == "embed") {
 
 
 });
-/////////////////////////////////
+//////////////////////////////----------------welcome///
 
 
 client.on('guildMemberAdd', member => {
@@ -3392,7 +3392,7 @@ client.on('guildMemberAdd', member => {
             .setDescription(`Bye Bye  😔 `)
             .addField('👤  --- ',`**[ ${member.guild.memberCount} ]**`,true)
             .setColor('RED')
-            .setFooter(`==== :exclamation: Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
+            .setFooter(`====Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
         var channel =member.guild.channels.find('name', '个welcome个')
         if (!channel) return;
@@ -3450,10 +3450,56 @@ client.on('guildMemberAdd', member => {
    !!, ${member}`);
 });
 
-///////////////////////////////////////2y 7ad y3mel 2mr el bot fe room 8yr bot y5od muted 
+///////////////////////////////////////
 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
+client.on('message', msg => {
+  if (msg.content === 'g!help') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'هلا') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === '.') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === '..') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === '...') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === '?') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === '??') {
+    msg.reply('***Welcome To Server*** :sparkles: ');
+  }
+});
 
 
 
