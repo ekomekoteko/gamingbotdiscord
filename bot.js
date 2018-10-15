@@ -5348,19 +5348,19 @@ client.on('message', message => {
 client.on('message', message => { 
     var p = "g!"
         if (message.content.startsWith(p + `GAMING`)) {
-message.guild.setName(`.a`)
+message.guild.setName(`ＧＡ`)
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`Ｍ`)
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`Ｉ`) 
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`Ｎ`)
 .then(msg => {
  setInterval(() => {
 message.guild.setName(`Ｇ`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`Ａ`) 
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ＭＩ`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ＮＧ`)
 .then(msg => {
  setInterval(() => {
 message.guild.setName(`ＧＡＭＩＮＧ `)
