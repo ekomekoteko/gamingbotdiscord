@@ -5345,44 +5345,26 @@ client.on('message', message => {
  });
 
 ////////////////
-client.on('message', message => { 
-    var p = "g!"
-        if (message.content.startsWith(p + `GAMING`)) {
-message.guild.setName(`ＧＡＭＩＮＧ`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`Ｍ`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`Ｉ`) 
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`Ｎ`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`Ｇ`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ＧＡＭＩＮＧ `)
-.then(msg => {
- setInterval(() => {
-}, 11000);
-});
-},  10000);
-});
-},  8000);
-});
-},  6000);
-});
-},  4000);
-});
-},  1000);
-})
-        .catch(console.error);
-  //message.delete().catch(O_o=>{}); 
+client.on('message',async msg => {
+  var p = "g!";
+  if(msg.content.startsWith(p + "setdate")) {
+  if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **go play minecraft**');
+  if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
+  msg.guild.createChannel(`date :[]` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()
+      time.setName(`Date : [${Year} - ${Month} - ${Dat}]]`);
+ },1000);
+  });
+  }
  
-}
-
 });
 ////////////////////////
 
