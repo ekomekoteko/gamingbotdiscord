@@ -4771,7 +4771,7 @@ client.on('message',message =>{
     }else{
         invs[inv.code] =+ inv.uses;
     }
-        invites.push(`:pushpin:invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\:pushpin: `;`);
+        invites.push(`:pushpin:invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
    
   });
   var embed = new Discord.RichEmbed()
