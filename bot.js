@@ -3343,6 +3343,7 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
+        .setImage('http://live-timely-4jepdssgmc.time.ly/wp-content/uploads/2018/08/welcomeEvents.jpg') //هنا حط الصوره الي تبيها
         .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
         .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
         .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
@@ -5321,6 +5322,14 @@ client.on('message', message => {
  });
 
 ////////////////
+
+
+
+
+
+
+
+
 
 
 client.login(process.env.BOT_TOKEN);
