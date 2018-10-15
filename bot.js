@@ -5360,7 +5360,7 @@ client.on('message',async msg => {
 Year = currentTime.getFullYear(),
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`Date : [${Year} - ${Month} - ${Dat}]]`);
+      time.setName(`⇲ Date : [${Year} - ${Month} - ${Dat}]]⇱`);
  },1000);
   });
   }
