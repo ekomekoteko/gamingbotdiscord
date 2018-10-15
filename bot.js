@@ -5289,171 +5289,71 @@ module.exports.help = {
 }
 /////////////////////////////
 
-const bot = new Discord.Client({disableEveryone: true});
-const Canvas = require('canvas')  
-const r1 = require('snekfetch'); 
+bot.on('guildMemberAdd', member => {
+      const welcomer =  member.guild.channels.find('name', 'welcome');
+      var Canvas = require('canvas')
+      var jimp = require('jimp')
 
+      const w = ['./img/w1.png',
+      './img/w2.png',
+      './img/w3.png',
+      './img/w4.png',
+      './img/w5.png',
+      './img/w7.png',
+      './img/w8.png'];
 
-//var يعني تختصر للحاجه زي منا عامل كدة
+              let Image = Canvas.Image,
+                  canvas = new Canvas(401, 202),
+                  ctx = canvas.getContext('2d');
+              ctx.patternQuality = 'bilinear';
+              ctx.filter = 'bilinear';
+              ctx.antialias = 'subpixel';
+              ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+              ctx.shadowOffsetY = 2;
+              ctx.shadowBlur = 2;
+              fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+                  if (err) return console.log(err)
+                  let BG = Canvas.Image;
+                  let ground = new Image;
+                  ground.src = Background;
+                  ctx.drawImage(ground, 0, 0, 401, 202);
 
-var copy = "ALPHACODE STEWART"
-
-
-var mo = "الفلوس"
-var po = "النقاط"
-var lev = "الفل"
-
-
-bot.on("ready", async () => { // كل حاجه هتتفح لما البوت يشتغل
-
-    console.log(`I'm Online \n By ${copy}`) // الي هيظهر في الكونسل
-    console.log(`Logged in as ${bot.user.tag}!`); // نفس الي فوق
-
-    bot.user.setGame(`${bot.users.size} users `,"http://twitch.tv/") 
-    bot.user.setStatus("online")
-
-}); // نهايه الكود
-
-
-
-client.on('message', message => {
-
-if (message.content.startsWith("*profile")) { // الامر
- let canvas = new Canvas(300, 300) //حجم الصوره الي هتظهر
- let ctx = canvas.getContext('2d')
-    let Image = Canvas.Image
-    
-   
-                      //  ava.src = buf;
-
-    fs.readFile(__dirname + '/images_profile/profile.png', function(err, picture) { //مكان الصوره 
-      if (err) throw err
-      var img = new Image
-        		var url = message.author.avatarURL; //افتار صورتك
-		url = url.substring(0, url.indexOf('?'));
-
-		r1.get(url).then(res => {
-			var dataURL = res.body.toString('base64');
-			dataURL = 'data:image/png;base64,' + dataURL;
-			img.onload = function() {
-
-				ctx.save();
-    		ctx.beginPath();
-    		ctx.arc(54, 103, 47, 0, Math.PI * 2, true); // احدثيات الدائره
-		    ctx.closePath();
-		    ctx.clip();
-		    ctx.drawImage(img, 8, 57, 92, 92); // الصوره
-		    ctx.restore();
-			}
-			img.src = dataURL;
-		});
-		
-      img.onload = () => {
-        ctx.drawImage(img, 1, 1, 300, 300)
-     //   ctx.drawImage(message.author.avatarURL, 152, 27, 95, 95);
-        ctx.font = "regular 11px Cairo" // نوع الخط وحجمه
-        ctx.fillStyle = "#9f9f9f" // لون الخط
-        ctx.fillText(`${message.author.username}`, 140, 137)
-        ctx.fillText(`${mo}  `, 143, 219) //money
-        ctx.fillText(`${po}`, 120, 202) // النقاط
-
-        //Level
-        ctx.font = "regular 21px Cairo"
-        ctx.fillStyle = "#ffffff"
-        ctx.fillText(`${lev}`, 47, 255) //لفل
-
-        ctx.save()
-        
-      }
-      img.src = picture
-			
-    })
-		
-   
-
-    
-
-    setTimeout(function() {
-      fs.readFile(__dirname + '/images_profile/diamond_prof_bg.png', function(err, picture) {
-        if (err) throw err
-        var img = new Image
-        img.onload = () => {
-          ctx.drawImage(img, -1, -1, 0, 0)
-        }
-        img.src = picture
-        let inventoryPicture = canvas.toDataURL()
-        let data = inventoryPicture.replace(/^data:image\/\w+;base64,/, "")
-        let buf = new Buffer(data, 'base64')
-      fs.writeFile(`image.png`, buf)
-      
-        message.channel.send("", {
-          file: `image.png` 
-        })
       })
-    }, 1000)
 
+                      let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(5, -20) + ".gif" : member.user.displayAvatarURL;
+                      jimp.read(url, (err, ava) => {
+                          if (err) return console.log(err);
+                          ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                              if (err) return console.log(err);
 
-    function roundedImage(x, y, width, height, radius) {
-      ctx.beginPath();
-      ctx.moveTo(x + radius, y);
-      ctx.lineTo(x + width - radius, y);
-      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-      ctx.lineTo(x + width, y + height - radius);
-      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
-      ctx.lineTo(x + radius, y + height);
-      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
-      ctx.lineTo(x, y + radius);
-      ctx.quadraticCurveTo(x, y, x + radius, y);
-      ctx.closePath();
-    }
+                              
+                              let Avatar = Canvas.Image;
+                              let ava = new Avatar;
+                              ava.src = buf;
+                              ctx.drawImage(ava, 152, 27, 95, 95);
 
-    function wrapText(context, text, x, y, maxWidth, lineHeight) {
+                                                      //wl
+                              ctx.font = '20px Arial Bold';
+                              ctx.fontSize = '15px';
+                              ctx.fillStyle = "#FFFFFF";
+                              ctx.textAlign = "center";
+                                                         ctx.fillText(member.user.username, 200, 154);
 
-      var words = text.split(' '),
-        line = '',
-        lineCount = 0,
-        i,
-        test,
-        metrics;
+                              //NAME
+                              ctx.font = '20px Arial';
+                              ctx.fontSize = '28px';
+                              ctx.fillStyle = "#FFFFFF";
+                              ctx.textAlign = "center";
+                                    ctx.fillText(`انت العضو رقم${member.guild.memberCount} `
+                              , 200, 190);
 
-      for (i = 0; i < words.length; i++) {
-        test = words[i];
-        metrics = context.measureText(test);
-        while (metrics.width > maxWidth) {
-
-          test = test.substring(0, test.length - 1);
-          metrics = context.measureText(test);
-        }
-        if (words[i] != test) {
-          words.splice(i + 1, 0, words[i].substr(test.length))
-          words[i] = test;
-        }
-
-        test = line + words[i] + ' ';
-        metrics = context.measureText(test);
-
-        if (metrics.width > maxWidth && i > 0) {
-          context.fillText(line, x, y);
-          line = words[i] + ' ';
-          y += lineHeight;
-          lineCount++;
-        } else {
-          line = test;
-        }
-      }
-
-      ctx.fillText(line, x, y);
-    }
-  
+ welcomer.sendFile(canvas.toBuffer())
 
 
 
-};
-
-
-
-
-});
+      })
+      })
+      });
 ////////////////
 
 
