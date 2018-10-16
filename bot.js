@@ -5433,29 +5433,30 @@ hours = 12;
  
 });
 ///////CODE EL AFK 
-let profile = JSON.parse(fs.readFileSync("./profile.json", "utf8"))
+const Canvas = require("canvas"); //npm i canvas
+let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))
 client.on("message", message => {
-
+ 
   if (message.author.bot) return;
   if(!message.channel.guild)return;
   if (!profile[message.author.id]) profile[message.author.id] = {
-    tite: '>title',
+    tite: 'Super User',
     rep: 0,
     reps: 'NOT YET',
     lastDaily:'Not Collected',
     level: 0,
     points: 0,
-    credits: 1,
+    credits: 150,
   };
-
-
-fs.writeFile('./profile.json', JSON.stringify(profile), (err) => {
+ 
+ 
+fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
 });
-
+ 
 client.on('message', message => {
-
+ 
     if(message.content.startsWith(prefix + 'rep')) {
       if(!message.channel.guild) return;
                     moment.locale('en');
@@ -5470,17 +5471,17 @@ client.on('message', message => {
          message.channel.send(`**:stopwatch: |  ${message.author.username}, you can raward more reputation  ${moment().endOf('day').fromNow()} **`)
         }
        }
-       fs.writeFile('./profile.json', JSON.stringify(profile), (err) => {
+       fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
 });
-
+ 
 client.on("message", (message) => {
   let men = message.mentions.users.first()
-
+ 
   if (message.author.bot) return;
     if (message.author.id === client.user.id) return;
-	if(!message.channel.guild) return;
+    if(!message.channel.guild) return;
 if (message.content.startsWith(prefix + 'credit')) {
   if(men) {
     if (!profile[men.id]) profile[men.id] = {
@@ -5494,17 +5495,17 @@ message.channel.send(`** ${men.username}, :credit_card: balance` + " is `" + `${
   message.channel.send(`** ${message.author.username}, your :credit_card: balance` + " is `" + `${profile[message.author.id].credits}$` + "`.**")
 }
 }
-
+ 
 if(message.content.startsWith(prefix + "daily")) {
- if(profile[message.author.id].lastDaily != moment().format('day')) {
+  if(profile[message.author.id].lastDaily != moment().format('day')) {
     profile[message.author.id].lastDaily = moment().format('day')
-    profile[message.author.id].credits += 300
-     message.channel.send(`**${message.author.username} you collect your \`300\` :dollar: daily pounds**`)
+    profile[message.author.id].credits += 200
+     message.channel.send(`**${message.author.username} you collect your \`200\` :dollar: daily pounds**`)
 } else {
     message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes ${moment().endOf('day').fromNow()}**`)
 }
   }
-
+ 
  let cont = message.content.slice(prefix.length).split(" ");
 let args = cont.slice(1);
 let sender = message.author
@@ -5525,7 +5526,7 @@ if(message.content.startsWith(prefix + 'trans')) {
             var mentionned = message.mentions.users.first();
 if (!profile[sender.id]) profile[sender.id] = {}
 if (!profile[sender.id].credits) profile[sender.id].credits = 200;
-fs.writeFile('./profile.json', JSON.stringify(profile), (err) => {
+fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
       var mando = message.mentions.users.id;
@@ -5536,9 +5537,9 @@ if (err) console.error(err);
       let mariam = message.author.username
 message.channel.send(`**:moneybag: | ${message.author.username}, has transferrerd ` + "`" + args[0] + "$` to " + `<@${defineduser.id}>**`)
 }
-
+ 
       });
-
+ 
       client.on('message', message => {
           if(!profile[message.author.id]) profile[message.author.id] ={
               points: 0,
@@ -5551,330 +5552,26 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
               profile[message.author.id].level = Math.floor(profile[message.author.id].level+1);
               message.channel.send(`**${message.author.username}, You leveld up to __${profile[message.author.id].level}__**`)
           }
-          fs.writeFile('./profile.json', JSON.stringify(profile), (err) => {
+          fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
       })
-
+ 
     client.on('message', message => {
         let tit = message.content.split(" ").slice(1).join(" ");
         if(message.content.startsWith(prefix + "title")) {
-        if(!profile[message.author.id].tite) profile[message.author.id].tite = "Hey im using DarkSide"
+        if(!profile[message.author.id].tite) profile[message.author.id].tite = "Hey im using Super"
         if(!tit) {
-            message.channel.send("**:large_orange_diamond: .title <something>**");
+            message.channel.send("**Usage: <title <something>**");
         } else {
             profile[message.author.id].tite = tit
-            message.channel.send(`:ok: Done Dude !?`)
+            message.channel.send(`:ok:`)
         }
         }
-        fs.writeFile('./profile.json', JSON.stringify(profile), (err) => {
+        fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
     })
-
-    client.on("message", message => {
-  if (message.author.bot) return;
-	if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + "profile")) {
-                               let user = message.mentions.users.first();
-         var men = message.mentions.users.first();
-            var heg;
-            if(men) {
-                heg = men
-            } else {
-                heg = message.author
-            }
-          var mentionned = message.mentions.members.first();
-             var h;
-            if(mentionned) {
-                h = mentionned
-            } else {
-                h = message.member
-            }
-            var ment = message.mentions.users.first();
-            var getvalueof;
-            if(ment) {
-              getvalueof = ment;
-            } else {
-              getvalueof = message.author;
-            }
-   var mentionned = message.mentions.users.first();
-
-    var client;
-      if(mentionned){
-          var client = mentionned;
-      } else {
-          var client = message.author;
-
-      }
-if (!profile[getvalueof.id]) profile[getvalueof.id] = {points: 0,reps: "NOT YET",credits: 1, level: 1,tite: ">title", rep: 0, lastDaily: "NOT COLLECTED"};
-            let Image = Canvas.Image,
-            canvas = new Canvas(300, 300),
-            ctx = canvas.getContext('2d');
-            fs.readFile("./powerx.png", function (err, Background) { //امتداد الصورة
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 300, 300); // حجم الصورة
-
-})
-
-
-
-                let url = getvalueof.displayAvatarURL.endsWith(".webp") ? getvalueof.displayAvatarURL.slice(5, -20) + ".png" : getvalueof.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                        if (err) return console.log(err);
-
-                        //ur name
-                    ctx.font = 'bold 13px Comic Sans MS'; // حجم الخط و نوعه
-                        ctx.fontSize = '30px'; // عرض الخط
-                        ctx.fillStyle = "#000000"; // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${getvalueof.username}`, 153, 173) // احداثيات اسمك
-
-                        //ur name
-                    ctx.font = 'bold 13px Comic Sans MS'; // حجم الخط و نوعه
-                        ctx.fontSize = '30px'; 
-                        ctx.fillStyle = "#f1f1f1"; 
-                        ctx.textAlign = "center"; 
-                        ctx.fillText(`${getvalueof.username}`, 151, 171) // احداثيات اسمك
-
-                        //credit
-                        ctx.font = "bold 12px Arial" // نوع الخط وحجمه
-                        ctx.fontSize = '10px'; // عرض الخط
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`$${profile[getvalueof.id].credits}`, 81, 159) // احداثيات المصاري
-
-                        //poits
-                        ctx.font = "bold 12px Arial" // ن
-                        ctx.fontSize = '10px'; // عرض الخطوع الخط وحجمه
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].points}`, 223, 159) // احداثيات النقاط
-
-                        //Level
-                        ctx.font = "bold 20px Arial" // نوع الخط و حجمه
-                        ctx.fontSize = '10px'; // عرض الخط
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].level}`, 223, 115) // احداثيات اللفل
-
-                         //info
-                        ctx.font = "bold 12px Arial" // ن
-                        ctx.fontSize = '15px'; // عرض الخطوع الخط وحجمه
-                        ctx.fillStyle = "#000000" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].tite}`, 150, 199) // احداثيات النقاط
-
-                        //info
-                        ctx.font = "bold 12px Arial" // ن
-                        ctx.fontSize = '15px'; // عرض الخطوع الخط وحجمه
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`${profile[getvalueof.id].tite}`, 150, 197) // احداثيات النقاط
-
-                        // REP
-                        ctx.font = "bold 20px  Arial";
-                        ctx.fontSize = "40px";
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`+${profile[getvalueof.id].rep}`, 80,115)
-
-                        let Avatar = Canvas.Image;
-                        let ava = new Avatar;
-
-ava.src = buf;
-                        ctx.beginPath();
-                        ctx.arc(75, 100, 780, 0, Math.PI*2, true);
-                        ctx.closePath();
-                        ctx.clip();
-                          ctx.drawImage(ava, 116, 82, 73, 74);
-
-message.channel.startTyping()
-message.channel.sendFile(canvas.toBuffer())
-message.channel.stopTyping()
-})
-})
-}
-});
-
-
-
-
-
-
-////////////////
-const sWlc = {}
-const premium = ['411137717884289024', '', '', '']
-client.on('message', message => {
-var prefix = "g!";
-if(message.channel.type === "dm") return;
-if(message.author.bot) return;
-  if(!sWlc[message.guild.id]) sWlc[message.guild.id] = {
-    channel: "welcome"
-}
-const channel = sWlc[message.guild.id].channel
-  if (message.content.startsWith(prefix + "setwelcomer")) {
-    if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
-    let newChannel = message.content.split(' ').slice(1).join(" ")
-    if(!newChannel) return message.reply(`**${prefix}setwelcomer <channel name>**`)
-    sWlc[message.guild.id].channel = newChannel
-    message.channel.send(`**${message.guild.name}'s channel has been changed to ${newChannel}**`);
-  }
-});
- 
-
-
-client.on("guildMemberAdd", member => {
-      if(!sWlc[member.guild.id]) sWlc[member.guild.id] = {
-    channel: "welcome"
-  }
-  const channel = sWlc[member.guild.id].channel
-    const sChannel = sWlc[member.guild.id].channel
-    let welcomer = member.guild.channels.find('name', sChannel);
-    let memberavatar = member.user.avatarURL
-      if (!welcomer) return;
-      if(welcomer) {
-         moment.locale('ar-ly');
-         var h = member.user;
-        let heroo = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(h.avatarURL)
-        .setAuthor(h.username,h.avatarURL)
-        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
-         .addField(': تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)      
-         .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
-     welcomer.send({embed:heroo});          
-         
-      var Canvas = require('canvas')
-      var jimp = require('jimp')
-      
-      const w = ['w.png'];
-      
-              let Image = Canvas.Image,
-                  canvas = new Canvas(557, 241),
-                  ctx = canvas.getContext('2d');
-  
-              fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-                  if (err) return console.log(err)
-                  let BG = Canvas.Image;
-                  let ground = new Image;
-                  ground.src = Background;
-                  ctx.drawImage(ground, 0, 0, 540, 230);
-      
-      })
-      
-                      let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(5, -20) + ".gif" : member.user.displayAvatarURL;
-                      jimp.read(url, (err, ava) => {
-                          if (err) return console.log(err);
-                          ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                              if (err) return console.log(err);
-      
-                                    ctx.font = '21px kathen';
-                              ctx.fontSize = '25px';
-                              ctx.fillStyle = "#FFFFFF";
-                                ctx.fillText(member.user.username, 240, 150);
-                              
-                              //NAMEً
-                              ctx.font = '21px kathen';
-                              ctx.fontSize = '20px';
-                              ctx.fillStyle = "#FFFFFF";
-      ctx.fillText(`Welcome To ${member.guild.name}`, 240, 90);
-      
-                              //AVATARً
-                              let Avatar = Canvas.Image;
-                              let ava = new Avatar;
-                              ava.src = buf;
-                              ctx.beginPath();
-                 ctx.arc(120.8, 120.5, 112.3, 0, Math.PI*2, true);
-                   ctx.closePath();
-                   
-                                 ctx.clip();
-
-                        ctx.drawImage(ava, 7, 8, 227, 225);
-                              ctx.closePath();
-
-                            
-    welcomer.sendFile(canvas.toBuffer())
-      
-      
-      
-      })
-      })
-      
-      }
-      });
-
-
-
-
-
-//////////////7aga kda 
-client.on('message',  (message) => {
-  if (message.content.startsWith(prefix + 'pu')) {
-  let user = message.mentions.users.first();
-  if (!user) {
-    /**
-     * The command was ran with invalid parameters.
-     * @fires commandUsage
-     */
-    return message.emit('commandUsage', message, this.help);
-  }
-
-  let punches = [
-    'https://i.giphy.com/media/iWEIxgPiAq58c/giphy.gif',
-    'https://i.giphy.com/media/DViGV8rfVjw6Q/giphy.gif',
-    'https://i.giphy.com/media/GoN89WuFFqb2U/giphy.gif',
-    'https://i.giphy.com/media/xT0BKiwgIPGShJNi0g/giphy.gif',
-    'https://i.giphy.com/media/Lx8lyPHGfdNjq/giphy.gif'
-  ];
-
-  message.channel.send({
-    embed: {
-      description: `${user.username} ادااك بوكس ع وشك يا ${message.author.username}! :punch:`,
-      image: {
-        url: punches[Math.floor(Math.random() * punches.length)]
-      }
-    }
-  }).catch(e => {
-    client.log.error(e);
-  })
-        }  
-});
-
-client.on('message',  (message) => {
-  if (message.content.startsWith(prefix + 'sp')) {
-  let user = message.mentions.users.first();
-  if (!user) {
-
-    return message.emit('commandUsage', message, this.help);
-  }
-  let slaps = [
-    'https://i.giphy.com/media/3XlEk2RxPS1m8/giphy.gif',
-    'https://i.giphy.com/media/mEtSQlxqBtWWA/giphy.gif',
-    'https://i.giphy.com/media/j3iGKfXRKlLqw/giphy.gif',
-    'https://i.giphy.com/media/2M2RtPm8T2kOQ/giphy.gif',
-    'https://i.giphy.com/media/l3YSimA8CV1k41b1u/giphy.gif',
-    'https://i.giphy.com/media/WLXO8OZmq0JK8/giphy.gif'
-  ];
-
-  message.channel.send({
-    embed: {
-      description: `${message.author.username} اداك بالقلم علي وشك ${user.username}!`,
-      image: {
-        url: slaps[Math.floor(Math.random() * slaps.length)]
-      }
-    }
-  }).catch(e => {
-    client.log.error(e);
-  })
-        }  
-});
-
 
 
 
