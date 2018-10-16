@@ -169,39 +169,41 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 			  اوامر عامة                                                                                 
-:mailbox_with_mail: g!allbots ~ لعرض جميع البوتات الي بالسيرفر
-:mailbox_with_mail: g!server ~يعرض لك معلومات عن السيرفر
-:mailbox_with_mail: g!bot ~ يعرض لك كل معلومات البوت***
-:mailbox_with_mail: g!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
-:mailbox_with_mail: g!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر
-:mailbox_with_mail: g!invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر
-:mailbox_with_mail: g!cal ~ اله حاسبة
-:mailbox_with_mail: g!trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
-:mailbox_with_mail: g!short ~ يختصر لك رابط كبير الى رابط صغير
-:mailbox_with_mail: g!tag ~ يكتب لك الكلمة بشكل جميل وكبير
-:mailbox_with_mail: g!google ~ للبحث في قوقل عن طريق الدسكورد
-:mailbox_with_mail: g!perms ~ يعرض لك برمشناتك بالسيرفر
-:mailbox_with_mail: g!rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها
-:mailbox_with_mail: g!roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل
-:mailbox_with_mail: g!emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر
-:mailbox_with_mail: g!say ~ يكرر الكلام الي تكتبو
-:mailbox_with_mail: g!image ~ صورة السيرفر
-:mailbox_with_mail: g!members ~ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
-:mailbox_with_mail: g!id ~ معلومات عنك
-:mailbox_with_mail: g!bans ~ عدد الاشخاص المبندة
-:mailbox_with_mail: g!avatar ~ صورتك او صورة الي تمنشنو
-:mailbox_with_mail: g!embed ~ يكرر الي تقولو بشكل حلو
-:mailbox_with_mail: g!emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
-:mailbox_with_mail: g!inv ~ لدعوة البوت الى سيرفرك
-:mailbox_with_mail: g!support ~ سيرفر الدعم
-:mailbox_with_mail: g!contact ~ ارسال اقتراح او لمراسلة صاحب البوت
-:mailbox_with_mail: g!report ~  احد سبك واهانك
-:mailbox_with_mail: g!owner<messange ~ ارسال رسالة لي اونر
-:mailbox_with_mail: g!server ~  معلومات عن السرفر 
-:mailbox_with_mail: g!draw<messange ~ يحط لك الكلام في صوره
-:mailbox_with_mail: g!embed<messange> ~ يحط لك الكلام في مربع
-:mailbox_with_mail: g!time ~ لمعرفة الوقت 
-:mailbox_with_mail: g!dt ~ لمعرفة الوقت والتاريخ
+✅ g!allbots ~ لعرض جميع البوتات الي بالسيرفر
+✅ g!server ~يعرض لك معلومات عن السيرفر
+✅ g!bot ~ يعرض لك كل معلومات البوت***
+✅ g!count ~ يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
+✅ g!invites ~ يعرض لك  عدد انفايتاتك بالسيرفر
+✅ g!invite-codes ~ يعرض لك روابط الانفايتات حكك في السيرفر
+✅ g!cal ~ اله حاسبة
+✅ g!trans <language> <any thing> ~ يترجم لك الي تبيه من اي لغة
+✅ g!short ~ يختصر لك رابط كبير الى رابط صغير
+✅ g!tag ~ يكتب لك الكلمة بشكل جميل وكبير
+✅ g!google ~ للبحث في قوقل عن طريق الدسكورد
+✅ g!perms ~ يعرض لك برمشناتك بالسيرفر
+✅ g!rooms ~ يعرض لك كل الرومات الي بالسيرفر مع عددها
+✅ g!roles ~ يعرض لك كل الرانكات بالسيرفر بشكل جميل
+✅ g!emojilist ~ يعرض لك كل الايموجيات الي بالسيرفر
+✅ g!say ~ يكرر الكلام الي تكتبو
+✅ g!image ~ صورة السيرفر
+✅ g!members ~ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
+✅ g!id ~ معلومات عنك
+✅ g!bans ~ عدد الاشخاص المبندة
+✅ g!avatar ~ صورتك او صورة الي تمنشنو
+✅ g!embed ~ يكرر الي تقولو بشكل حلو
+✅ g!emoji <any things> ~ لتحويل اي كلمه تقولها الي ايموجي
+✅ g!inv ~ لدعوة البوت الى سيرفرك
+✅ g!support ~ سيرفر الدعم
+✅ g!contact ~ ارسال اقتراح او لمراسلة صاحب البوت
+✅ g!report ~  احد سبك واهانك
+✅ g!owner<messange ~ ارسال رسالة لي اونر
+✅ g!server ~  معلومات عن السرفر 
+✅ g!draw<messange ~ يحط لك الكلام في صوره
+✅ g!embed<messange> ~ يحط لك الكلام في مربع
+✅ g!time ~ لمعرفة الوقت 
+✅ g!dt ~ لمعرفة الوقت والتاريخ
+✅ g!credit ~  لمعرفة الكرديت 
+✅ g!daily ~ لمعرفة اليومي 
 `)
    message.author.sendEmbed(embed)
     
@@ -5621,207 +5623,6 @@ const adkar = [
   }
   });
 /////////////////////////////////////////////-////////////////////////////////////
-client.on('message', message => {
- 
-  if(message.content.split(' ')[0] == prefix + 'iid') {
-  if(!message.channel.guild) return;
- 
-  let args = message.content.split(' ').slice(1).join(' ');
- 
-         let defineduser = '';
-         if (!args[1]) {
-             defineduser = message.author;
-         } else { // Run this if they did define someone...
-             let firstMentioned = message.mentions.users.first();
-             defineduser = firstMentioned;
-         }
- 
-         const w = ['./id5.png','./id6.png'];
-         var Canvas = require('canvas')
-  var jimp = require('jimp')
- 
-          const millis = new Date().getTime() - defineduser.createdAt.getTime();
-  const now = new Date();
-  dateFormat(now, 'dddd, mmmm dS, yyyy');
-  const stats2 = ['online', 'Low', 'Medium', 'Insane'];
-  const days = millis / 1000 / 60 / 60 / 24;
-           dateFormat(now, 'dddd, mmmm dS, yyyy');
-               let time = `${dateFormat(defineduser.createdAt)}`
-               var heg;
-               if(men) {
-                   heg = men
-               } else {
-                   heg = message.author
-               }
-              var mentionned = message.mentions.members.first();
-                var h;
-               if(mentionned) {
-                   h = mentionned
-               } else {
-                   h = message.member
-               }
-         let Image = Canvas.Image,
-             canvas = new Canvas(300, 300),
-             ctx = canvas.getContext('2d');
-         ctx.patternQuality = 'bilinear';
-         ctx.filter = 'bilinear';
-         ctx.antialias = 'subpixel';
- 
-         fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-             if (err) return console.log(err);
-             let BG = Canvas.Image;
-             let ground = new Image;
-             ground.src = Background;
-             ctx.drawImage(ground, 0, 0, 300, 300);
- 
-  })
-    var mentionned = message.mentions.users.first();
- 
-     var client;
-       if(mentionned){
-           var client = mentionned;
-       } else {
-           var client = message.author;
- 
-       }
- 
-  var men = message.mentions.users.first();
-             var heg;
-             if(men) {
-                 heg = men
-             } else {
-                 heg = message.author
-             }
-                 let url = defineduser.displayAvatarURL.endsWith(".webp") ? defineduser.displayAvatarURL.slice(20, 20) + ".png" : defineduser.displayAvatarURL;
-                 jimp.read(url, (err, ava) => {
-                     if (err) return console.log(err);
-                     ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                         if (err) return console.log(err);
- 
-                         let Avatar = Canvas.Image;
-                         let ava = new Avatar;
-                         ava.src = buf;
-                         ctx.drawImage(ava, 112 , 40, 75, 75);
- 
-                         var status;
-     if (defineduser.presence.status === 'online') {
-         status = 'ONLINE';
-  ctx.fillStyle = `#2ce032`;
-  ctx.beginPath();
-  ctx.arc(179, 107, 10, 0, Math.PI*2, true);
-  ctx.closePath();
-  ctx.fill();
- 
-     } else if (defineduser.presence.status === 'dnd') {
-         status = 'DND';
-         ctx.fillStyle = `#ff0000`;
-  ctx.beginPath();
-  ctx.arc(179, 107, 8, 0, Math.PI*2, true);
-  ctx.closePath();
-  ctx.fill();
-     } else if (defineduser.presence.status === 'idle') {
-         status = 'IDLE';
-         ctx.fillStyle = `#f4d32e`;
-  ctx.beginPath();
-  ctx.arc(179, 107, 10, 0, Math.PI*2, true);
-  ctx.closePath();
-  ctx.fill();
-     } else if (defineduser.presence.status === 'offline') {
-         status = 'INVISIABLE';
-         ctx.fillStyle = `#898988`;
-  ctx.beginPath();
-  ctx.arc(179, 107, 10, 0, Math.PI*2, true);
-  ctx.closePath();
-  ctx.fill();
-     }
- 
- 
-                                               var time2;
-       if(mentionned){
-           var time2 = `${dateFormat(message.mentions.users.first.joinedAt)}`;
-       } else {
-           var time2 = `${dateFormat(message.member.joinedAt)}`;
- 
-       }
- 
-                         ctx.font = 'Bold 15px Arial ';
-                         ctx.fontSize = '15px';
-                         ctx.fillStyle = "#ffffff";
-                         ctx.textAlign = "center";
-                         ctx.fillText(status, 70 , 108 );
- 
-                          ctx.font = 'Bold 13px Arial';
-                         ctx.fontSize = '13px';
-                         ctx.fillStyle = "#ffffff";
-                         ctx.textAlign = "center";
-                         ctx.fillText(`${message.author.presence.game === null ? "No Status" : message.author.presence.game.name}`, 150.00   , 180  );
- 
- 
-                         ctx.font = 'Bold 20px Arial ';
-                         ctx.fontSize = '15px';
-                         ctx.fillStyle = "#ffffff";
-                         ctx.textAlign = "center";
-                         ctx.fillText(`${defineduser.username}`, 150.50 , 140);
- 
- 
-                         ctx.font = 'Bold 15px Arial';
-                         ctx.fontSize = '15px';
-                         ctx.fillStyle = "#ffffff";
-                         ctx.textAlign = "center";
-                         ctx.fillText(`#${defineduser.discriminator}`, 227  , 108);
- 
-                         var time2;
-       if(mentionned){
-           var time2 = `${dateFormat(message.mentions.users.first.joinedAt)}`;
-       } else {
-           var time2 = `${dateFormat(message.member.joinedAt)}`;
- 
-       }
- 
-                         ctx.font = 'Bold 13px Arial ';
-                         ctx.fontSize = '13px';
-                         ctx.fillStyle = "#ffffff";
-                         ctx.textAlign = "center";
-                         ctx.fillText(`${moment(defineduser.createdTimestamp).fromNow()}`, 179 , 226 );
-                         ctx.font = 'Bold 13px Arial ';
-                         ctx.fontSize = '13px';
-                         ctx.fillStyle = "#ffffff";
-                         ctx.textAlign = "center";
-                         ctx.fillText(`${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')}`, 179 , 253);
- 
-  message.channel.sendFile(canvas.toBuffer())
- 
- 
-         })
-     })
- 
- 
- 
- 
-  }
- 
-  })
- 
- 
-    client.on("message", msg => {
-             var prefix = "d!"; // prefix
-    if(msg.content.startsWith (prefix + "id")) {
-      if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');
-        const embed = new Discord.RichEmbed();
-    embed.addField(":cloud_tornado:  الاسم", `**[ ${msg.author.username}#${msg.author.discriminator} ]**`, true)
-            .addField(":id:  الايدي", `**[ ${msg.author.id} ]**`, true)
-            .setColor("RANDOM")
-            .setFooter(msg.author.username , msg.author.avatarURL)
-            .setThumbnail(`${msg.author.avatarURL}`)
-            .setTimestamp()
-            .setURL(`${msg.author.avatarURL}`)
-            .addField(':spy:  الحالة', `**[ ${msg.author.presence.status.toUpperCase()} ]**`, true)
-            .addField(':satellite_orbital:   يلعب', `**[ ${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name} ]**`, true)
-            .addField(':military_medal:  الرتب', `**[ ${msg.member.roles.filter(r => r.name).size} ]**`, true)
-            .addField(':robot:  هل هو بوت', `**[ ${msg.author.bot.toString().toUpperCase()} ]**`, true);
-        msg.channel.send({embed: embed})
-        }
-});
 
 
 
