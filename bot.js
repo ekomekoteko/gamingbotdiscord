@@ -5635,7 +5635,7 @@ message.channel.sendEmbed(cat);
 });
 //////////contact
 client.on('message' , message => {
-var prefix = "g!
+var prefix = "g!"
 
 if (message.author.bot) return;
 if (message.content.startsWith(prefix + "contact")) {
@@ -5647,7 +5647,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 
-client.users.get("396958215377780747").send(
+client.users.get("411137717884289024").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
