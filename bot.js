@@ -5633,7 +5633,42 @@ var cats = ["http://palestine-kitchen.ps/wp-content/uploads/2017/12/%D9%86%D9%83
 message.channel.sendEmbed(cat);
     }
 });
-///////////fkk 
+//////////contact
+client.on('message' , message => {
+var prefix = "g!
+
+if (message.author.bot) return;
+if (message.content.startsWith(prefix + "contact")) {
+if (!message.channel.guild) return;
+
+
+
+let args = message.content.split(" ").slice(1).join(" ");
+
+
+
+client.users.get("396958215377780747").send(
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+     .setAuthor(message.author.username, message.author.avatarURL)
+     .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
+     .setThumbnail(message.author.avatarURL)
+     .setFooter("By : LEGEND_YT#4537 ")
+                                                
+
+message.channel.send(embed);
+
+
+}
+    
+});
+
 
 
  
