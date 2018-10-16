@@ -3395,7 +3395,7 @@ client.on('guildMemberAdd', member => {
             .setColor('RED')
             .setFooter(`==== Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
-        var channel =member.guild.channels.find('name', 'welcome')
+        var channel =member.guild.channels.find('name', '个welcome个')
         if (!channel) return;
         channel.send({embed : embed});
         })
