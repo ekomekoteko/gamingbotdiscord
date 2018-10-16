@@ -3389,16 +3389,16 @@ client.on('guildMemberAdd', member => {
             .setAuthor(member.user.username, member.user.avatarURL)
             .setThumbnail(member.user.avatarURL)
             .setTitle(`:wave:  😔`)
+            .setImage('https://cdn.pg.sa/GeQGucQhBR.gif') 
             .setDescription(`Bye Bye  😔 `)
             .addField('👤  --- ',`**[ ${member.guild.memberCount} ]**`,true)
             .setColor('RED')
-            .setFooter(`====Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
+            .setFooter(`==== Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
-        var channel =member.guild.channels.find('name', '个welcome个')
+        var channel =member.guild.channels.find('name', 'welcome')
         if (!channel) return;
         channel.send({embed : embed});
         })
-
 
 /////////////////////name welcome good bye
  client.on('guildMemberRemove', member => {
@@ -3406,10 +3406,11 @@ client.on('guildMemberAdd', member => {
             .setAuthor(member.user.username, member.user.avatarURL)
             .setThumbnail(member.user.avatarURL)
             .setTitle(`:wave:  😔`)
+            .setImage('https://cdn.pg.sa/GeQGucQhBR.gif') 
             .setDescription(`Bye Bye  😔 `)
             .addField('👤  --- ',`**[ ${member.guild.memberCount} ]**`,true)
             .setColor('RED')
-            .setFooter(`====:exclamation: Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
+            .setFooter(`==== Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
         var channel =member.guild.channels.find('name', 'welcome')
         if (!channel) return;
