@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
- client.user.setActivity("»ONLINE, ♥ ",{type: 'watching'})
+ client.user.setActivity("By:Mahmoud-QuaStyle ",{type: 'watching'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -5634,93 +5634,6 @@ message.channel.sendEmbed(cat);
     }
 });
 ///////////fkk 
-var fkk =[
-        {f:"فكك بسم الله الرحمن الرحيم",k:"ب س م ا ل ل ه ا ل ر ح م ن ا ل ر ح ي م"},
-        {f:"فكك باص",k:"ب ا ص"},
-        {f:"فكك عربة ",k:"ع ر ب ة"},
-        {f:"فكك سيارة",k:"س ي ا ر ة"},
-        {f:"فكك سيرفرنا احلى سيرفر",k:"س ي ر ف ر ن ا ا ح ل ى س ي ر ف ر"},
-        {f:"فكك العنود ",k:"ا ل ع ن و د"},
-        {f:"فكك المستتكعكبتيه",k:"ا ل م س ت ت ك ع ك ب ت ي ه"},
-        {f:"فكك دحوم",k:"د ح و م"},
-        {f:"فكك اونرنا احلى اونر",k:"ا و ن ر ن ا ا ح ل ى ا و ن ر"},
-        {f:"فكك الحياة حلوة",k:"ا ل ح ي ا ة ح ل و ة"},
-        {f:"فكك كازخستان ",k:"ك ا ز خ س ت ا ن"},
-        {f:"لحم الحمام حلال ولحم الحمار حرام ",k:"ل ح م ا ل ح م ا م ح ل ا ل و ل ح م ا ل ح م ا ر ح ر ا م"},
-        {f:"فكك استونيا ",k:"ا س ت و ن ي ا"},
-        {f:"فكك لقمة وجغمه ",k:"ل ق م ة و ج غ م ه"},
-        {f:"فكك زنديق  ",k:"ز ن د ي ق"},
-        {f:"فكك استراليا ",k:"ا س ت ر ا ل ي ا"},
-        {f:"فكك سوريا ",k:"س و ر ي ا"},
-        {f:"فكك الاردن ",k:"ا ل ا ر د ن"},
-        {f:"فكك طماطم ",k:"ط م ا ط م"},
-        {f:"فكك سارة ",k:"س ا ر ة"},
-        {f:"فكك دراجون ",k:"د ر ا ج و ن"},
-        {f:"فكك سيرفر ",k:"س ي ر ف ر"},
-        {n:"فكك الجبل",m:"ا ل ج ب ل"},
-        {n:"فكك هضبة",m:"ه ض ب ة"},
-        {n:"فكك خواطر",m:"خ و ا ط ر"},
-        {n:"فكك ارحبو",m:"ا ر ح ب و"},
-        {n:"فكك اطنخ سيرفر",m:"ا ط ن خ س ي ف ر"},
-        {n:"فكك احبك",m:"ا ح ب ك"},
-        {n:"فكك سبرايز",m:"س ب ر ا ي ز"},
-        {n:"فكك ولي على أمتك",m:"و ل ي ع ل ى أ م ت ك"},
-        {n:"فكك الو محد",m:"ا ل و م ح م د"},
-
-
-   ];
-
-
-  var al7arthyCodes = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
-var al7arthyCodes2 = ["📙__60%__  **|**  📘__40%__","📙__63%__  **|**  📘__37%__","📙__89%__  **|**  📘__11%__","📙__97%__  **|**  📘__3%__"]
-client.on('message', message => {
-    if(!message.guild) return;
-    if (message.author.bot) return;
-      let id = message.author.id,prefix="g!";//البريفكس
-      if (ti[id] && (new Date).getTime() - ti[id] < 20*1000) {
-          let r = (new Date).getTime() - ti[id];
-          r = 20*1000 - r;
-      message.channel.send(` **Please wait ${pretty(r, {verbose:true})}**`).then(m => m.delete(5000));
-      return;
-      }
-      if ( message.content == prefix+'لو خيروك'){
-         
-          try{
-  //body
-  }catch(e){
- 
-  }
-         var Embed = new Discord.RichEmbed()
-.setImage(al7arthyCodes[Math.floor(Math.random() * al7arthyCodes.length)])
-message.channel.sendEmbed(Embed).then(msg => {
-    msg.react('📘').then( r => {
-        msg.react('📙')
- 
-        let blueFilter = (reaction, user) => reaction.emoji.name === '📘' && user.id === message.author.id;
-    let orangeFilter = (reaction, user) => reaction.emoji.name === '📙' && user.id === message.author.id;
- 
- 
-    let blue = msg.createReactionCollector(blueFilter, { time: 15000 });
-    let orange = msg.createReactionCollector(orangeFilter, { time: 15000 });
- 
- 
-    blue.on("collect", r => {
-        msg.delete();
-        message.channel.send(al7arthyCodes2[Math.floor(Math.random() * al7arthyCodes2.length)]).then(m => m.delete(60000));
- 
-        })
-       
- orange.on("collect", r => {
-        msg.delete();
-        message.channel.send(al7arthyCodes2[Math.floor(Math.random() * al7arthyCodes2.length)]).then(m => m.delete(60000));
- 
-        })
- 
-                                })
-                                })
-                              ti[id] = (new Date).getTime()
-                                }
-                                });
 
 
  
