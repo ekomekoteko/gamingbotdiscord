@@ -5486,7 +5486,7 @@ if (message.content.startsWith(prefix + 'credit')) {
   if(men) {
     if (!profile[men.id]) profile[men.id] = {
     lastDaily:'Not Collected',
-    credits: 1,
+    credits: 195956
   };
   }
   if(men) {
@@ -5576,7 +5576,7 @@ if (err) console.error(err);
     client.on("message", message => {
   if (message.author.bot) return;
     if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + ".profile")) {
+if (message.content.startsWith(prefix + ".A")) {
                                let user = message.mentions.users.first();
          var men = message.mentions.users.first();
             var heg;
