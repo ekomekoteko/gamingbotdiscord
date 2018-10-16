@@ -5448,21 +5448,7 @@ hours = 12;
  
 });
 ///////CODE EL AFK 
-super.on('message', sap =>{//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661
-  var prefix = "g!" //By  @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-      if(sap.content.startsWith(prefix)){//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-          if(command == "afk"){//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-      if(sap.guild.member(super.author).hasPermission("MANAGE_NICKNAME")) return sap.reply(`**I D'ont Have Permission "MANAGE_NICKNAME"`);//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-      if(sap.mebmer(sap.author).hasPermission("CHANGE_NICKNAME")) return sap.reply(`**You D'ont Have Permission "CHANGE_NICKNAME"**`);//BY@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-              if(sap.member.setNickname(`[AFK] ${sap.author.username}`)) sap.reply(`**You Are Now In AFK Mode, Aply "s!back" For Join To Online Mod**`);//By @$~Super_Man~$//
-          }//By @$~Super_Man~$//
-          if(command == "back"){//By @$~Super_Man~$//
-      if(sap.guild.member(super.author).hasPermission("MANAGE_NICKNAME")) return sap.reply(`**I D'ont Have Permission "MANAGE_NICKNAME"`);//By @@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-      if(sap.guild.mebmer(sap.author).hasPermission("CHANGE_NICKNAME")) return sap.reply(`**You D'ont Have Permission "CHANGE_NICKNAME"**`);//By@༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-              if(sap.member.setNickname(``)) sap.reply(`You Are Now In Online Mod`);//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 /
-      }//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-    }//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
-});//By @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661 
+
 
 client.login(process.env.BOT_TOKEN);
 
