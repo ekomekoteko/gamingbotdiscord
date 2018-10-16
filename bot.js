@@ -5813,7 +5813,67 @@ client.on("guildMemberAdd", member => {
 
 
 
+//////////////7aga kda 
+client.on('message',  (message) => {
+  if (message.content.startsWith(prefix + 'pu')) {
+  let user = message.mentions.users.first();
+  if (!user) {
+    /**
+     * The command was ran with invalid parameters.
+     * @fires commandUsage
+     */
+    return message.emit('commandUsage', message, this.help);
+  }
 
+  let punches = [
+    'https://i.giphy.com/media/iWEIxgPiAq58c/giphy.gif',
+    'https://i.giphy.com/media/DViGV8rfVjw6Q/giphy.gif',
+    'https://i.giphy.com/media/GoN89WuFFqb2U/giphy.gif',
+    'https://i.giphy.com/media/xT0BKiwgIPGShJNi0g/giphy.gif',
+    'https://i.giphy.com/media/Lx8lyPHGfdNjq/giphy.gif'
+  ];
+
+  message.channel.send({
+    embed: {
+      description: `${user.username} ادااك بوكس ع وشك يا ${message.author.username}! :punch:`,
+      image: {
+        url: punches[Math.floor(Math.random() * punches.length)]
+      }
+    }
+  }).catch(e => {
+    client.log.error(e);
+  })
+        }  
+});
+
+client.on('message',  (message) => {
+  if (message.content.startsWith(prefix + 'sp')) {
+  let user = message.mentions.users.first();
+  if (!user) {
+
+    return message.emit('commandUsage', message, this.help);
+  }
+  let slaps = [
+    'https://i.giphy.com/media/3XlEk2RxPS1m8/giphy.gif',
+    'https://i.giphy.com/media/mEtSQlxqBtWWA/giphy.gif',
+    'https://i.giphy.com/media/j3iGKfXRKlLqw/giphy.gif',
+    'https://i.giphy.com/media/2M2RtPm8T2kOQ/giphy.gif',
+    'https://i.giphy.com/media/l3YSimA8CV1k41b1u/giphy.gif',
+    'https://i.giphy.com/media/WLXO8OZmq0JK8/giphy.gif'
+  ];
+
+  message.channel.send({
+    embed: {
+      description: `${message.author.username} اداك بالقلم علي وشك ${user.username}!`,
+      image: {
+        url: slaps[Math.floor(Math.random() * slaps.length)]
+      }
+    }
+  }).catch(e => {
+    client.log.error(e);
+  })
+        }  
+});
 
 
 
