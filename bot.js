@@ -5664,7 +5664,30 @@ message.channel.send(embed);
 }
     
 });
+/////////////////Aktr7at 
+client.on('message', msg => {
+  if(msg.content.startsWith('g!sug')) {
+    if(!msg.channel.guild) return msg.reply('**هذا الامر فقط للسيرفرات**').then(msg => msg.delete(3000));
+    if(!msg.guild.channels.find('name', 'suggestions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions)**');
+    let args = msg.content.split(" ").slice(1);
+    if(!args[1]) return msg.reply('الرجاء كتابة الاقتراح').then(msg => msg.delete(3000));
+    //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
+    if(msg.guild.channels.find('name', '﴾-suggestions-﴿')) {
+      //غيره هنا كمان اذا غيرت فوق
+      msg.guild.channels.find('name', '﴾-suggestions-﴿').send(`
+    **﴾ ${msg.member} ﴿ تم الاقتراح من قبل**
+                        **[❖═════ الاقتراح ═══════❖]**
+                                             ﴾ @here ﴿
+**__${args.join(" ").split(msg.mentions.members.first()).slice(' ')}__**
+      `)
+      .then(function (message) {
+        message.react('✅')
+        message.react('❌')
+      })
+      }
+    }
 
+});    
 
 
  
