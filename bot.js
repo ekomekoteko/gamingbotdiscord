@@ -5659,25 +5659,7 @@ client.on('message', msg => {
     }
 
 });    
-client.on('message', message =>{
-    let messageArray = message.content.split(" ");
-    let cmd = messageArray[0];
-    let args = messageArray.slice(1);
-    let prefix = '!';//البرفكس
 
-if(cmd === `${prefix}الامر`) {
-    var suggestMessage = message.content.substring(8)
-    let suggestEMBED = new Discord.RichEmbed()
-    .setColor(3447003)
-    .setTitle("اقتراح جديد || الاقتراح")
-    .setDescription(`**${suggestMessage}**`)
-    .setFooter(`Suggested By : ${message.author.tag}`);
-    message.delete().catch(O_o=>{}) 
-    let suggests = message.guild.channels.find(`name`, "suggestions");
-    suggests.send(suggestEMBED);
-}
-
-});
 
 
  
