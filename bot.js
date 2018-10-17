@@ -5636,29 +5636,38 @@ message.channel.send(embed);
     
 });
 /////////////////Aktr7at 
-client.on('message', msg => {
-  if(msg.content.startsWith('g!sug')) {
-    if(!msg.channel.guild) return msg.reply('**هذا الامر فقط للسيرفرات**').then(msg => msg.delete(3000));
-    if(!msg.guild.channels.find('name', 'suggestions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions)**');
-    let args = msg.content.split(" ").slice(1);
-    if(!args[1]) return msg.reply('الرجاء كتابة الاقتراح').then(msg => msg.delete(3000));
-    //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
-    if(msg.guild.channels.find('name', '﴾suggestions﴿')) {
-      //غيره هنا كمان اذا غيرت فوق
-      msg.guild.channels.find('name', '﴾suggestions﴿').send(`
-    **﴾ ${msg.member} ﴿ تم الاقتراح من قبل**
-                        **[❖═════ الاقتراح ═══════❖]**
-                                             ﴾ @here ﴿
-**__${args.join(" ").split(msg.mentions.members.first()).slice(' ')}__**
-      `)
-      .then(function (message) {
-        message.react('✅')
-        message.react('❌')
-      })
-      }
-    }
+client.on('message', async message => {
+  if (message.author.bot) return;
+    if(!message.channel.guild) return;
+ let args = message.content.split(' ').slice(1).join(' ');
+  if(message.content.startsWith(prefix + "sug")) {
+  await  message.channel.send(`🔔 **| اكتب اقتراحك **`)
+    message.delete(10000);
+    let filter = m => m.author.id === message.author.id
+      var text = '';
+        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+          .then(co => {
+            text = co.first().content
+              message.channel.send(`✅ **| تم حفظ اقتراحك **`)
+    message.delete(10000);
+            let embed = new Discord.RichEmbed()
 
-});    
+       .setColor('RANDOM')
+       .setThumbnail('https://images-ext-2.discordapp.net/external/cfiQPI-jiFWEr1dTyHZeT4l5ZSegPifQZSSOYusKSyo/https/cdn2.iconfinder.com/data/icons/basic-flat-icon-set/128/letter-256.png')
+       .setTitle('')
+       .addField('**» Guild :**', message.guild.name)
+       .addField('**» المرسل :**', message.author.username)
+       .addField('» اقتراحي :', text)
+       .setTimestamp()
+       .setFooter(message.author.username, message.author.avatarURL)
+
+              client.channels.find('name', '≄◉♔『≤suggestions≥』♔◉≄').send({embed})
+       .setFooter(message.author.username, message.author.avatarURL)
+   message.channel.sendMessage({embed});
+              })
+            }
+          })
+
 
 
 
