@@ -136,24 +136,24 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
 	 
-	         Please Chose: 
+	         ***``Please Chose:``***
 
 
-${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
+:white_small_square:${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
 
-${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
+:white_small_square:${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
 			 
-${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
+:white_small_square:${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
 
-${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
+:white_small_square:${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
  
 :white_small_square:${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
 
-${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudspeaker:
+:white_small_square:${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudspeaker:
 
-${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
+:white_small_square:${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 
-${prefix}:white_small_square:***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+:white_small_square:${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 	  `)
    message.channel.sendEmbed(embed)
     
