@@ -147,13 +147,13 @@ ${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_ga
 
 ${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
  
-${prefix}***help-colors*** →→ ***『اوامر اللوان』*** :traffic_light: 』         
+:white_small_square:${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
 
 ${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudspeaker:
 
 ${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 
-${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+${prefix}:white_small_square:***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 	  `)
    message.channel.sendEmbed(embed)
     
