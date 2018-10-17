@@ -266,12 +266,20 @@ client.on('message', msg => {
     msg.reply('Check Your DM :white_check_mark:')
   }); 
 
-   client.on("message", message => {
-	var prefix = "g!";
- if (message.content === "g!help-games") {
-	  message.channel.send('');
+  client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-games") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    شيك على الخاص
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
   const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
       .setDescription(`
           اوامر الالعاب
 :video_game: g!rps ~ حجر ورقة مقص
