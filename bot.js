@@ -304,14 +304,11 @@ client.on("message", message => {
       .setColor("#000000")
       .setDescription(`
 	        اوامر الموسيقى 
-:loud_sound: ${prefix}play ~ لتشغيل أغنية برآبط أو بأسم
-:loud_sound: ${prefix}skip ~ لتجآوز الأغنية الحآلية
-:loud_sound: ${prefix}pause ~ إيقآف الأغنية مؤقتا
-:loud_sound: ${prefix}resume ~ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-:loud_sound: ${prefix}vol ~ لتغيير درجة الصوت 100 - 0
-:loud_sound: ${prefix}stop ~ لإخرآج البوت من الروم
-:loud_sound: ${prefix}np ~ لمعرفة الأغنية المشغلة حآليا
-:loud_sound: ${prefix}queue ~ لمعرفة قآئمة التشغيل
+ ╔[❖════════════❖]╗
+ •
+تحت الصيانه
+ •
+╚[❖════════════❖]╝`
 
  `)
    message.author.sendEmbed(embed)
