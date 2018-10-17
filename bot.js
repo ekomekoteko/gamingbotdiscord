@@ -69,10 +69,19 @@ client.on("message", message => {
 
 ////2 
 client.on("message", message => {
-	var prefix = "g!";
- if (message.content === "g!help-Rank") {
-	 message.channel.send('');
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-Rank") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
   const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
       .setColor("#000000")
          .setDescription(`**❓❔❗️❕Add-Rank❗️❕❓❔**
         **:ok_hand: g!CrossFire|Create Rank <CrossFire> ~ اعمل رتبة بي اسم CrossFire 
@@ -112,10 +121,7 @@ Type: g!Brawlhalla
    
    }
    });
-client.on('message', msg => {
-    if(msg.content === 'g!help-Rank')
-    msg.reply('Check Your DM :white_check_mark:')
-  }); 
+
 
 
 
@@ -162,13 +168,23 @@ client.on("message", message => {
   
 
 client.on("message", message => {
-	var prefix = "g!";
- if (message.content === "g!help-public") {
-	 message.channel.send('');
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-public") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
   const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
       .setDescription(`
-			  اوامر عامة                                                                                 
+╔[❖════════════❖]╗
+                اوامر عامة
+╚[❖════════════❖]╝                                                                                 
 ✅ ***g!allbots ~ لعرض جميع البوتات الي بالسيرفر***
 ✅ ***g!server ~يعرض لك معلومات عن السيرفر***
 ✅ ***g!bot ~ يعرض لك كل معلومات البوت***
@@ -209,20 +225,26 @@ client.on("message", message => {
     
    }
    }); 
-client.on('message', msg => {
-    if(msg.content === 'g!help-public')
-    msg.reply('Check Your DM :white_check_mark:')
-  }); 
 
    
-   client.on("message", message => {
-	var prefix = "g!";
- if (message.content === "g!help-admin") {
-	  message.channel.send('');
+  client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-admin") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
   const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
       .setDescription(`
-	      اوامر ادارة السيرفر
+╔[❖════════════❖]╗ 
+               اوامر ادارة السيرفر
+╚[❖════════════❖]╝        
 ***:anger: - سوي روم اسمه 个welcome个 or welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
 :ok_hand: g!move @user ~  لسحب الشخص الى روومك  
 :ok_hand: g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
@@ -261,10 +283,7 @@ client.on('message', msg => {
     
    }
    });
-client.on('message', msg => {
-    if(msg.content === 'g!help-admin')
-    msg.reply('Check Your DM :white_check_mark:')
-  }); 
+
 
   client.on("message", message => {
     if (message.author.bot) return;
@@ -273,7 +292,7 @@ client.on('message', msg => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`**
-    شيك على الخاص
+    
      Check Your DM**`)
 
 		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
@@ -281,7 +300,9 @@ client.on('message', msg => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-          اوامر الالعاب
+╔[❖════════════❖]╗
+              اوامر الالعاب 
+╚[❖════════════❖]╝      اوامر الالعاب
 :video_game: g!rps ~ حجر ورقة مقص
 :video_game: g!speed ~ اسرع كتابة
 :video_game: g!quas ~ اسئلة عامة
@@ -299,17 +320,22 @@ client.on('message', msg => {
     
    }
    }); 
-client.on('message', msg => {
-    if(msg.content === 'g!help-games')
-    msg.reply('Check Your DM :white_check_mark:')
-  });
+
 			  
 client.on("message", message => {
-	var prefix = "g!";
- if (message.content === "g!help-music") {
-	  message.channel.send(':white_check_mark: | Check Your DM تم الأرسال بلخاص ');
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-music") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
   const embed = new Discord.RichEmbed() 
-      .setColor("#000000")
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
       .setDescription(`
 	        اوامر الموسيقى 
 ╔[❖════════════❖]╗
@@ -325,9 +351,19 @@ client.on("message", message => {
 
 
 client.on("message", message => {
- if (message.content === "!help-colors") {
-  const embed = new Discord.RichEmbed()
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-colors") {
+  const embedss2 = new Discord.RichEmbed() 
       .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
       .setDescription('👑 اوامر اللوانء👑')
       .addField('❖-|g!colors', `👑لعرض قائمة الألوان💯`)
       .addField('❖-|g!createcolors', `☺لأنشاء 50 لون💯`)
@@ -336,10 +372,7 @@ client.on("message", message => {
       message.channel.send("")
  }
 });
- client.on('message', msg => {
-    if(msg.content === 'g!help-colors')
-    msg.reply('Check Your DM :white_check_mark:')
-  });
+
 
 client.on("message", message => {
  if (message.content === "g!help-colors") {
@@ -356,11 +389,20 @@ client.on("message", message => {
 
 
 
- client.on("message", message => {
-    if (message.content === "g!help-bc") {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#00FF00")
-         .setThumbnail(message.author.avatarURL)
+client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-bc") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
   :e_mail:      g!obc | لأرسال برود كاست للكل
@@ -385,26 +427,7 @@ client.on('message', msg => {
 
 
 
-  client.on("message", message => {
- if (message.content === "g!help-welcome") {
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-        .setDescription('👑أوامر الترحيب👑')
-	.addField('❖-|!wlc 1', `👋يخلي البوت يرسل لك ترحيب بشكل حلو👋`)
-	  .addField('❖-|!wlc 2', `👑يخلي البوت يرسل لك ترحيب بشكل تاني خورافي👑`)
-	  .addField('❖-|!wlc 3', `👋يخلي البوت يرسل لك ترحيب بشكل غير الي فاتوا👋`)
-	  .addField('❖-|!wlc 4', `👑يخلي البوت يرسل لك ترحيب بشكل اخر و خورافي مرة👑`)
-          .addField('❖-|!wlc 5', `👋يخلي البوت يرحب بك بشكل حلو👋`)
-          .addField('❖-|!wlc 6', `👑يخلي البوت يرحب بك بطريقة خورافية👑`)
-          .addField('❖-|!wlc 7', `👋يخلي البوت يرحب بك بطريقة حلوة👋`)
-          .addField('❖-|!wlc 8', `👑يخلي البوت يرحب بك مثل الباقي👑`)
-          .addField('❖-|!wlc 9', `👋يخلي البوت يرحب بك مثل الباقي👋`)
-          .addField('❖-|!wlc 10', `👑يخلي البوت يرحب بك مثل الباقي👑`)
-  message.author.send({embed});
-      message.channel.send(":white_check_mark: | Check Your DM تم الأرسال بلخاص")
-
- }
-});
+  
 //////////////////////HELP 
 client.on("message", message => {
     if (message.author.bot) return;
