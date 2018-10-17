@@ -136,7 +136,7 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
 	 
-	         ***``Please Chose:``***
+	         ***Please Chose:***
 
 
 :white_small_square:${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
