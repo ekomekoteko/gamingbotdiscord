@@ -6020,9 +6020,9 @@ if (message.content.startsWith(prefix + "rank")) {
     if (CulLevel > EpicEdiTeD[message.author.id].Level) {EpicEdiTeD[message.author.id].Level +=CulLevel}
     let edited = new Discord.RichEmbed()
     .setColor("Random")
-    .addField("Nâmè :", message.author.tag)
-    .addField("Lèvèl :", EpicEdiTeD[message.author.id].Level)
-    .addField("xp :",Math.floor(EpicEdiTeD[message.author.id].Xp))
+    .addField("Nâmè :↙", message.author.tag)
+    .addField("Lèvèl↙ :", EpicEdiTeD[message.author.id].Level)
+    .addField("Xp :↙",Math.floor(EpicEdiTeD[message.author.id].Xp))
     message.channel.send(edited);
 }
 if (!EpicEdiTeD[message.author.id]) {
