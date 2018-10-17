@@ -397,6 +397,50 @@ client.on('message', msg => {
 
  }
 });
+//////////////////////HELP 
+client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "g!help-important") {
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+		 message.channel.send(`<@${message.author.id}>`, {embed : embedss2});
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+╭
+**╔[❖════════════❖]╗
+                Important  :fire:
+╚[❖════════════❖]╝**
+
+__to enable welcome message do channel name__
+
+ "welcome"
+
+__to enable Suggest message do channel name__
+
+"≄◉♔『≤suggestions≥』♔◉≄"
+
+__to enable log message do channel name__ "log"
+
+**`)
+
+       .setTimestamp()
+       .setFooter(message.author.username, message.author.avatarURL)
+message.author.sendEmbed(embed)
+
+.catch(() => {
+  message.channel.send('🚫الخاص مغلق');
+});
+
+}
+}); 
+
 
 
 //////////////////////////////////----------------------------/////////////////////----////////ID
@@ -598,6 +642,7 @@ client.on('message', message => {
       message.channel.sendEmbed(embed);
     }
 });
+////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////Photo Server IMAGE 
 client.on("message", message => {
     const prefix = "g!"
