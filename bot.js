@@ -141,8 +141,10 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000") 
       .setDescription(`
-	 
-	         ***Please Chose:***
+	
+***╔[❖════════════❖]╗
+             Please Chose        
+╚[❖════════════❖]╝  ***           
 
 
 :white_small_square:${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
@@ -155,7 +157,7 @@ client.on("message", message => {
  
 :white_small_square:${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
 
-:white_small_square:${prefix}***help-welcome*** →→ ***『اوامر الترحيب』*** :loudspeaker:
+:white_small_square:${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
 
 :white_small_square:${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 
@@ -182,9 +184,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-╔[❖════════════❖]╗
+***╔[❖════════════❖]╗
                 اوامر عامة
-╚[❖════════════❖]╝                                                                                 
+╚[❖════════════❖]╝  ***                                                                               
 ✅ ***g!allbots ~ لعرض جميع البوتات الي بالسيرفر***
 ✅ ***g!server ~يعرض لك معلومات عن السيرفر***
 ✅ ***g!bot ~ يعرض لك كل معلومات البوت***
@@ -242,9 +244,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-╔[❖════════════❖]╗ 
+***╔[❖════════════❖]╗ 
                اوامر ادارة السيرفر
-╚[❖════════════❖]╝        
+╚[❖════════════❖]╝***      
 ***:anger: - سوي روم اسمه 个welcome个 or welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
 :ok_hand: g!move @user ~  لسحب الشخص الى روومك  
 :ok_hand: g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
@@ -300,9 +302,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-╔[❖════════════❖]╗
+***╔[❖════════════❖]╗
               اوامر الالعاب 
-╚[❖════════════❖]╝      اوامر الالعاب
+╚[❖════════════❖]╝***      
 :video_game: g!rps ~ حجر ورقة مقص
 :video_game: g!speed ~ اسرع كتابة
 :video_game: g!quas ~ اسئلة عامة
@@ -338,11 +340,11 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 	        اوامر الموسيقى 
-╔[❖════════════❖]╗
+***╔[❖════════════❖]╗
 •
 تحت الصيانه
 •
-╚[❖════════════❖]╝
+╚[❖════════════❖]╝***
  `)
    message.author.sendEmbed(embed)
     
@@ -431,7 +433,7 @@ client.on('message', msg => {
 //////////////////////HELP 
 client.on("message", message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "g!help-important") {
+     if (message.content === prefix + "help-important") {
   const embedss2 = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
