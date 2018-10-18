@@ -187,9 +187,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-***╔[❖════════════❖]╗
-                اوامر عامة
-╚[❖════════════❖]╝  ***                                                                               
+
+***¯−ـ‗ऊ»اوامر عامة«ऊ‗ـ−¯***
+                                                                  
 ✅ ***g!allbots ~ لعرض جميع البوتات الي بالسيرفر***
 ✅ ***g!server ~يعرض لك معلومات عن السيرفر***
 ✅ ***g!bot ~ يعرض لك كل معلومات البوت***
@@ -247,9 +247,8 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-***╔[❖════════════❖]╗ 
-               اوامر ادارة السيرفر
-╚[❖════════════❖]╝***      
+***¯−ـ‗ऊ» اوامر ادارة السيرفر«ऊ‗ـ−¯***
+
 ***:anger: - سوي روم اسمه 个welcome个 or welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
 :ok_hand: g!move @user ~  لسحب الشخص الى روومك  
 :ok_hand: g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
@@ -305,9 +304,8 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-***╔[❖════════════❖]╗
-              اوامر الالعاب 
-╚[❖════════════❖]╝***      
+***¯−ـ‗ऊ» اوامر العاب«ऊ‗ـ−¯***
+
 :video_game: g!rps ~ حجر ورقة مقص
 :video_game: g!speed ~ اسرع كتابة
 :video_game: g!quas ~ اسئلة عامة
@@ -342,7 +340,7 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-	        اوامر الموسيقى 
+***¯−ـ‗ऊ» اوامر الموسقي «ऊ‗ـ−¯***
 ***╔[❖════════════❖]╗
 •
 تحت الصيانه
