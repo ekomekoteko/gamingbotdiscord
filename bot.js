@@ -11,8 +11,7 @@ const moment = require('moment');
 const devs = ['411137717884289024'];
 var Canvas = require('canvas');
 var jimp = require('jimp');
-var prefix = "-"
-const adminprefix = "admin-"
+var prefix = "g!"
 
 client.on('ready', function(){
     client.user.setStatus("online");
