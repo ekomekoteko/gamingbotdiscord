@@ -5755,7 +5755,7 @@ client.on('message', message => {
             var Canvas = module.require('canvas');
             var jimp = module.require('jimp');
     
-     const w = ['ID1.png', './img/ID2.png', './img/ID3.png', './img/ID4.png', './img/ID5.png'];
+     const w = ['ID1.png', './img/ID2.png', './img/ID3.png', './img/ID4.png', './img/ID5.png', './imge/ID6.png];
     
              let Image = Canvas.Image,
                  canvas = new Canvas(802, 404),
@@ -6120,27 +6120,7 @@ console.log('`Error`: ' + RebeL);
 });
 
 ////////////////Short
-client.on('message', message => { 
-	var prefix = "g!";
- let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'short')) {
-    if(!message.channel.guild) return;  
 
-        googl.setKey('AIzaSyC2Z2mZ_nZTcSvh3QvIyrmOIFP6Ra6co6w');
-        googl.getKey();
-        googl.shorten(args.join(' ')).then(shorturl => {
-            message.channel.send(''+shorturl)
-        }).catch(e=>{
-            console.log(e.message);
-            message.channel.send('Error!');
-        });
-}
-});
-
-client.on('ready', () => {
-    client.user.setStatus("Idle");
- 
- });
 
 
 
