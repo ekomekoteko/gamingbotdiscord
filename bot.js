@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 	const client = new Discord.Client()
 	const fs = require('fs');
-	const moment = require('moment');
         const ytdl = require("ytdl-core");
         const sql = require('sqlite')
         const ms = require("ms");
