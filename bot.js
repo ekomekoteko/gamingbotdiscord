@@ -6130,8 +6130,6 @@ client.on('message',async message => {
   });
 
 //////////////////////////////////////////////////Join in Voice 
-const Discord = require("discord.js")
-const client = new Discord.Client();
 const YTDL = require('ytdl-core');
 const nodeopus = require('node-opus');
 const ffmpeg = require('ffmpeg');
