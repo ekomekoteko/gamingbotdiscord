@@ -6003,7 +6003,9 @@ console.log('`Error`: ' + RebeL);
 
 
 ////////////------------------------------------------------------//////Help test
- const serverStats = {
+ 
+
+const serverStats = {
     guildID: '479519956208320512',
     ticketCategoryID: '411137717884289024'
 
@@ -6061,8 +6063,53 @@ client.on('message', async message => {
             .setFooter(`Your message has been sent - A staff member will be in contact soon.`)
         await message.author.send(dm);
         if (message.content.startsWith(prefix + 'complete')) return;
-        const embe
-
+        const embed5 = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setAuthor(message.author.tag, message.author.avatarURL)
+            .setDescription(message.content)
+            .setFooter(`Message Received - ${message.author.tag}`)
+        await channel.send(embed5);
+        db.set(`support_${message.author.id}`, active);
+        db.set(`supportChannel_${channel.id}`, message.author.id);
+        return;
+    }
+    let support = await db.fetch(`supportChannel_${message.channel.id}`);
+    if (support) {
+        support = await db.fetch(`support_${support}`);
+        let supportUser = client.users.get(support.targetID);
+        if (!supportUser) return message.channel.delete();
+        if (message.content.toLowerCase() === '/complete') {
+            const complete = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .setAuthor(`Hey, ${supportUser.tag}`, supportUser.avatarURL)
+                .setFooter('Ticket Closed -- Nebulous')
+                .setDescription('*Your ticket has been marked as complete. If you wish to reopen it, or create a new one, please send a message to the bot.*')
+            supportUser.send(complete);
+            message.channel.delete();
+            db.delete(`support_${support.targetID}`);
+            let inEmbed = new Discord.RichEmbed()
+                .setTitle('Ticket Closed!')
+                .addField('Support User', `${supportUser.tag}`)
+                .addField('Closer', message.author.tag)
+                .setColor('RANDOM')
+            const staffChannel = client.channels.get('489156917092941826'); //Create a log channel and put id here
+            staffChannel.send(inEmbed);
+        }
+        const embed4 = new Discord.RichEmbed()
+            .setColor('RANDOM')
+            .setAuthor(message.author.tag, message.author.avatarURL)
+            .setFooter(`Message Received - Nebulous`)
+            .setDescription(message.content)
+        client.users.get(support.targetID)
+            .send(embed4);
+        message.delete({
+            timeout: 10000
+        });
+        embed4.setFooter(`Message Sent -- ${supportUser.tag}`)
+            .setDescription(message.content);
+        return message.channel.send(embed4);
+    }
+});
 
 
 
