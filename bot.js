@@ -1,36 +1,22 @@
 const Discord = require('discord.js');
+	const client = new Discord.Client()
+	const fs = require('fs');
+	const moment = require('moment');
+        const ytdl = require("ytdl-core");
+        const sql = require('sqlite')
+        const ms = require("ms");
+        const Canvas = require('canvas');
+        const superagent = require('superagent');
 const { Client, Util } = require('discord.js');
-const client = new Client();
+const { MessageAttachment } = require("discord.js");
+const getYoutubeID = require('get-youtube-id');
+const fetchVideoInfo = require('youtube-info');
 const YouTube = require('simple-youtube-api');
-const ytdl = require('ytdl-core');
 const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
-const request = require('request');
-const fs = require("fs");
-const moment = require('moment');
-const devs = ['411137717884289024'];
-var Canvas = require('canvas');
-var jimp = require('jimp');
-var prefix = "g!"
-
-client.on('ready', function(){
-    client.user.setStatus("online");
-    var ms = 100000 ;
-    var setGame = [`g!help  ${client.guilds.size} Servers`,` ${client.users.size}`,`GAMING ❤ ✯`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
-    }, ms);100000
-
-});
+const prefix = "g!";
+const p = "-";
+var errors = 0;
 //-----------------------------------------------------------------------------------------------------------------------------
 
 
