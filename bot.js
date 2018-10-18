@@ -5150,7 +5150,7 @@ client.on('message', message => {
                                                                              ctx.fillText(`${getvalueof.username}`,655, 170);
                                                                             
                                                                         
-                                                          moment.locale('ar-ly');        
+                                                          moment.locale('en-ly');        
                                             
                                             
                                                                     ctx.font = '30px Arial';
