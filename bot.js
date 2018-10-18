@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var Canvas = require('canvas');// npm i canvas
+var jimp = require('jimp');// npm i jimp 
+const fs = require("fs");// npm i fs
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
