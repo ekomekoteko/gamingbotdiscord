@@ -5910,7 +5910,7 @@ EpicEdiTeD[message.author.id].Money+= 0.25;
 });
 ////////////////////////
 client.on('message' , async message => {
-            if(message.content.startsWith(prefix + "ads")) {
+            if(message.content.startsWith(prefix + "auto")) {
      await message.channel.send("`ارسال الرساله .`").then(e => {
     let filter = m => m.author.id === message.author.id
     let tests = '';
