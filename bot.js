@@ -95,7 +95,7 @@ client.on("message", message => {
 وي اليكتب امر من دول يحصل علي الرتلقائي
 :boom: ___Ranks In GAME'S___:boom: 
 
-to Add Rank:  CrossFire  
+__to Add Rank:  CrossFire  
 Type: g!CrossFire
 --------------------------
 to Add Rank: PUBG 
@@ -114,7 +114,7 @@ to Add Rank: Leagueoflegends
 Type: g!Leagueoflegends 
 --------------------------
 to Add Rank: Brawlhalla
-Type: g!Brawlhalla
+Type: g!Brawlhalla__
 ---------------------------
      **`)
    message.author.sendEmbed(embed)
@@ -142,27 +142,30 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
 	
-***╔[❖════════════❖]╗
-             Please Chose        
-╚[❖════════════❖]╝  ***           
 
+          ***¯−ـ‗ऊ_»Please Chose«_ऊ‗ـ−¯***
+         
 
-:white_small_square:${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
+***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçom ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
 
-:white_small_square:${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
+❒${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
+
+❒${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
 			 
-:white_small_square:${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
+❒${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
 
-:white_small_square:${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
+❒${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
  
-:white_small_square:${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
+❒${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
 
-:white_small_square:${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
+❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
 
-:white_small_square:${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
+❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 
-:white_small_square:${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
-	  `)
+❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+
+***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋• @ĢǻMiÑğ ßδT#6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
+          `)
    message.channel.sendEmbed(embed)
     
    }
