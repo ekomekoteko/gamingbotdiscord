@@ -1,30 +1,36 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, Util } = require('discord.js');
+const client = new Client();
+const YouTube = require('simple-youtube-api');
+const ytdl = require('ytdl-core');
+const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
+const queue = new Map();
+const request = require('request');
+const fs = require("fs");
+const moment = require('moment');
+const devs = ['411137717884289024'];
+var Canvas = require('canvas');
+var jimp = require('jimp');
+var prefix = "-"
+const adminprefix = "admin-"
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
- client.user.setActivity("",{type: 'watching'})
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
+client.on('ready', function(){
+    client.user.setStatus("online");
+    var ms = 100000 ;
+    var setGame = [`g!help  ${client.guilds.size} Servers`,` ${client.users.size}`,`GAMING ❤ ✯`];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
+    }, ms);100000
+
 });
 //-----------------------------------------------------------------------------------------------------------------------------
 
