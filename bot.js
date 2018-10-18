@@ -1,4 +1,8 @@
 const Discord = require('discord.js');
+const fetchVideoInfo = require('youtube-info');
+const YouTube = require('simple-youtube-api');
+const ytdl = require('ytdl-core');
+const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const client = new Discord.Client();
 
 client.on('ready', () => {
