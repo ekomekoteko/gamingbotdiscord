@@ -6130,8 +6130,6 @@ client.on('message',async message => {
   });
 
 //////////////////////////////////////////////////Join in Voice 
-f (!Discord) const Discord = require('discord.js');
-if (!client)const client = new Discord.Client();
 if (!fs) const fs = require('fs');
 if (!suck) const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
 if (!prefix) const prefix = "g!";
