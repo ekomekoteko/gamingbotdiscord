@@ -889,23 +889,40 @@ client.on('message', message => {
 
 
 ////////////////////////////////////////////////-------///////////////////////// i n  v i t e s 
-
-
-
 client.on('message', message => {
-    if (message.content.startsWith("g!invite")) {
-    message.guild.fetchInvites()
-    .then(invites => message.channel.send(`:small_orange_diamond:You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites Todây`))
-     
-    }
+    if (message.content.startsWith ("g!invites")) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+         var mentionned = message.mentions.users.first();
+        var os;
+      if(mentionned){
+          var os = mentionned.id;
+      } else {
+          var os = message.author.id;
+          
+      }
+          var oss;
+      if(mentionned){
+          var oss = mentionned;
+      } else {
+          var oss = message.author;
+          
+      }
+message.guild.fetchInvites()
+ .then(invites =>{
+ if(!invites.find(invite => invite.inviter.id === `${os}`)) return message.channel.send(`**${oss.username}, Does't Have Invites :x:**`);
+ message.channel.send(`**__${invites.find(invite => invite.inviter.id === `${os}`).uses}__ Member Joined By ${oss.username} !** :chart_with_upwards_trend: `)
+
+ })
+ 
+ 
+
+}
+
 });
-client.on('message', message => {
-    if (message.content.startsWith("g!Invites")) {
-    message.guild.fetchInvites()
-    .then(invites => message.channel.send(`:small_orange_diamond:You have  ${invites.find(invite => invite.inviter.id === message.author.id).uses} invites Todây`))
-     
-    }
-});
+
+
+
+
 ///////////////Law 7ad d5al el Server y5od Rank Member Auto
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","Member"));
@@ -6341,38 +6358,51 @@ client.on('message', message => {
 //╱╱┃┃
 //╱╱╰╯
 
+
+//////////////////////////////////////////
 client.on('message', message => {
-    if (message.content.startsWith ("-invites")) {
-     if(!message.channel.guild) return message.reply('** This command only for servers **');
-         var mentionned = message.mentions.users.first();
-        var os;
+   if (message.content.startsWith ("-id")) {
+       if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+               var mentionned = message.mentions.users.first();
+    var mentionavatar;
       if(mentionned){
-          var os = mentionned.id;
+          var mentionavatar = mentionned;
       } else {
-          var os = message.author.id;
+          var mentionavatar = message.author;
           
       }
-          var oss;
-      if(mentionned){
-          var oss = mentionned;
-      } else {
-          var oss = message.author;
-          
-      }
-message.guild.fetchInvites()
- .then(invites =>{
- if(!invites.find(invite => invite.inviter.id === `${os}`)) return message.channel.send(`**${oss.username}, Does't Have Invites :x:**`);
- message.channel.send(`**__${invites.find(invite => invite.inviter.id === `${os}`).uses}__ Member Joined By ${oss.username} !** :chart_with_upwards_trend: `)
+      message.guild.fetchInvites()
+       .then(invites =>{
+ if(!invites.find(invite => invite.inviter.id === `${mentionavatar.id}`)) {
+     let embed = new Discord.RichEmbed()
+  .setColor(0xd3d0c4)
+   .setThumbnail(`${mentionavatar.avatarURL}`)
+  .addField("Name:",`<@` + `${mentionavatar.id}` + `>`, true)
+  .addField('Discrim:',"#" +  `${mentionavatar.discriminator}`, true)
+   .addField("ID:", "**" + `${mentionavatar.id}` + "**", true)
+  .addField("Create At:", "**" + `${mentionavatar.createdAt}` + "**", true)
+  .addField("Invites:", `**0**` ,true)
+     .setFooter(`©  Dream™ `)
+      message.channel.sendEmbed(embed);
+ }else{
+   let embed = new Discord.RichEmbed()
+  .setColor(0xd3d0c4)
+   .setThumbnail(`${mentionavatar.avatarURL}`)
+  .addField("Name:",`<@` + `${mentionavatar.id}` + `>`, true)
+  .addField('Discrim:',"#" +  `${mentionavatar.discriminator}`, true)
+   .addField("ID:", "**" + `${mentionavatar.id}` + "**", true)
+  .addField("Create At:", "**" + `${mentionavatar.createdAt}` + "**", true)
 
- })
+  .addField("Invites:", `**${invites.find(invite => invite.inviter.id === `${mentionavatar.id}`).uses}**` ,true)
+    .setFooter(`GAMING BOT `)
+
+  message.channel.sendEmbed(embed);
+ }
  
- 
-
-}
-
+       })
+    }
 });
-
-
 
 
 
