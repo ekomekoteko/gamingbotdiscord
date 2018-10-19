@@ -6458,6 +6458,10 @@ function timeCon(time) {
 
 ////////////////////////////////////////---------------------------------------------------///////////////
 
+
+
+
+
 const k = new Discord.RichEmbed()
           .setDescription(` ** 「🔧 | BOT INFO」**`)
                 
@@ -6470,7 +6474,7 @@ const k = new Discord.RichEmbed()
 .addField("`-stats`",
 "  To preview Bots Stats   .")
 .setColor("RANDOM")
-.setFooter(`©  Dreams™`)
+.setFooter(`GAMING BOT™`)
 
 const l = new Discord.RichEmbed()
 .addField("**:globe_with_meridians: | WEBSITE :**","https://dreamsbot.wixsite.com/dreams")
@@ -6512,10 +6516,6 @@ message.channel.send("**:arrow_down:  Use __Emojis__`👈👉` To Move From Page
 })
   }
   });
-
-
-
-
 
 
 
