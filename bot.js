@@ -6232,7 +6232,24 @@ client.on('message', message => {
         permissions :   [1],
         color : " #ffffff"
     })
- 
+    
+    message.guild.createRole({
+        name : "CrossFire",
+        permissions :   [1],
+        color : " #ffffff"
+    })     
+  
+    message.guild.createRole({
+        name : "PUBG",
+        permissions :   [1],
+        color : " #ffffff"
+    })    
+   
+     message.guild.createRole({
+        name : "BlackSquad",
+        permissions :   [1],
+        color : " #D2B48C"
+    })      
   console.log(`i make rools in this server: ** ${message.guild.name} ** `);
 }
 });
