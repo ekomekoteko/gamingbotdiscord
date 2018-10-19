@@ -6027,7 +6027,174 @@ client.on('message',async message => {
 
 //////////////////////////////////////////////////Join in Voice 
 
+client.on('message', message => {
+         if (message.content === "R-Build R") {
+		       if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
 
+                       if(!message.channel.guild) return message.reply('** This command only for servers **');
+	                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+	const embed = new Discord.RichEmbed()
+		.setDescription('** __:ok_hand: running...to make Channels | يتم الأن عمل الرومات الصويتة والكتابية__ **')
+		.setColor('RANDOM')
+		.setFooter("**R- Bot Build**")
+	message.channel.sendEmbed(embed);
+
+message.guild.createChannel('Info', 'text');
+message.guild.createChannel('Welcome', 'text');
+message.guild.createChannel('Chat', 'text');
+message.guild.createChannel('bot', 'text');
+message.guild.createChannel('bo7', 'text');
+message.guild.createChannel('pic', 'text');
+message.guild.createChannel('cut', 'text');
+message.guild.createChannel('log', 'text');
+message.guild.createChannel('admin-chat', 'text');
+message.guild.createChannel('▓▬▬▬ADMNS▬▬▬▓', 'voice');
+message.guild.createChannel('Owner - مالك السيرفر', 'voice');
+message.guild.createChannel('Co Owner - نائب الرئيس', 'voice');
+message.guild.createChannel('Dev - مبرمج السيرفر', 'voice');
+message.guild.createChannel('Admin - مشرف', 'voice');
+message.guild.createChannel('Mod - مود', 'voice');
+message.guild.createChannel('▓▬▬▬Other▬▬▬▓', 'voice');
+message.guild.createChannel('[ R E C ] 🎥', 'voice');
+message.guild.createChannel('YouTubers - يوتيوبرز', 'voice');
+message.guild.createChannel('VIP + - كبار الشخصيات بلس', 'voice');
+message.guild.createChannel('VIP - كبار الشخصيات', 'voice');
+message.guild.createChannel('Friends - اصدقاء', 'voice');
+message.guild.createChannel('▓▬▬▬WEL▬▬▬▓', 'voice');
+message.guild.createChannel('Help - مساعدة', 'voice');
+message.guild.createChannel('Ξ〖 اقـتـراحـاتـكمـ 💡 〗', 'voice');
+message.guild.createChannel('▓▬▬▬♚▬▬▬▓', 'voice');
+message.guild.createChannel('♧ Ξ〖 🎤  سواليف 📣  〗', 'voice');
+message.guild.createChannel('♢ Ξ〖 🎤 مواهب 🎵  〗', 'voice');
+message.guild.createChannel('❋ Ξ〖 🎈فعاليات 🏅 〗', 'voice');
+message.guild.createChannel('❋ Ξ〖  🕋 القرآن الكريم  〗', 'voice');
+message.guild.createChannel('▓▬▬▬♛▬▬▬▓', 'voice');
+message.guild.createChannel('☆  Ξ〖 🔞  السجن العام 🔪 〗', 'voice');
+message.guild.createChannel('▓▬▬▬Games▬▬▬▓', 'voice');
+message.guild.createChannel('Clash of Clans | كلاش أوف كلانز', 'voice');
+message.guild.createChannel('Clash Royal | كلاش رويال', 'voice');
+message.guild.createChannel('Hajwala  Online | هجولة أون لاين', 'voice');
+message.guild.createChannel('Bullet force | بولت فورس', 'voice');
+message.guild.createChannel('MTA | ام تي اي', 'voice');
+message.guild.createChannel('Ludo Star | لودو ستار', 'voice');
+message.guild.createChannel('▓▬▬▬Private▬▬▬▓', 'voice');
+message.guild.createChannel('✿Tow✿', 'voice');
+message.guild.createChannel('✿Three✿', 'voice');
+message.guild.createChannel('✿Four✿', 'voice');
+message.guild.createChannel('✿Five✿', 'voice');
+message.guild.createChannel('✿Six✿', 'voice');
+message.guild.createChannel('▓▬▬▬AFK▬▬▬▓', 'voice');
+message.guild.createChannel('Away From keyboard AFK', 'voice');
+message.guild.createChannel('▓▬▬▬♚▬▬▬▓', 'voice');
+
+  console.log(`i make text channels in this server: ** ${message.guild.name} ** `)
+  
+}
+});
+client.on('message', message => {
+	
+	if (message.content === "R-Build Rr") {
+		      if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_ROLES ` **").then(msg => msg.delete(6000))
+
+	              if(!message.channel.guild) return message.reply('** This command only for servers **');
+	                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+		          const embed = new Discord.RichEmbed()
+		.setDescription('** __:ok_hand: running...to make roles | يتم الأن عمل الرتب__ **')
+		.setColor('RANDOM')
+		.setFooter("** R-Bot Build **")
+	message.channel.sendEmbed(embed);
+		   
+
+  message.guild.createRole({
+        name : "Owner",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    message.guild.createRole({
+        name : "Co-Owner",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+      message.guild.createRole({
+        name : "Leader",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    message.guild.createRole({
+        name : "Co-Leader",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+  
+     message.guild.createRole({
+        name : "Admin",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    
+
+  
+    message.guild.createRole({
+        name : "Mod",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    message.guild.createRole({
+        name : "ＶＩＰ + ",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    message.guild.createRole({
+        name : "ＶＩＰ",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    message.guild.createRole({
+        name : "Support ",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+
+  message.guild.createRole({
+        name : "YouTuber+200",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+   
+    message.guild.createRole({
+        name : "YouTuber",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    
+      message.guild.createRole({
+        name : "Pro Member☤",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    
+          message.guild.createRole({
+        name : "🌹「Friendly」",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+  
+ 
+    message.guild.createRole({
+        name : "☤Member☤",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+    
+        message.guild.createRole({
+        name : "Bot",
+        permissions :   [1],
+        color : " #ffffff"
+    })
+ 
+  console.log(`i make rools in this server: ** ${message.guild.name} ** `);
+}
+});
 
 
 
