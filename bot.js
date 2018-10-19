@@ -6262,8 +6262,38 @@ client.on('message', message => {
   console.log(`i make rools in this server: ** ${message.guild.name} ** `);
 }
 });
-/////////////////////////////
- 
+//////////////////////=---------------------------------------------------------------///////
+ client.on('message', message => {
+     if (message.content === "-help music") {
+           if(!message.channel.guild) return message.reply('** This command only for servers**');
+           
+ const embed = new Discord.RichEmbed()
+         .setDescription(` ** 「️️️🎶| MUSIC COMMANDS」**`)
+.addField("`-mplay`",
+" To Play A ( Youtube Link / Song By Name )   .")
+.addField("`-msearch`",
+" To Search A video In Youtube and play it by choose it   .")
+.addField("`-mqueue`",
+" To  See The Wating Music List   .")
+.addField("`-mnowplaying`",
+" To Display the current song in chat   .")
+.addField("`-mskip`",
+" To Skip The Current Song .")
+.addField("`-mvolume`",
+" To Change Volume Ratio   .")
+.addField("`-mshuffle`",
+" To Shuffles the playlist     .")
+.addField("`-mrepeat`",
+" To Loop The Queue   .")
+.setColor("RANDOM")
+.addField("🌍 **| OWNER :**  ",
+" `-contact`")
+.setFooter(`GAMING BOT  `)
+message.react("️️️🎶")
+message.author.sendEmbed(embed);
+
+    }
+});
 
 
 client.login(process.env.BOT_TOKEN);
