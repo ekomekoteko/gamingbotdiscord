@@ -6130,10 +6130,7 @@ client.on('message',async message => {
   });
 
 //////////////////////////////////////////////////Join in Voice 
-if (!fs) const fs = require('fs');
-if (!suck) const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
-if (!prefix) const prefix = "g!";
-// By M7MD
+
 client.on("message", message => {
     fs.writeFile('./suck.json', JSON.stringify(suck));
 });
