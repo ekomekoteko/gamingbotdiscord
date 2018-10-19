@@ -6615,7 +6615,6 @@ message.channel.sendFile(canvas.toBuffer());
 
 
 /////////////////////
-const prefix = "g!";
 // 
 client.on("message", message => {
     fs.writeFile('./suck.json', JSON.stringify(suck));
