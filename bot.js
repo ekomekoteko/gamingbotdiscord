@@ -6149,28 +6149,28 @@ client.on('message', message => {
   message.guild.createRole({
         name : "Owner",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #000000"
     })
     message.guild.createRole({
         name : "Co-Owner",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #000000"
     })
       message.guild.createRole({
         name : "Leader",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #EE82EE"
     })
     message.guild.createRole({
         name : "Co-Leader",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #EE82EE"
     })
   
      message.guild.createRole({
         name : "Admin",
         permissions :   [1],
-        color : " #RANDOM"
+        color : " #8A2BE2"
     })
     
      message.guild.createRole({
@@ -6184,34 +6184,34 @@ client.on('message', message => {
     message.guild.createRole({
         name : "Mod",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #8A2BE2"
     })
     message.guild.createRole({
         name : "ＶＩＰ + ",
         permissions :   [1],
-        color : " #ffffff"
+        color : "  #7CFC00"
     })
     message.guild.createRole({
         name : "ＶＩＰ",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #7CFC00"
     })
     message.guild.createRole({
         name : "Support ",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #FFD700"
     })
 
   message.guild.createRole({
         name : "YouTuber+200",
         permissions :   [1],
-        color : " #ffffff"
+        color : " "#8B0000"
     })
    
     message.guild.createRole({
         name : "YouTuber",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #FF0000"
     })
     
       message.guild.createRole({
@@ -6223,7 +6223,7 @@ client.on('message', message => {
           message.guild.createRole({
         name : "🌹「Friendly」",
         permissions :   [1],
-        color : " #ffffff"
+        color : " #9932CC"
     })
   
  
@@ -6254,7 +6254,7 @@ client.on('message', message => {
      message.guild.createRole({
         name : "BlackSquad",
         permissions :   [1],
-        color : " #D2B48C"
+        color : " #ffffff"
     })      
   console.log(`i make rools in this server: ** ${message.guild.name} ** `);
 }
