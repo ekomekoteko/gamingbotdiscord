@@ -6569,6 +6569,15 @@ message.channel.sendMessage('**تم إنشاء روم عداد الأعضآء :s
 message.reply ("لتفعيل الرومات اكتب `g!Ch ac`");  
 }
 });
+///////////////////////
+client.on("message", message => {
+    if(message.author.id !== "411137717884289024") return;
+
+    if(message.content === "g!restart"){
+        console.log("your say restart for this i'm closed");
+        return process.exit(26);
+    }
+});
 
 
 
