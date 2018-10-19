@@ -461,8 +461,9 @@ __to enable Suggest message do channel name__
 "≄◉♔『≤suggestions≥』♔◉≄"
 
 __to enable log message do channel name__ "log"**
-__g!Build R »البوت يعمل لك روم بي الشكل دا__ 
-          ↘↙ 
+════════════════════════════════════════════════════
+__g!Build R »البوت يعمل لك روم__ 
+          ↘↙ بي الشكل دا
 ***('Info', 'text');
 ('Welcome', 'text');
 ('Chat', 'text');
@@ -508,7 +509,24 @@ __g!Build R »البوت يعمل لك روم بي الشكل دا__
 ('✿Five✿', 'voice');
 ('✿Six✿', 'voice');
 ('▓▬▬▬AFK▬▬▬▓', ***
-
+════════════════════════════════════════════════════════════════════════
+g!Build Rr »***البوت يعمل لك رتب بي الاسم دا بي الزخرفة*** 
+          ↘↙ بي الشكل دا
+***1-Name: Owner
+2- Name: Co-owner
+3-Name:Leader
+4-Name:Co-Leader
+5-Name:Admin
+6-Name:Mod
+7-Name:VIP+
+8-Name:VIP
+9-Name:Support
+10-Name:Youtuber +200
+11-Name:Youtuber
+12-Name:ProMember
+13-Name:Friendly
+14-Name:Member
+15-Name:Bot***
 `)
 
        .setTimestamp()
@@ -6083,7 +6101,7 @@ client.on('message', message => {
 	const embed = new Discord.RichEmbed()
 		.setDescription('** __:ok_hand: running...to make Channels | يتم الأن عمل الرومات الصويتة والكتابية__ **')
 		.setColor('RANDOM')
-		.setFooter("**R- Bot Build**")
+		.setFooter("**GAMING BOT **")
 	message.channel.sendEmbed(embed);
 
 message.guild.createChannel('Info', 'text');
@@ -6148,7 +6166,7 @@ client.on('message', message => {
 		          const embed = new Discord.RichEmbed()
 		.setDescription('** __:ok_hand: running...to make roles | يتم الأن عمل الرتب__ **')
 		.setColor('RANDOM')
-		.setFooter("** R-Bot Build **")
+		.setFooter("** GAMING BOT  **")
 	message.channel.sendEmbed(embed);
 		   
 
