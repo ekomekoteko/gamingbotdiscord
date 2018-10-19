@@ -460,9 +460,56 @@ __to enable Suggest message do channel name__
 
 "≄◉♔『≤suggestions≥』♔◉≄"
 
-__to enable log message do channel name__ "log"
+__to enable log message do channel name__ "log"**
+__g!Build R »البوت يعمل لك روم بي الشكل دا__ 
+          ↘↙ 
+***('Info', 'text');
+('Welcome', 'text');
+('Chat', 'text');
+('bot', 'text');
+('bo7', 'text');
+('pic', 'text');
+('cut', 'text');
+('log', 'text');
+('admin-chat', 'text');
+('▓▬▬▬ADMNS▬▬▬▓', 'voice');
+('Owner - مالك السيرفر', 'voice');
+('Co Owner - نائب الرئيس', 'voice');
+('Dev - مبرمج السيرفر', 'voice');
+('Admin - مشرف', 'voice');
+('Mod - مود', 'voice');
+('▓▬▬▬Other▬▬▬▓', 'voice');
+('[ R E C ] 🎥', 'voice');
+('YouTubers - يوتيوبرز', 'voice');
+('VIP + - كبار الشخصيات بلس', 'voice');
+('VIP - كبار الشخصيات', 'voice');
+('Friends - اصدقاء', 'voice');
+('▓▬▬▬WEL▬▬▬▓', 'voice');
+('Help - مساعدة', 'voice');
+('Ξ〖 اقـتـراحـاتـكمـ 💡 〗', 'voice');
+('▓▬▬▬♚▬▬▬▓', 'voice');
+('♧ Ξ〖 🎤  سواليف 📣  〗', 'voice');
+('♢ Ξ〖 🎤 مواهب 🎵  〗', 'voice');
+('❋ Ξ〖 🎈فعاليات 🏅 〗', 'voice');
+('❋ Ξ〖  🕋 القرآن الكريم  〗', 'voice');
+('▓▬▬▬♛▬▬▬▓', 'voice');
+('☆  Ξ〖 🔞  السجن العام 🔪 〗', 'voice');
+('▓▬▬▬Games▬▬▬▓', 'voice');
+('Clash of Clans | كلاش أوف كلانز', 'voice');
+('Clash Royal | كلاش رويال', 'voice');
+('Hajwala  Online | هجولة أون لاين', 'voice');
+('Bullet force | بولت فورس', 'voice');
+('MTA | ام تي اي', 'voice');
+('Ludo Star | لودو ستار', 'voice');
+('▓▬▬▬Private▬▬▬▓', 'voice');
+('✿Tow✿', 'voice');
+('✿Three✿', 'voice');
+('✿Four✿', 'voice');
+('✿Five✿', 'voice');
+('✿Six✿', 'voice');
+('▓▬▬▬AFK▬▬▬▓', ***
 
-**`)
+`)
 
        .setTimestamp()
        .setFooter(message.author.username, message.author.avatarURL)
@@ -6028,7 +6075,7 @@ client.on('message',async message => {
 //////////////////////////////////////////////////Join in Voice 
 
 client.on('message', message => {
-         if (message.content === "R-Build R") {
+         if (message.content === "g!Build R") {
 		       if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
 
                        if(!message.channel.guild) return message.reply('** This command only for servers **');
@@ -6093,7 +6140,7 @@ message.guild.createChannel('▓▬▬▬♚▬▬▬▓', 'voice');
 });
 client.on('message', message => {
 	
-	if (message.content === "R-Build Rr") {
+	if (message.content === "g!Build Rr") {
 		      if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_ROLES ` **").then(msg => msg.delete(6000))
 
 	              if(!message.channel.guild) return message.reply('** This command only for servers **');
