@@ -6462,60 +6462,6 @@ function timeCon(time) {
 
 
 
-const k = new Discord.RichEmbed()
-          .setDescription(` ** 「🔧 | BOT INFO」**`)
-                
-.addField("`-invite`",
-"  To Invite Bot To Your Server  .")
-.addField("`-support`",
-"   To Join Our Support Server   .")
-.addField("`-info`",
-"  To preview Info About Bot   .")
-.addField("`-stats`",
-"  To preview Bots Stats   .")
-.setColor("RANDOM")
-.setFooter(`GAMING BOT™`)
-
-const l = new Discord.RichEmbed()
-.addField("**:globe_with_meridians: | WEBSITE :**","https://dreamsbot.wixsite.com/dreams")
-.addField("**:link: | INVITE :**","https://goo.gl/s8AwxX")
-.addField("**:link: | INVITE MUSIC:**","https://discordapp.com/oauth2/authorize?client_id=336097096337850369&scope=bot&permissions=16951376")
-.addField("**:link: | SUPPORT SERVER :**","https://discordapp.com/invite/gP6q8tY")
-.setColor("RANDOM")
-.setFooter(`©  Dreams™ `)
-
-    let pages = [q,a,b,c,d,e,f,h,i,z,j,k,l];
-    let page = 1;
-
-message.channel.send("**:arrow_down:  Use __Emojis__`👈👉` To Move From Pages **")
-    message.channel.send(pages [page-1]).then(msg => {
-                msg.react('👈').then( r => {
-                msg.react('👉')
-             const backwardsFilter = (reaction, user) => reaction.emoji.name === '👈' && user.id === message.author.id;
-             const fotwardsFilter = (reaction, user) => reaction.emoji.name === '👉' && user.id === message.author.id;
-             
-             const backwards = msg.createReactionCollector(backwardsFilter, { time:90000 });
-             const forwards = msg.createReactionCollector(fotwardsFilter, { time:90000 });
-             
-             backwards.on('collect', r => {
-               if (page === 1) return;  
-               page--;
-              
-               msg.edit(pages [page-1])
-             })
-             
-             forwards.on('collect', r => {
-               if (page === pages.length) return;  
-               page++;
-               
-               msg.edit(pages [page-1])
-                 
-             })
-
-})
-})
-  }
-  });
 
 
 
