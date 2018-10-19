@@ -6544,8 +6544,15 @@ message.channel.sendMessage("تم تفعيل الروم بنجاح")
       
   }
 });
-////////////////////
-
+//////--------------------//////////////
+client.on("message", (message) => {
+    if (message.content.startsWith('g!deletech')) {
+  if (!message.member.hasPermission('MANAGE_CHANNELS')) return  message.reply("أنت ليس لديك برمشن  `MANAGE_CHANNELS`  ");
+        let args = message.content.split(' ');
+        message.channel.setTopic(args);
+        message.channel.sendMessage('تم حذف الروم بنجاح');
+    }
+});
 
 
 
