@@ -6273,7 +6273,7 @@ client.on('message', message => {
 لاضافة امر رد تلقائي 
 -asadd back Welcome`)
 
-.addField("`-asedit`",
+.addField("`g!asedit`",
 `   To Edit A AS exists Command  
 للتعديل على امر موجود مسبقا .
 -asedit back Wlc`)
@@ -6294,6 +6294,28 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
 }
 });
+//////////////////////////////////////////////////////////**-----------------
+client.on('message', message => {
+                                if(!message.channel.guild) return;
+                        if (message.content.startsWith('-ping')) {
+                            if(!message.channel.guild) return;
+                            var msg = `${Date.now() - message.createdTimestamp}`
+                            var api = `${Math.round(client.ping)}`
+                            if (message.author.bot) return;
+                        const embed = new Discord.RichEmbed()
+                        .setAuthor(message.author.username,message.author.avatarURL)
+                        .setThumbnail('https://cdn.discordapp.com/avatars/368141321547808768/c42716e13cb850f9ad0930af699472d0.png?size=2048nk')
+                        .setColor('ffffff')
+                        .addField('**Time Taken:**',msg + " ms")
+                        .addField('**WebSocket:**',api + " ms")
+         message.channel.send({embed:embed});
+                        }
+                    });
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
 
 
