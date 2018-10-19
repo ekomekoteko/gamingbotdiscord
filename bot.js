@@ -6342,36 +6342,30 @@ client.on('message', message => {
 //╱╱╰╯
 
 client.on('message', message => {
-const yt = require('ytdl-core');
-  if (message.content.startsWith('-quran')) {
-              if(!message.channel.guild) return message.reply('** This command only for servers **');
+    if (message.content.startsWith ("g!invites")) {
+     if(!message.channel.guild) return message.reply('** This command only for servers **');
+         var mentionned = message.mentions.users.first();
+        var os;
+      if(mentionned){
+          var os = mentionned.id;
+      } else {
+          var os = message.author.id;
+          
+      }
+          var oss;
+      if(mentionned){
+          var oss = mentionned;
+      } else {
+          var oss = message.author;
+          
+      }
+message.guild.fetchInvites()
+ .then(invites =>{
+ if(!invites.find(invite => invite.inviter.id === `${os}`)) return message.channel.send(`**${oss.username}, Does't Have Invites :x:**`);
+ message.channel.send(`**__${invites.find(invite => invite.inviter.id === `${os}`).uses}__ Member Joined By ${oss.username} !** :chart_with_upwards_trend: `)
 
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply(`من فضلك ادخل روم صوتي `);
-    }
-    voiceChannel.join()
-      .then(connnection => {
-        let stream = yt('https://www.youtube.com/watch?v=9-oGnGaI9Ps&t=8009s', {audioonly: true});
-        const dispatcher = connnection.playStream(stream);
-        dispatcher.on('end', () => {
-          voiceChannel.leave();
-        });
-      });
-  }
-  
-  if (message.content.startsWith('-stop')) {
-              if(!message.channel.guild) return message.reply('** This command only for servers **');
-
-    const voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel) {
-      return message.reply(`من فضلك ادخل روم صوتي `);
-    }
-voiceChannel.leave();
-  }
-
-});
-
+ })
+ 
 
 
 
