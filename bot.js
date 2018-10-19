@@ -6570,22 +6570,7 @@ message.reply ("لتفعيل الرومات اكتب `g!Ch ac`");
 }
 });
 ///////////////////////
-client.on('ready', () => {
-console.log('Logging into discord..');
-console.log(`
-Login successful.
------------------
-GAMING Bot - Discord Bot
------------------
-${client.user.username}
-Connected to:
-${client.guilds.size} servers
-${client.channels.size} channel
-${client.users.size} users
------------------
-Use this url to bring your bot to a server:
-https://discordapp.com/oauth2/authorize?client_id={client.user.id}&permissions=2146958839&scope=bot`);
-});
+
 
 
 
