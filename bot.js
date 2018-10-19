@@ -115,8 +115,27 @@ Type: g!Leagueoflegends
 --------------------------
 to Add Rank: Brawlhalla
 Type: g!Brawlhalla__
----------------------------
-     **`)
+---------------------------**
+═══════════════════════════════════════════════════════════════════════
+g!Build Rr »***البوت يعمل لك رتب بي الاسم دا بي الزخرفة*** 
+          ↘↙ بي الشكل دا
+***1-Name: Owner
+2- Name: Co-owner
+3-Name:Leader
+4-Name:Co-Leader
+5-Name:Admin
+6-Name:Mod
+7-Name:VIP+
+8-Name:VIP
+9-Name:Support
+10-Name:Youtuber +200
+11-Name:Youtuber
+12-Name:ProMember
+13-Name:Friendly
+14-Name:Member
+15-Name:Bot***
+
+`)
    message.author.sendEmbed(embed)
    
    }
@@ -510,23 +529,6 @@ __g!Build R »البوت يعمل لك روم__
 ('✿Six✿', 'voice');
 ('▓▬▬▬AFK▬▬▬▓', ***
 ════════════════════════════════════════════════════════════════════════
-g!Build Rr »***البوت يعمل لك رتب بي الاسم دا بي الزخرفة*** 
-          ↘↙ بي الشكل دا
-***1-Name: Owner
-2- Name: Co-owner
-3-Name:Leader
-4-Name:Co-Leader
-5-Name:Admin
-6-Name:Mod
-7-Name:VIP+
-8-Name:VIP
-9-Name:Support
-10-Name:Youtuber +200
-11-Name:Youtuber
-12-Name:ProMember
-13-Name:Friendly
-14-Name:Member
-15-Name:Bot***
 `)
 
        .setTimestamp()
