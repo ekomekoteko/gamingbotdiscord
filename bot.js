@@ -6205,7 +6205,7 @@ client.on('message', message => {
   message.guild.createRole({
         name : "YouTuber+200",
         permissions :   [1],
-        color : " "#8B0000"
+        color : " #8B0000"
     })
    
     message.guild.createRole({
