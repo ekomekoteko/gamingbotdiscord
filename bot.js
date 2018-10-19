@@ -6264,11 +6264,11 @@ client.on('message', message => {
 });
 //////////////////////=---------------------------------------------------------------///////
 client.on('message', message => {
-     if (message.content === "-as") {
+     if (message.content === "g!as") {
  const embed = new Discord.RichEmbed()
 .setTitle(` ** 「:recycle:  | Auto Responding」**`)
                 
-.addField("`-asadd`",
+.addField("`g!asadd`",
 `  To Add A AS Command  
 لاضافة امر رد تلقائي 
 -asadd back Welcome`)
@@ -6278,18 +6278,18 @@ client.on('message', message => {
 للتعديل على امر موجود مسبقا .
 -asedit back Wlc`)
 
-.addField("`-asdelete`",
+.addField("`g!asdelete`",
 `  To Delete A AS Command
 لمسح امر رد تلقائي.
 -asdelete back `)
 
-.addField("`-aslist`",
+.addField("`g!aslist`",
 `  To preview AS Commands List  
 لعرض قائمة اوامر الردود التلقائية.`)
 
 .setColor("ffffff")
 
-.setFooter(`©  Dreams™ `)
+.setFooter(`GAMING BOT`)
 
 message.channel.sendEmbed(embed);
 }
