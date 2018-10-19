@@ -6028,9 +6028,8 @@ client.on('message',async message => {
 
 //////////////////////////////////////////////////Join in Voice 
 
-const fs = require('fs');
 const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
-const prefix = "!";
+const prefix = "g!";
 // By M7MD
 client.on("message", message => {
     fs.writeFile('./suck.json', JSON.stringify(suck));
