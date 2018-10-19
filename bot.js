@@ -6457,363 +6457,61 @@ function timeCon(time) {
 
 
 ////////////////////////////////////////---------------------------------------------------///////////////
-client.on("message", message => {
-  if (!message.content.startsWith(prefix)) return;
-  if (message.author.bot) return;
 
-  if (!points[message.author.id]) points[message.author.id] = {
-    points: 0,
-    level: 0,
-    credits: 0,
-    reps: 0,
-    lastdaily: "null",
-     lastdailyr: "null",
-    statu: "",
-    
-  };
-  let userData = points[message.author.id];
-  userData.points++;
-var Canvas = require('canvas')
-var jimp = require('jimp')
-  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-  if (curLevel > userData.level) {
-    // Level up!
-    userData.level = curLevel;
-    let Image = Canvas.Image,
-    
-            canvas = new Canvas(84, 120),
-            ctx = canvas.getContext('2d');       
-        fs.readFile('./Dreams/img/levll.png', function (err, Background) {
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 84, 120);
-})
+const k = new Discord.RichEmbed()
+          .setDescription(` ** 「🔧 | BOT INFO」**`)
+                
+.addField("`-invite`",
+"  To Invite Bot To Your Server  .")
+.addField("`-support`",
+"   To Join Our Support Server   .")
+.addField("`-info`",
+"  To preview Info About Bot   .")
+.addField("`-stats`",
+"  To preview Bots Stats   .")
+.setColor("RANDOM")
+.setFooter(`©  Dreams™`)
 
-                let url = message.author.displayAvatarURL.endsWith(".webp") ? message.author.displayAvatarURL.slice(5, -20) + ".png" : message.author.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                        if (err) return console.log(err);
-                        
-                        //Avatar
-                        let Avatar = Canvas.Image;
-                        let ava = new Avatar;
-                        ava.src = buf;
-                        ctx.drawImage(ava, 21, 25, 40, 40);  
-                        
-                        //level
-                        ctx.font = '20px Arial';
-                        ctx.fontSize = '19px';
-                        ctx.fillStyle = "#909090";
-                        ctx.textAlign = "center";
-                        ctx.fillText(curLevel, 48, 110);    
-                        
-message.channel.sendFile(canvas.toBuffer())
-message.channel.send(`:up:  | ${message.author.username}, leveled up!`)
+const l = new Discord.RichEmbed()
+.addField("**:globe_with_meridians: | WEBSITE :**","https://dreamsbot.wixsite.com/dreams")
+.addField("**:link: | INVITE :**","https://goo.gl/s8AwxX")
+.addField("**:link: | INVITE MUSIC:**","https://discordapp.com/oauth2/authorize?client_id=336097096337850369&scope=bot&permissions=16951376")
+.addField("**:link: | SUPPORT SERVER :**","https://discordapp.com/invite/gP6q8tY")
+.setColor("RANDOM")
+.setFooter(`©  Dreams™ `)
 
-})
-})
+    let pages = [q,a,b,c,d,e,f,h,i,z,j,k,l];
+    let page = 1;
 
-  }
-
-  if (message.content.startsWith(prefix + "level")) {
-    message.channel.send(`** :cool:  ${message.author.username}, You are currently level ${userData.level}, with ${userData.points} points.**`);
-  }
-  
-if(message.content.startsWith(prefix + 'credits')) {
-    
-    
-        var mentionned = message.mentions.users.first();
-
-        
-if (!points[message.author.id]) userData = {}
-if (!userData.credits) userData.credits = 1000;
-
-fs.writeFile("./userdata.json", JSON.stringify(points), (err) => {
-if (err) console.error(err);
-
-})
-        
-    
-    var x5bzm;
-      if(mentionned){
-          var x5bzm = mentionned;
-      } else {
-          var x5bzm = message.author;
-          
-      }
-      
-       if(!points[x5bzm.id])return message.channel.send("**This User Doesn't Have Account ! :warning: **");
-
-      if  (!points[x5bzm.id]) points[x5bzm.id] = {}
-      if (!points[x5bzm.id].credits) points[x5bzm.id].credits = 1000;
-         
-    
-      
-           message.channel.send("**:credit_card:  | **" + '`' + x5bzm.username + '`' + "** , you have a balance of :yen: **" + '`' + points[x5bzm.id].credits + '`' + "** credits!**")
-
-
-}
-
-
-    let cont = message.content.slice(prefix.length).split(" ");
-    let args = cont.slice(1);
-    
-    
-    
-    if(message.content.startsWith(prefix + 'transfer')) {
-      
-          if (!args[0]) {
-
-
-message.channel.send(`**-transfer <sum> <user>**`)
-            return;
-        }
-
-        // We should also make sure that args[0] is a number
-        if (isNaN(args[0])) {
-            message.channel.send(`**Not a valid number :x:**`);
-            return; // Remember to return if you are sending an error message! So the rest of the code doesn't run.
-        }
-        
-        
-        
-                let defineduser = '';
-            let firstMentioned = message.mentions.users.first();
-            defineduser = (firstMentioned)
-            if (!defineduser) return message.channel.send(`**You Have To Mention The Receiver :warning: **`);
-        
-                var mentionned = message.mentions.users.first();
-
-        if(!points[defineduser.id])return message.channel.send("**This User Doesn't Have Account ! :warning: **");
-if (!points[message.author.id]) points[message.author.id] = {}
-if (!userData.credits) userData.credits = 500;
-
-fs.writeFile('./userdata.json', JSON.stringify(points), (err) => {
-if (err) console.error(err);
-
-})
-      
-      var mando = message.mentions.users.id;
-      
-      if  (!points[defineduser.id]) points[defineduser.id] = {}
-      if (!points[defineduser.id].credits) points[defineduser.id].credits = 500;
-      
-      
-      points[defineduser.id].credits += (+args[0]);
-      
-      points[message.author.id].credits += (-args[0]);
-      
-      
-              let dr = message.author.username
-      
-message.channel.send(`**:moneybag: | ${dr}, has transferred ${args[0]} to ${mentionned.username}**`)
-      
-   fs.writeFile('./userdata.json', JSON.stringify(points), (err) => {
-if (err) console.error(err);
-
-})
-
-}
-
- if(message.content.startsWith(prefix + 'daily')) {
-     
-if (userData.lastdaily != moment().format('L')) {
-    userData.lastdaily = moment().format('L')
-          userData.credits += 500; 
-message.channel.send(`**:atm:  | ${message.author.username}, you received your :yen: 500 daily credits!**`)
-} else {
-message.channel.send(`**:stopwatch: |  ${message.author.username}, your daily :yen: credits refreshes in **` + `${moment().endOf('day').fromNow()}`  )
-  
-}
-}
-
-fs.writeFile('./userdata.json', JSON.stringify(points), (err) => {
-if (err) console.error(err);
-
-})
-
-
-if(message.content.startsWith(prefix + 'rep')) {
-      var mentionned = message.mentions.users.first();
-                 if(!mentionned)return message.reply("**Please __Mention__ A Member To Give A __rep__ :warning: **");
-          if (mentionned === message.author)return message.reply("**You Can't Rep Your Self ! :x: **"); 
-        if(!points[mentionned.id])return message.channel.send("**This User Doesn't Have Account ! :warning: **");   
-if (userData.lastdailyr != moment().format('L')) {
-    userData.lastdailyr = moment().format('L')
-          points[mentionned.id].reps += 1; 
-message.channel.send(`** :up:  |  ${message.author}, has given ${mentionned.username} a reputation point!**`)
-} else {
-message.channel.send(`** :stopwatch: |  ${message.author}, you can award more reputation **` + `${moment().endOf('day').fromNow()}`  )
-  
-}
-
-fs.writeFile('./userdata.json', JSON.stringify(points), (err) => {
-if (err) console.error(err);
-
-})
-
-}
-
-if(message.content.startsWith(prefix + 'setinfo')) {
-if (!userData.statu) userData.statu = 'Here';
-
-var mard = userData.statu
-let args = message.content.split(' ').slice(1).join(' ');
-  if(!args)return message.reply("**Write A Status :warning: **")
-
-userData.statu = args ;
-
-message.channel.send(`**Status Sets to __${args}__ ! :white_check_mark:  **`);
-  
-fs.writeFile('./userdata.json', JSON.stringify(points), (err) => {
-if (err) console.error(err);
-
-})
-
-
-}
-
-
-   if (message.content.startsWith("-profile")) {
-     
-    
-
-if(!message.channel.guild) return;
-
-let args = message.content.split(' ').slice(1).join(' ');
-
-        let defineduser = '';
-        if (!args[1]) { // If they didn't define anyone, set it to their own.
-            defineduser = message.author;
-        } else { // Run this if they did define someone...
-            let firstMentioned = message.mentions.users.first();
-            defineduser = firstMentioned;
-        }
-
-const w = ['./Dreams/img/profil.png'];
-var Canvas = require('canvas')
-var jimp = require('jimp')
-
-         
+message.channel.send("**:arrow_down:  Use __Emojis__`👈👉` To Move From Pages **")
+    message.channel.send(pages [page-1]).then(msg => {
+                msg.react('👈').then( r => {
+                msg.react('👉')
+             const backwardsFilter = (reaction, user) => reaction.emoji.name === '👈' && user.id === message.author.id;
+             const fotwardsFilter = (reaction, user) => reaction.emoji.name === '👉' && user.id === message.author.id;
+             
+             const backwards = msg.createReactionCollector(backwardsFilter, { time:90000 });
+             const forwards = msg.createReactionCollector(fotwardsFilter, { time:90000 });
+             
+             backwards.on('collect', r => {
+               if (page === 1) return;  
+               page--;
               
-        let Image = Canvas.Image,
-            canvas = new Canvas(300, 300),
-            ctx = canvas.getContext('2d');
-        ctx.patternQuality = 'bilinear';
-        ctx.filter = 'bilinear';
-        ctx.antialias = 'subpixel';
-
-        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
-            if (err) return console.log(err);
-            let BG = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 300, 300);
-
-})
-   var mentionned = message.mentions.users.first();
-
-    var client;
-      if(mentionned){
-          var client = mentionned;
-      } else {
-          var client = message.author;
-          
-      }
-
-                let url = message.author.displayAvatarURL.endsWith(".webp") ? message.author.displayAvatarURL.slice(20, 20) + ".png" : message.author.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                        if (err) return console.log(err);
-
-                        let Avatar = Canvas.Image;
-                        let ava = new Avatar;
-                        ava.src = buf;
-                        ctx.drawImage(ava, 110 , 59, 78, 78);
-
-     
-  
-    
-                       
-                        ctx.font = 'Bold 15px Arial';
-                        ctx.fontSize = '15px';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${message.author.username}`, 150   , 165 );
-
-   if (!points[message.author.id].statu) {
-       ctx.fontSize = '10px ';
-        ctx.font = 'Bold 10px Arial ';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`-setinfo`, 150   , 205  );
-
-    } else if (points[message.author.id]) {
-           ctx.font = 'Bold 10px Arial ';
-                        ctx.fontSize = '10px';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                        ctx.fillText(points[message.author.id].statu, 150   , 203  ); 
-    }
-    
-    if (!points[message.author.id].reps) {
-   
-       ctx.fontSize = '20px';
-        ctx.font = 'lighter 20px Arial';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                    
-                        ctx.fillText(`❤0`, 71   , 88  );
-
-    } else {
-           ctx.font = 'lighter 20px Arial ';
-                        ctx.fontSize = '20px';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
+               msg.edit(pages [page-1])
+             })
+             
+             forwards.on('collect', r => {
+               if (page === pages.length) return;  
+               page++;
+               
+               msg.edit(pages [page-1])
                  
-                        ctx.fillText(`❤${userData.reps}`, 71   , 88  ); 
-    }
+             })
 
-                        ctx.font = 'Bold 10px Arial';
-                        ctx.fontSize = '10px';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${userData.points}`, 150   , 240);
-
-              
-
-                        ctx.font = 'Bold 20px Arial';
-                        ctx.fontSize = '20px';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${userData.level}`, 228  , 88 );
-                     
-                        ctx.font = 'lighter 20px Arial';
-                        ctx.fontSize = '20px';
-                        ctx.fillStyle = "#ffffff";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${userData.credits}`, 228  , 139 );
-   
-                   
-message.channel.send(` :pencil: | Showing your Profile ${message.author.username}`)
-message.channel.sendFile(canvas.toBuffer())
-
-        })
-    })
-
-
-
-  
-}
-
-
-});
-
-
+})
+})
+  }
+  });
 
 
 
