@@ -6570,13 +6570,21 @@ message.reply ("لتفعيل الرومات اكتب `g!Ch ac`");
 }
 });
 ///////////////////////
-client.on("message", message => {
-    if(message.author.id !== "411137717884289024") return;
-
-    if(message.content === "g!restart"){
-        console.log("your say restart for this i'm closed");
-        return process.exit(26);
-    }
+client.on('ready', () => {
+console.log('Logging into discord..');
+console.log(`
+Login successful.
+-----------------
+GAMING Bot - Discord Bot
+-----------------
+${client.user.username}
+Connected to:
+${client.guilds.size} servers
+${client.channels.size} channel
+${client.users.size} users
+-----------------
+Use this url to bring your bot to a server:
+https://discordapp.com/oauth2/authorize?client_id={client.user.id}&permissions=2146958839&scope=bot`);
 });
 
 
