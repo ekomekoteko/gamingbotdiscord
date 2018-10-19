@@ -6342,7 +6342,7 @@ client.on('message', message => {
 //╱╱╰╯
 
 client.on('message', message => {
-    if (message.content.startsWith ("g!invites")) {
+    if (message.content.startsWith ("-invites")) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
          var mentionned = message.mentions.users.first();
         var os;
@@ -6366,6 +6366,12 @@ message.guild.fetchInvites()
 
  })
  
+ 
+
+}
+
+});
+
 
 
 
