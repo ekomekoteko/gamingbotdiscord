@@ -6359,9 +6359,9 @@ client.on('message', message => {
 //╱╱╰╯
 
 
-//////////////////////////////////////////
+/////////////////////////////////----------------------------------------ID--------------/////////
 client.on('message', message => {
-   if (message.content.startsWith ("-id")) {
+   if (message.content.startsWith ("g!Id")) {
        if(!message.channel.guild) return message.reply('** This command only for servers **');
 
                var mentionned = message.mentions.users.first();
@@ -6404,6 +6404,22 @@ client.on('message', message => {
     }
 });
 
+////////////////////////////////////////----------------/////////////////////Member info 
+client.on('message', message => {
+    if(message.content == 'g!members') {
+    const embed = new Discord.RichEmbed()
+    .setDescription(`**Members info🔋
+:green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
+:heart:dnd:       ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}
+:yellow_heart: idle:      ${message.guild.members.filter(m=>m.presence.status == 'idle').size}   
+:black_heart: offline:   ${message.guild.members.filter(m=>m.presence.status == 'offline').size} 
+:blue_heart:   all:  ${message.guild.memberCount}**`)         
+             .setColor(0xd3d0c4)
+            .setFooter(`GAMING BOT  `)
+         message.channel.send({embed});
+
+    }
+  });
 
 
 client.login(process.env.BOT_TOKEN);
