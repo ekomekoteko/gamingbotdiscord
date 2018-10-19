@@ -6544,7 +6544,7 @@ message.channel.sendMessage("تم تفعيل الروم بنجاح")
       
   }
 });
-//////--------------------//////////////
+//////--------------------//////////////deletech
 client.on("message", (message) => {
     if (message.content.startsWith('g!deletech')) {
   if (!message.member.hasPermission('MANAGE_CHANNELS')) return  message.reply("أنت ليس لديك برمشن  `MANAGE_CHANNELS`  ");
@@ -6554,8 +6554,21 @@ client.on("message", (message) => {
     }
 });
 
+//////////////////////////////Create room hour we Date we Member
+client.on("message", (message) => {
+if (message.content === ("g!Ch")) {
+if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send("**أنت ليس لديك برمشن** `ADMINISTRATOR`" );
+	      if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
 
-
+    message.guild.createChannel('hour', 'voice');
+    message.guild.createChannel('date', 'voice');
+    message.guild.createChannel('member', 'voice');
+message.channel.sendMessage('**تم إنشاء روم ساعة :small_orange_diamond:**');
+message.channel.sendMessage('**تم إنشاء روم تاريخ :small_orange_diamond:**');
+message.channel.sendMessage('**تم إنشاء روم عداد الأعضآء :small_orange_diamond:**');
+message.reply ("لتفعيل الرومات اكتب `g!Ch ac`");  
+}
+});
 
 
 
