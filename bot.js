@@ -6263,39 +6263,37 @@ client.on('message', message => {
 }
 });
 //////////////////////=---------------------------------------------------------------///////
- client.on('message', message => {
-     if (message.content === "-help music") {
-           if(!message.channel.guild) return message.reply('** This command only for servers**');
-           
+client.on('message', message => {
+     if (message.content === "-as") {
  const embed = new Discord.RichEmbed()
-         .setDescription(` ** 「️️️🎶| MUSIC COMMANDS」**`)
-.addField("`-mplay`",
-" To Play A ( Youtube Link / Song By Name )   .")
-.addField("`-msearch`",
-" To Search A video In Youtube and play it by choose it   .")
-.addField("`-mqueue`",
-" To  See The Wating Music List   .")
-.addField("`-mnowplaying`",
-" To Display the current song in chat   .")
-.addField("`-mskip`",
-" To Skip The Current Song .")
-.addField("`-mvolume`",
-" To Change Volume Ratio   .")
-.addField("`-mshuffle`",
-" To Shuffles the playlist     .")
-.addField("`-mrepeat`",
-" To Loop The Queue   .")
-.setColor("RANDOM")
-.addField("🌍 **| OWNER :**  ",
-" `-contact`")
-.setFooter(`GAMING BOT  `)
-message.react("️️️🎶")
-message.author.sendEmbed(embed);
+.setTitle(` ** 「:recycle:  | Auto Responding」**`)
+                
+.addField("`-asadd`",
+`  To Add A AS Command  
+لاضافة امر رد تلقائي 
+-asadd back Welcome`)
 
-    }
+.addField("`-asedit`",
+`   To Edit A AS exists Command  
+للتعديل على امر موجود مسبقا .
+-asedit back Wlc`)
+
+.addField("`-asdelete`",
+`  To Delete A AS Command
+لمسح امر رد تلقائي.
+-asdelete back `)
+
+.addField("`-aslist`",
+`  To preview AS Commands List  
+لعرض قائمة اوامر الردود التلقائية.`)
+
+.setColor("ffffff")
+
+.setFooter(`©  Dreams™ `)
+
+message.channel.sendEmbed(embed);
+}
 });
-
-
 client.login(process.env.BOT_TOKEN);
 
 
