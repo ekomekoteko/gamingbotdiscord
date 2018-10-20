@@ -6641,7 +6641,6 @@ client.on('message', message => {
 ////////////////////////////////////
 const dateFormat = require('dateformat');
 var jimp = require('jimp')
-var moment = require("moment");
 
 
 client.on('message', message => {
