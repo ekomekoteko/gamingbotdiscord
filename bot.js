@@ -7021,7 +7021,7 @@ hours = 12;
   if(message.content.startsWith(prefix + "giveaway")) {
 
     if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
-    message.channel.send(`🎉| **Send Name channel For the Giveaway**`).then(msg => {
+    message.channel.send(`🎉| **``Send Name channel For the Giveaway``**`).then(msg => {
       message.channel.awaitMessages(filter, {
         max: 1,
         time: 20000,
@@ -7054,7 +7054,7 @@ hours = 12;
                   let giveEmbed = new Discord.RichEmbed()
                   .setDescription(`**${title}** \nReact With 🎉 To Enter! \nTime remaining : ${duration / 60000} **Minutes**\n **Created at :** ${hours}:${minutes}:${seconds} ${suffix}`)
                   .setFooter(message.author.username, message.author.avatarURL);
-                  message.guild.channels.find("name" , room).send(' :heavy_check_mark: **Giveaway Created** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
+                  message.guild.channels.find("name" , room).send(' 🎉 **Giveaway Created** 🎉 ' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
                        let users = m.reactions.get("🎉").users;
