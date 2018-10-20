@@ -6614,15 +6614,7 @@ message.channel.sendFile(canvas.toBuffer());
 });
 
 
-////////////////////----////////////--------------////////////////// law 7ad d5al el Server yb3atlo Link el Server bt3ak
 // 
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`https://discord.gg/6ReF5CQ
-  `) 
-}).catch(console.error)
-})
 
 
 
