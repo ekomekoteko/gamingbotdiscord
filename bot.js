@@ -6268,7 +6268,7 @@ client.on('message', message => {
 .addField("`g!asadd`",
 `  To Add A AS Command  
 لاضافة امر رد تلقائي 
--asadd back Welcome`)
+g!asadd back Welcome`)
 
 .addField("`g!asedit`",
 `   To Edit A AS exists Command  
@@ -6363,7 +6363,7 @@ client.on('message', message => {
    .addField("ID:", "**" + `${mentionavatar.id}` + "**", true)
   .addField("Create At:", "**" + `${mentionavatar.createdAt}` + "**", true)
   .addField("Invites:", `**0**` ,true)
-     .setFooter(`©  Dream™ `)
+     .setFooter(`GAMING BOT  `)
       message.channel.sendEmbed(embed);
  }else{
    let embed = new Discord.RichEmbed()
