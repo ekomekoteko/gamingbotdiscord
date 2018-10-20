@@ -6932,7 +6932,7 @@ client.on('guildMemberAdd', member => {
 
 
 
-const w = ['w1.png'];
+const w = ['./img/w1.png'];
 
          let Image = Canvas.Image,
             canvas = new Canvas(400, 200),
@@ -6992,7 +6992,7 @@ welcomer.sendFile(canvas.toBuffer())
 
 
 
-/////////////////////////////GIVEAWAY
+//////////////////////////////////////////////////////////GIVEAWAY
 client.on('message',async message => {
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
