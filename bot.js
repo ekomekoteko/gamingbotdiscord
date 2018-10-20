@@ -7085,7 +7085,7 @@ hours = 12;
 client.on('message', MEGA => { 
   var sender = MEGA.author
   if(!MEGA.guild) return
-  if(!sw[MEGA.guild.id]) sw[MEGA.guild.id] = {
+
   onoff: 'Off',
   ch:    'Welcome',
   msk:   'Welcome'
