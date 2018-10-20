@@ -5482,7 +5482,7 @@ client.on('message',async msg => {
 Year = currentTime.getFullYear(),
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`⇲ Date : [${Year} - ${Month} - ${Dat}]]⇱`);
+      time.setName(`⇲ Date : [${Year} - ${Month} - ${Dat}]⇱`);
  },1000);
   });
   }
@@ -6704,7 +6704,7 @@ client.on('message', message => {
   const embed = new Discord.RichEmbed()
   .setTitle('Join Support Server')
   .setURL('a')
-  .setFooter('Quran Bot')
+  .setFooter('GAMING Bot')
   .setColor('RANDOM')
   message.channel.send({embed: embed});
   }
@@ -6732,15 +6732,15 @@ function hasRole(mem, role) {
 var servers = {};
 
 
-var q1 = ".quran 1"
+var q1 = "g!quran 1"
 
-var q2 = ".quran 2"
+var q2 = "g!quran 2"
 
-var q3 = ".quran 3"
+var q3 = "g!quran 3"
 
-var q4 = ".quran 4"
+var q4 = "g!quran 4"
 
-var q5 = ".live"
+var q5 = "g!live"
 
 
 
@@ -6765,7 +6765,7 @@ var PREFIX = ".";
 
 
 
-//sowar
+///////////sowar
 
 
 client.on("message", message => {
@@ -6856,19 +6856,19 @@ client.on("message", message => {
   if(message.content === "g!help-quran") {
     message.channel.send(` 
 	 Quran Commands
-:pray: .quran 1             : القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد 
+:pray: g!quran 1             : القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد 
             
-:pray: .quran 2             : القرآن الكريم كامل بصوت الشيخ سعد الغامدي  
+:pray: g!quran 2             : القرآن الكريم كامل بصوت الشيخ سعد الغامدي  
 
-:pray: .quran 3             : القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم 
+:pray: g!quran 3             : القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم 
 
-:pray: .quran 4             : القرآن الكريم كامل بصوت الشيخ المعيقلي  
+:pray: g!quran 4             : القرآن الكريم كامل بصوت الشيخ المعيقلي  
 
-:pray: .live                : لتشغيل القرآن الكريم مباشر
+:pray: g!live                : لتشغيل القرآن الكريم مباشر
 
-:pray: .adkar               : لنشر الأدكار
+:pray: g!adkar               : لنشر الأدكار
 
-:pray: .stop                : لـ أيقاف تشغيل البوت `)
+:pray: g!stop                : لـ أيقاف تشغيل البوت `)
 	  
 	  message.channel.send(`
      Other Commands
@@ -6947,6 +6947,109 @@ message.channel.send(embed);
 
 
 
+client.on('guildMemberAdd', member => {
+     const welcomer =  member.guild.channels.find('name', 'welcome');
+const w = ['./w1.png'];
+ 
+         let Image = Canvas.Image,
+            canvas = new Canvas(400, 200),
+            ctx = canvas.getContext('2d');
+        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+            if (err) return console.log(err);
+            let BG = Canvas.Image;
+            let ground = new Image;
+            ground.src = Background;
+            ctx.drawImage(ground, 0, 0, 400, 200);
+             
+         
+ 
+                let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(100) + ".png" : member.user.displayAvatarURL;
+                jimp.read(url, (err, ava) => {
+                    if (err) return console.log(err);
+                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                        if (err) return console.log(err);
+                       
+                        ctx.font = "bold 12px Arial";
+                        ctx.fontSize = '20px';
+                        ctx.fillStyle = "#f1f1f1";
+                        ctx.textAlign = "center";
+                        ctx.fillText(`welcome to Brix`, 300, 130);
+                       
+                        ctx.font = "bold 12px Arial";
+                        ctx.fontSize = '20px';
+                        ctx.fillStyle = "#f1f1f1";
+                        ctx.textAlign = "center";
+                        ctx.fillText(member.user.username, 200, 150);
+ 
+                let Avatar = Canvas.Image;
+                              let ava = new Avatar;
+                              ava.src = buf;
+                              ctx.beginPath();
+                              ctx.arc(77, 101, 62, 0, Math.PI*2);
+                              ctx.stroke();
+                                 ctx.clip();
+                                 ctx.drawImage(ava, 13, 38, 128, 126);  
+                         
+               
+                             
+welcomer.sendFile(canvas.toBuffer())
+ 
+ 
+ 
+     
+     
+                    }  )  
+     
+                   
+ 
+})
+      });                    
+});
+var dat = JSON.parse("{}");
+function forEachObject(obj, func) {
+    Object.keys(obj).forEach(function (key) { func(key, obj[key]) });
+}
+client.on("ready", () => {
+    var guild;
+    while (!guild)
+        guild = client.guilds.get("498511797008203777");
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
+            var Inv = Invite.code;
+            dat[Inv] = Invite.uses;
+        });
+    });
+});
+ 
+ 
+ 
+client.on("guildMemberAdd", (member) => {
+    let channel = member.guild.channels.get("502873612026511362");
+    if (!channel) {
+        console.log("!the channel id it's not correct");
+        return;
+    }
+    if (member.id == client.user.id) {
+        return;
+    }
+    console.log('-');
+    var guild;
+    while (!guild)
+        guild = client.guilds.get("498511797008203777");
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
+            var Inv = Invite.code;
+            if (dat[Inv])
+                if (dat[Inv] < Invite.uses) {
+                    setTimeout(function() {
+ channel.send(`**invited by** ${Invite.inviter} `) ;
+                    },1500);
+ }
+            dat[Inv] = Invite.uses;
+       
+       });
+    });
+});
 
 
 
