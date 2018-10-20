@@ -6614,7 +6614,30 @@ message.channel.sendFile(canvas.toBuffer());
 });
 
 
-// 
+// /////////////////////////////////////////////////////////////////////
+const dot = new Discord.Client();
+client.on('message', message => {
+    
+    if (message.content === "GAMING BOT") {
+        setInterval(function(){
+        message.edit('**G**')    
+        message.edit('**GA**')    
+        message.edit('**GAM**')
+        message.edit('**GAMI**')
+        message.edit('**GAMIN**')
+        message.edit('**GAMING**')
+        message.edit('**GAMING B*')
+        message.edit('**GAMING BO**')
+        message.edit('**GAMING BOT **')
+        message.edit('**GAMING BOT**')
+        message.edit('**GAMING BO**')
+        message.edit('**GAMING BOT**')
+        message.edit('**GAMING BOT **')
+        message.edit('**GAMING BOT ..**')
+        }, 1000)
+    }
+    
+})
 
 
 
