@@ -1774,8 +1774,7 @@ ${args}
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`👑Welcome To Server👑 https://discord.gg/N5CyxyK
- Name member🌷  ${member}
+  return channel.send(`👑Welcome To Server👑 
  You Member number is👑 ${member.guild.memberCount}`) 
 
 }).catch(console.error)
