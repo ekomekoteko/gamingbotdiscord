@@ -6766,7 +6766,7 @@ if(!message.channel.guild) return;
 })
    })
 
-} });*/
+} });
 
 
 
