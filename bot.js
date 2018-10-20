@@ -7021,7 +7021,7 @@ hours = 12;
   if(message.content.startsWith(prefix + "giveaway")) {
 
     if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
-    message.channel.send(`:eight_pointed_black_star:| **Send Name channel For the Giveaway**`).then(msg => {
+    message.channel.send(`🎉| **Send Name channel For the Giveaway**`).then(msg => {
       message.channel.awaitMessages(filter, {
         max: 1,
         time: 20000,
@@ -7031,7 +7031,7 @@ hours = 12;
         if(!room) return message.channel.send(':heavy_multiplication_x:| **i Found It :(**');
         room = collected.first().content;
         collected.first().delete();
-        msg.edit(':eight_pointed_black_star:| **Time For The Giveaway**').then(msg => {
+        msg.edit(':tada:| **``Time For The Giveaway``**').then(msg => {
           message.channel.awaitMessages(filter, {
             max: 1,
             time: 20000,
@@ -7040,7 +7040,7 @@ hours = 12;
             if(isNaN(collected.first().content)) return message.channel.send(':heavy_multiplication_x:| **The Time Be Nambers `` Do the Commend Agin``**');
             duration = collected.first().content * 60000;
             collected.first().delete();
-            msg.edit(':eight_pointed_black_star:| **Now send The Present **').then(msg => {
+            msg.edit('🎉| **``Now send The Present``**').then(msg => {
               message.channel.awaitMessages(filter, {
                 max: 1,
                 time: 20000,
