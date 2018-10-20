@@ -670,6 +670,31 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
+     if (message.content === "g!help") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/h76vMMP**")
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+client.on('message', message => {
+     if (message.content === "g!link") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/h76vMMP**")
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
+
 
 
 ///2
@@ -889,7 +914,7 @@ client.on('guildMemberAdd', member=> {
 
 
 
-//////////////////////////////////////////////////////////--------------////////////////////////BOT 
+//////////////////////////------////////////////////////////////--------------////////////////////////BOT 
 client.on('message', message => {
      if (message.content === "g!bot") {
      let embed = new Discord.RichEmbed()
@@ -903,7 +928,7 @@ message.channel.sendEmbed(embed);
 });
 
 
-///////////////////////////--------------------------------------------------//////////Roles 
+///////////////-------------////////////--------------------------------------------------//////////Roles 
 client.on('message', message => {
     if (message.content === 'g!roles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
@@ -917,7 +942,7 @@ client.on('message', message => {
 
 
 
-/////////////////////////////////////No Share Link Discordddddddddddddddddddddd
+////////////////////////-----------/////////////No Share Link Discordddddddddddddddddddddd
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -936,8 +961,14 @@ client.on('message', message => {
     }
 }); 
 
-///////////////////////////////////////////////////////-----------------------/////////Clear <Number>
+//////////////////////--------------------/////////////////////////////////-----------------------/////////Clear <Number>
  
+
+
+
+
+
+
 client.on('message', msg => {
 	var prefix = "g!";
   if (msg.author.bot) return;
@@ -964,7 +995,11 @@ client.on('message', msg => {
 });
 
 
-/////////////////////////////////////////////////////////-----------/////////////////////emojilist
+/////////////////-----------////////////////////////////////////////-----------/////////////////////emojilist
+
+
+
+
 client.on('message', message => { 
 let PREFIX = 'g!'
     if (message.content.startsWith(PREFIX + 'emojilist')) {
@@ -982,7 +1017,7 @@ let PREFIX = 'g!'
 });
 
 
-//////////////////////////////////////////////////////////////--------------////Rules
+///////////////--------///////////////////////////////////////////////--------------////Rules
 
 
 client.on('message', message => {
@@ -1004,7 +1039,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-//////////////////////////////////////////////////////BC
+////////////----------------//////////////////////////////////////////BC
 client.on('message', message => {
 	    var prefix = "g!";
               if(!message.channel.guild) return;
@@ -1054,7 +1089,7 @@ client.on('message', message => {
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("Member", "اسم الرتبة");
+   var role = member.guild.roles.find ("Member", "1");
    member.addRole (role);
   
 })
@@ -1125,7 +1160,7 @@ var prefix = "g!";
              message.channel.sendEmbed(Date15);
     }
 });
-/////////////////////////////////////////////////////////////Code law 7ad tl3 men server we gh tany y5od nfs el Rank
+//////////////////////////////////////////----///////////////////Code law 7ad tl3 men server we gh tany y5od nfs el Rank
 var ALPHACODES = {};
 client.on('guildMemberRemove', member => {
 ALPHACODES[member.id] = {roles: member.roles.array()};
@@ -1188,7 +1223,7 @@ return;
 
 });
 
-///////////////////////Code law 7ad tl3 men server lma ygy tany nfs el rank el kan ma3h yrg3lo tany 
+/////////////-----------------------//////////Code law 7ad tl3 men server lma ygy tany nfs el rank el kan ma3h yrg3lo tany 
 
 
 
@@ -1700,7 +1735,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
-  .setDescription(`**Thank you for adding the bot to the server :tada: **`)
+  .setDescription(`**Thank you for adding the bot to The Server :tada: **`)
       guild.owner.send(embed)
 });
 
@@ -1739,7 +1774,7 @@ ${args}
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(`👑Welcome To Server👑 
+  return channel.send(`👑Welcome To Server👑 https://discord.gg/N5CyxyK
  Name member🌷  ${member}
  You Member number is👑 ${member.guild.memberCount}`) 
 
@@ -4532,7 +4567,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   !! Staff @SُimŹik ,, 4kk ²²#7227  ```");
+    message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   ```");
     }
 });
 ////////////////////iNVITEby
