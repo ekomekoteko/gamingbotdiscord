@@ -7118,24 +7118,6 @@ hours = 12;
 ////////////////////////////////////Invite By:-------    bYTF3al anta el bf3aalo 
 
 ////////////By:Mahmoud-QuaStyle
-const A7MD = new Discord.Client();
-
-A7MD.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-:gift:GAMING Rewards:gift: 
-<10+ People Invited>
-➤ [:page_with_curl:] @Invite VIP  Inviter Role
-➤ [:gem:] 4k Credit 
-
-                               [ discord.gg/BkgXqb ] 
- https://cdn.pg.sa/NvEttsiwEa.gif
-Special invitation to you... [ ${member}  ]
-**`) 
-}).catch(console.error)
-})
-
 
 
 
