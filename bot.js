@@ -7118,8 +7118,9 @@ hours = 12;
 ////////////////////////////////////Invite By:-------    bYTF3al anta el bf3aalo 
 
 ////////////By:Mahmoud-QuaStyle
+const A7MD = new Discord.Client();
 
-const.on("guildMemberAdd", member => {
+A7MD.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
