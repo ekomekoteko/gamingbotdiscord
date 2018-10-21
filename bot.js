@@ -365,7 +365,7 @@ client.on("message", message => {
 •
 g!play ~لتشغيل اغنية
 g!join ~ دخول رومك الصوتي
-g!Gadisconnect ~ الخروج من رومك الصوتي
+g!disconnect ~ الخروج من رومك الصوتي
 g!skip, تخطي الأغنية
 g!pause ~ ايقاف الاغنية مؤقتا
 g!resume ~ تكملة الاغنية
