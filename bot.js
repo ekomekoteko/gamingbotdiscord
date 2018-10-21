@@ -7119,7 +7119,7 @@ hours = 12;
 
 ////////////By:Mahmoud-QuaStyle
 
-A7MD.on("guildMemberAdd", member => {
+const.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
