@@ -5551,6 +5551,29 @@ fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
 });
+
+
+client.on('message', message => {
+  if (message.author.bot) return;
+    var sender = message.author
+    if (message.author.id === client.user.id) return;
+	if(!message.channel.guild) return;       
+    if(message.content.startsWith(prefix + 'like')) {
+    let ment = message.mentions.users.first()  
+if (games[sender.id].lastDaily != moment().format('day')) {
+    games[sender.id].lastDaily = moment().format('day')
+        if(!ment) return message.channel.send(`**:mag: |  ${message.author.username}, the user could not be found.    **`);
+        if(ment = message.author.id) return message.channel.send(`**${message.author.username}, you cant give yourself a reputation !**`)
+    profile[ment.id].rep += 1; 
+    message.channel.send(`** :up:  |  ${message.author.username} has given ${ment} a reputation point!**`)
+    }else {
+    message.channel.send(`**:stopwatch: |  ${message.author.username}, you can award more reputation  ${moment().endOf('day').fromNow()} **`)
+    }
+	
+    }
+    });
+
+
  
 client.on('message', message => {
  
