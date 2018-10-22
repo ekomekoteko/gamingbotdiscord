@@ -184,7 +184,7 @@ client.on("message", message => {
 
 ❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 
-***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋• @ĢǻMiÑğ ßδT#6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
+***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋• :gamingbot: @ĢǻMiÑğ ßδT#6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
     
@@ -232,7 +232,7 @@ client.on("message", message => {
 يكتب لك الكلمة بشكل جميل وكبير***
 :pushpin:***g!google 
 للبحث في قوقل عن طريق الدسكورد***
-✅ ***g!perms 
+:pushpin:***g!perms 
 يعرض لك برمشناتك بالسيرفر***
 :pushpin:***g!rooms 
 يعرض لك كل الرومات الي بالسيرفر مع عددها***
@@ -270,16 +270,16 @@ client.on("message", message => {
 معلومات عن السرفر*** 
 :pushpin:*** g!draw
 <messange> يحط لك الكلام في صوره
-:pushpin:*** g!embed
-<messange>  يحط لك الكلام في مربع*** 
+:pushpin:***g!embed***
+***<messange>  يحط لك الكلام في مربع*** 
 :pushpin:***g!time 
-لمعرفة الوقت***  
+***لمعرفة الوقت
 :pushpin:***g!dt 
-لمعرفة الوقت والتاريخ*** 
+***لمعرفة الوقت والتاريخ 
 :pushpin: ***g!credit
-لمعرفة الكرديت*** 
+***لمعرفة الكرديت
 :pushpin:***g!daily
-لمعرفة اليومي*** 
+***لمعرفة اليومي 
 `)
    message.author.sendEmbed(embed)
     
