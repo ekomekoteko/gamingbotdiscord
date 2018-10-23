@@ -704,12 +704,13 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/h76vMMP**")
-     
+  .addField(" **:small_orange_diamond: Link Server Support︾︾**" , "  **https://discord.gg/h76vMMP**")
+  .addField(" **:small_blue_diamond: Link BOT:Gaming︾︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
      
   message.channel.sendEmbed(embed);
     }
-});
+});////////////////////////////////////By:Mahmoud-QuaStyle
+
 
 
 
