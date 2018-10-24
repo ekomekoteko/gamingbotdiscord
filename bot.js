@@ -7289,7 +7289,7 @@ hours = 12;
 });
 ////////////////////////////////////Invite By:-------    bYTF3al anta el bf3aalo 
 
-////////////By:Mahmoud-QuaStyle
+//////////////////////////////////Auto Colors :"" in ROles/////By:Mahmoud-QuaStyle
 
 client.on("ready", () => {
   function lol() {
@@ -7305,6 +7305,20 @@ client.on("ready", () => {
   };
   setInterval(lol, 10000);
 });
+
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('479519956208320512').roles.find("name", "Bot,Gaming").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
+
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('479519956208320512').roles.find("name", "Bot,Gaming»Music").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
  
 client.on("ready", () => {
   function lol() {
@@ -7314,7 +7328,7 @@ client.on("ready", () => {
 });
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////
 
 
 
