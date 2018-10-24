@@ -7295,7 +7295,7 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('479519956208320512').roles.find("name", "Giveaways").setColor("RANDOM");
   };
-  setInterval(lol, 10000);
+  setInterval(lol, 100000);
 });
 
 
@@ -7310,21 +7310,21 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('479519956208320512').roles.find("name", "Bot,Gaming").setColor("RANDOM");
   };
-  setInterval(lol, 10000);
+  setInterval(lol, 100000);
 });
 
 client.on("ready", () => {
   function lol() {
     client.guilds.get('479519956208320512').roles.find("name", "Bot,Gaming»Music").setColor("RANDOM");
   };
-  setInterval(lol, 1000);
+  setInterval(lol, 100000);
 });
  
 client.on("ready", () => {
   function lol() {
     client.guilds.get('479519956208320512').roles.find("name", "disco").setColor("RANDOM");
   };
-  setInterval(lol, 10000);
+  setInterval(lol, 100000);
 });
 
 
@@ -7332,7 +7332,7 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('479519956208320512').roles.find("name", "ＧＡＭＩＮＧ ƁŎƮ").setColor("RANDOM");
   };
-  setInterval(lol, 10000);
+  setInterval(lol, 100000);
 });
 /////////////////////////////////////////////
 ///////SERVER Wings
