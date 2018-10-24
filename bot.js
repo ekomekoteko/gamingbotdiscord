@@ -207,7 +207,6 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-
 ***¯−ـ‗ऊ»اوامر عامة«ऊ‗ـ−¯***
                                                                   
 :pushpin:***g!allbots 
@@ -986,6 +985,11 @@ message.guild.fetchInvites()
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","Member"));
     });
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","☤Member☤"));
+    });
+
+
 //////////////////////////////////----------------///////////////
 
 
@@ -1846,7 +1850,7 @@ ${args}
 
 
 /////////////
-/////////////////////////////////////////////////////////////////////WELCOME 
+//////////////////////////////////////---------------///////////////////////////////WELCOME 
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
@@ -1855,7 +1859,43 @@ client.on("guildMemberAdd", member => {
 
 }).catch(console.error)
 })
-////////////
+
+
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`  https://discord.gg/WjQ3BcR  30 Invites For BOT MUSIC       `) 
+
+}).catch(console.error)
+})
+/////////////////////Code law 7ad d5al server kolo y3mlo tr7eb gma3y 
+
+client.on("guildMemberAdd", (member) => {
+    const guild = member.guild;
+    if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
+    newUsers[guild.id].set(member.id, member.user);
+  
+    if (newUsers[guild.id].size > 2) {
+      const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
+      guild.channels.get(guild.id).send("Welcome our new users!\n" + userlist);
+      newUsers[guild.id].clear();
+    }
+  });
+  
+  client.on("guildMemberRemove", (member) => {
+    const guild = member.guild;
+    if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
+  });
+  
+
+
+
+
+
+
+
+
+////////---------------------------------------////
 client.on("roleCreate", role => {
   client.setTimeout(() => {
     role.guild.fetchAuditLogs({
@@ -6474,7 +6514,7 @@ function timeCon(time) {
          .setColor('ffffff')
          .setTimestamp()
          .setTitle(message.guild.name,message.guild.iconURL)
-         .addField(':id: :sparkles_gaming:  Server Id :',`${message.guild.id}`,true)
+         .addField(':id:   Server Id :',`${message.guild.id}`,true)
          .addField(':date: Create Date: ',D3 + '.' + M2 + '.' + Y1,true)             
          .addField(':crown: Server Owner:',`${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)             
          .addField(':busts_in_silhouette: Members : ' + ` ${message.guild.memberCount} `,'Online '+`[ ${message.guild.members.filter(m=>m.presence.status == 'online','idle','dnd').size} ]`+ ','+'Offline '+`[ ${message.guild.members.filter(m=>m.presence.status == 'offline').size} ]`,true)
