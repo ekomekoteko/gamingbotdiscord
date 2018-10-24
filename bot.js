@@ -6474,7 +6474,7 @@ function timeCon(time) {
          .setColor('ffffff')
          .setTimestamp()
          .setTitle(message.guild.name,message.guild.iconURL)
-         .addField(':id: Server Id :',`${message.guild.id}`,true)
+         .addField(':id: :sparkles_gaming:  Server Id :',`${message.guild.id}`,true)
          .addField(':date: Create Date: ',D3 + '.' + M2 + '.' + Y1,true)             
          .addField(':crown: Server Owner:',`${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)             
          .addField(':busts_in_silhouette: Members : ' + ` ${message.guild.memberCount} `,'Online '+`[ ${message.guild.members.filter(m=>m.presence.status == 'online','idle','dnd').size} ]`+ ','+'Offline '+`[ ${message.guild.members.filter(m=>m.presence.status == 'offline').size} ]`,true)
