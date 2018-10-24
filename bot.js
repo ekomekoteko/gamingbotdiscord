@@ -7291,7 +7291,12 @@ hours = 12;
 
 ////////////By:Mahmoud-QuaStyle
 
-
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('479519956208320512').roles.find("name", "Giveaways").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
 
 
 
