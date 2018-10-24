@@ -3595,7 +3595,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲  ̲W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming 🎉♥:sparkles: `);
+  channel.send(` ̲  ̲W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming :two_hearts: 🎉♥:sparkles: `);
 });
 ////welcome
 // Create an event listener for new guild members
@@ -3605,7 +3605,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server 🎉♥:hugging:  !!
+  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server :two_hearts: 🎉♥:hugging:  !!
    !!, ${member}`);
 });
 
