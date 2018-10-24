@@ -304,39 +304,71 @@ client.on("message", message => {
       .setDescription(`
 ***¯−ـ‗ऊ» اوامر ادارة السيرفر«ऊ‗ـ−¯***
 
-***:anger: - سوي روم اسمه 个welcome个 or welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
-:ok_hand: g!move @user ~  لسحب الشخص الى روومك  
-:ok_hand: g!bc ~ رسالة جماعية الى كل اعضاء السيرفر
-:ok_hand: g!role @user <rank> ~ لأعطاء رتبة لعضو معين
-:ok_hand: g!roleremove @user <rank> ~ لازالة الرتبة من شخص معين
-:ok_hand: g!role all <rank> ~ لأعطاء رتبة للجميع
-:ok_hand: g!role humans <rank> ~ لأعطاء رتبة للاشخاص فقط
-:ok_hand: g!role bots <rank> ~ لأعطاء رتبة لجميع البوتات
-:ok_hand: g!hchannel ~ اخفاء الشات
-:ok_hand: g!schannel ~ اضهار الشات المخفية
-:ok_hand: g!clear <numbr> ~ مسح الشات بعدد
-:ok_hand: g!clear ~ مسح الشات
-:ok_hand: g!mute @user <reason> ~ اعطاء العضو ميوت لازم رتبة<Muted>
-:ok_hand: g!unmute @user ~ لفك الميوت عن الشخص 
-:ok_hand: g!kick @user <reason> ~ طرد الشخص من السيرفر
-:ok_hand: g!ban @user <reason> ~ حضر الشخص من السيرفر
-:ok_hand: g!mc ~ تقفيل الشات
-:ok_hand: g!unmc ~ فتح الشات
-:ok_hand: g!dc ~ مسح كل الرومات
-:ok_hand: g!dr ~ <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
-:ok_hand: g!ct <name> ~ انشاء شات
-:ok_hand: g!cv <name> ~ انشاء رووم فويس
-:ok_hand: g!delet <name> ~ مسح الشات او الرووم فويس
-:ok_hand: g!color <number> ~ ينشا لك الوان مع كم الوان تبي
-:ok_hand: g!muteall ~ لاعطاء ميوت لكل السرفر
-:ok_hand: g!deafen ~ لاعطاء دفين
-:ok_hand: g!undeafen ~ فك الدفين
-:ok_hand: g!add-swear <SWEAR> > تضيف سبه او اي كلمة تريد منعها 
-:ok_hand: g!swears > يطلع لك السبات الي ضفتها
-:ok_hand: g!remove-swear <NUMBER> > يمسح سبه اذا تبي تعرف رقم السبه اكتب g!swears
-:ok_hand: g!remove-all-swears > يمسح كل السبات
-:ok_hand: g!setdate ~ البوت يعمل روم فيها التاريخ
-:ok_hand: g!settime ~ البوت يعمل روم فيها اللوقت
+***:anger: - سوي روم اسمه welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
+***:gem:g!move @user 
+:small_orange_diamond:لسحب الشخص الى روومك  
+:gem:g!bc 
+:small_orange_diamond:رسالة جماعية الى كل اعضاء السيرفر
+:gem:g!role @user <rank>
+:small_orange_diamond:لأعطاء رتبة لعضو معين
+:gem:g!roleremove @user <rank> 
+:small_orange_diamond:لازالة الرتبة من شخص معين
+:gem:g!role all <rank> 
+:small_orange_diamond:لأعطاء رتبة للجميع
+:gem:g!role humans <rank> 
+:small_orange_diamond:لأعطاء رتبة للاشخاص فقط
+:gem:g!role bots <rank>
+:small_orange_diamond:لأعطاء رتبة لجميع البوتات
+:gem:g!hchannel 
+:small_orange_diamond:اخفاء الشات
+:gem:g!schannel
+:small_orange_diamond:اضهار الشات المخفية
+:gem:g!clear <numbr>
+:small_orange_diamond:مسح الشات بعدد
+:gem:g!clear
+:small_orange_diamond:مسح الشات
+:gem:g!mute @user <reason>
+:small_orange_diamond:اعطاء العضو ميوت لازم رتبة<Muted>
+:gem:g!unmute @user
+:small_orange_diamond:لفك الميوت عن الشخص 
+:gem:g!kick @user <reason>
+:small_orange_diamond:طرد الشخص من السيرفر
+:gem:g!ban @user <reason>
+:small_orange_diamond:حضر الشخص من السيرفر
+:gem:g!mc
+:small_orange_diamond:تقفيل الشات
+:gem:g!unmc
+:small_orange_diamond:فتح الشات
+:gem:g!dc
+:small_orange_diamond:مسح كل الرومات
+:gem:g!dr 
+:small_orange_diamond:<مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
+:gem:g!ct <name> 
+:small_orange_diamond:انشاء شات
+:gem:g!cv <name>
+:small_orange_diamond:انشاء رووم فويس
+:gem:g!delet <name>
+:small_orange_diamond:مسح الشات او الرووم فويس
+:gem:g!color <number>
+:small_orange_diamond:ينشا لك الوان مع كم الوان تبي
+:gem:g!muteall
+:small_orange_diamond:لاعطاء ميوت لكل السرفر
+:gem:g!deafen
+:small_orange_diamond:لاعطاء دفين
+:gem:g!undeafen 
+:small_orange_diamond:فك الدفين
+:gem:g!add-swear <SWEAR> 
+:small_orange_diamond:تضيف سبه او اي كلمة تريد منعها 
+:gem:g!swears 
+:small_orange_diamond:يطلع لك السبات الي ضفتها
+:gem:g!remove-swear <NUMBER> 
+:small_orange_diamond:يمسح سبه اذا تبي تعرف رقم السبه اكتب g!swears
+:gem:g!remove-all-swears 
+:small_orange_diamond:يمسح كل السبات
+:gem:g!setdate 
+:small_orange_diamond:البوت يعمل روم فيها التاريخ
+:gem:g!settime 
+:small_orange_diamond:البوت يعمل روم فيها اللوقت***
 `)
     message.author.sendEmbed(embed)
     
