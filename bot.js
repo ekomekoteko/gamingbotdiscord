@@ -3595,7 +3595,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲:ture:  ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server Gaming :two_hearts: :sparkles_gaming: :tadagaming: !!, ${member}`);
+  channel.send(` ̲  ̲W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming 🎉♥:sparkles: `);
 });
 ////welcome
 // Create an event listener for new guild members
