@@ -7299,6 +7299,24 @@ client.on("ready", () => {
 });
 
 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('479519956208320512').roles.find("name", ".").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
+ 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('479519956208320512').roles.find("name", "disco").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
+
+
+
+
+
 
 
 
