@@ -7328,6 +7328,22 @@ client.on("ready", () => {
 });
 
 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('479519956208320512').roles.find("name", "ＧＡＭＩＮＧ ƁŎƮ").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
+/////////////////////////////////////////////
+///////SERVER Wings
+
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('504684895969214464').roles.find("name", "GAMING").setColor("RANDOM");
+  };
+  setInterval(lol, 10);
+});
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
