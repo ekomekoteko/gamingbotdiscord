@@ -1862,7 +1862,7 @@ client.on("guildMemberAdd", member => {
 
 
 
-A7MD.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
