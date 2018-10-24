@@ -1862,21 +1862,7 @@ client.on("guildMemberAdd", member => {
 
 
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-New
- 5 Invites BOT Bc ONLINE 24h
-10 Invites BOT WELCOME ONLINE 24h 
-30 Invites  BOT Music ONLINE 24h
-https://discord.gg/H8sZFh
 
-
-Special invitation to you... [ ${member}  ]
-**`) 
-}).catch(console.error)
-})
 
 
 
