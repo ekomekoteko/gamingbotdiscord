@@ -431,7 +431,7 @@ client.on("message", message => {
 •
 g!play ~لتشغيل اغنية
 g!join ~ دخول رومك الصوتي
-g!disconnect ~ الخروج من رومك الصوتي
+g!stop ~ الخروج من رومك الصوتي
 g!skip, تخطي الأغنية
 g!pause ~ ايقاف الاغنية مؤقتا
 g!resume ~ تكملة الاغنية
@@ -3513,7 +3513,7 @@ if (command == "embed") {
 //////////////////////////////----------------welcome///
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '个welcome个');
+    let channel = member.guild.channels.find('name', '↗wèlcòmèヅ');
     let memberavatar = member.user.avatarURL
       if (!channel) return; 
     let embed = new Discord.RichEmbed()
@@ -3569,7 +3569,7 @@ client.on('guildMemberAdd', member => {
             .setColor('RED')
             .setFooter(`==== Gòǒd Luck ♦=====`, 'https://cdn.pg.sa/GeQGucQhBR.gif')
         
-        var channel =member.guild.channels.find('name', '个welcome个')
+        var channel =member.guild.channels.find('name', '↗wèlcòmèヅ')
         if (!channel) return;
         channel.send({embed : embed});
         })
@@ -3591,12 +3591,11 @@ client.on('guildMemberAdd', member=> {
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === '个welcome个');
+  const channel = member.guild.channels.find(ch => ch.name === '↗wèlcòmèヅ');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server :two_hearts: 🎉:hugging:  !!
-   !!, ${member}`);
+  channel.send(` ̲:ture:  ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server Gaming :two_hearts: :sparkles_gaming: :tadagaming: !!, ${member}`);
 });
 ////welcome
 // Create an event listener for new guild members
@@ -7044,7 +7043,7 @@ if(message.content === prefix + 'مصحف' || message.content === prefix + 'ms7f
 
 ///////////////////////////////welcome by swra 
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'welcome');
+     const welcomer =  member.guild.channels.find('name', '↗wèlcòmèヅ');
     if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -7122,7 +7121,7 @@ welcomer.sendFile(canvas.toBuffer())
 ///////By:Mahmoud-QuaStyle
 
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', '个welcome个');
+     const welcomer =  member.guild.channels.find('name', 'welcome');
     if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
