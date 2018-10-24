@@ -306,69 +306,69 @@ client.on("message", message => {
 
 ***:anger: - سوي روم اسمه welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
 ***:gem:g!move @user 
-:small_orange_diamond:لسحب الشخص الى روومك  
+لسحب الشخص الى روومك  
 :gem:g!bc 
-:small_orange_diamond:رسالة جماعية الى كل اعضاء السيرفر
+رسالة جماعية الى كل اعضاء السيرفر
 :gem:g!role @user <rank>
-:small_orange_diamond:لأعطاء رتبة لعضو معين
+لأعطاء رتبة لعضو معين
 :gem:g!roleremove @user <rank> 
-:small_orange_diamond:لازالة الرتبة من شخص معين
+لازالة الرتبة من شخص معين
 :gem:g!role all <rank> 
-:small_orange_diamond:لأعطاء رتبة للجميع
+لأعطاء رتبة للجميع
 :gem:g!role humans <rank> 
-:small_orange_diamond:لأعطاء رتبة للاشخاص فقط
+لأعطاء رتبة للاشخاص فقط
 :gem:g!role bots <rank>
-:small_orange_diamond:لأعطاء رتبة لجميع البوتات
+لأعطاء رتبة لجميع البوتات
 :gem:g!hchannel 
-:small_orange_diamond:اخفاء الشات
+اخفاء الشات
 :gem:g!schannel
-:small_orange_diamond:اضهار الشات المخفية
+اضهار الشات المخفية
 :gem:g!clear <numbr>
-:small_orange_diamond:مسح الشات بعدد
+مسح الشات بعدد
 :gem:g!clear
-:small_orange_diamond:مسح الشات
+مسح الشات
 :gem:g!mute @user <reason>
-:small_orange_diamond:اعطاء العضو ميوت لازم رتبة<Muted>
+اعطاء العضو ميوت لازم رتبة<Muted>
 :gem:g!unmute @user
-:small_orange_diamond:لفك الميوت عن الشخص 
+لفك الميوت عن الشخص 
 :gem:g!kick @user <reason>
-:small_orange_diamond:طرد الشخص من السيرفر
+طرد الشخص من السيرفر
 :gem:g!ban @user <reason>
-:small_orange_diamond:حضر الشخص من السيرفر
+حضر الشخص من السيرفر
 :gem:g!mc
-:small_orange_diamond:تقفيل الشات
+تقفيل الشات
 :gem:g!unmc
-:small_orange_diamond:فتح الشات
+فتح الشات
 :gem:g!dc
-:small_orange_diamond:مسح كل الرومات
+مسح كل الرومات
 :gem:g!dr 
-:small_orange_diamond:<مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
+<مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات
 :gem:g!ct <name> 
-:small_orange_diamond:انشاء شات
+انشاء شات
 :gem:g!cv <name>
-:small_orange_diamond:انشاء رووم فويس
+انشاء رووم فويس
 :gem:g!delet <name>
-:small_orange_diamond:مسح الشات او الرووم فويس
+مسح الشات او الرووم فويس
 :gem:g!color <number>
-:small_orange_diamond:ينشا لك الوان مع كم الوان تبي
-:gem:g!muteall
-:small_orange_diamond:لاعطاء ميوت لكل السرفر
+ينشا لك الوان مع كم الوان تبي
+:gem: g!muteall
+لاعطاء ميوت لكل السرفر
 :gem:g!deafen
-:small_orange_diamond:لاعطاء دفين
+لاعطاء دفين
 :gem:g!undeafen 
-:small_orange_diamond:فك الدفين
+فك الدفين
 :gem:g!add-swear <SWEAR> 
-:small_orange_diamond:تضيف سبه او اي كلمة تريد منعها 
+تضيف سبه او اي كلمة تريد منعها 
 :gem:g!swears 
-:small_orange_diamond:يطلع لك السبات الي ضفتها
+يطلع لك السبات الي ضفتها
 :gem:g!remove-swear <NUMBER> 
-:small_orange_diamond:يمسح سبه اذا تبي تعرف رقم السبه اكتب g!swears
+يمسح سبه اذا تبي تعرف رقم السبه اكتب g!swears
 :gem:g!remove-all-swears 
-:small_orange_diamond:يمسح كل السبات
+يمسح كل السبات
 :gem:g!setdate 
-:small_orange_diamond:البوت يعمل روم فيها التاريخ
+ البوت يعمل روم فيها التاريخ
 :gem:g!settime 
-:small_orange_diamond:البوت يعمل روم فيها اللوقت***
+البوت يعمل روم فيها اللوقت***
 `)
     message.author.sendEmbed(embed)
     
