@@ -7554,6 +7554,32 @@ client.on('message', message => {
 
 
 
+client.on('message', message =>{
+  let args = message.content.split(' ');
+  let prefix = 'g!';
+if(args[0] === `g!emoji`){
+let findEmoji = args[1];
+
+if(!findEmoji || findEmoji === '') return  message.reply(`**أدخل الايموجي**`);
+
+let EmojiId = findEmoji.slice(findEmoji.length - 19,findEmoji.length -1);
+
+if(isNaN(EmojiId)) return message.reply(`**لم استطع العثور على الايموجي المطلوب**`);
+
+let EmojiURL = `https://cdn.discordapp.com/emojis/${EmojiId}.png`;
+
+let EmojiEmbed = new Discord.RichEmbed()
+.setColor('RANDOM')
+.setTitle(`Link Emoji ${findEmoji}`)
+.setURL(`${EmojiURL}`)
+.setImage(`${EmojiURL}`)
+
+message.channel.send({ embed  : EmojiEmbed });
+
+};
+});
+
+
 
 
 
