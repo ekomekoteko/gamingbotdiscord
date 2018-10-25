@@ -3993,7 +3993,7 @@ client.on('message', message => {
 client.on('message' , message => {
   var prefix = "g!";
   if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "bcRole")) {
+  if(message.content.startsWith(prefix + "formebc")) {
     let args = message.content.split(" ").slice(1);
 
     if(!args[0]) {
@@ -4035,7 +4035,7 @@ client.on('message' , message => {
 
 
 client.on("message", message => {
-    if (message.content.startsWith("g!obc")) {
+    if (message.content.startsWith("g!MahmouD")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
