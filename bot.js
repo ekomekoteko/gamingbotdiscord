@@ -38,8 +38,8 @@ client.on("guildMemberAdd", msg => {
 .setTitle(`
 Wèlcome to Sèrver 
 `)
-.addField("Link Server :  5 Invites BOT Bc -10 Invites BOT WELCOME - 30 Invites BOT Music (all BOT ONLINE 24h) ", `${msg.user.tag}`, true)
-.addField(`↓↓↓↓↓`,`https://discord.gg/WjQ3BcR`, true)
+.addField("Invite Rewards: :small_orange_diamond: 5 Invites BOT Bc -:small_orange_diamond:10 Invites BOT WELCOME - :small_orange_diamond:30 Invites BOT Music (all BOT ONLINE 24h) ", `${msg.user.tag}`, true)
+.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/WjQ3BcR`, true)
  .setFooter(msg.user.tag, msg.user.avatarURL, true)
 msg.user.sendMessage(AlphaE);
 });
