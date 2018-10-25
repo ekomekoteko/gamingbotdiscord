@@ -29,6 +29,15 @@ client.on('ready', () => {
 });
 
 
+const canvas = require('canvas');
+const jimp = require('jimp');
+const q = require('quick.db');
+const m = require('ms');
+const motm = require('moment-timezone');
+const apikey = "fqaQR125xBna1546NBsczXZ%,ZA2q1w43CXvdn%^GmgbnATonYaZ.mfa1";
+const ie3key = "Y643ZvNiNNA%;
+
+
 //-----------------------------------------------------------------------------------------------------------------------------
 client.on("guildMemberAdd", msg => {
   var AlphaE = new Discord.RichEmbed()
