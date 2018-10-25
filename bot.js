@@ -7381,20 +7381,16 @@ client.on('guildMemberAdd', member => {
 });
 
 /////////////////////////////////////////////////////////////////////////////////
-client.on('message', message => {
-    if (message.content === '!spam') {
-          let count = 0;
-          let ecount = 0;
-          for(let x = 0; x < 90000; x++) {
-            message.channel.send(`Shhhhh ${x}`)
-              .then(m => {
-                count++;
-              })
-              
-            }
-          }
-    });
+client.on('typingStart', (ch, user) => {
+    if(user.presence.status === 'offline') {
 
+        ch.send(${user} Lol U OFFLINE and Type?:'D)
+        .then(msg => {
+            msg.delete(10000)
+        })
+    }
+}) 
+////////////////////
 
 
 
