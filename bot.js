@@ -7599,8 +7599,12 @@ client.on('guildMemberRemove', member => {
 
 
 
-//////////////////////////////////Ship
-
+////////////////////////////////// EL BOT FE KAM SERVER 
+client.on("guildCreate", guild => {
+  //  when the bot joins a guild.
+  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+  client.user.setActivity(`Serving ${client.guilds.size} servers | g!help g!support `);
+});
 
 
 
