@@ -7574,7 +7574,7 @@ message.channel.send({ embed  : EmojiEmbed });
 
 
 client.on('guildMemberAdd', member => {
-    const welcomechannel = member.guild.channels.find('name', 'welcome')
+    const welcomechannel = member.guild.channels.find('name', '➫bot»commends▃-▄-▅-▆-▇-▉-▊-▋-█')
 
     var newuserjoinembed = new Discord.RichEmbed()
       .setColor('00FF00')
@@ -7586,7 +7586,7 @@ client.on('guildMemberAdd', member => {
 });
 
 client.on('guildMemberRemove', member => {
-    const goodbyechannel = member.guild.channels.find('name', 'welcome')
+    const goodbyechannel = member.guild.channels.find('name', '➫bot»commends▃-▄-▅-▆-▇-▉-▊-▋-█')
 
     var newuserjoinembed = new Discord.RichEmbed()
       .setColor('#FF0000')
