@@ -7533,24 +7533,26 @@ client.on('typingStart', (ch, user) => {
 
 
 ///////////////////////啊啊啊啊啊啊啊啊啊啊Ch///////////
+
+
+
 client.on('message', message => {
     if (message.content === "g!Ch") {
     let embed = new Discord.RichEmbed()
    .setColor("RANDOM")
    .setThumbnail(message.author.avatarURL)
-   .setTitle(`info about ${message.guild.name}`)
+   .setTitle(`info About ${message.guild.name}`)
    .addField("g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر')
    .addField('g!Ch ac2  ⇏  لتفعيل روم والوقت')
    .addField('g!Ch ac3  ⇏  لتفعيل روم التاريخ')
+   
    .setTimestamp()
    .setFooter(message.author.tag, message.author.avatarURL)
-
-    message.channel.sendEmbed(embed);
+      
+      /////////////////////////////////////////////////////GAMING
+   message.channel.sendEmbed(embed);
      }
  });
-
-
-
 
 
 
