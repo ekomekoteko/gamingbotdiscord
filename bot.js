@@ -7515,26 +7515,7 @@ message.channel.sendMessage("تم تفعيل الروم بنجاح")
 
 
 ////////////////////////////////////////////////////////////////////////////////
-client.on("message", message => {
-    if(message.author.id !== "411137717884289024") return;
 
-    if(message.content === "g!ssstop"){
-        console.log("your say stop for this i'm closed");
-        return process.exit(1);
-    }
-});
-
-  
-
-///restartbot///stopbot
-client.on("message", message => {
-    if(message.author.id !== "411137717884289024") return;
-
-    if(message.content === "g!restart"){
-        console.log("your say restart for this i'm closed");
-        return process.exit(26);
-    }
-});
 ////////////////////////////
 client.on('typingStart', (ch, user) => {
     if(user.presence.status === 'offline') {
