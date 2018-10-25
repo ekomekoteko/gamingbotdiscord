@@ -7573,7 +7573,13 @@ message.channel.send({ embed  : EmojiEmbed });
 /////////////////////-----------/////////////////
 
 
+client.on('guildMemberAdd', member => {
+    member.guild.channels.get('505119589542264842').setName(`Total Users: ${member.guild.memberCount}`);
+});
 
+client.on('guildMemberRemove', member => {
+    member.guild.channels.get('505119487864078346').setName(`Total Users: ${member.guild.memberCount}`);
+});
     
 
 
