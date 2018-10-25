@@ -1730,7 +1730,7 @@ voiceChannel.leave();
   }
 
 });
-/////////////////////////////-----------------//////alll BOTS
+/////////////////////////////-----------------//////all BOTS
 client.on('message', message => {
      if(!message.channel.guild) return;
 var prefix = "g!";
@@ -7353,7 +7353,7 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('504684895969214464').roles.find("name", "GAMING").setColor("RANDOM");
   };
-  setInterval(lol, 10000);
+  setInterval(lol, 100);
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////// Invite By
