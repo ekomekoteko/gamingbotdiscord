@@ -222,76 +222,76 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 ***¯−ـ‗ऊ»اوامر عامة«ऊ‗ـ−¯***                                                           
-:pushpin:***g!allbots 
-لعرض جميع البوتات الي بالسيرفر***
-:pushpin:***g!server 
-يعرض لك معلومات عن السيرفر***
-:pushpin:***g!bot 
-يعرض لك كل معلومات البوت***
-:pushpin:***g!count
-يعرض لك عدد الاشخاص بالسيرفر بدون بوتات***
-:pushpin:***g!invites 
-يعرض لك  عدد انفايتاتك بالسيرفر***
-:pushpin:***g!invite-codes 
-يعرض لك روابط الانفايتات حكك في السيرفر***
-:pushpin: ***g!cal 
-اله حاسبة***
-:pushpin:*** g!trans <language> <any thing> 
-يترجم لك الي تبيه من اي لغة***
-:pushpin:***g!short 
-يختصر لك رابط كبير الى رابط صغير***
-:pushpin:***g!tag 
-يكتب لك الكلمة بشكل جميل وكبير***
-:pushpin:***g!google 
-للبحث في قوقل عن طريق الدسكورد***
-:pushpin:***g!perms 
-يعرض لك برمشناتك بالسيرفر***
-:pushpin:***g!rooms 
-يعرض لك كل الرومات الي بالسيرفر مع عددها***
-:pushpin: ***g!roles 
-يعرض لك كل الرانكات بالسيرفر بشكل جميل***
-:pushpin:***g!emojilist
-يعرض لك كل الايموجيات الي بالسيرفر***
-:pushpin:***g!say 
-يكرر الكلام الي تكتبو***
-:pushpin:***g!image 
-صورة السيرفر***
-:pushpin:***g!members 
-يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص***
-:pushpin:***g!id 
-معلومات عنك***
-:pushpin:***g!bans 
-عدد الاشخاص المبندة*** 
-:pushpin:*** g!avatar 
-صورتك او صورة الي تمنشنو*** 
-:pushpin:*** g!embed
-يكرر الي تقولو بشكل حلو*** 
-:pushpin:*** g!emoji 
-<any things> لتحويل اي كلمه تقولها الي ايموجي*** 
-:pushpin:*** g!inv 
-لدعوة البوت الى سيرفرك*** 
-:pushpin:*** g!support
-سيرفر الدعم*** 
-:pushpin:*** g!contact
-ارسال اقتراح او لمراسلة صاحب البوت*** 
-:pushpin:*** g!report
-ا حد سبك واهانك***
-:pushpin:*** g!owner<messange 
-ارسال رسالة لي اونر***
-:pushpin:*** g!server 
-معلومات عن السرفر*** 
-:pushpin:*** g!draw
+***:pushpin:g!allbots
+∟ لعرض جميع البوتات الي بالسيرفر
+:pushpin:g!server 
+∟ يعرض لك معلومات عن السيرفر
+:pushpin:g!bot 
+∟ يعرض لك كل معلومات البوت
+:pushpin:g!count
+يعرض لك عدد الاشخاص بالسيرفر بدون بوتات
+:pushpin:g!invites
+∟يعرض لك  عدد انفايتاتك بالسيرفر
+:pushpin:g!invite-codes 
+∟ يعرض لك روابط الانفايتات حكك في السيرفر
+:pushpin:g!cal 
+∟ اله حاسبة
+:pushpin:g!trans <language> <any thing> 
+∟ يترجم لك الي تبيه من اي لغة
+:pushpin:g!short 
+∟ يختصر لك رابط كبير الى رابط صغير
+:pushpin:g!tag 
+∟ يكتب لك الكلمة بشكل جميل وكبير
+:pushpin:g!google 
+∟ للبحث في قوقل عن طريق الدسكورد
+:pushpin:g!perms 
+∟ يعرض لك برمشناتك بالسيرفر
+:pushpin:g!rooms 
+∟ يعرض لك كل الرومات الي بالسيرفر مع عددها
+:pushpin: g!roles 
+∟ يعرض لك كل الرانكات بالسيرفر بشكل جميل
+:pushpin:g!emojilist
+∟ يعرض لك كل الايموجيات الي بالسيرفر
+:pushpin:g!say 
+∟ يكرر الكلام الي تكتبو
+:pushpin:g!image 
+∟صورة السيرفر
+:pushpin:g!members 
+∟ يعرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص
+:pushpin:g!id 
+∟ معلومات عنك
+:pushpin:g!bans 
+∟ عدد الاشخاص المبندة 
+∟ :pushpin: g!avatar 
+صورتك او صورة الي تمنشنو 
+:pushpin: g!embed
+∟ يكرر الي تقولو بشكل حلو
+:pushpin:g!emoji 
+<any things> لتحويل اي كلمه تقولها الي ايموجي
+:pushpin: g!inv 
+∟لدعوة البوت الى سيرفرك
+:pushpin:g!support
+∟ سيرفر الدعم
+:pushpin: g!contact
+∟ ارسال اقتراح او لمراسلة صاحب البوت
+:pushpin: g!report
+∟ ا حد سبك واهانك
+:pushpin: g!owner<messange 
+∟ ارسال رسالة لي اونر
+:pushpin: g!server 
+∟ معلومات عن السرفر
+:pushpin: g!draw
 <messange> يحط لك الكلام في صوره
-:pushpin:***g!embed***
-***<messange>  يحط لك الكلام في مربع*** 
-:pushpin:***g!time 
-***لمعرفة الوقت
-:pushpin:***g!dt 
-***لمعرفة الوقت والتاريخ 
-:pushpin: ***g!credit
-***لمعرفة الكرديت
-:pushpin:***g!daily
-***لمعرفة اليومي 
+:pushpin:g!embed
+<messange>  يحط لك الكلام في مربع
+:pushpin:g!time 
+∟ لمعرفة الوقت
+:pushpin:g!dt 
+∟ لمعرفة الوقت والتاريخ 
+:pushpin: g!credit
+∟ لمعرفة الكرديت
+:pushpin:g!daily
+∟ لمعرفة اليومي ***
 `)
    message.author.sendEmbed(embed)
     
@@ -7381,15 +7381,7 @@ client.on('guildMemberAdd', member => {
 });
 
 /////////////////////////////////////////////////////////////////////////////////
-client.on('typingStart', (ch, user) => {
-    if(user.presence.status === 'offline') {
 
-        ch.send(`${user} Lol U OFFLINE and Type?:'D`)
-        .then(msg => {
-            msg.delete(10000)
-        })
-    }
-}) 
 ////////////////////
 
 
