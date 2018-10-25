@@ -479,26 +479,15 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription('👑 اوامر اللوانء👑')
       .addField('❖-|g!colors', `👑لعرض قائمة الألوان💯`)
-      .addField('❖-|g!createcolors', `☺لأنشاء 50 لون💯`)
-      .addField('❖-|g!color<number>', `😊لتحط ايا 0ون من هول الالوان اكتب الأمر و الرقم من 1 ل50 انت اختر😉`)
+      .addField('❖-|g!createcolors', `☺لأنشاء 137 لون💯`)
+      .addField('❖-|g!color<number>', `😊لتحط ايا 0ون من هول الالوان اكتب الأمر و الرقم من 1 ل137 انت اختر😉`)
   message.author.send({embed});
       message.channel.send("")
  }
 });
 
 
-client.on("message", message => {
- if (message.content === "g!help-colors") {
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription('👑 اوامر اللوانء👑')
-      .addField('❖-|g!colors', `👑لعرض قائمة الألوان💯`)
-      .addField('❖-|g!createcolors', `☺لأنشاء 50 لون💯`)
-      .addField('❖-|g!color<number>', `😊لتحط ايا 0ون من هول الالوان اكتب الأمر و الرقم من 1 ل50 انت اختر😉`)
-  message.author.send({embed});
-      message.channel.send("")
- }
-});
+
 
 
 
