@@ -7530,25 +7530,28 @@ client.on('typingStart', (ch, user) => {
 
 
 //////////////////////////////////////////////////////////////
-client.on("message", message => {
- if (message.content === "g!Ch ") {
-
-  const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(` 
-   ** اوامرَ Gaming Bot **
-        للتفعيل 
-g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر
-g!Ch ac2  ⇏  لتفعيل روم والوقت
-g!Ch ac3  ⇏  لتفعيل روم التاريخ
-`);
 
 
-message.channel.sendEmbed(embed)
+///////////////////////啊啊啊啊啊啊啊啊啊啊Ch///////////
+client.on('message', message => {
+    if (message.content === "g!Ch") {
+    let embed = new Discord.RichEmbed()
+   .setColor("RANDOM")
+   .setThumbnail(message.author.avatarURL)
+   .setTitle(`info about ${message.guild.name}`)
+   .addField("g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر')
+   .addField('g!Ch ac2  ⇏  لتفعيل روم والوقت')
+   .addField('g!Ch ac3  ⇏  لتفعيل روم التاريخ')
+   .setTimestamp()
+   .setFooter(message.author.tag, message.author.avatarURL)
 
-}
-}); 
+    message.channel.sendEmbed(embed);
+     }
+ });
+
+
+
+
 
 
 
