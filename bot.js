@@ -7579,12 +7579,6 @@ message.channel.send({ embed  : EmojiEmbed });
 };
 });
 /////////////////////-----------/////////////////
-client.on('message', message => {
-    var prefix = "g!"
-if(command ===`${prefix}countserver`) {
-  message.channel.send(`Server counted: **${client.guilds.size} **`)
-  message.react("✅");
-  }
 
 
 
