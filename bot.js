@@ -7529,6 +7529,29 @@ client.on('typingStart', (ch, user) => {
 
 
 
+//////////////////////////////////////////////////////////////
+client.on("message", message => {
+ if (message.content === "g!Ch ") {
+
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(` 
+   ** اوامرَ Gaming Bot **
+        للتفعيل 
+g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر
+g!Ch ac2  ⇏  لتفعيل روم والوقت
+g!Ch ac3  ⇏  لتفعيل روم التاريخ
+`);
+
+
+message.channel.sendEmbed(embed)
+
+}
+}); 
+
+
+
 
 client.login(process.env.BOT_TOKEN);
 
