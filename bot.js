@@ -29,12 +29,7 @@ client.on('ready', () => {
 });
 
 
-const canvas = require('canvas');
-const jimp = require('jimp');
-const q = require('quick.db');
-const m = require('ms');
-const motm = require('moment-timezone');
-const apikey = "fqaQR125xBna1546NBsczXZ%,ZA2q1w43CXvdn%^GmgbnATonYaZ.mfa1";
+
 
 
 //-----------------------------------------------------------------------------------------------------------------------------
@@ -7588,15 +7583,13 @@ message.channel.send({ embed  : EmojiEmbed });
 });
 /////////////////////-----------/////////////////
 
-const Discord = require('discord.js');
+
 const canvas = require('canvas');
 const jimp = require('jimp');
 const q = require('quick.db');
 const m = require('ms');
-const mo = require('moment');
 const motm = require('moment-timezone');
 const apikey = "fqaQR125xBna1546NBsczXZ%,ZA2q1w43CXvdn%^GmgbnATonYaZ.mfa1";
-const ie3key = "Y643ZvNiNNA%;
 ////////////////////////////////////////////////////////////
 
 bot.on("message", message => {
