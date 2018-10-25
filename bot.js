@@ -7557,7 +7557,7 @@ client.on('message', message => {
 client.on('message', message =>{
   let args = message.content.split(' ');
   let prefix = 'g!';
-if(args[0] === `g!emoji`){
+if(args[0] === `g!»••»`){
 let findEmoji = args[1];
 
 if(!findEmoji || findEmoji === '') return  message.reply(`**أدخل الايموجي**`);
