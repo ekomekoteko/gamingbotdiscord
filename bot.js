@@ -7545,7 +7545,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" :small_orange_diamond: ** اوامر Gaming Bot ** للتفعيل **" , "  :black_small_square:**g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر**")
+  .addField(" :small_orange_diamond: ** »وامر Gaming Bot»  للتفعيل** " , "  :black_small_square:**g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر**")
   .addField(" :small_orange_diamond:  **2**" , "  :black_small_square:**g!Ch ac2  ⇏  لتفعيل روم والوقت**")     
   .addField(":small_orange_diamond:  **3**" , "  :black_small_square:**g!Ch ac3  ⇏  لتفعيل روم التاريخ**")          
   message.channel.sendEmbed(embed);
