@@ -7542,7 +7542,7 @@ client.on('message', message => {
    .setColor("RANDOM")
    .setThumbnail(message.author.avatarURL)
    .setTitle(`info About ${message.guild.name}`)
-   .addField("g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر')
+   .addField('g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر')
    .addField('g!Ch ac2  ⇏  لتفعيل روم والوقت')
    .addField('g!Ch ac3  ⇏  لتفعيل روم التاريخ')
    
