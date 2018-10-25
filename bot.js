@@ -7385,58 +7385,64 @@ client.on('guildMemberAdd', member => {
 ////////////////////
 
 
-client.on("message", message => {
-  if (message.content === ("g!Ch ac2")) {
-          let channel = message.client.channels.find('name', "hour");
-           let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'hour');
-  if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر R-Ch **").catch(console.error);
-             if(!message.channel.guild) return message.reply('**Commands in the server**');
-	                         if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-              var currentTime = new Date(),
-            hours = currentTime.getHours() + 3 ,
-            minutes = currentTime.getMinutes(),
-            seconds = currentTime.getSeconds(),
-            years = currentTime.getFullYear(),
-            month = currentTime.getMonth() + 3,
-            day = currentTime.getDate(),
-            week = currentTime.getDay();
-           
- 
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            var suffix = "AM";
-            if (hours >= 12) {
-                suffix = "PM";
-                hours = hours - 12;
-            }
-            if (hours == 0) {
-                hours = 12;
-            }
-    channel.edit({name : "🕐 - Time   「" + hours + ":" + minutes  +" " + suffix + "」"});
-  message.channel.sendMessage("تم تفعيل الروم بنجاح");
-  }
-});
-client.on("message", message => {
-    if (message.content === ("g!Ch ac3")) {
-          let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'date');
-  if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر R-Ch **").catch(console.error);
-           
-                   if(!message.channel.guild) return message.reply('**Commands in the server**');
-	        if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
-            
-          let channel = message.client.channels.find('name', "date");
-              var currentTime = new Date(),
-            years = currentTime.getFullYear(),
-            month = currentTime.getMonth() + 1,
-            day = currentTime.getDate(),
-            week = currentTime.getDay();
-   
-    channel.edit({name : "📅 - Date " + "「" + day + "-" + month + "-" + years + "」"});
-message.channel.sendMessage("تم تفعيل الروم بنجاح");
-}
-});
 
+///////////////////////////////////
+var prefix= "g!";
+client.on("message", message => {
+    if(message.content.startsWith(prefix + 'v2')) {
+     let args = message.content.split(" ").slice(1);
+       var nam = args.join(' ');
+          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
+
+	                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
+      message.guild.createChannel(nam, 'voice').then(c => setTimeout(() => c.delete(), 120000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
+      message.channel.send(`:ballot_box_with_check: TemporarySound : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الصوتي`), 120000))  // 120000 دقيقتان
+    }
+    });
+
+var prefix = "g!";
+client.on("message", message => {
+    if(message.content.startsWith(prefix + 'v4')) {
+     let args = message.content.split(" ").slice(1);
+       var nam = args.join(' ');
+          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
+
+	                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
+      message.guild.createChannel(nam, 'voice').then(c => setTimeout(() => c.delete(), 240000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
+      message.channel.send(`:ballot_box_with_check: TemporarySound : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الصوتي`), 120000))  // 120000 دقيقتان
+    }
+    });
+var prefix= "g!";
+client.on("message", message => {
+    if(message.content.startsWith(prefix + 'c2')) {
+     let args = message.content.split(" ").slice(1);
+       var nam = args.join(' ');
+          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
+
+	                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
+      message.guild.createChannel(nam, 'chat').then(c => setTimeout(() => c.delete(), 120000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
+      message.channel.send(`:ballot_box_with_check: TemporaryText : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الكتابي`), 120000))  // 120000 دقيقتان
+    }
+    });
+
+var prefix= "g!";
+client.on("message", message => {
+    if(message.content.startsWith(prefix + 'c4')) {
+     let args = message.content.split(" ").slice(1);
+       var nam = args.join(' ');
+          if(!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return message.reply("**يحتاج البوت الى خاصية` MANAGE_CHANNELS ` **").then(msg => msg.delete(6000))
+
+	                         if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+      if (!nam) return message.channel.send(`<@${message.author.id}> يجب عليك ادخال اسم`).then(msg => msg.delete(10000))
+      message.guild.createChannel(nam, 'chat').then(c => setTimeout(() => c.delete(), 120000)) // كل 60 تساوي دقيقة عدل عليها الوقت لي تبيه 
+      message.channel.send(`:ballot_box_with_check: TemporaryText : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الكتابي`), 120000))  // 120000 دقيقتان
+    }
+    });
+
+//////////////////////////////////////////////////////
 
 
 
