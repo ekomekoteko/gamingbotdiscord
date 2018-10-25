@@ -7353,7 +7353,7 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('504684895969214464').roles.find("name", "GAMING").setColor("RANDOM");
   };
-  setInterval(lol, 100);
+  setInterval(lol, 10090);
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////// Invite By
