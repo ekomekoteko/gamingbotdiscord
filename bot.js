@@ -7574,14 +7574,28 @@ message.channel.send({ embed  : EmojiEmbed });
 
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('505119589542264842').setName(`Total Users: ${member.guild.memberCount}`);
+    const welcomechannel = member.guild.channels.find('name', 'welcome')
+
+    var newuserjoinembed = new Discord.RichEmbed()
+      .setColor('00FF00')
+      .setAuthor(member.user.tag + ' has joined server', member.user.displayAvatarURL)
+      .addField(`:inbox_tray: Welcome To The Server ${member.user.tag}`)
+      .setFooter(`User joined`)
+      .setTimestamp()
+      return welcomechannel.send(newuserjoinembed);
 });
 
 client.on('guildMemberRemove', member => {
-    member.guild.channels.get('505119487864078346').setName(`Total Users: ${member.guild.memberCount}`);
-});
-    
+    const goodbyechannel = member.guild.channels.find('name', 'welcome')
 
+    var newuserjoinembed = new Discord.RichEmbed()
+      .setColor('#FF0000')
+      .setAuthor(member.user.tag + ' has left server', member.user.displayAvatarURL)
+      .addField(`:outbox_tray: Goodbye ${member.user.name} :disappointed_relieved: `)
+      .setFooter(`User left`)
+      .setTimestamp()
+      return goodbyechannel.send(newuserjoinembed);
+});
 
 
 
