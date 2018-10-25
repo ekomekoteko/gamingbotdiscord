@@ -2127,7 +2127,7 @@ Sender <@${message.author.id}>                                                  
 
  client.on('message', msg => {//msg
     if (msg.content === 'g!colors') {
-      msg.channel.send({file : "https://cdn.pg.sa/CVlyQsMkqX.png"})
+      msg.channel.send({file : "https://cdn.pg.sa/MFNLM5z8C8.jpg"})
     }
   });;
 
