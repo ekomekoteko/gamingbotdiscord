@@ -748,8 +748,8 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" **:small_orange_diamond: Link Server Support︾︾**" , "  **https://discord.gg/h76vMMP**")
-  .addField(" **:small_blue_diamond: Link BOT:Gaming︾︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
+  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/h76vMMP**")
+  .addField(" **:small_blue_diamond: Link BOT:Gaming︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
      
   message.channel.sendEmbed(embed);
     }
@@ -6568,7 +6568,7 @@ client.users.filter(u => u.discriminator == message.author.discriminator).forEac
  
 });
 
-///////////////////////////////////// lma 7ad yd5ol room anta t7ddha y5od el Rotba 
+///////////////////////////////////// ch ac1
 client.on("message", message => {
 if (message.content === ("g!Ch ac1")) {
 let channel = message.client.channels.find('name', "member");
@@ -7536,23 +7536,22 @@ client.on('typingStart', (ch, user) => {
 
 
 
+
+
+
+
 client.on('message', message => {
-    if (message.content === "g!Ch") {
-    let embed = new Discord.RichEmbed()
-   .setColor("RANDOM")
-   .setThumbnail(message.author.avatarURL)
-   .setTitle(`info About ${message.guild.name}`)
-   .addField('g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر')
-   .addField('g!Ch ac2  ⇏  لتفعيل روم والوقت')
-   .addField('g!Ch ac3  ⇏  لتفعيل روم التاريخ')
-   
-   .setTimestamp()
-   .setFooter(message.author.tag, message.author.avatarURL)
-      
-      /////////////////////////////////////////////////////GAMING
-   message.channel.sendEmbed(embed);
-     }
- });
+     if (message.content === "g!Ch") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" :small_orange_diamond: ** اوامر Gaming Bot ** للتفعيل **" , "  :black_small_square:**g!Ch ac1  ⇏  لتفعيل عداد اعضاء السيرفر**")
+  .addField(" :small_orange_diamond:  **2**" , "  :black_small_square:**g!Ch ac2  ⇏  لتفعيل روم والوقت**")     
+  .addField(":small_orange_diamond:  **3**" , "  :black_small_square:**g!Ch ac3  ⇏  لتفعيل روم التاريخ**")          
+  message.channel.sendEmbed(embed);
+    }
+});////////////////////////////////////By:Mahmoud-QuaStyle
+
 
 
 
