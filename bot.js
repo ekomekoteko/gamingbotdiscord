@@ -34,7 +34,6 @@ const googl = require('goo.gl');
 const translate = require('google-translate-api');  
 const fs = require("fs");
 const getYoutubeID = require('get-youtube-id');
-const moment = require("moment");  
 const { Client, Util } = require('discord.js');  
 const UserBlocked = new Set();
 const jimp = require('jimp');  
@@ -233,8 +232,7 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-***¯−ـ‗ऊ»اوامر عامة«ऊ‗ـ−¯***
-                                                                  
+***¯−ـ‗ऊ»اوامر عامة«ऊ‗ـ−¯***                                                           
 :pushpin:***g!allbots 
 لعرض جميع البوتات الي بالسيرفر***
 :pushpin:***g!server 
