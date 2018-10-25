@@ -7521,6 +7521,8 @@ client.on('typingStart', (ch, user) => {
 
 
 
+
+
 //////////////////////////////////////////////////////////////
 
 
@@ -7607,6 +7609,24 @@ client.on("ready", () => {
   // docs refer to as the "ClientUser".
   client.user.setActivity(`Serving ${client.guilds.size} servers | g!help g!support `);
 });
+////////////////////////////////////////////////////
+
+
+client.exports = (client, member, message) => {
+  const welcomeChannel = member.guild.channels.find('name', 'welcome');
+  if (welcomeChannel) {
+     let WelcomeEmbed = new Discord.RichEmbed()
+    .setTitle("Member has joined!")
+    .setThumbnail(member.user.displayAvatarURL)
+    .setDescription(`Welcome ${member.user} to ${member.guild.name}, \nPlease follow the rules \n and I hope you enjoy your stay here!`)
+    .setColor("#4286f4")
+    .setFooter(`You are the ${member.guild.memberCount} member to joined.`)
+    .setTimestamp();
+    welcomeChannel.send(WelcomeEmbed)
+  } 
+}
+
+
 
 
 
