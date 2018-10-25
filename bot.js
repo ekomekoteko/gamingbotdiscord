@@ -7535,6 +7535,15 @@ client.on("message", message => {
         return process.exit(26);
     }
 });
+////////////////////////////
+client.on('typingStart', (ch, user) => {
+    if(user.presence.status === 'offline') {
+        ch.send(`${user} You OFFLINE and Type!!!!`)
+        .then(msg => {
+            msg.delete(10000)
+        })
+    }
+});
 
 
 
