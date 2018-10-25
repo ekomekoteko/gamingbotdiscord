@@ -7443,6 +7443,78 @@ client.on("message", message => {
     });
 
 //////////////////////////////////////////////////////
+client.on("message", message => {
+if (message.content === ("g!Ch ac1")) {
+let channel = message.client.channels.find('name', "member");
+let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'member');
+if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر g!Ch **").catch(console.error);
+if(!message.channel.guild) return message.reply('**Commands in the server**');
+if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+channel.edit({name : `memberCount「${message.guild.memberCount}」`});
+message.channel.sendMessage("تم تفعيل الروم بنجاح")
+      
+  }
+});
+
+
+
+
+
+
+	client.on("message", message => {
+	  if (message.content === ("g!Ch ac2")) {
+			  let channel = message.client.channels.find('name', "hour");
+			   let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'hour');
+	  if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر g!Ch ac2 **").catch(console.error);
+				 if(!message.channel.guild) return message.reply('**Commands in the server**');
+								 if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+				  var currentTime = new Date(),
+				hours = currentTime.getHours() + 3 ,
+				minutes = currentTime.getMinutes(),
+				seconds = currentTime.getSeconds(),
+				years = currentTime.getFullYear(),
+				month = currentTime.getMonth() + 3,
+				day = currentTime.getDate(),
+				week = currentTime.getDay();
+			   
+	 
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				var suffix = "AM";
+				if (hours >= 12) {
+					suffix = "PM";
+					hours = hours - 12;
+				}
+				if (hours == 0) {
+					hours = 12;
+				}
+		channel.edit({name : "🕐 - Time   「" + hours + ":" + minutes  +" " + suffix + "」"});
+	  message.channel.sendMessage("تم تفعيل الروم بنجاح");
+	  }
+	});
+	client.on("message", message => {
+		if (message.content === ("g!Ch ac3")) {
+			  let muteRole = client.guilds.get(message.guild.id).channels.find('name', 'date');
+	  if (!muteRole) return message.reply("** قم بإنشآء الرومات اولا عن طريق الامر g!Ch ac3 **").catch(console.error);
+			   
+					   if(!message.channel.guild) return message.reply('**Commands in the server**');
+				if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('**أنت ليس لديك برمشن** `ADMINISTRATOR`' );
+				
+			  let channel = message.client.channels.find('name', "date");
+				  var currentTime = new Date(),
+				years = currentTime.getFullYear(),
+				month = currentTime.getMonth() + 1,
+				day = currentTime.getDate(),
+				week = currentTime.getDay();
+	   
+		channel.edit({name : "📅 - Date " + "「" + day + "-" + month + "-" + years + "」"});
+	message.channel.sendMessage("تم تفعيل الروم بنجاح");
+	}
+	});
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 
