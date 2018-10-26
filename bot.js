@@ -7474,33 +7474,8 @@ let replies = ["يب", "لا.", "ما بعرف.", "اسالني لاحقا لو 
     });
 });
 ////////////////////////////////////////////////////////////////
-var ss = 0;
- 
-client.on('voiceStateUpdate', (o,n) => {
-    if (o.voiceChannel && !n.voiceChannel) {
-        ss-=1
-        n.guild.channels.get("505408954952843265").edit({
-            name : "Voice Online : [" + ss+ "]"
-        })
-    };
-    if (n.voiceChannel && !o.voiceChannel) {
-        ss+=1
-        n.guild.channels.get("505408498629083136").edit({
-            name : "Voice Online : [" + ss+ "]"
-        })
-    }
-})
-client.on("ready", () => {
-    client.guilds.get("479519956208320512").members.forEach(m => {
-        if (m.voiceChannel) {
-            ss+=1
-        };
-        client.channels.get("505408607483985930").edit({
-            name : "Voice Online : [" + ss+ "]"
-        })
-    });
-    client.user.setGame("Top •", "https://twitch.tv/©");
-});
+
+    
 
 
 
