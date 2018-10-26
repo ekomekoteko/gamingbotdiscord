@@ -3633,8 +3633,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲ ̲***W̲e̲l̲c̲o̲m̲e${member}  ̲t̲o  ̲Server ,${message.guild.name} :two_hearts: 🎉♥:hugging:***  !!
-   !!, `);
+  channel.send(` ̲ ̲***W̲e̲l̲c̲o̲m̲e${member}  ̲t̲o  ̲Server  `,`${member.guild.name}`,` :two_hearts: 🎉♥:hugging:***  !! `);
 });
 
 /////////////////////////////////////////////// ////////////////////// ////////////////////// //////////////
