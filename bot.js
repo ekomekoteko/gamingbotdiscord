@@ -1,5 +1,8 @@
 
 const Discord = require('discord.js');
+const prefix = "g!"
+const tpoints = {};
+const vpoints = {};
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -27,9 +30,7 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 });
-const prefix = "g!"
-const tpoints = {};
-const vpoints = {};
+
 
 
 
