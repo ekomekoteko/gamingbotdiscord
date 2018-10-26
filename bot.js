@@ -7471,7 +7471,7 @@ client.on('message', message => {
     var name = message.guild.id
     var statsmsg = new Discord.RichEmbed()
     .setAuthor("InfoRoles - AdminBot", iconb)
-    .addField(`Roles¬`, '`'+ bot.guilds.get(name).roles.map(r => r.name).join(", ") + '`')
+    .addField(`Roles¬`, '`'+ client.guilds.get(name).roles.map(r => r.name).join(", ") + '`')
     .setColor("#A901DB")
     .setFooter(`Demandé par ${message.author.tag}`, iconm)
     
