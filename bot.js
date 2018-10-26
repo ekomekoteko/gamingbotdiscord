@@ -7612,7 +7612,7 @@ client.on("ready", () => {
 ////////////////////////////////////////////////////
 const discord = require ('discord.js');
 const Jimp = require(`jimp`)
-
+client.on('message', message => {
 if (message.content.startsWith(`g!ship`)) {
         let replies = [`Will Never Work`, `Slight Chance of Working`, `👀`, `Can Work`, `Could Work`, `High Chance of Working`, `Will Work <3`, `A Great Match <3`, `PERFECT MATCH ❤`]
         let result = Math.floor(Math.random() * replies.length);
