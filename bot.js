@@ -507,7 +507,7 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-  :e_mail:      g!obc | لأرسال برود كاست للكل
+  :e_mail:      g!bc | لأرسال برود كاست للكل
 
   :e_mail:     gb!bc  |  لأرسال برود كاست للأونلاين
 
@@ -520,10 +520,6 @@ client.on("message", message => {
    });
 
 
-client.on('message', msg => {
-    if(msg.content === 'g!help-bc')
-    msg.reply('Check Your DM :white_check_mark:')
-  });
 
 
 
@@ -986,7 +982,7 @@ message.guild.fetchInvites()
 
 
 
-///////////////Law 7ad d5al el Server y5od Rank Member Auto
+////////////////////// ////////////////////// ////////////////////// ////////////////////// /Law 7ad d5al el Server y5od Rank Member Auto
 client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("name","Member"));
     });
@@ -995,11 +991,11 @@ client.on('guildMemberAdd', member=> {
     });
 
 
-//////////////////////////////////----------------///////////////
+//////////////////////////////////-----------////////////////////// ////////////////////// -----///////////////
 
 
 
-//////////////////////////------////////////////////////////////--------------////////////////////////BOT 
+//////////////////////////------//////////////////////////////////// //////////////////--------------////////////////////////BOT 
 client.on('message', message => {
      if (message.content === "g!bot") {
      let embed = new Discord.RichEmbed()
@@ -1013,7 +1009,7 @@ message.channel.sendEmbed(embed);
 });
 
 
-///////////////-------------////////////--------------------------------------------------//////////Roles 
+///////////////-------------///////////////////////// ////////////////////// /////////--------------------------------------------------//////////Roles 
 client.on('message', message => {
     if (message.content === 'g!roles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
@@ -1026,8 +1022,7 @@ client.on('message', message => {
 
 
 
-
-////////////////////////-----------/////////////No Share Link Discordddddddddddddddddddddd
+////////////////////////-----------////////////////////////////// ////////////// /////No Share Link Discordddddddddddddddddddddd
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
@@ -1080,7 +1075,7 @@ client.on('message', msg => {
 });
 
 
-/////////////////-----------////////////////////////////////////////-----------/////////////////////emojilist
+/////////////////-----------//////////////////////////////// //////////////////////////////-----------/////////////////////emojilist
 
 
 
@@ -1102,7 +1097,7 @@ let PREFIX = 'g!'
 });
 
 
-///////////////--------///////////////////////////////////////////////--------------////Rules
+///////////////--------/////////////////////////////////////// //////////////////////////////--------------////Rules
 
 
 client.on('message', message => {
@@ -1124,7 +1119,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
-////////////----------------//////////////////////////////////////////BC
+////////////----------------//////////////////////////////////// ////////////////////// ////////////////////////////BC
 client.on('message', message => {
 	    var prefix = "g!";
               if(!message.channel.guild) return;
@@ -1225,7 +1220,7 @@ setInterval(function(){})
     }
 });
 
-//////////////////////////////////////////////////////////////////-//////////////date
+///////////////////////////////////////////////////////////////////////// ///////////////-//////////////date
 const HeRo = new Discord.Client();
 client.on('message', message => {
 var prefix = "g!";
@@ -1245,7 +1240,7 @@ var prefix = "g!";
              message.channel.sendEmbed(Date15);
     }
 });
-//////////////////////////////////////////----///////////////////Code law 7ad tl3 men server we gh tany y5od nfs el Rank
+/////////////////////////////////////////////////////////----///////////////////Code law 7ad tl3 men server we gh tany y5od nfs el Rank
 var ALPHACODES = {};
 client.on('guildMemberRemove', member => {
 ALPHACODES[member.id] = {roles: member.roles.array()};
@@ -1257,7 +1252,7 @@ for(let i = 0; i < ALPHACODES[member.user.id].roles.length + 1; i++) {
 member.addRole(ALPHACODES[member.user.id].roles.shift());
 }
 });
-/////////////////////////////////////////////////////////////////////////////////////////My Invite
+/////////////////////////////////////////////////////////////////////////////////// ////////////////////////////My Invite
 
 client.on('message',message =>{
       var prefix = "g!";
@@ -1308,7 +1303,7 @@ return;
 
 });
 
-/////////////-----------------------//////////Code law 7ad tl3 men server lma ygy tany nfs el rank el kan ma3h yrg3lo tany 
+/////////////--------////////////---------------//////////Code law 7ad tl3 men server lma ygy tany nfs el rank el kan ma3h yrg3lo tany 
 
 
 
@@ -1385,7 +1380,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 });
 
 
-///////////////////////////////add ROLE ALL 
+//////////////////////////////////////// ////////////////////// ////////////////////// /////////////add ROLE ALL 
 client.on('message', message => {
    
     if(message.author.bot) return;
@@ -1769,7 +1764,7 @@ if (message.content.startsWith("g!cv")) {
     
 }
 });
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////// ///////////////////////////////////////////////////////////////
 
 
 
@@ -1786,7 +1781,7 @@ if (message.content.startsWith("g!cv")) {
   message.channel.sendEmbed(embed);
    }
 }); 
-///////////////////////////////////////////////////7alet el BOT
+//////////////////////////////////////////////////// ////////////////////// /////////////////////7alet el BOT
 
 const adminprefix = "g!";
 const devs = ['411137717884289024'];
@@ -1816,7 +1811,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 
 
-/////////////////////////// Ty For add BOT in YOur Discord 
+///////////////////////////////////// ////////////////////// //////////// Ty For add BOT in YOur Discord 
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
@@ -1825,7 +1820,7 @@ client.on('guildCreate', guild => {
 });
 
 
-/////////////////////////////////////////////Rsala le Owner
+////////////////////////////////////////// ////////////////////// ////////////////////// /////////////////////////Rsala le Owner
 
 client.on('message', ReBeeL => {
   var prefix = "g!";
@@ -2114,7 +2109,7 @@ Sender <@${message.author.id}>                                                  
 
 
 
-////////////////////////////////////////// Color 
+///////////////////////////////////////////////////////// ////////////////////// /////// Color 
 
 
  client.on('message', msg => {//msg
@@ -3240,7 +3235,7 @@ message.channel.sendFile(canvas.toBuffer());
 }).on('ready', () => {
 
 });
-////////////////////////////////////////////////Music
+/////////////////////////////////////////////////////////// ///////////Music
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	
@@ -3587,7 +3582,7 @@ client.on('guildMemberAdd', member => {
 
 
 
-///////////WELCOME 
+///////////////////////// ////////////////////// ////////////////////// ////////////////////// ////////WELCOME 
 client.on('guildMemberAdd', member=> {
 
     client.channels.get("487407595590516747").send(`***https://cdn.pg.sa/2PgnoANxa9.jpg |Welcome to Server GAMING ♥  ${member}***`);
@@ -3600,7 +3595,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲  ̲W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming :two_hearts: 🎉♥:sparkles: `);
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming :two_hearts: 🎉♥:sparkles:*** `);
 });
 ////welcome
 // Create an event listener for new guild members
@@ -3610,11 +3605,11 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲ ̲W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server :two_hearts: 🎉♥:hugging:  !!
+  channel.send(` ̲ ̲***W̲e̲l̲c̲o̲m̲e  ̲t̲o  ̲Server :two_hearts: 🎉♥:hugging:***  !!
    !!, ${member}`);
 });
 
-///////////////////////////////////////
+/////////////////////////////////////////////// ////////////////////// ////////////////////// //////////////
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -3669,7 +3664,7 @@ client.on('message', msg => {
 
 
 
-//////////////////////////////////////////uptime el bot 48al men emta 
+//////////////////////////////////////////////// ////////////////////// ////////////////////////////////uptime el bot 48al men emta 
 
 
 client.on('message', message => {
@@ -3982,45 +3977,7 @@ client.on('message', message => {
 
 
 ///////////////////////////////////////obc 
-client.on('message' , message => {
-  var prefix = "g!";
-  if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "formebc")) {
-    let args = message.content.split(" ").slice(1);
 
-    if(!args[0]) {
-      message.channel.send("قم بمنشنة الرتبة | g!bcRole@everyoneرساله");
-        return;
-    }
-    if(!args[1]) {
-      message.channel.send("قم بمنشنة الرتبة | g!bcRole @everyone رساله");
-        return;
-    }
-
-      if(args[0] == "@everyone") {
-        message.channel.send(`لقد تم ارسال هذه الرسالة الى ${message.guild.memberCount} اعضاء`);
-        message.guild.members.forEach(mi => {
-          mi.send(
-          "الرسالة :" + "\n" +
-         "**" + `${args[1]}` + "**"
-          );
-        });
-        return;
-      }
-          var role = message.mentions.roles.first();
-            if(!role) {
-              message.reply("لا توجد رتبة بهذا الاسم");
-                return;
-            }
-        message.guild.members.filter(m => m.roles.get(role.id)).forEach(sa => {
-        sa.send(
-          "الرسالة :" + "\n" +
-        "**" + `${args[1]}` + "**"
-          );
-        });
-      message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عظو**`);
-    }
-});
 
 
 
@@ -4151,7 +4108,7 @@ client.on('message', function(message) {
 
 client.on('message', message => {
     let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('g!bc-bot')){
+    if (message.content.startsWith('g!bot-bc')){
     if(!message.author.id === '') return;
     message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
     client.users.forEach(m =>{
@@ -4519,7 +4476,7 @@ if (message.content.startsWith(prefix + 'trans')) {
     
         const embed = new Discord.RichEmbed()
             .setColor("FFFFFF")
-            .setDescription("**ترجمة الكتابة.**\استعمل: `-translate <الكلمة لتبي> <االغة>`");
+            .setDescription("**ترجمة الكتابة.**\استعمل: `g!translate <الكلمة لتبي> <االغة>`");
 
         return message.channel.send(embed);
 
@@ -4665,7 +4622,7 @@ client.on('message', message=> {
     message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   ```");
     }
 });
-////////////////////iNVITEby
+/////////////----------------------------------------------------------------///////iNVITEby
 client.on('guildMemberAdd', member => {
   member.guild.fetchInvites().then(guildInvites => {
     const ei = invites[member.guild.id];
@@ -4792,6 +4749,20 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
         oldMessage.channel.send(`:no_entry: | Hey <@${oldMessage.author.id}>! Dont swear or you will get mute!`).then(msg => msg.delete(2000));
     }// حقوق الفا كودز & عبود
 });
+////////////////////////////////////////////
+client.on('ready', () => {
+var x = client.channels.get("504331236622467073");
+if (x) x.join();
+});
+
+
+
+
+
+
+
+
+
 ///////////////////////////GAME
 const cuttweet = [
   'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
