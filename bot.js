@@ -7650,7 +7650,7 @@ if (message.content.startsWith(`g!ship`)) {
             })}
         )})
     }
-});
+
 
 
 
