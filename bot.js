@@ -27,6 +27,9 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 });
+const prefix = "g!"
+const tpoints = {};
+const vpoints = {};
 
 
 
@@ -7424,6 +7427,26 @@ client.on("ready", () => {
   client.user.setActivity(`Serving ${client.guilds.size} servers | g!help g!support `);
 });
 ////////////////////////////////////////////////////
+client.on('ready',async () => {
+
+
+  client.users.forEach(m => {
+
+    if(m.bot) return;
+
+    if(!tpoints[m.id]) tpoints[m.id] = {points: 0, id:m.id};
+
+ 
+
+    if(!vpoints[m.id]) vpoints[m.id] = {points: 0, id:m.id};
+
+  });
+
+});
+
+
+
+
 client.on('message',async message => {
 
   if(message.author.bot || message.channel.type === 'dm')return;
