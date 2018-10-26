@@ -7421,94 +7421,86 @@ client.on('ready',async () => {
 
 
 
+
+////////////////////////////////////setDays
+
+
 client.on('message',async message => {
-
-  if(message.author.bot || message.channel.type === 'dm')return;
-
-  let args = message.content.split(' ');
-
-  let member = message.member;
-
-  let mention = message.mentions.users.first();
-
-  let guild = message.guild;
-
-  let author = message.author;
-
- 
-
-  let rPoints = Math.floor(Math.random() * 4) + 1;// Random Points
-
-  tpoints[author.id].points += rPoints;
-
-  if(args[0] === `${prefix}top`) {
-
-    let _voicePointer = 1;
-
-    let _textPointer = 1;
-
-    let _voiceArray = Object.values(vpoints);
-
-    let _textArray = Object.values(tpoints);
-
-    let _topText = _textArray.slice(0, 5).map(r =>`**\`.${_textPointer++}\` | <@${r.id}> \`XP:${r.points}\`**`).sort((a, b) => a > b).join('\n');
-
-    let _voiceText = _voiceArray.slice(0, 5).map(r =>`**\`.${_voicePointer++}\` | <@${r.id}> \`XP:${r.points}\`**`).sort((a, b) => a > b).join('\n');
-
- 
-
-    let topRoyale = new Discord.RichEmbed();
-
-    topRoyale.setAuthor(message.author.username,message.author.avatarURL);
-
-    topRoyale.setTitle('# " Top');
-
-    //topRoyale.setThumbnail(message.guild.iconURL);
-
-    topRoyale.addField(`**TOP 5 TEXT 💬**`, _topText,true);
-
-    topRoyale.addField(`**TOP 5 VOICE 🎙**`, _voiceText,true);
-
-    topRoyale.setFooter(`${message.guild.name}`, message.guild.iconURL);
-
-    message.channel.send(topRoyale).catch(e => {
-
-      if(e) return message.channel.send(`**. Error;\`${e.message}\`**`);
-
+  var moment = require('moment');
+    if(message.content.startsWith(prefix + "setDays")) {
+    if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply('❌ **ليس لديك الصلاحيات الكافية**');
+    if(!message.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return message.reply('❌ **ليس معي الصلاحيات الكافية**');
+    message.channel.send('✅| **تم عمل الروم بنجاح**');
+    message.guild.createChannel(`Day : ${moment().format('dddd')}` , 'voice').then(c => {
+      console.log(`Day channel setup for guild: \n ${message.guild.name}`);
+      c.overwritePermissions(message.guild.id, {
+        CONNECT: false,
+        SPEAK: false
+      });
+      setInterval(function() {
+        c.setName(`📅 - Day : 「${moment().format('dddd')}」`);
+      },1000);
     });
+    }
+  });
 
-  }
+//////////////////////////////////
+client.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
 
+  let prefix = "g!";
+  let messageArray = message.content.split (" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+
+
+if(cmd === `${prefix}8ball`){
+
+
+if(!args[1]) return message.reply("?");
+let replies = ["يب", "لا.", "ما بعرف.", "اسالني لاحقا لو سمحت"];
+
+  let result = Math.floor((Math.random() * replies.length));
+  let question = args.slice(1).join(" ");
+
+       message.channel.sendMessage(`${replies[Math.floor(Math.random() * replies.length)]}`);   ///Alpha Codes 
+                   if (!args[0]) {
+              message.edit('1')
+              return;
+            }
+        }
+    });
 });
-
+////////////////////////////////////////////////////////////////
+var ss = 0;
  
-
-
-
-client.on('voiceStateUpdate', (u, member) => {
-
-  let author = member.user.id;
-
-  let guild = member.guild;
-
-  if(member.voiceChannel === null) return;
-
-  let rPoints = Math.floor(Math.random() * 4) + 1;
-
-  setInterval(() => {
-
-    if(!member.voiceChannel) return;
-
-    if(member.selfDeafen) return;
-
-    vpoints[author].points += rPoints;
-
-  }, 5000);
-
+client.on('voiceStateUpdate', (o,n) => {
+    if (o.voiceChannel && !n.voiceChannel) {
+        ss-=1
+        n.guild.channels.get("505408954952843265").edit({
+            name : "Voice Online : [" + ss+ "]"
+        })
+    };
+    if (n.voiceChannel && !o.voiceChannel) {
+        ss+=1
+        n.guild.channels.get("505408498629083136").edit({
+            name : "Voice Online : [" + ss+ "]"
+        })
+    }
+})
+client.on("ready", () => {
+    client.guilds.get("479519956208320512").members.forEach(m => {
+        if (m.voiceChannel) {
+            ss+=1
+        };
+        client.channels.get("505408607483985930").edit({
+            name : "Voice Online : [" + ss+ "]"
+        })
+    });
+    client.user.setGame("Top •", "https://twitch.tv/©");
 });
-
-
-
 
 
 
