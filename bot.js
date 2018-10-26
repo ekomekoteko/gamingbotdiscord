@@ -7464,6 +7464,25 @@ client.on('guildMemberAdd', member => {
   });
 });
 ////////////////////////////////////////////////////////////////
+client.on('message', message => {
+  if (message.content === prefix + "rolelist") {
+    var iconb = bot.user.avatarURL;
+    var iconm = message.author.avatarURL
+    var name = message.guild.id
+    var statsmsg = new Discord.RichEmbed()
+    .setAuthor("InfoRoles - AdminBot", iconb)
+    .addField(`Roles¬`, '`'+ bot.guilds.get(name).roles.map(r => r.name).join(", ") + '`')
+    .setColor("#A901DB")
+    .setFooter(`Demandé par ${message.author.tag}`, iconm)
+    
+    message.delete().catch(O_o=>{});
+    message.channel.sendMessage(statsmsg);
+  }
+}); 
+
+
+
+
 
     
 
