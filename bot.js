@@ -32,6 +32,31 @@ client.on('ready', () => {
 
 
 
+
+///////////////////////////////////////////////////////////
+//////////// Cry Cry /////////////////// Out Dog 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //-----------------------------------------------------------------------------------------------------------------------------
 client.on("guildMemberAdd", msg => {
   var AlphaE = new Discord.RichEmbed()
@@ -5388,7 +5413,7 @@ hours = hours - 12;
 if (hours == 0) {
 hours = 12;
 }
-      time.setName(`Time :[${hours} : ${minutes} : ${Seconds} ${suffix}]`);
+      time.setName(`🕐 - Time :[${hours} : ${minutes} : ${Seconds} ${suffix}]`);
  },1000);
   });
   }
@@ -7399,6 +7424,91 @@ client.on("ready", () => {
   client.user.setActivity(`Serving ${client.guilds.size} servers | g!help g!support `);
 });
 ////////////////////////////////////////////////////
+client.on('message',async message => {
+
+  if(message.author.bot || message.channel.type === 'dm')return;
+
+  let args = message.content.split(' ');
+
+  let member = message.member;
+
+  let mention = message.mentions.users.first();
+
+  let guild = message.guild;
+
+  let author = message.author;
+
+ 
+
+  let rPoints = Math.floor(Math.random() * 4) + 1;// Random Points
+
+  tpoints[author.id].points += rPoints;
+
+  if(args[0] === `${prefix}top`) {
+
+    let _voicePointer = 1;
+
+    let _textPointer = 1;
+
+    let _voiceArray = Object.values(vpoints);
+
+    let _textArray = Object.values(tpoints);
+
+    let _topText = _textArray.slice(0, 5).map(r =>`**\`.${_textPointer++}\` | <@${r.id}> \`XP:${r.points}\`**`).sort((a, b) => a > b).join('\n');
+
+    let _voiceText = _voiceArray.slice(0, 5).map(r =>`**\`.${_voicePointer++}\` | <@${r.id}> \`XP:${r.points}\`**`).sort((a, b) => a > b).join('\n');
+
+ 
+
+    let topRoyale = new Discord.RichEmbed();
+
+    topRoyale.setAuthor(message.author.username,message.author.avatarURL);
+
+    topRoyale.setTitle('# " Top');
+
+    //topRoyale.setThumbnail(message.guild.iconURL);
+
+    topRoyale.addField(`**TOP 5 TEXT 💬**`, _topText,true);
+
+    topRoyale.addField(`**TOP 5 VOICE 🎙**`, _voiceText,true);
+
+    topRoyale.setFooter(`Ping Pong TeaM`, message.guild.iconURL);
+
+    message.channel.send(topRoyale).catch(e => {
+
+      if(e) return message.channel.send(`**. Error;\`${e.message}\`**`);
+
+    });
+
+  }
+
+});
+
+ 
+
+
+
+client.on('voiceStateUpdate', (u, member) => {
+
+  let author = member.user.id;
+
+  let guild = member.guild;
+
+  if(member.voiceChannel === null) return;
+
+  let rPoints = Math.floor(Math.random() * 4) + 1;
+
+  setInterval(() => {
+
+    if(!member.voiceChannel) return;
+
+    if(member.selfDeafen) return;
+
+    vpoints[author].points += rPoints;
+
+  }, 5000);
+
+});
 
 
 
