@@ -7454,8 +7454,17 @@ client.on('message',async message => {
     }
   });
 
-//////////////////////////////////
-
+////////////////////////////////// Law anta d5al 3ndy Github el Fo2 inviteBy Fehom t3del da a7tmal y4t8al m3ak we a7la msa 3la gd3an 
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const member = member.guild.channels.find("name", "welcome");
+     member.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
+    member.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
+  });
+});
 ////////////////////////////////////////////////////////////////
 
     
