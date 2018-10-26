@@ -7466,7 +7466,7 @@ client.on('guildMemberAdd', member => {
 ////////////////////////////////////////////////////////////////
 client.on('message', message => {
   if (message.content === prefix + "rolelist") {
-    var iconb = bot.user.avatarURL;
+    var iconb = client.user.avatarURL;
     var iconm = message.author.avatarURL
     var name = message.guild.id
     var statsmsg = new Discord.RichEmbed()
