@@ -509,7 +509,7 @@ client.on("message", message => {
 
   :e_mail:      g!bc | لأرسال برود كاست للكل
 
-  :e_mail:     gb!bc  |  لأرسال برود كاست للأونلاين
+  :e_mail:     g!bc  |  لأرسال برود كاست للأونلاين
 
   :e_mail:      g!invite |  لدعوة البوت الي سيرفرك
 
@@ -1082,7 +1082,7 @@ client.on('message', msg => {
 
 client.on('message', message => { 
 let PREFIX = 'g!'
-    if (message.content.startsWith(PREFIX + 'emojilist')) {
+    if (message.content.startsWith(PREFIX + 'Emojiserverda')) {
 
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
 
