@@ -5245,33 +5245,7 @@ if(ratus.user.id === message.author.id) {
 ///////--------------------------------------
 
 ///////------------------------------------------------------------------------------/////top inv
-client.on('message',message =>{
-    var prefix = "g!";
-    if(message.content.startsWith(prefix + 'top')) {
-  message.guild.fetchInvites().then(i =>{
-  var invites = [];
-   
-  i.forEach(inv =>{
-    var [invs,i]=[{},null];
-     
-    if(inv.maxUses){
-        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
-    }else{
-        invs[inv.code] =+ inv.uses;
-    }
-        invites.push(`:pushpin:invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
-   
-  });
-  var embed = new Discord.RichEmbed()
-  .setColor("#000000")
-  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
-  .setThumbnail("https://cdn.pg.sa/DDmkm6YzNO.jpg")
-           message.channel.send({ embed: embed });
-   
-  });
-   
-    }
-  });
+
 //////////////////////////
 
 module.exports.run = async (bot, message, args) => {
@@ -7495,7 +7469,7 @@ client.on('message',async message => {
 
     topRoyale.addField(`**TOP 5 VOICE 🎙**`, _voiceText,true);
 
-    topRoyale.setFooter(`Ping Pong TeaM`, message.guild.iconURL);
+    topRoyale.setFooter(`${message.guild.name}`, message.guild.iconURL);
 
     message.channel.send(topRoyale).catch(e => {
 
