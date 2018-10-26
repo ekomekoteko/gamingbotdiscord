@@ -7161,6 +7161,16 @@ client.on("ready", () => {
   };
   setInterval(lol, 10090);
 });
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('478982807297720340').roles.find("name", "Gaming").setColor("RANDOM");
+  };
+  setInterval(lol, 10090);
+});
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////// Invite By
 client.on('guildMemberAdd', member => {
