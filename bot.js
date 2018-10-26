@@ -3613,7 +3613,7 @@ client.on('guildMemberAdd', member => {
 ///////////////////////// ////////////////////// ////////////////////// ////////////////////// ////////WELCOME 
 client.on('guildMemberAdd', member=> {
 
-    client.channels.get("487407595590516747").send(`***https://cdn.pg.sa/2PgnoANxa9.jpg |Welcome to Server GAMING ♥  ${member}***`);
+    client.channels.get("487407595590516747").send(`**__Welcome ${member}  to Server   ***`);
     });
 ////////////WELCOME 2
 // Create an event listener for new guild members
@@ -3623,7 +3623,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server ${message.guild.name} :two_hearts: 🎉♥:sparkles:*** `);
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server  :two_hearts: 🎉♥:sparkles:*** `);
 });
 ////welcome
 // Create an event listener for new guild members
@@ -3633,9 +3633,8 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲ ̲***W̲e̲l̲c̲o̲m̲e${member}  ̲t̲o  ̲Server  `,`${member.guild.name}`,` :two_hearts: 🎉♥:hugging:***  !! `);
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲  Sērvěr`, `${member.guild.name}`,true`);
 });
-
 /////////////////////////////////////////////// ////////////////////// ////////////////////// //////////////
 
 client.on('ready', () => {
