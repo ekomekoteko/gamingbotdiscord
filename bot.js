@@ -4465,7 +4465,7 @@ client.on('message', message => {
                                    })
                                    }
                                    });
-//////////////////////////////////////////////////////////////////////////////////trans
+//////////////////////////////////////////////////////////////////////////////////Auto ROle For Type 
 
 
 ////////////////////////////////////////////////////
@@ -5355,7 +5355,7 @@ client.on('message',async msg => {
 Year = currentTime.getFullYear(),
 Month = currentTime.getMonth() + 1,
 Dat = currentTime.getDate()
-      time.setName(`⇲ Date : [${Year} - ${Month} - ${Dat}]⇱`);
+      time.setName(`📅 - Date「${Year} - ${Month} - ${Dat}」`);
  },1000);
   });
   }
@@ -5901,7 +5901,7 @@ client.on('message',async message => {
         SPEAK: false
       });
       setInterval(function() {
-        c.setName(`Members Count : [ ${message.guild.members.size} ]`)
+        c.setName(`Members Count :  ${message.guild.members.size} `)
       },1000);
     });
     }
@@ -6314,7 +6314,7 @@ function timeCon(time) {
          .addField(':earth_asia: Region:',message.guild.region)
          .addField(':ribbon: Server Emojis :',`${message.guild.emojis.size}`,true)
          .addField(':construction: VerificationLevel:',`${verificationLevels[message.guild.verificationLevel]}`,true)
-         .addField(':closed_lock_with_key: Roles Count : '+message.guild.roles.size+' ','Type`-roles` To See The Server Roles!')
+         .addField(':closed_lock_with_key: Roles Count : '+message.guild.roles.size+' ','Type`g!id ` To See The Server Roles!')
          message.channel.send({embed:xNiTRoZ});
      }
     });
@@ -7168,7 +7168,7 @@ client.on('guildMemberAdd', member => {
     const inviter = client.users.get(invite.inviter.id);
     const stewart = member.guild.channels.find("name", "↗wèlcòmèヅ");
      stewart.send(`<@${member.user.id}> Invite By: <@${inviter.id}>`);
-   //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
+   // stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
 });
 
@@ -7180,7 +7180,7 @@ client.on('guildMemberAdd', member => {
     const inviter = client.users.get(invite.inviter.id);
     const stewart = member.guild.channels.find("name", "welcome");
      stewart.send(`<@${member.user.id}> Invite By: <@${inviter.id}>`);
-   //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
+     stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
 });
 
