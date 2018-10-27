@@ -311,8 +311,6 @@ client.on("message", message => {
 ∟ يعرض لك برمشناتك بالسيرفر
 :pushpin:g!rooms 
 ∟ يعرض لك كل الرومات الي بالسيرفر مع عددها
-:pushpin: g!roles 
-∟ يعرض لك كل الرانكات بالسيرفر بشكل جميل
 :pushpin:g!emojilist
 ∟ يعرض لك كل الايموجيات الي بالسيرفر
 :pushpin:g!say 
