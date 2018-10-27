@@ -7511,7 +7511,6 @@ var prefix = "g!";
  }
 });
 ///////////////////////////////////
-const Discord = require("discord.js");
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
   message.delete()
