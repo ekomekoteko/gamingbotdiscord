@@ -7463,7 +7463,7 @@ client.on('guildMemberAdd', member => {
     member.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   });
 });
-////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////Rolelist
 client.on('message', message => {
   if (message.content === prefix + "rolelist") {
     var iconb = client.user.avatarURL;
@@ -7479,7 +7479,37 @@ client.on('message', message => {
     message.channel.sendMessage(statsmsg);
   }
 }); 
+////////////////////////////////////////////// hcchannel shchannel
 
+
+client.on('ready', () => {
+	console.log('I am ready!'); 
+  });
+
+client.on('message', message => {
+var prefix = "g!";
+      if(message.content === prefix + "hchannel") {
+      if(!message.channel.guild) return;
+      if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
+             message.channel.overwritePermissions(message.guild.id, {
+             READ_MESSAGES: false
+ })
+              message.channel.send('Channel Hided Successfully ! :white_check_mark:  ')
+ }
+});
+
+
+client.on('message', message => {
+var prefix = "g!";
+      if(message.content === prefix + "schannel") {
+      if(!message.channel.guild) return;
+      if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
+             message.channel.overwritePermissions(message.guild.id, {
+             READ_MESSAGES: true
+ })
+              message.channel.send('Done  ')
+ }
+});
 
 
 
