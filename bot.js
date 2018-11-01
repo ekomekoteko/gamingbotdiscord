@@ -3653,7 +3653,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server  :two_hearts: 🎉♥:sparkles:*** `);
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming  :two_hearts: 🎉♥:sparkles:*** `);
 });
 ////welcome
 // Create an event listener for new guild members
@@ -3664,6 +3664,17 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   // Send the message, mentioning the member
   channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server  :two_hearts: 🎉♥:sparkles:*** `);
+});
+
+
+
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === 'shop»welcome‹‹');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Shoping  :two_hearts: 🎉♥:sparkles:*** `);
 });
 /////////////////////////////////////////////// ////////////////////// ////////////////////// //////////////
 
@@ -4590,6 +4601,42 @@ client.on('message', message => {
                                    })
                                    }
                                    });
+
+
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', 'Shop»Active'));  
+});
+ 
+ 
+client.on('message', message => {                      
+    if(!message.channel.guild) return;
+       if(message.content.startsWith(prefix + 'Shop»Member')) {       
+       if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+       message.channel.sendMessage(` Shop»Member Click Right to Get a Rank  `).then(msg => {
+       
+       
+        msg.react('✅')
+       .then(() => msg.react('✅'))
+     
+     
+ 
+       let activeFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+     
+       let active = msg.createReactionCollector(activeFilter, { time: 15000 });
+     
+                                                       
+                               active.on("collect", r => {
+                                   message.member.addRole(message.guild.roles.find("name", "Shop»Member"));
+                                   message.member.removeRole(message.guild.roles.find("name", "Shop»NotActive"));
+                                   msg.delete();
+                                   message.channel.send(`**You Have been Activated.**`).then(m => m.delete(1000));  
+
+                                   })
+                                   })
+                                   }
+                                   });
+
+
 
 
 
