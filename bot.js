@@ -3570,6 +3570,13 @@ if (command == "embed") {
 });
 //////////////////////////////----------------welcome///
 
+
+
+
+
+//
+
+
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', '↗wèlcòmèヅ');
     let memberavatar = member.user.avatarURL
