@@ -1,9 +1,9 @@
 
 const Discord = require('discord.js');
+const canvas = require("canvas");
 const tpoints = {};
 const vpoints = {};
 const client = new Discord.Client();
-const canvas = require("canvas");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
