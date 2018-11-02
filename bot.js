@@ -1,6 +1,4 @@
-
 const Discord = require('discord.js');
-const canvas = require("canvas");
 const tpoints = {};
 const vpoints = {};
 const client = new Discord.Client();
@@ -173,7 +171,6 @@ client.on("message", message => {
  وي بعديها اكتب اي امر من دول 
 وي اليكتب امر من دول يحصل علي الرتلقائي
 :boom: ___Ranks In GAME'S___:boom: 
-
 __to Add Rank:  CrossFire  
 Type: g!CrossFire
 --------------------------
@@ -213,7 +210,6 @@ g!Build Rr »***البوت يعمل لك رتب بي الاسم دا بي الز
 13-Name:Friendly
 14-Name:Member
 15-Name:Bot***
-
 `)
    message.author.sendEmbed(embed)
    
@@ -240,28 +236,19 @@ client.on("message", message => {
       .setColor("#000000") 
       .setDescription(`
 	
-
           ***¯−ـ‗ऊ_»Please Chose«_ऊ‗ـ−¯***
          
-
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçome ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
-
 ❒${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
-
 ❒${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
 			 
 ❒${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
-
 ❒${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
  
 ❒${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
-
 ❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
-
 ❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
-
 ❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
-
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @ĢǻMiÑğ ßδT#6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
@@ -377,7 +364,6 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 ***¯−ـ‗ऊ» اوامر ادارة السيرفر«ऊ‗ـ−¯***
-
 ***:anger: - سوي روم اسمه welcome عشان البوت يرحب بكل الاعضاء الجديد ،:anger: ***
 ***:gem:g!move @user 
 لسحب الشخص الى روومك  
@@ -466,7 +452,6 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 ***¯−ـ‗ऊ» اوامر العاب«ऊ‗ـ−¯***
-
 :video_game: g!rps ~ حجر ورقة مقص
 :video_game: g!speed ~ اسرع كتابة
 :video_game: g!quas ~ اسئلة عامة
@@ -565,13 +550,9 @@ client.on("message", message => {
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
-
   :e_mail:      g!bc | لأرسال برود كاست للكل
-
   :e_mail:     g!bc  |  لأرسال برود كاست للأونلاين
-
   :e_mail:      g!invite |  لدعوة البوت الي سيرفرك
-
   :e_mail:      g!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
@@ -605,15 +586,10 @@ client.on("message", message => {
 **╔[❖════════════❖]╗
                 Important  :fire:
 ╚[❖════════════❖]╝**
-
 __to enable welcome message do channel name__
-
  "welcome"
-
 __to enable Suggest message do channel name__
-
 "≄◉♔『≤suggestions≥』♔◉≄"
-
 __to enable log message do channel name__ "log"**
 ════════════════════════════════════════════════════
 __g!Build R »البوت يعمل لك روم__ 
@@ -3571,14 +3547,51 @@ if (command == "embed") {
 });
 //////////////////////////////----------------welcome///
 
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', '↗wèlcòmèヅ');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return; 
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
+        .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
+        .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
+        .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
+                .addField(':pushpin: Yóǔ Arě The Mēmbêr Nǖmbèr☆',`:small_orange_diamond: ${member.guild.memberCount}`)
+               
+                  .addField("•Ŋàme .. ♥",`<@` + `${member.id}` + `>`, true)
+                      
+                                     .addField(' Sērvěr', `${member.guild.name}`,true)
+                                       
+     .setFooter("Sērvěr")
+        .setTimestamp()
+    
+      channel.sendEmbed(embed);
+    });
 
-
-
-
-//
-
-
-
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'welcome');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return; 
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .setImage('https://cdn.pg.sa/dupNksp0Yh.gif') //هنا حط الصوره الي تبيها
+        .addField(':small_orange_diamond:Nâmè  :rose:   ',`${member}`)
+        .addField(':balloon:Wēlcōmé tó  Sērvěr' , `Wēlcōmé tó  Sērvěr, ${member}`)
+        .addField(':id: | Usèr :', "**[" + `:small_orange_diamond: ${member.id}` + "]**" )
+                .addField(':pushpin: Yóǔ Arě The Mēmbêr Nǖmbèr☆',`:small_orange_diamond: ${member.guild.memberCount}`)
+               
+                  .addField("•Ŋàme .. ♥",`<@` + `${member.id}` + `>`, true)
+                      
+                                     .addField(' Sērvěr', `${member.guild.name}`,true)
+                                       
+     .setFooter("Sērvěr")
+        .setTimestamp()
+    
+      channel.sendEmbed(embed);
+    });
     ///////////////////////////////////Code e lma 7ad ytl3 men el Discord
  client.on('guildMemberRemove', member => {
             var embed = new Discord.RichEmbed()
@@ -4449,7 +4462,7 @@ client.on('message', message => {
        let activeFilter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
      
        let active = msg.createReactionCollector(activeFilter, { time: 15000 });
-     f
+     
                                                        
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "Minecraft"));
@@ -4463,7 +4476,7 @@ client.on('message', message => {
                                    });
 
 
-//////////////////////////////////////////////////Fortnite RANk
+//////////////////////////////////////////////////Fortnite RANK
 client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find('name', 'Member'));  
 });
@@ -5436,7 +5449,149 @@ hours = 12;
  
 });
 ///////CODE EL AFK 
+const Canvas = require("canvas"); //npm i canvas
+let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))
+client.on("message", message => {
+ 
+  if (message.author.bot) return;
+  if(!message.channel.guild)return;
+  if (!profile[message.author.id]) profile[message.author.id] = {
+    tite: 'Super User',
+    rep: 0,
+    reps: 'NOT YET',
+    lastDaily:'Not Collected',
+    level: 0,
+    points: 0,
+    credits: 150,
+  };
+ 
+ 
+fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
+if (err) console.error(err);
+})
+});
 
+
+
+
+ 
+client.on('message', message => {
+ 
+    if(message.content.startsWith(prefix + 'rep')) {
+      if(!message.channel.guild) return;
+                    moment.locale('en');
+                  var getvalueof = message.mentions.users.first()
+                    if(!getvalueof) return message.channel.send(`**:mag: |  ${message.author.username}, the user could not be found.    **`);
+                       if(getvalueof.id == message.author.id) return message.channel.send(`**${message.author.username}, you cant give yourself a reputation !**`)
+    if(profile[message.author.id].reps != moment().format('L')) {
+            profile[message.author.id].reps = moment().format('L');
+            profile[getvalueof.id].rep = Math.floor(profile[getvalueof.id].rep+1);
+         message.channel.send(`** :up:  |  ${message.author.username} has given ${getvalueof} a reputation point!**`)
+        } else {
+         message.channel.send(`**:stopwatch: |  ${message.author.username}, you can raward more reputation  ${moment().endOf('day').fromNow()} **`)
+        }
+       }
+       fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
+if (err) console.error(err);
+})
+});
+ 
+client.on("message", (message) => {
+  let men = message.mentions.users.first()
+ 
+  if (message.author.bot) return;
+    if (message.author.id === client.user.id) return;
+    if(!message.channel.guild) return;
+if (message.content.startsWith(prefix + 'credit')) {
+  if(men) {
+    if (!profile[men.id]) profile[men.id] = {
+    lastDaily:'Not Collected',
+    credits: 1,
+  };
+  }
+  if(men) {
+message.channel.send(`** ${men.username}, :credit_card: balance` + " is `" + `${profile[men.id].credits}$` + "`.**")
+} else {
+  message.channel.send(`** ${message.author.username}, your :credit_card: balance` + " is `" + `${profile[message.author.id].credits}$` + "`.**")
+}
+}
+ 
+if(message.content.startsWith(prefix + "daily")) {
+  if(profile[message.author.id].lastDaily != moment().format('day')) {
+    profile[message.author.id].lastDaily = moment().format('day')
+    profile[message.author.id].credits += 200
+     message.channel.send(`**${message.author.username} you collect your \`200\` :dollar: daily pounds**`)
+} else {
+    message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes ${moment().endOf('day').fromNow()}**`)
+}
+  }
+ 
+ let cont = message.content.slice(prefix.length).split(" ");
+let args = cont.slice(1);
+let sender = message.author
+if(message.content.startsWith(prefix + 'trans')) {
+          if (!args[0]) {
+            message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
+         return;
+           }
+        // We should also make sure that args[0] is a number
+        if (isNaN(args[0])) {
+            message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
+            return; // Remember to return if you are sending an error message! So the rest of the code doesn't run.
+             }
+            let defineduser = '';
+            let firstMentioned = message.mentions.users.first();
+            defineduser = (firstMentioned)
+            if (!defineduser) return message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
+            var mentionned = message.mentions.users.first();
+if (!profile[sender.id]) profile[sender.id] = {}
+if (!profile[sender.id].credits) profile[sender.id].credits = 200;
+fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
+if (err) console.error(err);
+})
+      var mando = message.mentions.users.id;
+      if  (!profile[defineduser.id]) profile[defineduser.id] = {}
+      if (!profile[defineduser.id].credits) profile[defineduser.id].credits = 200;
+      profile[defineduser.id].credits += (+args[0]);
+      profile[sender.id].credits += (-args[0]);
+      let mariam = message.author.username
+message.channel.send(`**:moneybag: | ${message.author.username}, has transferrerd ` + "`" + args[0] + "$` to " + `<@${defineduser.id}>**`)
+}
+ 
+      });
+ 
+      client.on('message', message => {
+          if(!profile[message.author.id]) profile[message.author.id] ={
+              points: 0,
+              level: 1
+          };
+          if(message.author.bot) return;
+          profile[message.author.id].points = Math.floor(profile[message.author.id].points+1);
+          if(profile[message.author.id].points > 100) {
+              profile[message.author.id].points = 0
+              profile[message.author.id].level = Math.floor(profile[message.author.id].level+1);
+              message.channel.send(`**${message.author.username}, You leveld up to __${profile[message.author.id].level}__**`)
+          }
+          fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
+if (err) console.error(err);
+})
+      })
+ 
+    client.on('message', message => {
+        let tit = message.content.split(" ").slice(1).join(" ");
+        if(message.content.startsWith(prefix + "title")) {
+        if(!profile[message.author.id].tite) profile[message.author.id].tite = "Hey im using Super"
+        if(!tit) {
+            message.channel.send("**Usage: <title <something>**");
+        } else {
+            profile[message.author.id].tite = tit
+            message.channel.send(`:ok:`)
+        }
+        }
+        fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
+if (err) console.error(err);
+})
+    })
 //////////////////////azkar
 const adkar = [
     '**اذكار  | **اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ.',
@@ -6599,28 +6754,18 @@ client.on("message", message => {
 :pray: g!quran 1             : القران الكريم كامل بصوت الشيخ عبدالباسط عبدالصمد 
             
 :pray: g!quran 2             : القرآن الكريم كامل بصوت الشيخ سعد الغامدي  
-
 :pray: g!quran 3             : القرآن الكريم كامل بصوت الشيخ عبد الرحمن السديس وسعود الشريم 
-
 :pray: g!quran 4             : القرآن الكريم كامل بصوت الشيخ المعيقلي  
-
 :pray: g!live                : لتشغيل القرآن الكريم مباشر
-
 :pray: g!adkar               : لنشر الأدكار
-
 :pray: g!stop                : لـ أيقاف تشغيل البوت `)
 	  
 	  message.channel.send(`
      Other Commands
 :inbox_tray:  g!invite         : لدعوة البوت الى سيرفرك 
-
 :mailbox_with_mail: .contact  : لإرسال رسالة الى صاحب البوت
-
 :gear: g!support               : للدخول الى سيرفر السيبورت
-
 :up:   g!vote                  : To Vote For The Bot
-
-
 `)
  
 	  
@@ -7419,5 +7564,4 @@ var prefix = "g!";
 
 
 client.login(process.env.BOT_TOKEN);
-
 
