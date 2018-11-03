@@ -5074,7 +5074,7 @@ message.channel.sendEmbed(cat);
 });
 ////////////Profile
 client.on('message', message => {
-    if(message.content == ('g!profile')) {    
+    if(message.content == ('g!PRofile')) {    
  
              if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');   
             var Canvas = module.require('canvas');
