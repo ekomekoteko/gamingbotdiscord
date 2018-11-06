@@ -3620,7 +3620,7 @@ client.on('guildMemberAdd', member => {
 ///////////////////////// ////////////////////// ////////////////////// ////////////////////// ////////WELCOME 
 client.on('guildMemberAdd', member=> {
 
-    client.channels.get("487407595590516747").send(`**__Welcome ${member}  to Serve__**🎉♥`);
+    client.channels.get("487407595590516747").send(`**__Welcome ${member} https://cdn.pg.sa/ZzCBpPDFgM.png __**🎉♥`);
     });
 ////////////WELCOME 2
 // Create an event listener for new guild members
