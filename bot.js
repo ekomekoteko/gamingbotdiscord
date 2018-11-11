@@ -100,7 +100,7 @@ client.on("guildMemberAdd", msg => {
 .setTitle(`
 Wèlcome to Sèrver 
 `)
-.addField("Invite Rewards: :small_orange_diamond: 5 Invites BOT Bc -:small_orange_diamond:10 Invites BOT WELCOME - :small_orange_diamond:30 Invites BOT Music (all BOT ONLINE 24h) ", `${msg.user.tag}`, true)
+.addField("Invite Rewards: 5 Invite=Bot Spam 3 Days  15 Invite =Bot Spam 18 Days ", `${msg.user.tag}`, true)
 .addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/WjQ3BcR`, true)
  .setFooter(msg.user.tag, msg.user.avatarURL, true)
 msg.user.sendMessage(AlphaE);
@@ -4035,7 +4035,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:heart_exclamation  عدد المستلمين `);
   message.delete();
   };
   });
@@ -7211,6 +7211,14 @@ client.on("ready", () => {
   setInterval(lol, 10090);
 });
 
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('499213116941533184').roles.find("name", "Spammer  10k Credit 1 DAY").setColor("RANDOM");
+  };
+  setInterval(lol, 100);
+});
+
+
 
 
 
@@ -7228,16 +7236,6 @@ client.on('guildMemberAdd', member => {
 });
 
 
-client.on('guildMemberAdd', member => {
-  member.guild.fetchInvites().then(guildInvites => {
-    const ei = invites[member.guild.id];
-    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-    const inviter = client.users.get(invite.inviter.id);
-    const stewart = member.guild.channels.find("name", "welcome");
-     stewart.send(`<@${member.user.id}> Invite By: <@${inviter.id}>`);
-     //stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
-  }); 
-});
 
 /////////////////////////////////////////////////////////////////////////////////
 
