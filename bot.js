@@ -126,7 +126,7 @@ DEL.channel.sendEmbed(embed);
 
 
 client.on("message", message => {
-    if (message.content === "g!help"|| prefix + "g!Help") {
+    if (message.content === "g!help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setDescription(`**❓❔❗️❕وش مميزات البوت❗️❕❓❔**
