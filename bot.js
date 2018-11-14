@@ -257,7 +257,7 @@ client.on("message", message => {
 
 client.on("message", message => {
     if (message.author.bot) return;
-     if (message.content === prefix + "help-public"  || prefix + "Help-Public") {
+     if (message.content === prefix + "help-public") {
   const embedss2 = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL)
