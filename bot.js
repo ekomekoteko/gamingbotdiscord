@@ -239,14 +239,14 @@ client.on("message", message => {
           ***¯−ـ‗ऊ_»Please Chose«_ऊ‗ـ−¯***
          
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçome ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
-❒${prefix}***``help-public``*** →→ ***『اوامر عامة』*** :bell:  
-❒${prefix}***``help-admin``***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 			 
-❒${prefix}***``help-games``*** →→ ***『اوامر الالعاب』*** :video_game:
-❒${prefix}***``help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
-❒${prefix}***``help-colors``*** →→ ***『اوامر اللوان』***  :traffic_light:       
-❒${prefix}***``help-important``*** →→ ***『اوامر هامة』*** :loudspeaker:
-❒${prefix}***``help-bc``*** →→ ***『اوامر النشر 』*** :e_mail: 
-❒${prefix}***``help-Rank``*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+❒${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
+❒${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 			 
+❒${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
+❒${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
+❒${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
+❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
+❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
+❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @ĢǻMiÑğ ßδT#6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
@@ -1267,7 +1267,7 @@ client.on('message', message => {
     let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
     let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
  reaction1.on("collect", r => {
-    message.channel.send(`**:heart_exclamation:  | Done ... The Broadcast Message Has Been Sent For __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
+    message.channel.send(`**:heart_exclamation:  | ``Done`` ... The Broadcast Message Has Been Sent For __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
     message.guild.members.forEach(m => {
   
   var bc = new
@@ -4127,7 +4127,7 @@ client.on("message", message => {
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
   m.send(`${argresult}\n ${m}`);
   })
-  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:heart_exclamation  عدد المستلمين `);
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:heart_exclamation:  عدد المستلمين `);
   message.delete();
   };
   });
@@ -5594,7 +5594,7 @@ client.on("message", (message) => {
   if (message.author.bot) return;
     if (message.author.id === client.user.id) return;
     if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + 'CRedit')) {
+if (message.content.startsWith(prefix + 'credit')) {
   if(men) {
     if (!profile[men.id]) profile[men.id] = {
     lastDaily:'Not Collected',
@@ -5608,7 +5608,7 @@ message.channel.send(`** ${men.username}, :credit_card: balance` + " is `" + `${
 }
 }
  
-if(message.content.startsWith(prefix + "dAilly")) {
+if(message.content.startsWith(prefix + "daily")) {
   if(profile[message.author.id].lastDaily != moment().format('day')) {
     profile[message.author.id].lastDaily = moment().format('day')
     profile[message.author.id].credits += 200
