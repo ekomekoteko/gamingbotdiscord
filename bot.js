@@ -7756,7 +7756,7 @@ client.on('message',async message => {
   - \`${prefix}clan stats\`: لعرض معلومات الكلان تبعك:paperclip:
   - \`${prefix}clan list\`: يظهر لك اعضاء الكلان برسالة:paperclip:
   - \`${prefix}clan accept\`: لقبول شخص وجعل الشخص يدخل الكلان ( يتطلب صلاحية الادمن ) ء:paperclip:
-  - \`${prefix}clan decline\`: لرفض شخص وعم جعل الشخص يدخل الكلان ( يطلب صلاحية الادمن ) ء`):paperclip:
+  - \`${prefix}clan decline\`: لرفض شخص وعم جعل الشخص يدخل الكلان ( يطلب صلاحية الادمن ) ء`)
   .setFooter(message.author.username, message.author.avatarURL);
   message.channel.send(embed);
 }
