@@ -113,7 +113,7 @@ msg.user.sendMessage(AlphaE);
 client.on('message', DEL => {//By Mahmoud-QuaStyle
 if(DEL.content === 'g!bot-owner') {
 var embed = new Discord.RichEmbed()
-.addField('صاْنع البوت : @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661  ', `${client.user.tag}`, true)
+.addField('صاْنع البوت : @Mal ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661  ', `${client.user.tag}`, true)
 .setColor("RANDOM")
 DEL.channel.sendEmbed(embed);
 
@@ -240,11 +240,9 @@ client.on("message", message => {
          
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçome ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
 ❒${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
-❒${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
-			 
+❒${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 			 
 ❒${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
 ❒${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
- 
 ❒${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
 ❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
 ❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
@@ -743,7 +741,64 @@ client.on("message", (message) => {
   if (message.content.startsWith("g!close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`-confirm\`. This will time out in 10 seconds and be cancelled.`)
+       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`g!confirm\`. This will time out in 10 seconds and be cancelled.`)
+           .then((m) => {
+               message.channel.awaitMessages(response => response.content === 'g!confirm', {
+                       max: 1,
+                       time: 10000,
+                       errors: ['time'],
+                   })    /// ALPHA CODES
+                   .then((collected) => {
+                       message.channel.delete();
+                   })    /// ALPHA CODES
+                   .catch(() => {
+                       m.edit('Ticket close timed out, the ticket was not closed.').then(m2 => {
+                           m2.delete();
+                       }, 3000);
+                   });
+           });
+   }
+ 
+});
+
+///////////////////
+client.on("message", (message) => {
+    /// ALPHA CODES
+   if (message.content.startsWith("g!new")) {     /// ALPHA CODES
+        const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
+        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
+        if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
+        message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
+            let role = message.guild.roles.find("name", "Support Team");
+            let role2 = message.guild.roles.find("name", "@everyone");
+            c.overwritePermissions(role, {
+                SEND_MESSAGES: true,
+                READ_MESSAGES: true
+            });    /// ALPHA CODES
+            c.overwritePermissions(role2, {
+                SEND_MESSAGES: false,
+                READ_MESSAGES: false
+            });
+            c.overwritePermissions(message.author, {
+                SEND_MESSAGES: true,
+                READ_MESSAGES: true
+            });
+            message.channel.send(`:white_check_mark: Your ticket has been created, #${c.name}.`);
+            const embed = new Discord.RichEmbed()
+                .setColor(0xCF40FA)
+                .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
+                .setTimestamp();
+            c.send({
+                embed: embed
+            });
+        }).catch(console.error);
+    }
+ 
+ 
+  if (message.content.startsWith("g!close")) {
+        if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
+ 
+       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`g!confirm\`. This will time out in 10 seconds and be cancelled.`)
            .then((m) => {
                message.channel.awaitMessages(response => response.content === 'g!confirm', {
                        max: 1,
@@ -764,7 +819,6 @@ client.on("message", (message) => {
 });
 
 
-
 //////////////////////////////////////////////////////////////////////Support 2 
 client.on('message', message => {
      if (message.content === "g!support") {
@@ -778,7 +832,17 @@ client.on('message', message => {
     }
 });////////////////////////////////////By:Mahmoud-QuaStyle
 
-
+client.on('message', message => {
+     if (message.content === "g!invite") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/h76vMMP**")
+  .addField(" **:small_blue_diamond: Link BOT:Gaming︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
+     
+  message.channel.sendEmbed(embed);
+    }
+});///////////////////////////////
 
 
 client.on('message', message => {
@@ -897,14 +961,42 @@ message.react("❌")
 
 /////////////////////////////////////////////////--------///////////////////////////ban
 client.on('message', message => {
-if (message.content.startsWith("g!ban")) {
-    var mention = message.mentions.members.first();
-    if(!mention) return message.channel.send("يجب منشن العضو");
+	var prefix = "g!"
+  if (message.author.x5bz) return;
+  if (!message.content.startsWith(prefix)) return;
 
-    mention.ban("By: " + message.author.tag);
-    
-    message.channel.send("تم أعطاء باند الى : " + mention.tag);
-};
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "ban") {
+               if(!message.channel.guild) return message.reply('** This command only for servers**');
+         
+  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
+  if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
+  let user = message.mentions.users.first();
+  let reason = message.content.split(" ").slice(2).join(" ");
+  /*let log = client.channels.find("name", "log");
+  if(!b5bzlog) return message.reply("I've detected that this server doesn't have a 5bz-log text channel.");*/
+  if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
+  if(!reason) return message.reply ("**اكتب سبب الطرد**");
+  if (!message.guild.member(user)
+  .bannable) return message.reply("**لايمكنني طرد شخص اعلى من رتبتي يرجه اعطاء البوت رتبه عالي**");
+
+  message.guild.member(user).ban(7, user);
+
+  const banembed = new Discord.RichEmbed()
+  .setAuthor(`BANNED!`, user.displayAvatarURL)
+  .setColor("RANDOM")
+  .setTimestamp()
+  .addField("**User:**",  '**[ ' + `${user.tag}` + ' ]**')
+  .addField("**By:**", '**[ ' + `${message.author.tag}` + ' ]**')
+  .addField("**Reason:**", '**[ ' + `${reason}` + ' ]**')
+  message.channel.send({
+    embed : banembed
+  })
+}
 });
 
 
@@ -1175,7 +1267,7 @@ client.on('message', message => {
     let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
     let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
  reaction1.on("collect", r => {
-    message.channel.send(`**☑ | Done ... The Broadcast Message Has Been Sent For __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
+    message.channel.send(`**:heart_exclamation:  | Done ... The Broadcast Message Has Been Sent For __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
     message.guild.members.forEach(m => {
   
   var bc = new
@@ -7558,20 +7650,536 @@ if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar
 if(!omar.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return omar.reply("**I Don't Have ` MANAGE_CHANNELS ` Permission**");
 omar.guild.channels.forEach(m => {
 m.delete();
-});// omar jedol / Codes
-}// omar jedol / Codes
+});// Mahmoud-QuaStyle
+}// Mahmoud-QuaStyle
 if(omar.content.split(' ')[0] == prefix + 'ams7role') { // delete all roles
 if (!omar.channel.guild) return;
 if(!omar.guild.member(omar.author).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**You Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
 if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**I Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
 omar.guild.roles.forEach(m => {
 m.delete();
-});// omar jedol / Codes
+});// Mahmoud-QuaStyle
 omar.reply("`تم حذف جميع الرتب بنجاح`")
-}// omar jedol / Codes
+}// Mahmoud-QuaStyle 
 });
     
 
+///////////////skin
+client.on("message", message => {
+    var prefix = "g!"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "skin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
+
+
+////////clan
+const fs = require('fs');
+const dat = JSON.parse(fs.readFileSync('./ClanSystem/invitedBy.json', 'UTF8'));
+client.on('ready',async () => {
+  if(client.guilds.size !== 1) throw new Error("Client must be in 1 server.");
+  console.log(`Ready.`);
+  fs.writeFile('./invitedBy.json', "{}".replace('"', ''),function(err) {if(err) console.log(err)});
+  client.guilds.forEach(g => {
+    g.fetchInvites().then((invites) => {
+      invites.forEach((data) => {
+        dat[data.code] = {uses: data.uses, inviter: data.inviter.id};
+        fs.writeFile('./ClanSystem/invitedBy.json', JSON.stringify(dat, null, 3), function(err) {if(err) console.error(err)});
+      });
+      });
+  });
+});
+
+client.on('guildMemberAdd',async member => {
+  console.log(`${member.user.username} Joined To ${member.guild.name}`);
+
+  member.guild.fetchInvites().then(invites => {
+    invites.filter(i => i.uses !== dat[i.c].uses).then(invitedBy => {
+      console.log(invitedBy);
+      client.channels.get('411137717884289024').send(`${member} is Invited By ${invitedBy}`);
+    });
+  });
+});
+
+const clans = JSON.parse(fs.readFileSync("./ClanSystem/ClanSystem.json", 'UTF8'));
+const system = JSON.parse(fs.readFileSync("./ClanSystem/ClanStats.json", 'UTF8'));
+const level = JSON.parse(fs.readFileSync("./ClanSystem/ClanLevels.json", 'UTF8'));
+
+client.on('message',async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === 'dm') return;
+
+  let args = message.content.split(' ');
+  let random = Math.floor(Math.random() * 5) + 2;
+  let author = message.author;
+
+  let xpLeft;
+  let nameClan;
+  let membersClan = [];
+  let levelClan = 0;
+  if(!system[author.id]) system[author.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+  fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+  if(!level[author.id]) level[author.id] = {level: 1, xp: 1};
+  fs.writeFile('./ClanSystem/ClanLevels.json', JSON.stringify(level, null, 4), function(err) {if(err) console.log(err)});
+
+  level[author.id].xp += (+random);
+  if(level[author.id].xp >= 300) {
+    if(level[author.id].xp > 300) xpLeft = level[author.id].xp - 300;
+    level[author.id] = {
+      level: level[author.id].level + 1,
+      xp: xpLeft
+    };
+    fs.writeFile('./ClanSystem/ClanLevels.json', JSON.stringify(level, null, 4), function(err) {if(err) console.log(err)});
+  }
+  if(message.content.startsWith(prefix + "clan")) {
+    if(message.content.split(' ')[0] !== `${prefix}clan`) return;
+
+    if(!args[1] || args[1] && args[1] === 'info') {
+  let embed = new Discord.RichEmbed()
+  .setAuthor('الكلانات', message.author.avatarURL)
+  .setDescription(`- \`${prefix}clan\`:   نظام الكلانات هو نظام شبه مسلي ينمي التفاعل ويمكنك التحكم بالكلان تبعك بشكل كامل:paperclip: 
+  - \`${prefix}clan info\`: (أظ:: هار رسالة الأوامر ( هذه الرسالة:paperclip:
+  - \`${prefix}clan create\`: لأنشاء كلان بالأسم الذي تريده:paperclip: 
+  - \`${prefix}clan invite\`: :paperclip: لدعوة شخص ما للكلان تبعك:paperclip:
+  - \`${prefix}clan join\`: :paperclip: للتقديم على دخول الكلان الذي تريده:paperclip:
+  - \`${prefix}clan promote\`: لأع طاء شخص بالكلان صلاحيات الادمن ( يتطلب صلاحية الادمن ) ء:paperclip:
+  - \`${prefix}clan demote\`: لأزالة صلاحية الادمن من عضو بالكلان ( صاحب الكلان فقط ) ء:paperclip:
+  - \`${prefix}clan ownership\`: لنقل ملكيةالكلان:paperclip:
+  - \`${prefix}clan leave\`: للخروج من الكلان الذي انت به:paperclip:
+  - \`${prefix}clan kick\`: لطرد عضو من الكلان ( يتطلب صلاحية الادمن ) ء:paperclip:
+  - \`${prefix}clan disband\`: لمسح الكلان من السستم ( صاحب الكلان فقط ) ء:paperclip:
+  - \`${prefix}clan stats\`: لعرض معلومات الكلان تبعك:paperclip:
+  - \`${prefix}clan list\`: يظهر لك اعضاء الكلان برسالة:paperclip:
+  - \`${prefix}clan accept\`: لقبول شخص وجعل الشخص يدخل الكلان ( يتطلب صلاحية الادمن ) ء:paperclip:
+  - \`${prefix}clan decline\`: لرفض شخص وعم جعل الشخص يدخل الكلان ( يطلب صلاحية الادمن ) ء`):paperclip:
+  .setFooter(message.author.username, message.author.avatarURL);
+  message.channel.send(embed);
+}
+
+    if(args[1] && args[1] === 'create') {
+      //if(level[author.id].level < 10) return message.channel.send('**# يجب أن يكون لديك 10 مستويات لعمل كلان , لتجميع مستويات تفاعل بالشات وسيتم حساب النقاط**');
+      if(system[author.id].clan !== 'None') return message.channel.send('**# يجب عليك ان تخرج من الكلان الذي أنت به حاليا**');
+
+      let m = await message.channel.send('**# أكتب أسم الكلان الان**');
+      let awaited = await message.channel.awaitMessages(r => r.author.id === message.author.id, { max: 1, time: 20000, errors: ['time']}).then(collected => {
+        if(collected.first().content.length > 25) return message.channel.send("**# لا يمكنك وضع اسم للكلان يفوق الـ25 حرفا , أعد كابة الأمر**");
+        if(collected.first().content.includes("None")) return message.channel.send("**# `None`, لا يمكنك وضع هذه الكلمة كأسم للكلان**");
+        collected.first().delete().catch();
+        nameClan = collected.first().content;
+      });
+
+      m = await m.edit('**# جارى عمل الكلان**');
+      awaited = await setTimeout(async() => {
+        let membersArray = {
+          nameClan: {
+            array: []
+          }
+        };
+        let members = membersArray.nameClan.array;
+        members.push(message.author.id);
+        clans[nameClan] = {
+          name: nameClan,
+          createdAt: new Date().toLocaleString(),
+          level: levelClan,
+          creator: message.author.id,
+          members: members,
+          applylist: [],
+          admins: []
+        };
+        fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+        system[author.id] = {
+          clan: nameClan,
+          joinedAt: new Date().toLocaleString(),
+          clanLevel: 0,
+          creator: message.author.id
+        };
+        fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+        m = await m.edit('**# تم عمل الكلان بنجاح**');
+      }, 2300);
+
+    }
+    if(args[1] && args[1] === 'invite') {
+      if(!system[author.id]) return message.channel.send("**# أنت لست بكلان**");
+      let clan = system[author.id].clan;
+      if(system[author.id].clan === 'None') return message.channel.send('**# أنت لست بكلان**');
+      if(!clans[clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send('**# يجب عليك ان تكون اداري بالكلان**');
+      let mention = message.mentions.users.first();
+      if(!mention) return message.channel.send('**# منشن شخص لدعوته للكلان**');
+      if(clans[clan].members.includes(mention.id)) return message.channel.send("**# هذا العضو بالكلان بالفعل**");
+      if(clans[clan].members.length === 10) return message.channel.send("**# هذا الكلان وصل للحد الاقصى من الاعضاء يمكنك**");
+
+      let m = await message.channel.send(`**${mention} # \`${clan}\`, تم دعوتك لدخول الكلان**\n\n - لقبول الدعوة \`نعم\`\n - لرفض الدعوة \`لا\``);
+      let awaiting = await message.channel.awaitMessages(r => r.author.id === mention.id, {max: 1, time: 20000, errors:['time']}).then(collected => {
+        collected.first().delete().catch();
+        if(collected.first().content === 'نعم') {
+          clans[clan].members.push(mention.id);
+          fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+          system[author.id].members += 1;
+          fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+
+          system[mention.id] = {
+            clan: clan,
+            joinedAt: new Date().toLocaleString(),
+            clanLevel: 0,
+            creator: clans[clan].creator
+          };
+          fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+          message.channel.send(`**${message.author} # تم قبول الدعوة**`);
+        }
+        if(collected.first().content === 'لا') {
+          message.channel.send(`**${message.author} # تم رفض الدعوة**`);
+        } else if(collected.first().content !== 'نعم' && collected.first().content !== 'لا'){
+          return message.channel.send('**# يجب عليك كتابة `نعم` أو `لا`**');
+        }
+      });
+    }
+    if(args[1] && args[1] === 'stats') {
+      if(system[author.id].clan === 'None') return message.channel.send('**# يجب ان تكون بكلان لأستخدام هذا الأمر**');
+      let clan = system[author.id].clan;
+      let embed = new Discord.RichEmbed()
+        .setAuthor(`${message.author.username} || الكلانات`, message.author.avatarURL)
+        .setDescription(`الكلان || \`${clan.toString()}\``)
+        embed.addField('» اسم الكلان', clan, true)
+        embed.addField('» تاريخ عمل الكلان', clans[clan].createdAt, true);
+        embed.addField('» تاريخ دخول الكلان', system[author.id].joinedAt, true)
+        embed.addField('» صاحب الكلان', `<@${clans[clan].creator}>`, true);
+        embed.addField('» لفل الكلان', clans[clan].level, true);
+        embed.addField('» عدد اعضاء الكلان', clans[clan].members.length, true);
+        embed.addField('» عدد التقديمات للكلان', clans[clan].applylist.length, true);
+        embed.addField('» عدد الادمنية بالكلان', clans[clan].admins.length, true);
+        embed.addField('» اعضاء الكلان', `${prefix}clan list || يظهرلك رسالة بها اعضاء الكلان`);
+      message.channel.send(embed);
+
+    }
+    if(args[1] && args[1] === 'join') {
+    let clanName = message.content.split(' ').slice(2).join(" ");
+    if(system[author.id].clan !== 'None') return message.channel.send("**# يجب أن لا تكون بكلان**");
+    if(!args[2]) return message.channel.send("**# يجب عليك كتابة اسم الكلان**");
+    if(!clans[clanName]) return message.channel.send("**# هذا الكلان غير موجود**");
+    if(clans[clanName].applylist.includes(message.author.id)) return message.channel.send("**# لقد قدمت على دخول هذا الكلان مسبقا");
+
+    clans[clanName].applylist.push(message.author.id);
+    message.channel.send("**# لقد تم التقديم على دخول الكلان , سيتم الرد عليك من قبل احد ادارة الكلان**");
+
+  }
+    if(args[1] && args[1] === 'accept') {
+      let mention = message.mentions.users.first();
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب عليك ان تكون بكلان لأستخدام هذا الأمر**");
+      if(!clans[system[author.id].clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب عليك ان تكون اداري بالكلان لأستخدام هذا الأمر**");
+      if(!mention) return message.channel.send("**# يجب عليك منشنة شخص لأستخدام هذا الأمر**");
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      if(!clans[system[author.id].clan].applylist.includes(mention.id)) return message.channel.send("**# هذا الشخص لم يقم بالتقديم على دخول الكلان**");
+
+      clans[system[author.id].clan].applylist.shift(mention.id);
+      clans[system[author.id].clan].members.push(mention.id);
+      let clan = system[author.id].clan;
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+
+      system[mention.id] = {
+        clan: clan,
+        joinedAt: new Date().toLocaleString(),
+        clanLevel: 0,
+        creator: clans[clan].creator
+      };
+      fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم قبولك بالكلان**`).catch();
+      message.channel.send(`**# \`${mention.username}\`, لقد تم قبول الشخص ودخوله للكلان**`);
+    }
+    if(args[1] && args[1] === 'decline') {
+      let mention = message.mentions.users.first();
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب عليك ان تكون بكلان لأستخدام هذا الأمر**");
+      if(!clans[system[author.id].clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب عليك ان تكون اداري بالكلان لأستخدام هذا الأمر**");
+      if(!mention) return message.channel.send("**# يجب عليك منشنة شخص لأستخدام هذا الأمر**");
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      if(!clans[system[author.id].clan].applylist.includes(message.author.id)) return message.channel.send("**# هذا الشخص لم يقم بالتقديم على دخول الكلان**");
+
+      clans[system[author.id].clan].applylist.shift(mention.id);
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      system[mention.id] = {
+        clan: clans[system[author.id].clan],
+        joinedAt: new Date().toLocaleString(),
+        clanLevel: 0
+      };
+      fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم رفض دخولك للكلان**`).catch();
+      message.channel.send(`**# \`${mention.username}\`, لقد تم رفض دخول الشخص للكلان**`);
+
+    }
+    if(args[1] && args[1] === 'promote') {
+      let mention = message.mentions.users.first();
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      if(!clans[system[author.id].clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب عليك ان تكون اونر او ادمن بالكلان لترقية عضو بالكلان**");
+      if(!mention) return message.channel.send("**# يجب عليك منشنة عضو بالكلان لأعطائه الترقية**");
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");
+      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");
+      if(clans[system[author.id].clan].admins.includes(mention.id)) return message.channel.send("**# هذا العضو لديه ادمن بالفعل**");
+      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك اعطاء نفسك ترقية**");
+
+      clans[system[author.id].clan].admins.push(mention.id);
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم ترقيتك الى ادمن**`).catch();
+      message.channel.send(`**# \`${mention.username}\`, لقد تم ترقية العضو الى رتبة ادمن**`);
+    }
+    if(args[1] && args[1] === 'demote') {
+      let mention = message.mentions.users.first();
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      if(clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# هذا الأمر لضاحب الكلان فقط**");
+      if(!mention) return message.channel.send("**# يجب عليك منشنة عضو بالكلان لأعطائه الترقية**");
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");
+      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");
+      if(!clans[system[author.id].clan].admins.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس ادمن بالكلان**");
+      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك اعطاء نفسك ترقية**");
+
+      clans[system[author.id].clan].admins.shift(mention.id);
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم ازالتك من منصب الادمن**`).catch();
+      message.channel.send(`**# \`${mention.username}\`, لقد تم ازالة الادمنية من العضو**`);
+    }
+    if(args[1] && args[1] === 'rename') {
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      let newName;
+      let oldName = clans[system[author.id].clan];
+      if(clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# هذا الأمر مخصص لصاحب الكلان فقط**");
+      if(!args[2]) return message.channel.send("**# يجب عليك تحديد اسم الكلان**");
+
+      let c = message.content.split(' ').slice(2).join(" ");
+      newName = c;
+      let clanInfo = clans[system[author.id].clan];
+      let m = await message.channel.send(`**# \`${c}\`, هل أنت متأكد من تغيير اسم الكلان \n\n - للتأكيد \`نعم\`\n - للرفض \`لا\`**`);
+      let awaiting = await message.channel.awaitMessages(r => r.author.id === message.author.id, {max: 1, time: 20000, errors: ['time']}).then(c => {
+        let collected = c.first();
+        collected.delete().catch();
+        m.delete().catch();
+        if(collected.content === 'نعم') {
+          clans[newName] = {
+            name: newName,
+            createdAt: clanInfo.createdAt,
+            level: clanInfo.level,
+            creator: clanInfo.creator,
+            members: clanInfo.members,
+            applylist: clanInfo.applylist,
+            admins: clanInfo.admins
+          };
+          clans[system[author.id].clan] = undefined;
+          fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+          system[author.id].clan = newName;
+          fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+
+            message.channel.send("**# جارى تغيير الاسم**");
+            message.channel.send("**# تم تغيير اسم الكلان بنجاح**");
+
+        } else if(collected.content === 'لا') {
+          message.channel.send(`**# \`${newName}\`, تم الغاء تغيير اسم الكلان**`);
+
+        } else if(collected.first().content !== 'نعم' && collected.first().content !== 'لا'){
+          return message.channel.send('**# يجب عليك كتابة `نعم` أو `لا`**')
+        }
+      });
+    }
+    if(args[1] && args[1] === 'list') {
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب عليك ان تكون بكلان لأستخدام هذا الأمر**");
+      let clan = clans[system[author.id].clan];
+      let members = Array.from(clan.members);
+      let admins = Array.from(clan.admins);
+      let applylist = Array.from(clan.applylist);
+      let i = 1;
+      let o = 1;
+
+      let embed = new Discord.RichEmbed();
+      embed.setAuthor(`${message.author.username} || ${clan.name}`, message.author.avatarURL);
+      embed.addField("# Members", members.map(r => `\`${i++}.\` **|| <@${r}>**`).join('\n') || `\`1.\` **|| None**`, true);
+      embed.addField('# Admins', admins.map(r => `\`${o++}.\` **|| <@${r}>**`).join('\n') || `\`1.\` **|| None**`, true);
+      embed.addField('# Apply', applylist.map(r => `\`${o++}.\` **|| <@${r}>**`).join('\n') || `\`1.\` **|| None**`, true);
+      embed.addField('# Owner', `\`1.\` **|| <@${clan.creator}>**`, true);
+      message.channel.send(embed);
+    }
+    if(args[1] && args[1] === 'leave') {
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      let m = await message.channel.send("**# هل انت متأكد انك تريد الخروج من الكلان \n\n - للتأكيد \`نعم\`\n - للألغاء \`لا\`**");
+      let awaited = await message.channel.awaitMessages(r => r.author.id === message.author.id, {max: 1, time: 20000, errors:['time']}).then(c => {
+        let collected = c.first();
+        if(collected.content === 'نعم') {
+          clans[system[author.id].clan].members.shift(author.id);
+          fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+          system[author.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+          fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+
+          message.channel.send("**# لقد غادرت الكلان**");
+        } else if(collected.content === 'لا') {
+          message.channel.send("**# تم الغاء الخروج من الكلان**");
+        } else if(collected.content !== 'نعم' && collected.content === 'لا') {
+          message.channel.send('**# يجب عليك كتابة `نعم` أو `لا`**');
+        }
+      });
+    }
+    if(args[1] && args[1] === 'kick') {
+      let mention = message.mentions.users.first();
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      if(!clans[system[author.id].clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب عليك ان تكون اونر او ادمن بالكلان لأستخدام هذا الامر**");
+      if(!mention) return message.channel.send("**# يجب عليك منشنة عضو بالكلان لطرده**");
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+      fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");
+      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");
+      if(clans[system[author.id].clan].admins.includes(mention.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# هذا العضو لديه ادمن**");
+      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك طرد نفسك**");
+
+        let index = clans[system[author.id].clan].members.indexOf(mention.id);
+        let index2 = clans[system[author.id].clan].admins.indexOf(mention.id) || "";
+        clans[system[author.id].clan].members.splice(index, 1);
+        if(clans[system[author.id].clan].admins.includes(mention.id)) clans[system[author.id].clan].admins.splice(index2, 1);
+        fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+        system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+        fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+
+        message.channel.send(`**# \`${mention.username}\`, تم طرد الشخص من الكلان**`);
+        mention.send(`**# \`${system[author.id].clan}\`, لقد تم طردك من الكلان**`).catch();
+    }
+    if(args[1] && args[1] === 'ownership') {
+      let mention = message.mentions.users.first();
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      if(!mention) return message.channel.send("**# يجب عليك منشنة شخص لتسليمه الأونر**");
+      if(clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب أن تكون صاحب الكلان لأستخدام هذا الأمر**");
+      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");
+      let o = Math.floor(Math.random() * 8) + 1;
+      let t = Math.floor(Math.random() * 8) + 1;
+      let th = Math.floor(Math.random() * 8) + 1;
+      let f = Math.floor(Math.random() * 8) + 1;
+      let number = `${o}${t}${th}${f}`;
+
+      message.author.send(`- \`${number}\`, أكتب هذا الرقم بالشات للأستمرار`).catch(e => {
+        return message.channel.send(`**# يجب عليك فتح خاصك لأستخدام هذا الأمر**`);
+      });
+
+      let m = await message.channel.send("**# تم ارسال رقم التكملة بالخاص .. يجب عليك كتابة الرقم بالشات للأستمرار**");
+      let awaited = await message.channel.awaitMessages(r => r.author.id === message.author.id, {max: 1, time: 10000, errors:['time']}).then(c => {
+        let collected = c.first();
+
+        if(collected.content === number) {
+          clans[system[author.id].clan].creator = mention.id;
+          fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+
+          m.delete();
+          message.channel.send(`**# \`${mention.username}\`, تم تحويل اونر الكلان للشخص**`);
+        } else
+        if(collected.content !== number) {
+          m.delete();
+        }
+      });
+    }
+    if(args[1] && args[1] === 'disband') {
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");
+      if(clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب أن تكون صاحب الكلان لأستخدام هذا الأمر**");
+      let o = Math.floor(Math.random() * 8) + 1;
+      let t = Math.floor(Math.random() * 8) + 1;
+      let th = Math.floor(Math.random() * 8) + 1;
+      let f = Math.floor(Math.random() * 8) + 1;
+      let fi = Math.floor(Math.random() * 8) + 1;
+      let number = `${o}${t}${th}${f}${fi}`;
+
+      message.author.send(`- \`${number}\`, أكتب هذا الرقم بالشات للأستمرار`).catch(e => {
+        return message.channel.send(`**# يجب عليك فتح خاصك لأستخدام هذا الأمر**`);
+      });
+
+      let m = await message.channel.send("**# تم ارسال رقم التكملة بالخاص .. يجب عليك كتابة الرقم بالشات للأستمرار**");
+      let awaited = await message.channel.awaitMessages(r => r.author.id === message.author.id, {max: 1, time: 10000, errors:['time']}).then(c => {
+        let collected = c.first();
+
+        if(collected.content === number) {
+          m.delete().catch();
+          let i = 0;
+          let name = system[author.id].clan;
+          let members = clans[system[author.id].clan].members.length;
+          clans[system[author.id].clan] = undefined;
+          fs.writeFile('./ClanSystem/ClanSystem.json', JSON.stringify(clans, null, 4), function(err) {if(err) console.log(err)});
+          hero.users.get(Array.from(clans[system[author.id].clan].members)).forEach(g => {
+            i++;
+            g.send(`- \`${system[author.id].clan}\`, تم اقفال الكلان`).catch();
+            system[g.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
+            fs.writeFile('./ClanSystem/ClanStats.json', JSON.stringify(system, null, 4), function(err) {if(err) console.log(err)});
+          });
+          if(i === members) return message.channel.send(` - \`${name}\`, تم اغلاق الكلان`);
+        } else
+        if(collected.content !== number) {
+          m.delete();
+        }
+      });
+    }
+  }
+});
+
+
+////////////////////top
+client.on('ready',async () => {
+  console.log(`.Codes TOP.`);
+  hero.users.forEach(m => {
+    if(m.bot) return;
+    if(!tpoints[m.id]) tpoints[m.id] = {points: 0, id: m.id};
+    fs.writeFileSync("./Text.json", JSON.stringify(tpoints, null, 2));
+
+    if(!vpoints[m.id]) vpoints[m.id] = {points: 0, id: m.id};
+    fs.writeFileSync("./Voice.json", JSON.stringify(vpoints, null, 2));
+  });
+});
+
+client.on('message',async message => {
+  if(message.author.bot || message.channel.type === 'dm') return;
+  let args = message.content.split(' ');
+  let member = message.member;
+  let mention = message.mentions.users.first();
+  let guild = message.guild;
+  let author = message.author;
+
+  let rPoints = Math.floor(Math.random() * 4) + 1;// Random Points
+  tpoints[author.id].points += rPoints;
+  fs.writeFileSync("./Text.json", JSON.stringify(tpoints, null, 2));
+  if(args[0] === `${client.config.prefix}top`) {
+    let _voicePointer = 1;
+    let _textPointer = 1;
+    let _voiceArray = Object.values(vpoints);
+    let _textArray = Object.values(tpoints);
+    let _topText = _textArray.slice(0, 5).map(r => `**\`.${_textPointer++}\` | <@${r.id}> \`XP: ${r.points}\`**`).sort((a, b) => a > b).join('\n');
+    let _voiceText = _voiceArray.slice(0, 5).map(r => `**\`.${_voicePointer++}\` | <@${r.id}> \`XP: ${r.points}\`**`).sort((a, b) => a > b).join('\n');
+
+    let topRoyale = new Discord.RichEmbed();
+    topRoyale.setTitle(' \ًں“‹Guild Score Leaderboards');
+    topRoyale.addField(`**TOP 5 TEXT ًں’¬**`, _topText, true);
+    topRoyale.addField(`**TOP 5 VOICE ًںژ™**`, _voiceText, true);
+    topRoyale.setFooter(message.author.username, message.author.avatarURL, message.author.tag);
+    topRoyale.setColor("GREEN");
+    message.channel.send(topRoyale).catch(e => {
+      if(e) return message.channel.send(`**. Error; \`${e.message}\`**`);
+    });
+  }
+});
+
+client.on('voiceStateUpdate', (u, member) => {
+  let author = member.user.id;
+  let guild = member.guild;
+  if(member.voiceChannel === null) return;
+  let rPoints = Math.floor(Math.random() * 4) + 1;// Random Points
+  setInterval(() => {
+    if(!member.voiceChannel) return;
+    if(member.selfDeafen) return;
+    vpoints[author].points += rPoints;
+    fs.writeFileSync("./Voice.json", JSON.stringify(vpoints, null, 2));
+  }, 5000); // 5 Secs
+});
 
 
 
