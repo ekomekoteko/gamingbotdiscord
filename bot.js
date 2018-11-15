@@ -3715,11 +3715,11 @@ client.on('guildMemberAdd', member => {
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === '↗wèlcòmèヅ');
+  const channel = member.guild.channels.find(ch => ch.name === '»welcome');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Gaming  :two_hearts: 🎉♥:sparkles:*** `);
+  channel.send(` ̲  ̲***W̲e̲l̲c̲o̲m̲e  , ${member} ̲t̲o  ̲Server Mal,Shop  :two_hearts: 🎉♥:sparkles:*** `);
 });
 ////welcome
 // Create an event listener for new guild members
@@ -8132,7 +8132,7 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = message.guild.channels.find('name','spam')
+var gg = message.guild.channels.find('name','طلب')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
