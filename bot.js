@@ -103,8 +103,8 @@ client.on("guildMemberAdd", msg => {
 .setTitle(`
 Wèlcome to Sèrver 
 `)
-.addField("Invite Rewards: 5 Invite=Bot Spam 3 Days  15 Invite =Bot Spam 18 Days ", `${msg.user.tag}`, true)
-.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/WjQ3BcR`, true)
+.addField("Mal Shop  ", `${msg.user.tag}`, true)
+.addField(`↓↓↓Link Server↓↓↓ `,`https://discord.gg/7vAcGGX`, true)
  .setFooter(msg.user.tag, msg.user.avatarURL, true)
 msg.user.sendMessage(AlphaE);
 });
@@ -116,7 +116,7 @@ msg.user.sendMessage(AlphaE);
 client.on('message', DEL => {//By Mahmoud-QuaStyle
 if(DEL.content === 'g!bot-owner') {
 var embed = new Discord.RichEmbed()
-.addField('صاْنع البوت : @Mal ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661  ', `${client.user.tag}`, true)
+.addField('صاْنع البوت : - Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼ ', `${client.user.tag}`, true)
 .setColor("RANDOM")
 DEL.channel.sendEmbed(embed);
 
@@ -133,7 +133,7 @@ client.on("message", message => {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setDescription(`**❓❔❗️❕وش مميزات البوت❗️❕❓❔**
-        **__1-__:books:🧐 GAMING BOT 🧐:books:
+        **__1-__:books:🧐 Mal Shop  🧐:books:
          __2-__:white_check_mark: :part_alternation_mark:️ استخدامه جدا سهل:part_alternation_mark:️:white_check_mark: 
          __3-__:gear:️صيانه كل يوم:gear:️
          __4-__:money_with_wings: مجاني :money_with_wings:**`)
@@ -250,7 +250,7 @@ client.on("message", message => {
 ❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
 ❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 ❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
-***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @ĢǻMiÑğ ßδT#6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
+***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @Mal Shop #6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
     
@@ -828,8 +828,8 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/h76vMMP**")
-  .addField(" **:small_blue_diamond: Link BOT:Gaming︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
+  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/4uUcper**")
+  .addField(" **:small_blue_diamond: Link Mal Shop︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
      
   message.channel.sendEmbed(embed);
     }
@@ -840,8 +840,8 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/h76vMMP**")
-  .addField(" **:small_blue_diamond: Link BOT:Gaming︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
+  .addField(" **:small_orange_diamond: Link Server Support︾**" , "  **https://discord.gg/4uUcper**")
+  .addField(" **:small_blue_diamond: Link Mal Shop︾ **" , "  **https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot**")     
      
   message.channel.sendEmbed(embed);
     }
@@ -853,7 +853,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/h76vMMP**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/4uUcper**")
      
      
   message.channel.sendEmbed(embed);
@@ -866,7 +866,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/h76vMMP**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/4uUcper**")
      
      
   message.channel.sendEmbed(embed);
@@ -1154,14 +1154,7 @@ client.on('message', message => {
 
 ////////////////////////-----------////////////////////////////// ////////////// /////No Share Link Discordddddddddddddddddddddd
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-        message.delete()
-    return message.reply(`**:warning:  Prèvènts Pǒsting ǒf links! **`)
-    }
-});
+
 client.on('message', message => {
      if (message.content === "servers") {
      let embed = new Discord.RichEmbed()
@@ -1250,49 +1243,6 @@ client.on('message', message => {
     }
 });
 ////////////----------------//////////////////////////////////// ////////////////////// ////////////////////////////BC
-client.on('message', message => {
-	    var prefix = "g!";
-              if(!message.channel.guild) return;
-    if(message.content.startsWith(prefix + 'bc')) {
-    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-  if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
-    let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "GAMING BOT ";
-    let request = `Requested By ${message.author.username}`;
-    if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-    msg.react('✅')
-    .then(() => msg.react('❌'))
-    .then(() =>msg.react('✅'))
-    
-    let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-    let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-    
-    let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-    let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
- reaction1.on("collect", r => {
-    message.channel.send(`**:heart_exclamation:  | ``Done`` ... The Broadcast Message Has Been Sent For __${message.guild.members.size}__ Members**`).then(m => m.delete(5000));
-    message.guild.members.forEach(m => {
-  
-  var bc = new
-       Discord.RichEmbed()
-       .setColor('RANDOM')
-       .setTitle(':anger_right: Broadcast :anger_right: ')
-       .addField(':rose: Server', message.guild.name)
-       .addField(':speaking_head: Sender', message.author.username)
-       .addField(':love_letter:  Message', args)
-       .setThumbnail(message.author.avatarURL)
-       .setFooter(copy, client.user.avatarURL);
-    m.send({ embed: bc })
-    msg.delete();
-    })
-    })
-    reaction2.on("collect", r => {
-    message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
-    msg.delete();
-    })
-    })
-    }
-    });
 
 
 //////////////////////////////////////////Autoo Member TO Join Server 
