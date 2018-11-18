@@ -39,7 +39,25 @@ client.on('ready', () => {
 ///////////////////////////////////////////////////////////
 //////////// Cry Cry /////////////////// Out Dog 
 
-
+client.on("message", message => {
+	var prefix = "";
+ if (message.content === "رابط") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000") 
+      .setDescription(`
+	
+          ***¯−ـ‗ऊ_»Mal Team ♥«_ऊ‗ـ−¯***
+         
+***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçome ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
+**تم فتح الشوب الخاص بنا  →→https://discord.gg/Ur3PYtM**
+**سيرفر الاكواد →→https://discord.gg/5JyuX62      **
+**السيرفر الرئيسى →→https://discord.gg/CbbZuaK**
+***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @Mal Team ♥ ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
+          `)
+   message.channel.sendEmbed(embed)
+    
+   }
+   }); 
 
 ////////////////////////////////////////////
 //                                        //
