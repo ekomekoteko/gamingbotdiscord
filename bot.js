@@ -67,7 +67,18 @@ client.on('guildMemberAdd', member=> {
 //                                        //
 //                                        //
 ////////////////////////////////////////////
-
+client.on("message", message => {
+    if (message.content.startsWith("g!bc")) {
+                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
+  m.send(`${argresult}\n ${m}`);
+  })
+  message.channel.send(`\`${message.guild.members.filter( m => m.presence.status !== 'all').size}\`:mailbox:  عدد المستلمين `);
+  message.delete();
+  };
+  });
 
 
 
@@ -86,7 +97,15 @@ client.on('guildMemberAdd', member=> {
 
 
 
-
+client.on('message', message => {
+    if(message.content.includes('491734578671779840')){
+                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? ??   **');
+        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+        message.delete()
+    return message.reply(`** No Share Link Discord  :angry: !**`)
+    }
+}
+});
 
 
 
