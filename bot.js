@@ -179,7 +179,7 @@ client.on("guildMemberAdd", member => {
                               ctx.fontSize = '18px';
                               ctx.fillStyle = "#FFFFFF";
                               ctx.textAlign = "center";
-      ctx.fillText(`Welcome To My World !!`
+      ctx.fillText(`Welcome To Mal Shop ♥ !!`
                               , 200, 155);
     welcomer.sendFile(canvas.toBuffer())
       
@@ -204,13 +204,116 @@ client.on("guildMemberAdd", member => {
 
 
 
-client.on('message', message => {
-    if(message.content.includes('491734578671779840')){
-                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? ??   **');
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-        message.delete()
-    return message.reply(`** No Share Link Discord  :angry: !**`)
+client.on('message', eyad => {
+  if (eyad.content.startsWith('g!uvban')) {
+if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
+ let men = eyad.mentions.users.first()
+ let mas = eyad.author
+ if(!men) return eyad.channel.send('`⛔| ** يجب عليك المنشن اولاً **`');
+ eyad.guild.channels.forEach(c => {
+ c.overwritePermissions(men.id, {
+         CONNECT: true
+ })
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+
+ الان يمكنك الدخول الي الرومات الصوتيه:)
+
+بواسطة : <@${eyad.author.id}> **`)
+.setThumbnail("http://shopforclipart.com/images/green-tick/22.jpg")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(eyad.guild.name, eyad.guild.iconURL)
+.setDescription(`          <@${men.id}>
+
+الان يمكنك الدخول الي الرومات الصوتيه
+
+بواسطة : <@${eyad.author.id}>
+`)
+.setThumbnail("http://shopforclipart.com/images/green-tick/22.jpg")
+eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(15000)})
     }
+}) // نهايه كود فك الباند الفويس
+ 
+client.on('message', eyad => {
+  if (eyad.content.startsWith('g!vban')) {
+if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("❎ | **انت لا تمتلك الخاصيه المطلوبه**");
+let men = eyad.mentions.users.first()
+let mas = eyad.author
+if(!men) return eyad.channel.send('`⛔| ** يجب عليك المنشن اولاً **`');
+eyad.guild.channels.forEach(c => {
+c.overwritePermissions(men.id, {
+          CONNECT: false
+})
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+
+لقد تم منع من دخول الرومات الصوتيه 
+
+بواسطة : <@${eyad.author.id}> **`)
+.setThumbnail("http://www.clker.com/cliparts/o/Y/d/G/j/1/close-hi.png")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(eyad.guild.name, eyad.guild.iconURL)
+.setDescription(`          <@${men.id}>
+
+لقد تم منع من دخول الرومات الصوتيه
+
+بواسطة : <@${eyad.author.id}> `)
+.setThumbnail("http://www.clker.com/cliparts/o/Y/d/G/j/1/close-hi.png")
+eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(10000)})
+    }
+})// نهايه كود الباند الفويس
+/////////////////
+client.on('message', msg => {
+  if(!msg.guild) return;
+    if (msg.content.startsWith(prefix +'vc')) {
+     let args = msg.content.split(" ").slice(1);
+    if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+let ra3d = new Discord.RichEmbed()
+.setColor('RANDOM')
+.setThumbnail(msg.author.avatarURL)
+.setDescription(`هل انت متاكد من انشاء روم صوتي ؟\n  ✅  \n  ❌ \n  لديك 60 ثانية للاختيار`)                                                                                                                                                                       
+msg.channel.send(ra3d).then(message => {
+ message.react('✅').then(r=>{
+ message.react('❌').then(r=>{           
+ let eyadandr3d = (reaction, user) => reaction.emoji.name === '✅' && user.id === msg.author.id;
+ let eyadandr3dd = (reaction, user) => reaction.emoji.name === '❌' && user.id === msg.author.id;
+ let tt  = message.createReactionCollector(eyadandr3d, { time: 60000 });
+ let er  = message.createReactionCollector(eyadandr3dd, { time: 60000 });
+er.on("collect", r => {
+msg.channel.send("`تم الالغاء`")
+message.delete();
+})
+tt.on("collect", r => {
+msg.guild.createChannel(args.join(' '), 'voice').then(ra3deyad => {
+channelCreated = ra3deyad.createdAt
+      const embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setImage()
+  .setThumbnail('https://cdn.discordapp.com/attachments/453024271560867853/455104628674134017/1500920527.jpg')
+  .setURL('')
+  .addField(`اسم القناة`, `${ra3deyad.name}`, true)
+  .addField(`أيدي القناة`, `${ra3deyad.id}`, true)
+  .addField(`نوع القناة`, `${ra3deyad.type}`, true)
+  .addField(`متى انشأت القناة`, `${channelCreated}`)
+ msg.channel.send({embed})
+    message.delete();
+})
+})
+})
+})
+})
 }
 });
 
@@ -219,6 +322,22 @@ client.on('message', message => {
 
 
 
+//////////
+ client.on('message', message => {
+   if(message.content.startsWith(prefix + "Invites")) {
+    message.guild.fetchInvites().then(invs => {
+      let user = message.mentions.users.first() || message.author
+      let personalInvites = invs.filter(i => i.inviter.id === user.id);
+      let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
+               let mmmmEmbed = new Discord.RichEmbed()
+                         .setAuthor(client.user.username)
+                         .setThumbnail(message.author.avatarURL)
+ .addField(` لقد قمت بدعوة :`, ` ${inviteCount} `)
+           .setFooter(`- Requested By: ${message.author.tag}`);
+           message.channel.send(mmmmEmbed)
+});
+  }
+});
 
 //-----------------------------------------------------------------------------------------------------------------------------
 client.on("guildMemberAdd", msg => {
