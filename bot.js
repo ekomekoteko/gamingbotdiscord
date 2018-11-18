@@ -324,7 +324,7 @@ channelCreated = ra3deyad.createdAt
 
 //////////
  client.on('message', message => {
-   if(message.content.startsWith(prefix + "Invites")) {
+   if(message.content.startsWith(prefix + "invites")) {
     message.guild.fetchInvites().then(invs => {
       let user = message.mentions.users.first() || message.author
       let personalInvites = invs.filter(i => i.inviter.id === user.id);
@@ -332,8 +332,8 @@ channelCreated = ra3deyad.createdAt
                let mmmmEmbed = new Discord.RichEmbed()
                          .setAuthor(client.user.username)
                          .setThumbnail(message.author.avatarURL)
- .addField(` لقد قمت بدعوة :`, ` ${inviteCount} `)
-           .setFooter(`- Requested By: ${message.author.tag}`);
+ .addField(`:low_brightness:لقد قمت بدعوه`, ` ${inviteCount}:champagne_glass:`)
+           .setFooter(`:black_small_square:»Requested By: ${message.author.tag}`);
            message.channel.send(mmmmEmbed)
 });
   }
@@ -1323,37 +1323,6 @@ client.on('message', message => {
 
 
 ////////////////////////////////////////////////-------///////////////////////// i n  v i t e s 
-client.on('message', message => {
-    if (message.content.startsWith ("g!invites")) {
-     if(!message.channel.guild) return message.reply('** This command only for servers **');
-         var mentionned = message.mentions.users.first();
-        var os;
-      if(mentionned){
-          var os = mentionned.id;
-      } else {
-          var os = message.author.id;
-          
-      }
-          var oss;
-      if(mentionned){
-          var oss = mentionned;
-      } else {
-          var oss = message.author;
-          
-      }
-message.guild.fetchInvites()
- .then(invites =>{
- if(!invites.find(invite => invite.inviter.id === `${os}`)) return message.channel.send(`**${oss.username}, Does't Have Invites :x:**`);
- message.channel.send(`**__${invites.find(invite => invite.inviter.id === `${os}`).uses}__ Member Joined By ${oss.username} !** :chart_with_upwards_trend: `)
-
- })
- 
- 
-
-}
-
-});
-
 
 
 
