@@ -493,7 +493,6 @@ g!Build Rr »***البوت يعمل لك رتب بي الاسم دا بي الز
 
 
 //////
-const Discord = require('discord.js')
 
 client.on = (client, message, args, tools) => {
 	var prefix = "g!";
