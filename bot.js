@@ -1114,7 +1114,7 @@ client.on("message", (message) => {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
             });
-            message.channel.send('Ticket:', `**Tickets's Author:** ${message.author.tag}\n**Server:** ${guild.name}\n**Full ticket:** ${args}`);
+            message.channel.send(`You must give me something to report first ${message.author}`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
                 .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Staff** will be here soon to help.`)
