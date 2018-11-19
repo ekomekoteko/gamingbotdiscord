@@ -247,7 +247,7 @@ client.on('message',message=> {                              //Wrong Code     3 
     .then(msg => (
         msg.react('✅')
           .msg.react('❌')
-    })    
+       
 
 });  
 
