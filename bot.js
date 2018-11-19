@@ -235,15 +235,15 @@ client.on("guildMemberAdd", member => {
 
 
 
-client.on('message',args=> {                              //Wrong Code     3 Mistakes
-    let args = args.content.split(' ').slice(1);
-    if(args.content.split(' ')[0] == '!poll') 
+client.on('message',message=> {                              //Wrong Code     3 Mistakes
+    let msg = message.content.split(' ').slice(1);
+    if(message.content.split(' ')[0] == '!poll') 
     var embed = new Discord.RichEmbed()
 
     .setColor('#000000').setColor('#36393e')
     .addField('Poll',`${args}`,true)
 
-    args.channel.send(embed)
+    message.channel.send(embed)
     .then(msg => (
          msg.react('❌').then(r=>{           
     .msg.react('❌').then(r=>{           
