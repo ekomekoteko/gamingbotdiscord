@@ -230,6 +230,51 @@ client.on("guildMemberAdd", member => {
 
 
 
+
+
+
+
+
+client.on('message' message => {                              //Wrong Code     3 Mistakes
+    let args = message.content.split(' ').slice(1);
+    if(message.content.split(' ')[0] == '!poll) 
+    var embed = new Discord.RichEmbed()
+
+    .setColor('#000000').setColor('#36393e')
+    addField('Poll',`${args}`,true)
+
+    message.channel.send(embed)
+    .then(msg => (
+        msg.react('✅')
+        msg.react('❌')
+    })    
+
+});  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.on('message', eyad => {
   if (eyad.content.startsWith('g!uvban')) {
 if (!eyad.member.hasPermission("MOVE_MEMBERS")) return eyad.channel.send("**انت لا تمتلك الخاصيه المطلوبه** | ❎ ");
