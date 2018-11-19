@@ -246,7 +246,7 @@ client.on('message',message=> {                              //Wrong Code     3 
     message.channel.send(embed)
     .then(msg => (
          msg.react('❌').then(r=>{           
-    .msg.react('❌').then(r=>{           
+    msg.react('❌').then(r=>{           
      })    
 
 });  
