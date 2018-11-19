@@ -235,7 +235,7 @@ client.on("guildMemberAdd", member => {
 
 
 
-client.on('message',message=> {                              //Wrong Code     3 Mistakes
+client.on("message",message=> {                              //Wrong Code     3 Mistakes
     let args = message.content.split(' ').slice(1);
     if(message.content.split(' ')[0] == '!poll') 
     var embed = new Discord.RichEmbed()
