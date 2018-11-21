@@ -7930,7 +7930,6 @@ gg.send({embed : new Discord.RichEmbed()
 
 ////////////////Code AUto colors nar 
 const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
-const prefix = "g!";
 // Mahmoud-QuaStyle
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
