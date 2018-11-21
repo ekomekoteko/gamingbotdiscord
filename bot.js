@@ -57,12 +57,6 @@ client.on('guildMemberAdd', member => {
 });
 
 
-const invites = {};
-
-const wait = require('util').promisify(setTimeout);
-
-client.on('ready', () => {
-  wait(1000);
 
   client.guilds.forEach(g => {
     g.fetchInvites().then(guildInvites => {
