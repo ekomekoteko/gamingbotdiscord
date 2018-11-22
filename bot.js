@@ -4544,7 +4544,7 @@ client.on('message', function(message) {
         .setThumbnail(`${message.author.avatarURL}`)
         .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
         .setFooter(`From **${message.author.tag} (${message.author.id})**`)
-    client.channels.get("499206701904297984").send({embed:iiMo});
+    client.channels.get("513482762775429139").send({embed:iiMo});
     }
 });
 
@@ -5038,7 +5038,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("`»Hello !!`");
+    message.reply("`Welcome !!`");
     }
 });
 
@@ -5047,7 +5047,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("`g!help g!inv g!help-Rank IAM ONLINE 24x24  !!`");
+    message.reply("`g!help g!help-R`");
     }
 });
 
@@ -5055,7 +5055,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("```Owner BOT @༄ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle ≽ܫ≼#5661   ```");
+    message.reply("Owner Bot: <@411137717884289024>");
     }
 });
 /////////////----------------------------------------------------------------///////iNVITEby
@@ -5186,10 +5186,6 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
     }// حقوق الفا كودز & عبود
 });
 ////////////////////////////////////////////
-client.on('ready', () => {
-var x = client.channels.get("504331236622467073");
-if (x) x.join();
-});
 
 
 
