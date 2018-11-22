@@ -35,6 +35,23 @@ client.on('ready', () => {
 
 
 
+lient.on('ready', function(){    
+    var ms = 5000 ;    
+    var setGame = [`تم اضافة رينبو و لبوت`,"عرفة المزيد عن رينبو و","g!help-R,","لدعوه البوت "，"g!invite","BY:Mal Mahmoud-QuaStyle","g!help"];    
+    var i = -1;    
+    var j = 0;    
+    setInterval(function (){    
+        if( i == -1 ){    
+j = 1;    
+       }    
+        if( i == (setGame.length)-1 ){    
+            j = -1;    
+      }    
+       i = i+j;    
+        client.user.setGame(setGame[i],`http://twitch.tv/quastyle11`);    
+}, ms);    
+    
+});
 
 
 
@@ -564,6 +581,7 @@ client.on("message", message => {
 ❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
 ❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 ❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+❒${prefix}***help-R***→→***『Rainbow تغير الوان الرتبة تلقائي』*** 🌈
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @Mal Shop #6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
@@ -571,15 +589,6 @@ client.on("message", message => {
    }
    }); 
   
-client.on("message", message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help-R"){
-  const embedss2 = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`**
-    
-     Check Your DM**`)
 
 
 
@@ -7928,12 +7937,12 @@ const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
           client.user.setActivity("Rainbow , g!help-R .",{type: 'WATCHING'});
-  
+  // Mahmoud-QuaStyle
   });
 client.on("message", message => {
     fs.writeFile('./suck.json', JSON.stringify(suck));
 });
-
+// Mahmoud-QuaStyle
 client.on('ready', () => {
     setInterval(function(){
         client.guilds.forEach(g => {
@@ -7948,7 +7957,7 @@ client.on('ready', () => {
         });
     }, 4000);
 })
-
+// Mahmoud-QuaStyle
 client.on("message", message => {
     if (!message.content.startsWith(prefix)) return;
     if (message.author.bot) return;
@@ -7958,7 +7967,7 @@ client.on("message", message => {
     switch(command) {
         case "set" :
         if(!message.member.hasPermission('ADMINSTRATOR')) return message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINSTRATOR`' );
-        message.guild.createRole({name : "Mal Team.", color : "RANDOM"}).then(r => {
+        message.guild.createRole({name : "RainbowBot .", color : "RANDOM"}).then(r => {
             r.edit({color : "RANDOM"});
             suck[message.guild.id] = {role : r.id};
         });
@@ -7985,7 +7994,7 @@ The steps of the role did not worked .!!
 -https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot
 **`)
   }})
-
+  
 
 
 
