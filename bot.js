@@ -599,15 +599,6 @@ client.on("message", message => {
   
 
 
-client.on("message", message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "help-R"){
-  const embedss2 = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`**
-    
-     Check Your DM**`)
 
 
 
