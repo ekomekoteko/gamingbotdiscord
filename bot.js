@@ -7587,12 +7587,6 @@ client.on("ready", () => {
   setInterval(lol, 10099);
 });
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('474683601158668299').roles.find("name", "PRESIDENT").setColor("RANDOM");
-  };
-  setInterval(lol, 10099);
-});
 
 
 
