@@ -35,7 +35,7 @@ client.on('ready', () => {
 
 
 
-lient.on('ready', function(){    
+client.on('ready', function(){    
     var ms = 5000 ;    
     var setGame = [`تم اضافة رينبو و لبوت`,"عرفة المزيد عن رينبو و","g!help-R,","لدعوه البوت ","g!invite","BY:Mal Mahmoud-QuaStyle","g!help"];    
     var i = -1;    
