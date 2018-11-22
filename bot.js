@@ -573,15 +573,23 @@ client.on("message", message => {
           ***¯−ـ‗ऊ_»Please Chose«_ऊ‗ـ−¯***
          
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  Welçome ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
-❒${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
-❒${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 			 
-❒${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
-❒${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
-❒${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light:       
-❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
-❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
-❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
-❒${prefix}***help-R***→→***『Rainbow تغير الوان الرتبة تلقائي』*** 🌈
+:small_blue_diamond:${prefix}***help-public*** →→ ***『اوامر عامة』*** :bell:  
+
+:small_orange_diamond:${prefix}***help-admin***  →→***『اوامر ادارة السيرفر』*** :ok_hand: 
+			 
+:small_blue_diamond:${prefix}***help-games*** →→ ***『اوامر الالعاب』*** :video_game:
+
+:small_orange_diamond:${prefix}***help-music***  →→ ***『اوامر الموسيقى』*** :loud_sound: 
+
+:small_blue_diamond:${prefix}***help-colors*** →→ ***『اوامر اللوان』***  :traffic_light: 
+      
+:small_orange_diamond:${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
+
+:small_blue_diamond:${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
+
+:small_orange_diamond:${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom:
+ 
+:small_blue_diamond:${prefix}***help-R***→→***『Rainbow تغير الوان الرتبة تلقائي』***  🌈
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @Mal Shop #6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
@@ -589,6 +597,18 @@ client.on("message", message => {
    }
    }); 
   
+
+
+client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-R"){
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
 
 
 
@@ -3359,10 +3379,10 @@ client.on('message', async message => {
 	if (message.content === 'g!help-public') {
 		message.react('😊');
 	}
-	else if (message.content === '!react-custom') {
+	else if (message.content === 'g!react-custom') {
 		message.react('396548322053062656');
 	}
-	else if (message.content === '!fruits') {
+	else if (message.content === 'g!fruits') {
 		message.react('🍎')
 			.then(() => message.react('🍊'))
 			.then(() => message.react('🍇'))
