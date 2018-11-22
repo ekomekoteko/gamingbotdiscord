@@ -40,8 +40,8 @@ client.on('ready', () => {
 
 
 client.on('ready', function(){    
-    var ms = 4000 ;    
-    var setGame = [`g!invite..`,"g!help","g!support","By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼","»Top"];    
+    var ms = 5000 ;    
+    var setGame = [`تم اضافة رينبو و لبوت`,"عرفة المزيد عن رينبو و","g!help-R,","لدعوه البوت "，"g!invite","By:-Mal Mahmoud-QuaStyle"];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
@@ -56,7 +56,6 @@ j = 1;
 }, ms);    
     
 });
-
 
 ///////////////////////////////////////////////////////////
 //////////// Cry Cry /////////////////// Out Dog 
@@ -581,6 +580,7 @@ client.on("message", message => {
 ❒${prefix}***help-important*** →→ ***『اوامر هامة』*** :loudspeaker:
 ❒${prefix}***help-bc*** →→ ***『اوامر النشر 』*** :e_mail: 
 ❒${prefix}***help-Rank*** →→  ***『اوامر الرتب المتوفره حاليا』*** :boom: 
+❒${prefix}***help-R***→→***『Rainbow تغير الوان الرتبة تلقائي』*** 🌈
 ***●๋• ●๋•●๋• ●๋• ●๋• ●๋•●๋• ●๋•  @Mal Shop #6133 ●๋• ●๋•●๋• ●๋•   ●๋• ●๋• ●๋• ●๋***
           `)
    message.channel.sendEmbed(embed)
@@ -588,6 +588,17 @@ client.on("message", message => {
    }
    }); 
   
+client.on("message", message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help-R"){
+  const embedss2 = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`**
+    
+     Check Your DM**`)
+
+
 
 client.on("message", message => {
     if (message.author.bot) return;
@@ -7964,7 +7975,7 @@ client.on("message", message => {
     switch(command) {
         case "set" :
         if(!message.member.hasPermission('ADMINSTRATOR')) return message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINSTRATOR`' );
-        message.guild.createRole({name : "RainbowBot .", color : "RANDOM"}).then(r => {
+        message.guild.createRole({name : "Mal Team.", color : "RANDOM"}).then(r => {
             r.edit({color : "RANDOM"});
             suck[message.guild.id] = {role : r.id};
         });
