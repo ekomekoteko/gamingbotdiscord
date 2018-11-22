@@ -41,7 +41,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){    
     var ms = 5000 ;    
-    var setGame = [`تم اضافة رينبو و لبوت`,"عرفة المزيد عن رينبو و","g!help-R,","لدعوه البوت "，"g!invite","By:-Mal Mahmoud-QuaStyle"];    
+    var setGame = [`تم اضافة رينبو و لبوت`,"عرفة المزيد عن رينبو و","g!help-R,","لدعوه البوت ","g!invite","By:-Mal Mahmoud-QuaStyle","g!help"];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
