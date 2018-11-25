@@ -43,10 +43,7 @@ client.on('ready', () => {
 /////////////////
 
 
-var dat = JSON.parse("{}");
-function forEachObject(obj, func) {
-    Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
-}
+
 client.on('guildMemberAdd', member => {
 let channel = member.guild.channels.get("512651427332620308");
 if (member.user.bot) return;
