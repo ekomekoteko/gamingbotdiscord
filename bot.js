@@ -32,6 +32,24 @@ client.on('ready', () => {
 });
 
 
+////////////////////////////
+//تكفي عندي اني عالي عليك
+//////////////////////////
+
+
+
+////////////////////
+/////da le atfal |//
+/////////////////
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8062,71 +8080,78 @@ gg.send({embed : new Discord.RichEmbed()
 
 
 ////////////////Code AUto colors nar 
-const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
-// Mahmoud-QuaStyle
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("Rainbow , g!help-R .",{type: 'WATCHING'});
-  // Mahmoud-QuaStyle
-  });
-client.on("message", message => {
-    fs.writeFile('./suck.json', JSON.stringify(suck));
-});
-// Mahmoud-QuaStyle
-client.on('ready', () => {
-    setInterval(function(){
-        client.guilds.forEach(g => {
-            if (suck[g.id]) {
-                if (suck[g.id].role) {
-                    var role = g.roles.get(suck[g.id].role);
-                    if (role) {
-                        role.edit({color : "RANDOM"});
-                    };
-                };
-            };
-        });
-    }, 4000);
+const reply = JSON.parse(fs.readFileSync('./replys.json' , 'utf8'));
+client.on('message', async message => {
+    let messageArray = message.content.split(" ");
+   if(message.content.startsWith(prefix + "setReply")) {
+    let filter = m => m.author.id === message.author.id;
+    let thisMessage;
+    let thisFalse;
+
+    if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send('You don\'t have permission').then(msg => {
+       msg.delete(4500);
+       message.delete(4500);
+    });
+    
+    message.channel.send(':pencil: **| من فضلك اكتب الرساله الان... :pencil2: **').then(msg => {
+
+        message.channel.awaitMessages(filter, {
+          max: 1,
+          time: 90000,
+          errors: ['time']
+        })
+        .then(collected => {
+            collected.first().delete();
+            thisMessage = collected.first().content;
+            let boi;
+            msg.edit(':scroll: **| من فضلك اكتب الرد الان... :pencil2: **').then(msg => {
+      
+                message.channel.awaitMessages(filter, {
+                  max: 1,
+                  time: 90000,
+                  errors: ['time']
+                })
+                .then(collected => {
+                    collected.first().delete();
+                    boi = collected.first().content;
+                    msg.edit('✅ **| تم الاعداد بنجاح...  **').then(msg => {
+        
+                      message.channel.awaitMessages(filter, {
+                        max: 1,
+                        time: 90000,
+                        errors: ['time']
+                      })
+                      let embed = new Discord.RichEmbed()
+                      .setTitle('**Done The Autoreply Code Has Been Setup**')
+                      .addField('Message:', `${thisMessage}`)
+                      .addField('Reply:', `${boi}`)
+                      .setThumbnail(message.author.avatarURL)
+                      .setFooter(`${client.user.username}`)
+                     message.channel.sendEmbed(embed)
+    reply[message.guild.id] = {
+        msg: thisMessage,
+        reply: boi,
+    }
+    fs.writeFile("./replys.json", JSON.stringify(reply), (err) => {
+    if (err) console.error(err)
+  })
+   } 
+            )
+        })
+    })
 })
-// Mahmoud-QuaStyle
-client.on("message", message => {
-    if (!message.content.startsWith(prefix)) return;
-    if (message.author.bot) return;
-    if (message.channel.type !== "text") return message.reply("This Command Is Only Allowed In Servers");
-    var args = message.content.split(" ");
-    var command = args[0].slice(prefix.length);
-    switch(command) {
-        case "set" :
-        if(!message.member.hasPermission('ADMINSTRATOR')) return message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINSTRATOR`' );
-        message.guild.createRole({name : "RainbowBot .", color : "RANDOM"}).then(r => {
-            r.edit({color : "RANDOM"});
-            suck[message.guild.id] = {role : r.id};
-        });
-    };
-});
-client.on("message", message => {
-  if (message.content === "g!help-R") {
-      message.react('🌈')
-message.author.send(`**
-g!set 
- - لإنشاء رتبة الرينبو وبدا الرينبو
-- To create the role of the Rainbow & Start The Rainbow
-g!inv 
-- لدعوة البوت
-- To Invite the bot
-
-خطوات لو الرتبة م أشتغلت .!!
-1- ضع رتبة الرينبو فوق الالوان أو الرتب الملونه لو فيه
-2- ضع رتبة البوت فوق رتبة الرينبو
-The steps of the role did not worked .!!
-1- Place the role of the Rainbow above the colors or colored ranks if it
-2- Put the bot role above the role of the Rainbow 
-رآبط البوت - Bot Invite link
--https://discordapp.com/api/oauth2/authorize?client_id=489487215270035466&permissions=2146958839&scope=bot
-**`)
-  }})
-  
+    })
+}})             
+client.on('message', async message => {
+   if(message.content === reply[message.guild.id].msg) {
+       message.channel.send(reply[message.guild.id].reply)
+   }}
+)
 
 
+
+
+////set
 
 client.login(process.env.BOT_TOKEN);
 
