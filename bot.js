@@ -8151,14 +8151,14 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('458253633037795328').roles.find("name", "• MaL »Team •").setColor("RANDOM");
   }
-  setInterval(lol, 2000);
+  setInterval(lol, 2003);
 })
 
 client.on("ready", () => {
   function lol() {
     client.guilds.get('481876096766181377').roles.find("name", "• MaL »Team •").setColor("RANDOM");
   }
-  setInterval(lol, 2000);
+  setInterval(lol, 2040);
 })
 
 
