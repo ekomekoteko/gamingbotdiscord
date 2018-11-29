@@ -200,7 +200,7 @@ client.on('guildMemberAdd', member => {
 //                                        //
 ////////////////////////////////////////////
 client.on("message", message => {
-    if (message.content.startsWith("g!bc")) {
+    if (message.content.startsWith("g!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -899,7 +899,7 @@ g!pause ~ ايقاف الاغنية مؤقتا
 g!resume ~ تكملة الاغنية
 g!queue ~ اظهار قائمة التشغيل
 g!np ~ اظهار الاغنية اللي انت مشغلها حاليا
-g!vol 0:100 ~ الصوت
+g!vol 0:150 ~ الصوت
 •
 ╚[❖════════════❖]╝***
  `)
@@ -953,7 +953,7 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
   :e_mail:      g!bc | لأرسال برود كاست للكل
-  :e_mail:     g!bc  |  لأرسال برود كاست للأونلاين
+  :e_mail:     g!obc  |  	لأرسال برود كاست للأونلاين
   :e_mail:      g!invite |  لدعوة البوت الي سيرفرك
   :e_mail:      g!support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
@@ -1892,7 +1892,7 @@ client.on('message', message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
    
-    var command = message.content.toLowerCase().split(" ")[0]; // حقوق الفا كوودز Alpha Codes.
+    var command = message.content.toLowerCase().split(" ")[0]; // Mal Team
     var args = message.content.toLowerCase().split(" ");
     var userM = message.guild.member(message.mentions.users.first() || message.guild.members.find(m => m.id === args[1]));
     var prefix = 'g!'; // هنا تقدر تغير البرفكس <==================
@@ -2328,7 +2328,7 @@ client.on('guildCreate', guild => {
 
 ////////////////////////////////////////// ////////////////////// ////////////////////// /////////////////////////Rsala le Owner
 
-client.on('message', ReBeeL => {
+client.on('message', QuaStyle => {
   var prefix = "g!";
     if(ReBeeL.author.bot) return;
       if(ReBeeL.content.startsWith(prefix + "owner")) {
@@ -2341,13 +2341,13 @@ client.on('message', ReBeeL => {
                       .setColor("RANDOM")
                         .setDescription(`
 تم إرسآل لك رسآلة من السيرفر الخاص بك
-${ReBeeL.guild.name}
+${QuaStyle.guild.name}
 الرسآلة
 ${args}
         `)
-        .setFooter(` بوآسطة ${ReBeeL.author.username}#${ReBeeL.author.discriminator}`)
-       ReBeeL.guild.owner.send(rebel);
-      ReBeeL.channel.send("**تم إرسآل الرسآلة إلى أونر السيرفر**")
+        .setFooter(` بوآسطة ${QuaStyle.author.username}#${QuaStyle.author.discriminator}`)
+       QuaStyle.guild.owner.send(rebel);
+      QuaStyle.channel.send("**تم إرسآل الرسآلة إلى أونر السيرفر**")
      }
     }
   );
@@ -3513,7 +3513,7 @@ client.on('message', async message => {
             ADD_REACTIONS: false
           });
         });
-      }); //kinggamer حقوق الفا كودز و
+      }); //Mal Team
     } catch(e) {
       console.log(e.stack);
     }
@@ -3548,7 +3548,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
  
   if(!role || !kinggamer.roles.has(role.id)) return message.channel.sendMessage(`**:information_source:${mention.user.username} لقد تم فك الميوت عنه مسبقا**`)
  
-  await kinggamer.removeRole(role) //kinggamer حقوق الفا كودز و
+  await kinggamer.removeRole(role) // Mal Team By Mahmoud-QuAsTYLE 
   message.channel.sendMessage(`**:white_check_mark: ${mention.user.username}  Unmuted! **`);
  
   return;
@@ -4622,7 +4622,7 @@ client.on('message', message => {
     let args = message.content.split(' ').slice(1).join(' ');
     if (message.content.startsWith('g!bot-bc')){
     if(!message.author.id === '') return;
-    message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
+    message.channel.sendMessage('**جار ارسال الرسالة** :white_check_mark:')
     client.users.forEach(m =>{
     m.sendMessage(args)
     })
@@ -5538,7 +5538,7 @@ message.channel.sendEmbed(cat);
 });
 ////////////Profile
 client.on('message', message => {
-    if(message.content == ('g!PRofile')) {    
+    if(message.content == ('g!profile')) {    
  
              if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');   
             var Canvas = module.require('canvas');
@@ -5766,7 +5766,7 @@ if(ratus.user.id === message.author.id) {
 
 module.exports.run = async (bot, message, args) => {
 
-    //!addrole @andrew Dog Person
+    //!addrole @andrew
     if (!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("❌ Sorry pal, you can't do that.");
     if (args[0] == "help") {
         message.reply("Usage: !addrole <user> <role>");
@@ -5970,7 +5970,7 @@ if (message.content.startsWith(prefix + 'credit')) {
   if(men) {
     if (!profile[men.id]) profile[men.id] = {
     lastDaily:'Not Collected',
-    credits: 1,
+    credits: 10,
   };
   }
   if(men) {
@@ -5983,8 +5983,8 @@ message.channel.send(`** ${men.username}, :credit_card: balance` + " is `" + `${
 if(message.content.startsWith(prefix + "daily")) {
   if(profile[message.author.id].lastDaily != moment().format('day')) {
     profile[message.author.id].lastDaily = moment().format('day')
-    profile[message.author.id].credits += 200
-     message.channel.send(`**${message.author.username} you collect your \`200\` :dollar: daily pounds**`)
+    profile[message.author.id].credits += 350
+     message.channel.send(`**${message.author.username} you collect your \`350\` :dollar: daily pounds**`)
 } else {
     message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes ${moment().endOf('day').fromNow()}**`)
 }
@@ -5993,7 +5993,7 @@ if(message.content.startsWith(prefix + "daily")) {
  let cont = message.content.slice(prefix.length).split(" ");
 let args = cont.slice(1);
 let sender = message.author
-if(message.content.startsWith(prefix + 'trRans')) {
+if(message.content.startsWith(prefix + 'trans')) {
           if (!args[0]) {
             message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
          return;
@@ -6009,13 +6009,13 @@ if(message.content.startsWith(prefix + 'trRans')) {
             if (!defineduser) return message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
             var mentionned = message.mentions.users.first();
 if (!profile[sender.id]) profile[sender.id] = {}
-if (!profile[sender.id].credits) profile[sender.id].credits = 200;
+if (!profile[sender.id].credits) profile[sender.id].credits = 350;
 fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
 if (err) console.error(err);
 })
       var mando = message.mentions.users.id;
       if  (!profile[defineduser.id]) profile[defineduser.id] = {}
-      if (!profile[defineduser.id].credits) profile[defineduser.id].credits = 200;
+      if (!profile[defineduser.id].credits) profile[defineduser.id].credits = 350;
       profile[defineduser.id].credits += (+args[0]);
       profile[sender.id].credits += (-args[0]);
       let mariam = message.author.username
@@ -6369,20 +6369,20 @@ if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
       possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
       if (i.uses === 30) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
           message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))//هنآ أسم ألرتبه اللي تجيهه
-.catch(RebeL =>{
-console.log('`Error`: ' + RebeL);
+.catch(QuaStyle =>{
+console.log('`Error`: ' + QuaStyle;
 });
 }
 if (i.uses === 30) {
 message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))
-.catch(RebeL =>{
-console.log('`Error`: ' + RebeL);
+.catch(QuaStyle =>{
+console.log('`Error`: ' + QuaStyle);
 });
 }
 if (i.uses === 30) {
 message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))
-.catch(RebeL =>{
-console.log('`Error`: ' + RebeL);
+.catch(QuaStyle =>{
+console.log('`Error`: ' + QuaStyle);
 });
       }//معلومه بسيطه يمديك تكرر العمليهه أكثر من مره
     })
@@ -8151,6 +8151,47 @@ client.on('message', async message => {
 
 
 ////set////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
+client.on('message', message => {
+    if(!message.channel.guild) return;
+if(message.content.startsWith('g!bc')) {
+if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+let copy = "Reaper";
+let request = `Requested By ${message.author.username}`;
+if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
+msg.react('✅')
+.then(() => msg.react('❌'))
+.then(() =>msg.react('✅'))
+
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+reaction1.on("collect", r => {
+message.channel.send(`☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو `).then(m => m.delete(5000));
+message.guild.members.forEach(m => {
+var bc = new
+Discord.RichEmbed()
+.setColor('RANDOM')
+.setTitle(':anger_right: Broadcast :anger_right:')
+.addField(':rose: Server', message.guild.name)
+.addField(':speaking_head: Sender', message.author.username)
+.addField(':love_letter: Message', args)
+.setThumbnail('https://a.top4top.net/p_1008gqyyd1.png')
+.setFooter(copy, client.user.avatarURL);
+m.send({ embed: bc })
+msg.delete();
+})
+})
+reaction2.on("collect", r => {
+message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
+msg.delete();
+})
+})
+}
+})
+
 
 
 
