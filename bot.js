@@ -6370,7 +6370,7 @@ if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
       if (i.uses === 30) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
           message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))//هنآ أسم ألرتبه اللي تجيهه
 .catch(QuaStyle =>{
-console.log('`Error`: ' + QuaStyle;
+console.log('`Error`: ' + QuaStyle);
 });
 }
 if (i.uses === 30) {
@@ -7000,7 +7000,7 @@ client.on('message', message => {
 })
 ////////////////////////////////////
 
-const developers = ["411137717884289024","470602554611597315","489487215270035466"]
+const developers = ["411137717884289024"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
