@@ -3452,15 +3452,15 @@ client.on('message', async message => {
       message.delete(3500);
     });
  
-    let mention = message.mentions.members.first();//kinggamer حقوق الفا كودز و
-    if(!mention) return  message.channel.send('').then(msg => { //kinggamer حقوق الفا كودز و
+    let mention = message.mentions.members.first();////////////By:Mal-Mahmoud-QuaStyle و
+    if(!mention) return  message.channel.send('').then(msg => { ////////////By:Mal-Mahmoud-QuaStyle و
       msg.delete(3500);
       message.delete(3500);
     });
  
     if(mention.id === message.author.id) return message.channel.send('**:x:You Cannot give mute to your self**').then(msg => {
       msg.delete(3500);
-      message.delete(3500); //kinggamer حقوق الفا كودز و
+      message.delete(3500);  ////////////By:Mal-Mahmoud-QuaStyle
     });
    
     if(mention.hasPermission('ADMINISTRATOR')) return message.channel.send(`**:x: لا يمكن آعطاء ميوت لادارة السيرفر**`); //kinggamer حقوق الفا كودز و
@@ -3475,8 +3475,8 @@ client.on('message', async message => {
    
     if(mention.positon >= message.guild.member(client.user).positon) return message.channel.send('I Donot Have Permission **Muted_Members**').then(msg => {
       msg.delete(3500);
-      message.delete(3500); //kinggamer حقوق الفا كودز و
-    });
+      message.delete(3500);  ////////////By:Mal-Mahmoud-QuaStyle
+    });////////////By:Mal-Mahmoud-QuaStyle
    
     let duration = args[2];
     if(!duration) message.channel.send(`**:hash: You Can Use ${prefix}mute @user Time Reason**`).then(msg => {
@@ -3504,11 +3504,11 @@ client.on('message', async message => {
     if(!role) try {
       message.guild.createRole({
         name: "Muted",
-        permissions: 0 //kinggamer حقوق الفا كودز و
+        permissions: 0 ////////////By:Mal-Mahmoud-QuaStyle و
       }).then(r => {
         message.guild.channels.forEach(c => {
           c.overwritePermissions(r , {
-            SEND_MESSAGES: false, //kinggamer حقوق الفا كودز و
+            SEND_MESSAGES: false, /////////////By:Mal-Mahmoud-QuaStyle
             READ_MESSAGES_HISTORY: false,
             ADD_REACTIONS: false
           });
@@ -3520,20 +3520,20 @@ client.on('message', async message => {
     mention.addRole(role).then(() => {
       mention.send(thisEmbed);
       message.channel.send(`**:white_check_mark: ${mention.user.username}  Muted! :zipper_mouth:  **  `);
-      mention.setMute(true); //kinggamer حقوق الفا كودز و
+      mention.setMute(true); /////////////By:Mal-Mahmoud-QuaStyle///////By:Mal-Mahmoud-QuaStyleو
     });
     setTimeout(() => {
       if(duration === 0) return;
       mention.setMute(false);
       mention.removeRole(role)
-    },duration * 60000); //kinggamer حقوق الفا كودز و
+    },duration * 60000); /////////////By:Mal-Mahmoud-QuaStyle-QuaStyleو
   }
 });
 client.on('message', async message => {
     let mention = message.mentions.members.first();
 let command = message.content.split(" ")[0];
      command = command.slice(prefix.length);
-    let args = message.content.split(" ").slice(1);  //kinggamer حقوق الفا كودز و
+    let args = message.content.split(" ").slice(1);  //////////////By:Mal-Mahmoud-QuaStyle//////By:Mal-Mahmoud-QuaStyleز و
 if(command === `unmute`) {2
   if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**You Donot HavePermission Mute_Members**").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I donot Have Permission Mute_Members**").then(msg => msg.delete(6000))
@@ -3541,7 +3541,7 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
   let kinggamer = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
      if(!kinggamer) return message.channel.send('').then(msg => {
       msg.delete(3500);
-      message.delete(3500); //kinggamer حقوق الفا كودز و
+      message.delete(3500); //////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyleز و
     });
  
   let role = message.guild.roles.find (r => r.name === "Muted");
@@ -3603,13 +3603,13 @@ client.on('message', message => {
 
 
 
-
-
-
-
-
-
-
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
 
 //////////////////////////////////////
 
@@ -3626,10 +3626,10 @@ client.on('guildCreate', guild => {
   })
 
 
-
-
-
-
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
 
 //////Muted اسكوت
 client.on("message", message => {
@@ -3666,11 +3666,11 @@ client.on("message", message => {
   
   });
 
-
-
-
-
-
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyl////////////By:Mal-Mahmoud-QuaStylee
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
+////////////By:Mal-Mahmoud-QuaStyle
 
 ///////////////////////////unmute
 
@@ -8150,7 +8150,133 @@ client.on('message', async message => {
 
 
 
-////set
+////set////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
+
+
+client.on("message", message => {
+  if (message.author.bot) return;
+fs.writeFile('./id/rank.json', JSON.stringify(id), (err) => {
+if (err) console.error(err);
+});
+});////////////By:Mal-Mahmoud-QuaStyle
+      client.on('message', message => {
+          if(!id[message.author.id]) id[message.author.id] ={
+              textrank: 1,
+              points: 1
+          };
+          if(message.author.bot) return;
+          id[message.author.id].points = Math.floor(id[message.author.id].points+4);
+          if(id[message.author.id].points > 10) {
+              id[message.author.id].points = 10;
+              id[message.author.id].level = Math.floor(id[message.author.id].level+4);
+          }
+          fs.writeFile('./id/rank.json', JSON.stringify(id), (err) => {
+if (err) console.error(err);
+});
+    
+    client.on("message", message => {
+  if (message.author.bot) return;
+    if(!message.channel.guild) return;
+if (message.content.startsWith(prefix + "rank")) {
+                               let user = message.mentions.users.first();
+         var human = message.mentions.users.first();
+            var author;
+            if(human) {
+                author = human;
+            } else {
+                author = message.author;
+            }
+          var mentionned = message.mentions.members.first();
+             var ah;
+            if(mentionned) {
+                ah = mentionned;
+            } else {
+                ah = message.member;
+            }
+            var ment = message.mentions.users.first();
+            var getvalueof;
+            if(ment) {
+              getvalueof = ment;
+            } else {
+              getvalueof = message.author;
+            }
+   var mentionned = message.mentions.users.first();
+ 
+    var client;
+      if(mentionned){
+          var client = mentionned;
+      } else {
+          var client = message.author;
+ 
+      }
+if (!id[getvalueof.id]) id[getvalueof.id] = {textrank: 0,points: 1};
+            let Image = Canvas.Image,
+            canvas = new Canvas(400, 200),
+            ctx = canvas.getContext('2d');
+            fs.readFile("./id/rank.png", function (err, Background) {
+            if (err) return console.log(err);
+            let id = Canvas.Image;
+            let ground = new Image;
+            ground.src = Background;
+            ctx.drawImage(ground, 0, 0, 400, 200);
+ 
+});////////////By:Mal-Mahmoud-QuaStyle
+ 
+ 
+ 
+                let url = getvalueof.displayAvatarURL.endsWith(".webp") ? getvalueof.displayAvatarURL.slice(5, -20) + ".png" : getvalueof.displayAvatarURL;
+                jimp.read(url, (err, ava) => {
+                    if (err) return console.log(err);
+                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                        if (err) return console.log(err);
+ 
+                        // N A M E  |  S H A D O W
+                        ctx.font = 'bold 18px Arial';
+                        ctx.fontSize = '18px';
+                        ctx.fillStyle = "#000000";
+                        ctx.textAlign = "center";
+                        ctx.fillText(`${getvalueof.username}`, 253, 79);
+ 
+                        // N A M E
+                        ctx.font = 'bold 18px Arial';
+                        ctx.fontSize = '18px';
+                        ctx.fillStyle = "#f1f1f1";
+                        ctx.textAlign = "center";
+                        ctx.fillText(`${getvalueof.username}`, 253, 77);
+ 
+
+                        // T E X T  R A N K
+                        ctx.font = "bold 12px Arial";
+                        ctx.fontSize = '12px';
+                        ctx.fillStyle = "#f1f1f1";
+                        ctx.textAlign = "center";
+                        ctx.fillText(`${id[getvalueof.id].textrank}`, 252, 124); 
+ 
+                        // P O I N T S
+                        ctx.font = "bold 12px Arial";
+                        ctx.fontSize = '12px';
+                        ctx.fillStyle = "#f1f1f1";
+                        ctx.textAlign = "center";
+                        ctx.fillText(`${id[getvalueof.id].points}`, 253, 171);
+ 
+ 
+                        let Avatar = Canvas.Image;
+                        let ava = new Avatar;
+ 
+ava.src = buf;
+                        ctx.beginPath();
+                        ctx.arc(75, 100, 780, 0, Math.PI*2, true);
+                        ctx.closePath();
+                        ctx.clip();
+                        ctx.drawImage(ava, 26, 69, 93, 93);
+                        
+message.channel.sendFile(canvas.toBuffer());
+
+});
+});
+}
+});
+});//////////////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
 
 client.login(process.env.BOT_TOKEN);
 
