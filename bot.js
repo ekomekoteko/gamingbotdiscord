@@ -290,7 +290,7 @@ client.on("guildMemberAdd", member => {
                               //NAMEً
                               ctx.font = '19px Arial';
                               ctx.fontSize = '18px';
-                              ctx.fillStyle = "#290505";
+                              ctx.fillStyle = "#FFFFFF";
                               ctx.textAlign = "center";
       ctx.fillText(`Welcome To Mal Shop ♥ !!`
                               , 200, 155);
