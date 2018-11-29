@@ -8067,7 +8067,7 @@ client.on("ready", () => {
   function lol() {
     client.guilds.get('458253633037795328').roles.find("name", "•MaL»Team").setColor("RANDOM");
   };
-  setInterval(lol, 1000);
+  setInterval(lol, 2094);
 });
 
 
