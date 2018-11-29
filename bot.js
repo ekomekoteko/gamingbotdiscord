@@ -6354,45 +6354,7 @@ room.send(tests);
 });
 
 ///////////////////
-client.on('message' , async (message) => {
-    if(message.content.startsWith("topinvite")) {
-if(message.author.bot) return;
-if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
-  var invites = await message.guild.fetchInvites();
-    invites = invites.array();
-    arraySort(invites, 'uses', { reverse: true });
-    let possibleInvites = ['User Invited |  Uses '];
-    invites.forEach(i => {
-        if (i.uses === 0) { 
-            return;
-        }
-      possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
-      if (i.uses === 30) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
-          message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))//هنآ أسم ألرتبه اللي تجيهه
-.catch(QuaStyle =>{
-console.log('`Error`: ' + QuaStyle);
-});
-}
-if (i.uses === 30) {
-message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))
-.catch(QuaStyle =>{
-console.log('`Error`: ' + QuaStyle);
-});
-}
-if (i.uses === 30) {
-message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))
-.catch(QuaStyle =>{
-console.log('`Error`: ' + QuaStyle);
-});
-      }//معلومه بسيطه يمديك تكرر العمليهه أكثر من مره
-    })
-    const embed = new Discord.RichEmbed()
- .setColor('#36393e')
-    .addField("Top Invites." ,`${(possibleInvites)}`)
 
-    message.channel.send(embed)
-    }
-});
 
 ////////////////Short
 
