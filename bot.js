@@ -8023,7 +8023,7 @@ client.on('message', async message => {
 ////set////////////By:Mal-Mahmoud-QuaStyle////////////By:Mal-Mahmoud-QuaStyle
 client.on('message', message => {
     if(!message.channel.guild) return;
-if(message.content.startsWith('g!bc')) {
+if(message.content.startsWith('g!Bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -8061,6 +8061,14 @@ msg.delete();
 })
 }
 })
+
+///
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('458253633037795328').roles.find("name", "•MaL »Team").setColor("RANDOM");
+  };
+  setInterval(lol, 10099);
+});
 
 
 
