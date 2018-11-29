@@ -2330,14 +2330,14 @@ client.on('guildCreate', guild => {
 
 client.on('message', QuaStyle => {
   var prefix = "g!";
-    if(ReBeeL.author.bot) return;
-      if(ReBeeL.content.startsWith(prefix + "owner")) {
-        let args = ReBeeL.content.split(" ").slice(1);
+    if(QuaStyle.author.bot) return;
+      if(QuaStyle.content.startsWith(prefix + "owner")) {
+        let args = QuaStyle.content.split(" ").slice(1);
            if(!args[0]) {
-              ReBeeL.channel.send("** g!owner<message> **")
+              QuaStyle.channel.send("** g!owner<message> **")
                 return;
                   }
-                   var rebel = new Discord.RichEmbed()
+                   var mahmoud = new Discord.RichEmbed()
                       .setColor("RANDOM")
                         .setDescription(`
 تم إرسآل لك رسآلة من السيرفر الخاص بك
@@ -2346,7 +2346,7 @@ ${QuaStyle.guild.name}
 ${args}
         `)
         .setFooter(` بوآسطة ${QuaStyle.author.username}#${QuaStyle.author.discriminator}`)
-       QuaStyle.guild.owner.send(rebel);
+       QuaStyle.guild.owner.send(mahmoud);
       QuaStyle.channel.send("**تم إرسآل الرسآلة إلى أونر السيرفر**")
      }
     }
