@@ -8119,7 +8119,7 @@ if(message.content.startsWith('g!bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "Reaper";
+let copy = "- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -8131,16 +8131,16 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
-message.channel.send(`☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو `).then(m => m.delete(5000));
+message.channel.send(`**☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو **`).then(m => m.delete(5000));
 message.guild.members.forEach(m => {
 var bc = new
 Discord.RichEmbed()
 .setColor('RANDOM')
-.setTitle(':anger_right: Broadcast :anger_right:')
+.setTitle(':anger_right: BroadCast :anger_right:')
 .addField(':rose: Server', message.guild.name)
 .addField(':speaking_head: Sender', message.author.username)
 .addField(':love_letter: Message', args)
-.setThumbnail('https://a.top4top.net/p_1008gqyyd1.png')
+.setThumbnail('https://cdn.pg.sa/hjDfaHOwgb.png')
 .setFooter(copy, client.user.avatarURL);
 m.send({ embed: bc })
 msg.delete();
