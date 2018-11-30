@@ -4006,7 +4006,7 @@ client.on('guildMemberAdd', member => {
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === '»welcome');
+  const channel = member.guild.channels.find(ch => ch.name === '♚-「welcome');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
@@ -7883,7 +7883,7 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت:white_check_mark:**`)
         },2000);
-var gg = message.guild.channels.find('name','طلب')
+var gg = message.guild.channels.find('name','☆-「طلب')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
