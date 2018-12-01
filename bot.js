@@ -4504,7 +4504,7 @@ message.channel.sendEmbed(cat);
 });
 //////////////////////////////////Klam fe SOt 
 client.on('message', message => {
-    if(message.content.startsWith('g!sa')) {
+    if(message.content.startsWith('g!malteama')) {
     let args = message.content.split(' ').slice(1);
     let ar = args.join(' ');
 
