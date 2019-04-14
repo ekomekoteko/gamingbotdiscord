@@ -86,19 +86,19 @@ if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
         }
       possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
       if (i.uses === 10) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
-          message.member.addRole(message.member.guild.roles.find("name","»Member"))//هنآ أسم ألرتبه اللي تجيهه
+          message.member.addRole(message.member.guild.roles.find("name","• Mál » Members."))//هنآ أسم ألرتبه اللي تجيهه
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
 }
 if (i.uses === 20) {
-message.member.addRole(message.member.guild.roles.find("name","»Member"))
+message.member.addRole(message.member.guild.roles.find("name","• Mál » Members."))
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
 }
 if (i.uses === 30) {
-message.member.addRole(message.member.guild.roles.find("name","»Member"))
+message.member.addRole(message.member.guild.roles.find("name","• Mál » Members."))
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
@@ -174,7 +174,7 @@ client.on('message', async message => {
 
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","»MâL"));
+    member.addRole(member.guild.roles.find("name","• Mál » Members."));
     });
 
 
@@ -4006,7 +4006,7 @@ client.on('guildMemberAdd', member => {
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find(ch => ch.name === '♚-「welcome');
+  const channel = member.guild.channels.find(ch => ch.name === '☭دردشة-الفاشوب');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
@@ -6794,29 +6794,7 @@ message.channel.sendFile(canvas.toBuffer());
 
 
 // /////////////////////////////////////////////////////////////////////
-const dot = new Discord.Client();
-client.on('message', message => {
-    
-    if (message.content === "GAMING BOT") {
-        setInterval(function(){
-        message.edit('**G**')    
-        message.edit('**GA**')    
-        message.edit('**GAM**')
-        message.edit('**GAMI**')
-        message.edit('**GAMIN**')
-        message.edit('**GAMING**')
-        message.edit('**GAMING B*')
-        message.edit('**GAMING BO**')
-        message.edit('**GAMING BOT **')
-        message.edit('**GAMING BOT**')
-        message.edit('**GAMING BO**')
-        message.edit('**GAMING BOT**')
-        message.edit('**GAMING BOT **')
-        message.edit('**GAMING BOT ..**')
-        }, 1000)
-    }
-    
-})
+
 ////////////////////////////////////
 
 const developers = ["411137717884289024"]
@@ -7452,19 +7430,9 @@ hours = 12;
 
 
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('499213116941533184').roles.find("name", "Spammer  10k Credit 1 DAY").setColor("RANDOM");
-  };
-  setInterval(lol, 10099);
-});
 
-client.on("ready", () => {
-  function lol() {
-    client.guilds.get('479519956208320512').roles.find("name", "○").setColor("RANDOM");
-  };
-  setInterval(lol, 10099);
-});
+
+
 
 client.on("ready", () => {
   function lol() {
